@@ -1,0 +1,50 @@
+# Experiment 001: Baseline Keyword Search
+# Establishes the baseline we're trying to beat
+
+name: "Baseline Keyword Search"
+description: >
+  Traditional keyword matching using the keywords defined in each CPRA request.
+  Uses boolean OR matching - a document is considered a match if it contains
+  any of the primary or secondary keywords. No semantic understanding.
+
+# No embedding or LLM models needed for baseline
+embedding_model: null
+llm_model: null
+
+pipeline:
+  # Keyword search only
+  method: keyword
+
+  keyword_search:
+    # Use keywords from CPRA request definitions
+    use_request_keywords: true
+    # Boolean OR - match if any keyword present
+    match_mode: any
+    # Case insensitive matching
+    case_sensitive: false
+    # Exclude documents containing exclude keywords
+    apply_exclusions: true
+
+  # No query expansion for baseline
+  query_expansion:
+    enabled: false
+
+  # No reranking for baseline
+  reranking:
+    enabled: false
+
+evaluation:
+  metrics:
+    - precision
+    - recall
+    - f1
+    - map
+
+  # Break down results by these dimensions
+  breakdown_by:
+    - cpra_request
+    - challenge_type
+
+  # Thresholds to evaluate (for methods that produce scores)
+  # For keyword search, this is binary (match/no match)
+  thresholds: [0.5]

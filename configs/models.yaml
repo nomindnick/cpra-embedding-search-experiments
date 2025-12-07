@@ -1,0 +1,107 @@
+# Model Registry
+# Defines available models and their configurations
+
+embedding_models:
+  # Local models (Ollama)
+  ollama:nomic-embed-text:
+    provider: ollama
+    model_name: nomic-embed-text
+    dimensions: 768
+    description: "Good general-purpose embeddings, Ollama-native"
+    local: true
+
+  ollama:mxbai-embed-large:
+    provider: ollama
+    model_name: mxbai-embed-large
+    dimensions: 1024
+    description: "Higher quality embeddings, slower"
+    local: true
+
+  # Local models (sentence-transformers)
+  st:all-MiniLM-L6-v2:
+    provider: sentence-transformers
+    model_name: all-MiniLM-L6-v2
+    dimensions: 384
+    description: "Fast, small, good for CPU"
+    local: true
+
+  st:all-mpnet-base-v2:
+    provider: sentence-transformers
+    model_name: all-mpnet-base-v2
+    dimensions: 768
+    description: "Better quality, still CPU-friendly"
+    local: true
+
+  # Cloud models (for experimentation)
+  openai:text-embedding-3-small:
+    provider: openai
+    model_name: text-embedding-3-small
+    dimensions: 1536
+    description: "OpenAI's small embedding model"
+    local: false
+
+  openai:text-embedding-3-large:
+    provider: openai
+    model_name: text-embedding-3-large
+    dimensions: 3072
+    description: "OpenAI's large embedding model"
+    local: false
+
+llm_models:
+  # Local models (Ollama)
+  ollama:llama3.2:
+    provider: ollama
+    model_name: llama3.2
+    description: "Good general purpose, 3B parameters"
+    local: true
+
+  ollama:llama3.1:
+    provider: ollama
+    model_name: llama3.1
+    description: "Larger llama, 8B parameters"
+    local: true
+
+  ollama:mistral:
+    provider: ollama
+    model_name: mistral
+    description: "Strong for structured tasks"
+    local: true
+
+  ollama:phi3:
+    provider: ollama
+    model_name: phi3
+    description: "Small but capable, fast on CPU"
+    local: true
+
+  # Cloud models (for experimentation)
+  anthropic:claude-3-5-sonnet:
+    provider: anthropic
+    model_name: claude-3-5-sonnet-20241022
+    description: "Claude 3.5 Sonnet - strong reasoning"
+    local: false
+
+  anthropic:claude-3-5-haiku:
+    provider: anthropic
+    model_name: claude-3-5-haiku-20241022
+    description: "Claude 3.5 Haiku - fast and capable"
+    local: false
+
+  openai:gpt-4o-mini:
+    provider: openai
+    model_name: gpt-4o-mini
+    description: "GPT-4o mini - fast and cheap"
+    local: false
+
+reranking_models:
+  # Cross-encoders (sentence-transformers)
+  cross-encoder:ms-marco-MiniLM-L-6-v2:
+    provider: sentence-transformers
+    model_name: cross-encoder/ms-marco-MiniLM-L-6-v2
+    description: "Small cross-encoder, CPU-friendly"
+    local: true
+
+  cross-encoder:ms-marco-MiniLM-L-12-v2:
+    provider: sentence-transformers
+    model_name: cross-encoder/ms-marco-MiniLM-L-12-v2
+    description: "Larger cross-encoder, better quality"
+    local: true
