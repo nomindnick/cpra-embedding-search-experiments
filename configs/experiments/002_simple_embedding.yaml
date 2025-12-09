@@ -1,0 +1,49 @@
+# Experiment 002: Simple Embedding Search
+# Test whether semantic similarity alone beats keyword matching
+
+name: "Simple Embedding Search"
+description: >
+  Pure semantic similarity search using sentence-transformers embeddings.
+  No query expansion, no reranking - just embed the request and emails,
+  then rank by cosine similarity. This tests whether embeddings alone
+  can outperform keyword matching.
+
+# Using sentence-transformers for local, fast experimentation
+embedding_model: st:all-mpnet-base-v2
+llm_model: null
+
+pipeline:
+  method: embedding
+
+  embedding_search:
+    # Embed both subject and body
+    embed_fields: [subject, body]
+    # Use cosine similarity for ranking
+    similarity_metric: cosine
+
+  # No query expansion for this experiment
+  query_expansion:
+    enabled: false
+
+  # No reranking for this experiment
+  reranking:
+    enabled: false
+
+evaluation:
+  metrics:
+    - precision
+    - recall
+    - f1
+    - map
+
+  # K values for precision@k and recall@k
+  k_values: [50, 100, 200, 375]
+
+  # Break down results by these dimensions
+  breakdown_by:
+    - cpra_request
+    - challenge_type
+
+  # Thresholds to evaluate for converting scores to binary predictions
+  # For embedding search, we'll use 0.5 as default but also report @K metrics
+  thresholds: [0.3, 0.4, 0.5, 0.6, 0.7]

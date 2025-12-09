@@ -7,14 +7,42 @@ embedding_models:
     provider: ollama
     model_name: nomic-embed-text
     dimensions: 768
-    description: "Good general-purpose embeddings, Ollama-native"
+    description: "Good general-purpose embeddings, 274MB"
     local: true
 
   ollama:mxbai-embed-large:
     provider: ollama
     model_name: mxbai-embed-large
     dimensions: 1024
-    description: "Higher quality embeddings, slower"
+    description: "Higher quality embeddings, 669MB"
+    local: true
+
+  ollama:embeddinggemma:
+    provider: ollama
+    model_name: embeddinggemma:300m
+    dimensions: 768
+    description: "Google's embedding model via Ollama, 621MB"
+    local: true
+
+  ollama:qwen3-embedding-0.6b:
+    provider: ollama
+    model_name: qwen3-embedding:0.6b
+    dimensions: 1024
+    description: "Qwen3 embedding small, 639MB"
+    local: true
+
+  ollama:qwen3-embedding-4b:
+    provider: ollama
+    model_name: qwen3-embedding:4b
+    dimensions: 2560
+    description: "Qwen3 embedding medium, 2.5GB"
+    local: true
+
+  ollama:qwen3-embedding-8b:
+    provider: ollama
+    model_name: qwen3-embedding:8b
+    dimensions: 4096
+    description: "Qwen3 embedding large, 4.7GB"
     local: true
 
   # Local models (sentence-transformers)
