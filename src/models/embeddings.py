@@ -50,16 +50,17 @@ class EmbeddingModel(ABC):
 class SentenceTransformerEmbedding(EmbeddingModel):
     """Embedding model using sentence-transformers library."""
 
-    def __init__(self, model_name: str):
+    def __init__(self, model_name: str, trust_remote_code: bool = False):
         """Initialize with a sentence-transformers model.
 
         Args:
             model_name: Model name (e.g., 'all-MiniLM-L6-v2', 'all-mpnet-base-v2')
+            trust_remote_code: Whether to trust remote code (needed for some HF models)
         """
         from sentence_transformers import SentenceTransformer
 
         self._model_name = model_name
-        self._model = SentenceTransformer(model_name)
+        self._model = SentenceTransformer(model_name, trust_remote_code=trust_remote_code)
         self._dimensions = self._model.get_sentence_embedding_dimension()
 
     @property
@@ -209,7 +210,10 @@ def get_embedding_model(
     provider = model_config["provider"]
 
     if provider == "sentence-transformers":
-        return SentenceTransformerEmbedding(model_config["model_name"])
+        return SentenceTransformerEmbedding(
+            model_config["model_name"],
+            trust_remote_code=model_config.get("trust_remote_code", False),
+        )
     elif provider == "ollama":
         return OllamaEmbedding(
             model_config["model_name"],

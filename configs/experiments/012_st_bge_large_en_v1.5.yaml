@@ -1,0 +1,38 @@
+# Experiment 012: BGE Large English v1.5
+# Strong English retrieval model from BAAI
+
+name: "BGE Large English v1.5"
+description: >
+  Test BAAI's bge-large-en-v1.5 model. 335M params, 1024 dimensions.
+  Optimized for English retrieval tasks.
+
+embedding_model: st:bge-large-en-v1.5
+llm_model: null
+
+pipeline:
+  method: embedding
+
+  embedding_search:
+    embed_fields: [subject, body]
+    similarity_metric: cosine
+
+  query_expansion:
+    enabled: false
+
+  reranking:
+    enabled: false
+
+evaluation:
+  metrics:
+    - precision
+    - recall
+    - f1
+    - map
+
+  k_values: [50, 100, 200, 375]
+
+  breakdown_by:
+    - cpra_request
+    - challenge_type
+
+  thresholds: [0.3, 0.4, 0.5, 0.6, 0.7, 0.8]

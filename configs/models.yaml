@@ -60,6 +60,53 @@ embedding_models:
     description: "Better quality, still CPU-friendly"
     local: true
 
+  # New models (2024-2025)
+  st:snowflake-arctic-embed-l-v2.0:
+    provider: sentence-transformers
+    model_name: Snowflake/snowflake-arctic-embed-l-v2.0
+    dimensions: 1024
+    description: "Snowflake Arctic v2.0 large, Dec 2024, multilingual"
+    local: true
+    trust_remote_code: true
+
+  st:snowflake-arctic-embed-m-v2.0:
+    provider: sentence-transformers
+    model_name: Snowflake/snowflake-arctic-embed-m-v2.0
+    dimensions: 768
+    description: "Snowflake Arctic v2.0 medium, Dec 2024"
+    local: true
+    trust_remote_code: true
+
+  st:jina-embeddings-v3:
+    provider: sentence-transformers
+    model_name: jinaai/jina-embeddings-v3
+    dimensions: 1024
+    description: "Jina v3, Sep 2024, task-specific LoRA, 8k context"
+    local: true
+    trust_remote_code: true
+
+  st:bge-m3:
+    provider: sentence-transformers
+    model_name: BAAI/bge-m3
+    dimensions: 1024
+    description: "BGE-M3, multi-functional (dense+sparse), 8k context"
+    local: true
+
+  st:bge-large-en-v1.5:
+    provider: sentence-transformers
+    model_name: BAAI/bge-large-en-v1.5
+    dimensions: 1024
+    description: "BGE large English v1.5, strong retrieval"
+    local: true
+
+  st:gte-Qwen2-1.5B-instruct:
+    provider: sentence-transformers
+    model_name: Alibaba-NLP/gte-Qwen2-1.5B-instruct
+    dimensions: 8960
+    description: "GTE-Qwen2 1.5B, Jun 2024, top MTEB"
+    local: true
+    trust_remote_code: true
+
   # Cloud models (for experimentation)
   openai:text-embedding-3-small:
     provider: openai
