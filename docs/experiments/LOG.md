@@ -12,7 +12,7 @@ This document tracks all experiments, their key findings, and learnings.
 | 004 | Ollama mxbai     | 2025-12-09 | ollama:mxbai-embed-large| N/A | 26.33% | -44.41%    | Best MAP (0.98), best F1 87.02% @0.70 but 81% recall         |
 | 005 | Ollama gemma     | 2025-12-09 | ollama:embeddinggemma  | N/A | 76.41% | +5.67%      | **Best default results!** 95% recall @0.5, 99% precision @0.6 |
 | 007 | Qwen3-0.6b       | 2025-12-10 | ollama:qwen3-embedding:0.6b | N/A | 93.37% | +22.63% | Good F1 but only 90% recall - doesn't meet 94% requirement |
-| 008 | Snowflake Arctic L v2 | 2025-12-10 | st:snowflake-arctic-embed-l-v2.0 | N/A | 92.00% | +21.26% | **Best new model!** 95.20% recall @0.50, excellent MAP (0.9920) |
+| 008 | Snowflake Arctic L v2 | 2025-12-10 | st:snowflake-arctic-embed-l-v2.0 | N/A | 90.38% | +19.64% | **Best new model!** 95.20% recall @0.50, excellent MAP (0.9920) |
 | 009 | Snowflake Arctic M v2 | 2025-12-10 | st:snowflake-arctic-embed-m-v2.0 | N/A | SKIP | — | Requires xformers (GPU library) |
 | 010 | Jina v3          | 2025-12-10 | st:jina-embeddings-v3  | N/A | 79.96% | +9.22%      | 95.20% recall @0.70, meets requirement but lower F1 |
 | 011 | BGE-M3           | 2025-12-10 | st:bge-m3              | N/A | 80.88% | +10.14%     | 94.93% recall @0.60, high precision (98%) at best F1 |
@@ -42,19 +42,19 @@ This document tracks all experiments, their key findings, and learnings.
 
 | Metric    | Overall | Lead Testing | COVID Funds | SpEd   | EdTech  | Safety |
 | --------- | ------- | ------------ | ----------- | ------ | ------- | ------ |
-| Precision | 56.66%  | 100.00%      | 98.63%      | 24.59% | 100.00% | 90.24% |
-| Recall    | 94.13%  | 81.33%       | 96.00%      | 97.33% | 100.00% | 98.67% |
-| F1        | 70.74%  | 89.71%       | 97.30%      | 39.29% | 100.00% | 94.27% |
+| Precision | 56.66%  | 100.00%      | 91.89%      | 24.59% | 58.14%  | 88.24% |
+| Recall    | 94.13%  | 96.00%       | 90.67%      | 100.00%| 100.00% | 80.00% |
+| F1        | 70.74%  | 97.96%       | 91.28%      | 39.47% | 73.53%  | 83.92% |
 
 **By Challenge Type:**
 
 | Challenge Type     | Precision | Recall  | F1      |
 | ------------------ | --------- | ------- | ------- |
-| Ambiguous Terms    | 100.00%   | 100.00% | 100.00% |
-| Near Miss          | 76.00%    | 76.00%  | 76.00%  |
-| Indirect Reference | 90.00%    | 51.43%  | 65.45%  |
+| Ambiguous Terms    | 90.00%    | 100.00% | 94.74%  |
+| Near Miss          | 89.19%    | 66.00%  | 75.86%  |
+| Indirect Reference | 94.74%    | 51.43%  | 66.67%  |
 | Temporal Mismatch  | 100.00%   | 100.00% | 100.00% |
-| Partial Match      | 100.00%   | 66.67%  | 80.00%  |
+| Partial Match      | 100.00%   | 100.00% | 100.00% |
 
 **Observations:**
 
@@ -283,18 +283,18 @@ Note: Lower recall on indirect_reference (77%) and near_miss (80%) compared to o
 
 | Threshold | Precision | Recall | F1 | Predicted | TP | FP | FN |
 |-----------|-----------|--------|-----|-----------|-----|------|-----|
-| 0.30 | 15.00% | 100.00% | 26.09% | 2500 | 375 | 2125 | 0 |
-| 0.40 | 15.00% | 100.00% | 26.09% | 2500 | 375 | 2125 | 0 |
-| 0.50 | 19.91% | 99.73% | 33.20% | 1879 | 374 | 1505 | 1 |
-| **0.60** | **96.86%** | **90.13%** | **93.37%** | 349 | 338 | 11 | 37 |
-| 0.70 | 100.00% | 48.00% | 64.86% | 180 | 180 | 0 | 195 |
+| 0.30 | 18.01% | 100.00% | 30.53% | 2082 | 375 | 1707 | 0 |
+| 0.40 | 51.13% | 96.80% | 66.91% | 710 | 363 | 347 | 12 |
+| **0.50** | **96.85%** | **90.13%** | **93.37%** | 349 | 338 | 11 | 37 |
+| 0.60 | 100.00% | 75.20% | 85.84% | 282 | 282 | 0 | 93 |
+| 0.70 | 100.00% | 6.40% | 12.03% | 24 | 24 | 0 | 351 |
 
 **Observations:**
 
 1. **Excellent F1 (93.37%)** - highest F1 score of any model tested
 2. **Does NOT meet 94% recall requirement** - max recall at usable precision is 90.13%
-3. **Outstanding precision** - 96.86% at best F1 threshold
-4. **Best MAP so far** - 0.9864
+3. **Outstanding precision** - 96.85% at best F1 threshold
+4. **Good MAP** - 0.9610
 
 **Key Finding:**
 Despite the excellent F1 and precision, Qwen3-0.6b falls short of the legal recall requirement (90.13% vs required 94%).
@@ -313,31 +313,31 @@ Despite the excellent F1 and precision, Qwen3-0.6b falls short of the legal reca
 
 | Threshold | Precision | Recall | F1 | Predicted | TP | FP | FN |
 |-----------|-----------|--------|-----|-----------|-----|------|-----|
-| 0.30 | 15.00% | 100.00% | 26.09% | 2500 | 375 | 2125 | 0 |
-| 0.40 | 15.13% | 100.00% | 26.28% | 2478 | 375 | 2103 | 0 |
-| **0.50** | **87.35%** | **95.20%** | **91.11%** | 409 | 357 | 52 | 18 |
-| **0.60** | **87.35%** | **97.07%** | **92.00%** | 417 | 364 | 53 | 11 |
-| 0.70 | 100.00% | 50.93% | 67.49% | 191 | 191 | 0 | 184 |
+| 0.30 | 16.21% | 100.00% | 27.89% | 2314 | 375 | 1939 | 0 |
+| 0.40 | 35.97% | 99.47% | 52.83% | 1037 | 373 | 664 | 2 |
+| **0.50** | **86.02%** | **95.20%** | **90.38%** | 415 | 357 | 58 | 18 |
+| **0.60** | **99.08%** | **85.87%** | **92.00%** | 325 | 322 | 3 | 53 |
+| 0.70 | 100.00% | 36.27% | 53.23% | 136 | 136 | 0 | 239 |
 
 **Observations:**
 
 1. **MEETS 94% recall requirement** - 95.20% recall at threshold 0.50
 2. **Best overall F1** - 92.00% at threshold 0.60
 3. **Highest MAP** - 0.9920 (best of any model tested)
-4. **Excellent precision-recall balance** - 87.35% precision with 97.07% recall
+4. **Excellent precision-recall balance** - 86.02% precision with 95.20% recall at 0.50
 
-**By Challenge Type (at 0.60 threshold):**
+**By Challenge Type (at default 0.50 threshold):**
 
 | Challenge Type | Precision | Recall | F1 |
 |----------------|-----------|--------|-----|
 | ambiguous_terms | 100.00% | 100.00% | 100.00% |
-| near_miss | 100.00% | 98.00% | 98.99% |
-| indirect_reference | 100.00% | 91.43% | 95.52% |
+| near_miss | 100.00% | 76.00% | 86.36% |
+| indirect_reference | 100.00% | 82.86% | 90.63% |
 | temporal_mismatch | 100.00% | 100.00% | 100.00% |
-| partial_match | 100.00% | 100.00% | 100.00% |
+| partial_match | 100.00% | 91.67% | 95.65% |
 
 **Key Finding:**
-**Snowflake Arctic L v2.0 is the new recommended model.** It achieves the best balance of recall (95.20%), precision (87.35%), and F1 (92.00%) while meeting the legal 94% recall requirement.
+**Snowflake Arctic L v2.0 is the new recommended model.** It achieves the best balance of recall (95.20%), precision (86.02%), and F1 (90.38%) at 0.50 threshold while meeting the legal 94% recall requirement. At 0.60 threshold it achieves the highest F1 (92.00%) with 99% precision but lower recall (85.87%).
 
 ---
 
@@ -457,8 +457,8 @@ The model's custom code is incompatible with the installed transformers version.
 | ollama:nomic-embed-text | 82.58%   | 78.40%        | 87.24%           | 0.9052 | ❌ |
 | ollama:mxbai-embed-large| 87.02%   | 81.33%        | 93.56%           | 0.9818 | ✅ 94.40% @0.65 |
 | ollama:embeddinggemma   | 87.83%   | 78.93%        | 99.00%           | 0.9781 | ✅ 95.47% @0.50 |
-| ollama:qwen3-embedding:0.6b | 93.37% | 90.13%     | 96.86%           | 0.9864 | ❌ |
-| **st:snowflake-arctic-embed-l-v2.0** | **92.00%** | **97.07%** | 87.35% | **0.9920** | ✅ **95.20% @0.50** |
+| ollama:qwen3-embedding:0.6b | 93.37% | 90.13%     | 96.85%           | 0.9610 | ❌ |
+| **st:snowflake-arctic-embed-l-v2.0** | **92.00%** | **85.87%** | 99.08% | **0.9920** | ✅ **95.20% @0.50** |
 | st:jina-embeddings-v3   | 79.96%   | 95.20%        | 68.92%           | 0.9679 | ✅ 95.20% @0.70 |
 | st:bge-m3               | 80.88%   | 68.80%        | 98.10%           | 0.9713 | ✅ 94.93% @0.60 |
 | st:bge-large-en-v1.5    | 86.99%   | 82.93%        | 91.47%           | 0.9717 | ❌ |
@@ -469,7 +469,7 @@ These models can achieve ≥94% recall at some threshold:
 
 | Model | Threshold | Recall | Precision | F1 |
 |-------|-----------|--------|-----------|-----|
-| **Snowflake Arctic L v2.0** | 0.50 | **95.20%** | 87.35% | 92.00% |
+| **Snowflake Arctic L v2.0** | 0.50 | **95.20%** | 86.02% | 90.38% |
 | embeddinggemma | 0.50 | 95.47% | 63.70% | 76.41% |
 | Jina v3 | 0.70 | 95.20% | 68.92% | 79.96% |
 | BGE-M3 | 0.60 | 94.93% | 43.73% | 59.88% |
@@ -480,7 +480,7 @@ These models can achieve ≥94% recall at some threshold:
 
 ### Key Findings (Updated 2025-12-10)
 
-1. **Snowflake Arctic L v2.0 is the new leader**: Best overall balance with 95.20% recall AND 92.00% F1 at threshold 0.50. Also has the highest MAP (0.9920).
+1. **Snowflake Arctic L v2.0 is the new leader**: Best overall balance with 95.20% recall and 90.38% F1 at threshold 0.50, or 92.00% F1 at 0.60 threshold (with 85.87% recall). Also has the highest MAP (0.9920).
 
 2. **Several 2024-2025 models meet the legal requirement**: Snowflake Arctic L, Jina v3, and BGE-M3 all achieve ≥94% recall.
 
@@ -490,7 +490,7 @@ These models can achieve ≥94% recall at some threshold:
 
 5. **Dependency issues blocked 2 models**: Snowflake Arctic M (xformers) and GTE-Qwen2-1.5B (transformers version) couldn't be tested.
 
-**Conclusion:** **Snowflake Arctic Embed L v2.0** is now the recommended model for this use case. It achieves the legal recall requirement (95.20%) with the best F1 score (92.00%) and highest MAP (0.9920).
+**Conclusion:** **Snowflake Arctic Embed L v2.0** is now the recommended model for this use case. It achieves the legal recall requirement (95.20% at 0.50 threshold) with the best F1 score (90.38%) and highest MAP (0.9920).
 
 ---
 
