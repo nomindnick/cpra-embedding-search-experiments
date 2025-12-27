@@ -229,40 +229,66 @@ All experiments report improvement/regression vs. Experiment 001 (keyword baseli
 
 The `cpra-golden-emails/` directory contains a synthetic email corpus generator:
 
+### Corpus v1 (Original)
 - **2,500 emails** across a fictional school district
 - **5 CPRA request scenarios** including the "lead testing" case
 - **~15% responsive** emails with known ground truth
 - **~30% challenge cases**: ambiguous terms, near-miss, indirect references
 - **Complete labels**: Per-email, per-request responsiveness with confidence and reasoning
 
-This provides a controlled environment to test retrieval approaches before deploying on real data.
+**Limitation discovered:** Keyword baseline achieves 94% recall on v1 corpus, which is unrealistically high. Analysis showed most "challenge" emails still contain searchable keywords.
+
+### Corpus v2 (Harder - Recommended)
+- **5,000 emails** with **20% responsive**
+- **Keyword-free emails**: ~40% of responsive emails contain NO request keywords
+- **Variable difficulty** by request type (20-60% keyword-free rate)
+- **LLM-generated** using Claude Haiku to create realistic indirect language
+- **Expected keyword baseline recall**: 60-70% (vs 94% on v1)
+
+This forces embedding-based approaches to prove their value on semantically challenging cases where keyword search genuinely fails.
+
+### Generating Corpora
+```bash
+cd cpra-golden-emails
+source ../.venv/bin/activate
+
+# v2 (recommended)
+export ANTHROPIC_API_KEY=your_key
+python generate_corpus.py --use-llm  # Uses config defaults: 5000 emails, 20% responsive
+```
 
 ## Current Status
 
-> *This section should be updated as the project progresses.*
+> *Last updated: 2025-12-26*
 
 ### Completed
 
 - [x] Project structure defined
 - [x] Test data generator available (cpra-golden-emails)
 - [x] SPEC.md created
+- [x] Baseline keyword search (Experiment 001) - 94% recall, 57% precision
+- [x] 11 embedding model experiments (002-013)
+- [x] Evaluation framework with per-request and per-challenge breakdowns
+- [x] **Corpus v2 generator** - keyword-free email generation with LLM
 
 ### In Progress
 
-- [ ] Implement baseline keyword search (Experiment 001)
-- [ ] Set up evaluation framework
-- [ ] Implement model abstraction layer
+- [ ] Generate full v2 corpus (5,000 emails with keyword-free challenges)
+- [ ] Re-run experiments on v2 corpus to get realistic baselines
 
 ### Next Priorities
 
-1. Generate test corpus
-2. Implement and run keyword baseline
-3. Implement basic embedding retrieval
-4. Compare results, identify where embeddings help/hurt
+1. Generate v2 corpus and establish new keyword baseline (~65% recall expected)
+2. Verify Snowflake Arctic L v2.0 still outperforms on harder corpus
+3. Implement cross-encoder reranking pipeline
+4. Test query expansion with positive/negative examples
 
 ### Key Learnings
 
-> *To be populated as experiments complete.*
+1. **Snowflake Arctic L v2.0 is current best model**: 95.20% recall, 90.38% F1, 0.9920 MAP
+2. **Corpus v1 was too easy**: 94% keyword recall meant embeddings couldn't prove value
+3. **Keyword-free emails are essential**: Real CPRA searches have much lower keyword recall
+4. **LLM generation works well**: Claude Haiku successfully generates responsive emails without keywords
 
 ## Conventions
 

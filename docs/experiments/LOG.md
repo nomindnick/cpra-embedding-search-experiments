@@ -494,6 +494,70 @@ These models can achieve ≥94% recall at some threshold:
 
 ---
 
+## Corpus Analysis & v2 Design (2025-12-26)
+
+### Problem Identified
+
+Analysis of the v1 corpus revealed it was **unrealistically easy** for keyword search:
+
+| Challenge Type | Has Keywords | Truly Keyword-Free |
+|----------------|--------------|-------------------|
+| Indirect Reference | 54% | 46% (only 16 emails) |
+| Near Miss | 68% | 32% (only 16 emails) |
+| Ambiguous Terms | 100% | 0% (by design) |
+
+The 94% keyword baseline recall doesn't reflect real-world CPRA searches, where keyword recall is typically much lower due to:
+- True indirect references ("the situation we discussed")
+- Euphemisms ("what the inspector found" instead of "lead contamination")
+- Abbreviations and jargon
+- Email chains where responsive content is buried
+
+### Corpus v2 Design
+
+Implemented a harder corpus generator with:
+
+1. **Keyword-free emails**: 20-60% of responsive emails per request contain NO keywords
+2. **Variable difficulty by request**:
+   - Lead Testing: 60% keyword-free (hardest)
+   - Safety Incidents: 50% keyword-free
+   - COVID Relief: 40% keyword-free
+   - Special Education: 30% keyword-free
+   - EdTech Vendor: 20% keyword-free (easiest)
+3. **LLM generation**: Claude Haiku generates emails avoiding specified keywords
+4. **Keyword validation**: Post-generation check ensures no keywords slipped through
+5. **New challenge types**: `KEYWORD_FREE`, `EUPHEMISM`, `BURIED_IN_THREAD`
+
+### Expected Outcomes
+
+| Metric | v1 Corpus | v2 Corpus (Expected) |
+|--------|-----------|---------------------|
+| Keyword Baseline Recall | 94% | 60-70% |
+| Size | 2,500 emails | 5,000 emails |
+| Responsive Rate | 15% | 20% |
+| Keyword-Free Responsive | ~5% | ~40% |
+
+### Test Run (50 emails)
+
+Small test confirmed the generator works:
+- 10 responsive emails generated
+- 5 were keyword-free (50%)
+- LLM successfully avoided keywords while maintaining semantic relevance
+
+Example keyword-free email for Lead Testing request:
+> Subject: "Follow-up on Sampling Initiative at District Facilities"
+> Body: "...the ongoing assessment program...collecting samples from the various dispensing stations..."
+
+No keywords like "lead", "water quality", "testing", or "contamination" - but clearly about water testing to a human reader.
+
+### Next Steps
+
+1. Generate full 5,000-email v2 corpus (~$2-5 API cost, 30-60 min)
+2. Run keyword baseline - verify ~65% recall
+3. Run Snowflake Arctic L v2.0 - verify it still outperforms
+4. Proceed with cross-encoder reranking experiments
+
+---
+
 ## Template for New Experiments
 
 ```markdown

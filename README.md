@@ -30,36 +30,52 @@ cpra-embedding-search-experiments/
 
 ### Golden Email Corpus
 
-The test data is a synthetic corpus of 2,500 school district emails with ground truth labels for CPRA responsiveness.
+The test data is a synthetic corpus of school district emails with ground truth labels for CPRA responsiveness.
 
-**Location:** `cpra-golden-emails/data/generated/corpus_20251207_153555/`
+#### Corpus Versions
 
-**Corpus Contents:**
+**v1 (Original):** `cpra-golden-emails/data/generated/corpus_20251207_153555/`
+- 2,500 emails, 15% responsive
+- Keyword baseline achieves 94% recall (unrealistically high)
+- Most "challenge" emails still contain searchable keywords
+
+**v2 (Harder - In Progress):** Requires `--use-llm` flag
+- 5,000 emails, 20% responsive
+- **Keyword-free emails:** 40% of responsive emails contain NO request keywords
+- Variable difficulty by request (Lead Testing hardest at 60% keyword-free)
+- Expected keyword baseline recall: **~60-70%** (forcing semantic search to prove value)
+
+#### Corpus Contents
 | File | Description |
 |------|-------------|
-| `emails/` | 2,500 individual email files (.txt) |
+| `emails/` | Individual email files (.txt) |
 | `ground_truth.json` | Complete responsiveness mapping (email → CPRA requests) |
 | `cpra_requests.json` | 5 CPRA request definitions with keywords and concepts |
 | `email_corpus.xlsx` | Excel workbook with all data and responsiveness matrix |
-| `statistics.json` | Corpus statistics and distribution info |
+| `statistics.json` | Corpus statistics including keyword analysis |
 | `district_context.json` | Generated school district context |
 | `generation_summary.json` | Generation parameters and results |
 
-**Corpus Statistics:**
-- **Total emails:** 2,500
-- **Responsive emails:** 375 (15%)
-- **CPRA requests:** 5 (75 responsive emails each)
-- **Challenge emails:** 110 (difficult edge cases)
-- **Emails with attachments:** 37
+#### Challenge Types
+| Challenge Type | Description |
+|----------------|-------------|
+| Near Miss | Related but not quite responsive |
+| Indirect Reference | Euphemisms, pronouns, oblique mentions |
+| Temporal Mismatch | Right topic, wrong time period |
+| Ambiguous Terms | e.g., "lead" as metal vs. leadership |
+| Partial Match | Partially matches request criteria |
+| **Keyword Free** (v2) | Responsive but contains zero request keywords |
+| **Euphemism** (v2) | Uses indirect language to avoid keywords |
+| **Buried in Thread** (v2) | Responsive content in earlier reply, benign surface |
 
-**Challenge Types (for testing edge cases):**
-| Challenge Type | Count | Description |
-|----------------|-------|-------------|
-| Near Miss | 50 | Related but not quite responsive |
-| Indirect Reference | 35 | Euphemisms, pronouns, oblique mentions |
-| Temporal Mismatch | 24 | Right topic, wrong time period |
-| Ambiguous Terms | 18 | e.g., "lead" as metal vs. leadership |
-| Partial Match | 12 | Partially matches request criteria |
+#### Keyword-Free Rate by Request (v2)
+| Request | Keyword-Free % | Rationale |
+|---------|---------------|-----------|
+| Lead Testing | 60% | Hardest - ambiguous terms, euphemisms common |
+| COVID Relief | 40% | Moderate - bureaucratic language |
+| Special Education | 30% | Moderate - specialized terminology |
+| EdTech Vendor | 20% | Easiest - concrete business terms |
+| Safety Incidents | 50% | Hard - sensitive topics use euphemisms |
 
 ### Loading the Test Data
 
@@ -90,12 +106,21 @@ def is_responsive(email_id: str, request_id: str) -> bool:
 
 ### Generating New Corpora
 
-To generate a new test corpus with different parameters:
+To generate a new test corpus:
 
 ```bash
 cd cpra-golden-emails
-python generate_corpus.py --num-emails 5000 --responsive-rate 0.20 --seed 123
+source ../.venv/bin/activate
+
+# v1 style (template-based, easier)
+python generate_corpus.py --num-emails 2500 --responsive-rate 0.15
+
+# v2 style (LLM-generated keyword-free emails, harder)
+export ANTHROPIC_API_KEY=your_key_here
+python generate_corpus.py --num-emails 5000 --responsive-rate 0.20 --use-llm
 ```
+
+The v2 corpus uses Claude Haiku to generate emails that avoid keywords entirely, creating a more realistic test where semantic search must prove its value.
 
 See `cpra-golden-emails/README.md` for full generation options.
 
