@@ -1,0 +1,27 @@
+Message-ID: 922845f4-aec1-4756-aad6-873455c09a77
+Date: Mon, 08 Jul 2024 18:15:55
+From: joseph.schaefer@rusd.edu
+To: jessica.herrera@rusd.edu
+Subject: Follow-up on EdTech Vendor Contracts - Need Your Input
+X-Email-Type: regular
+X-Department: Finance
+X-Topics: technology procurement, vendor evaluation
+
+Hi Jessica,
+
+Hope you're having a good week. I wanted to reach out because we're getting close to finalizing our EdTech vendor selections for next year, and I need to loop in curriculum on a few contract terms.
+
+Right now we're down to two vendors for the math platform - both have solid pricing, but they differ on implementation support and data access clauses. Before I send these to legal for review, I wanted to make sure we're aligned on what features are actually non-negotiable from an instructional standpoint.
+
+Could you take a look at the attached comparison sheet? I'm particularly interested in your thoughts on:
+
+1. The vendor's professional development model - how much hands-on training are we looking at?
+2. Data portability requirements - I know this came up in our last curriculum meeting
+3. Contract length - we're seeing 3-year vs. 5-year options
+
+I'm hoping to have a quick call with you and maybe Marcus from IT sometime next week to nail down our priorities before we move forward. Once we're clear on what we need, I can start negotiating final terms.
+
+Let me know your availability and if you have any initial questions about the contract language.
+
+Thanks,
+Joseph

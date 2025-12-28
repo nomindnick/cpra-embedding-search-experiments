@@ -1,0 +1,10 @@
+Message-ID: d8bf3ca4-8cee-42c6-b7c9-dcb13b643b32
+Date: Wed, 11 Jun 2025 08:59:45
+From: elizabeth.olsen@rusd.edu
+To: keith.adams@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services, standardized testing
+
+Please remember to display your parking permits.\n\nThanks,\nElizabeth

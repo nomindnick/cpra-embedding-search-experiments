@@ -1,0 +1,20 @@
+{
+  "total_emails": 30,
+  "responsive_emails": 0,
+  "responsive_rate": 0.0,
+  "emails_per_request": {
+    "cpra_001": 0,
+    "cpra_002": 0,
+    "cpra_003": 0,
+    "cpra_004": 0,
+    "cpra_005": 0
+  },
+  "challenge_distribution": {},
+  "responsiveness_reasons": {},
+  "generation_metadata": {
+    "timestamp": "2025-12-07T12:23:26.465627",
+    "version": "1.0",
+    "challenge_emails": 0,
+    "emails_with_attachments": 0
+  }
+}

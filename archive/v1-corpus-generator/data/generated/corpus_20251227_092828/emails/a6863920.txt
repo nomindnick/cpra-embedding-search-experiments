@@ -1,0 +1,10 @@
+Message-ID: a6863920-4f79-4032-a0f4-c73efc67b364
+Date: Mon, 03 Jun 2024 07:40:47
+From: margaret.terry@rusd.edu
+To: jonathan.rodriguez@rusd.edu, brian.rivera@rusd.edu, nancy.mcdowell@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: grant applications, curriculum updates
+
+The lunch schedule has been updated for next week.\n\nThanks,\nMargaret

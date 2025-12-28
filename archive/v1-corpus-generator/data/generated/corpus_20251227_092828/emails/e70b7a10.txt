@@ -1,0 +1,11 @@
+Message-ID: e70b7a10-d964-43c8-a51d-14682da500e7
+Date: Thu, 23 May 2024 12:37:36
+From: john.kim@rusd.edu
+To: cameron.davis@rusd.edu, ashley.lee@rusd.edu
+Cc: william.hill@rusd.edu, daniel.garcia@rusd.edu
+Subject: Schedule Change
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nJohn

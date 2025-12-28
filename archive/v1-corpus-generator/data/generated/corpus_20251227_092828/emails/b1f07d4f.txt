@@ -1,0 +1,10 @@
+Message-ID: b1f07d4f-a7c9-408b-a632-738f1667df48
+Date: Tue, 26 Mar 2024 15:37:04
+From: william.hill@rusd.edu
+To: robert.peterson@rusd.edu, laura.carter@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning, grant applications
+
+The lunch schedule has been updated for next week.\n\nThanks,\nWilliam

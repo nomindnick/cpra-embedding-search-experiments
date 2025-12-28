@@ -1,0 +1,10 @@
+Message-ID: a8eef3c9-462b-430b-bfb6-123ac5493c8f
+Date: Thu, 24 Jul 2025 08:59:52
+From: sarah.anderson@rusd.edu
+To: heather.dixon@rusd.edu, mary.cochran@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: food services, transportation
+
+The lunch schedule has been updated for next week.\n\nThanks,\nSarah

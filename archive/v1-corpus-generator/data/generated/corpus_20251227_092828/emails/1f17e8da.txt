@@ -1,0 +1,10 @@
+Message-ID: 1f17e8da-564d-4199-b716-e61e65941ac5
+Date: Fri, 14 Jun 2024 11:03:07
+From: joseph.nunez@rusd.edu
+To: gregory.medina@rusd.edu, anthony.nelson1@rusd.edu, joshua.lamb@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing
+
+Please remember to display your parking permits.\n\nThanks,\nJoseph

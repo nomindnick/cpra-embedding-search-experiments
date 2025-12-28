@@ -1,0 +1,10 @@
+Message-ID: af9b9cef-698b-412b-9814-3a2c51fe4fc2
+Date: Fri, 06 Sep 2024 06:42:26
+From: joe.vang@rusd.edu
+To: jane.lewis@rusd.edu, cameron.davis@rusd.edu, kevin.williams@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJoe

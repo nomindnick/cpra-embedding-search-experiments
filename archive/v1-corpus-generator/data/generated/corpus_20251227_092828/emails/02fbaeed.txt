@@ -1,0 +1,10 @@
+Message-ID: 02fbaeed-3d62-46c5-b247-1bdd9daccc56
+Date: Fri, 14 Feb 2025 09:01:57
+From: randy.koch@rusd.edu
+To: kimberly.cunningham@rusd.edu, elizabeth.olsen@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nRandy

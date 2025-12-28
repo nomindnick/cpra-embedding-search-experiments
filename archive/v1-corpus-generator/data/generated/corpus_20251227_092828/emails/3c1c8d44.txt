@@ -1,0 +1,10 @@
+Message-ID: 3c1c8d44-e2f3-49f1-8e79-1928a124b708
+Date: Fri, 10 Oct 2025 12:34:00
+From: harry.jefferson@rusd.edu
+To: kathy.gutierrez@rusd.edu, jennifer.simpson@rusd.edu, valerie.kennedy@rusd.edu
+Subject: Schedule Change
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nHarry

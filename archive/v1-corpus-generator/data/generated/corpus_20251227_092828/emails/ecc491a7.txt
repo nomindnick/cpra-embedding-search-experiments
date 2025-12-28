@@ -1,0 +1,10 @@
+Message-ID: ecc491a7-025d-4eb6-88ec-b527ccf9295a
+Date: Fri, 31 Oct 2025 15:41:12
+From: carly.preston@rusd.edu
+To: raymond.lopez@rusd.edu, jennifer.collins@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, budget planning
+
+The lunch schedule has been updated for next week.\n\nThanks,\nCarly

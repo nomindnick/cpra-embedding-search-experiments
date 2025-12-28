@@ -1,0 +1,19 @@
+{
+  "generation_date": "2025-12-26T20:18:11.784884",
+  "configuration": {
+    "total_emails": 50,
+    "responsive_rate": 0.2,
+    "challenge_email_rate": 0.3,
+    "use_llm": true,
+    "seed": 42
+  },
+  "results": {
+    "total_emails": 50,
+    "responsive_emails": 10,
+    "response_rate": 0.2,
+    "cpra_requests": 5,
+    "staff_members": 246,
+    "schools": 6
+  },
+  "output_location": "data/generated/corpus_20251226_201811"
+}

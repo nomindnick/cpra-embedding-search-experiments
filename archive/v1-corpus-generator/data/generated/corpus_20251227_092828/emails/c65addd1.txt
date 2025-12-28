@@ -1,0 +1,11 @@
+Message-ID: c65addd1-b74f-4f36-8f52-008d2d6133f6
+Date: Thu, 30 Jan 2025 11:27:05
+From: raymond.blair@rusd.edu
+To: casey.hubbard@rusd.edu
+Cc: zachary.moore@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning, student achievement
+
+Please remember to display your parking permits.\n\nThanks,\nRaymond

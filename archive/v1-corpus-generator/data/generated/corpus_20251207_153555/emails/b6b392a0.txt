@@ -1,0 +1,30 @@
+Message-ID: b6b392a0-122a-42e9-8886-88071ce8a27a
+Date: Tue, 24 Jun 2025 12:20:00
+From: jessica.herrera@rusd.edu
+To: dr. patricia.johnson@rusd.edu
+Subject: IT Supply Order Request - Q1 Inventory
+X-Email-Type: regular
+X-Department: Technology
+X-Topics: technology infrastructure, food services
+
+Dear Dr. Johnson,
+
+I hope this email finds you well. I am writing to request approval for our quarterly IT supply order for the first quarter.
+
+Based on our current inventory levels and anticipated needs across all school buildings, I recommend we order the following items:
+
+• Printer paper and toner cartridges
+• USB cables and adapters
+• Replacement keyboard and mouse units
+• Network cables and connectors
+• Replacement batteries for wireless devices
+
+The estimated cost for these supplies is approximately $2,400, which falls within our standard quarterly budget allocation. I have attached a detailed itemized list for your review.
+
+Please let me know if you have any questions or would like me to adjust the order. I would appreciate your approval by end of day Friday so we can place the order and ensure delivery before the supplies are needed.
+
+Thank you for your attention to this matter.
+
+Best regards,
+Jessica Herrera
+IT Director

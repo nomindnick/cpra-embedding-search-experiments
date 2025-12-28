@@ -1,0 +1,10 @@
+Message-ID: 8b09d99e-6818-4f07-a038-0f12b10100a0
+Date: Tue, 18 Mar 2025 16:08:44
+From: tyler.aguilar@rusd.edu
+To: jennifer.collins@rusd.edu, sarah.romero@rusd.edu, dawn.johnson@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications, technology infrastructure
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nTyler

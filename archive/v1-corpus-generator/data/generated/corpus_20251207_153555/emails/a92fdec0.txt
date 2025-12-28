@@ -1,0 +1,25 @@
+Message-ID: a92fdec0-a953-4e82-951e-f90c7594ca3c
+Date: Mon, 02 Sep 2024 09:44:38
+From: jessica.herrera@rusd.edu
+To: joseph.schaefer@rusd.edu
+Subject: Follow-up on EdTech Vendor Demos Next Week
+X-Email-Type: regular
+X-Department: Technology
+X-Topics: technology procurement, vendor evaluation
+
+Hi Joseph,
+
+Hope you're having a good week. I wanted to touch base about the vendor demos we have scheduled for next week. We've got three EdTech companies coming in to present their platforms:
+
+- Monday at 2pm: Learning Management Systems (the one with the better integration capabilities)
+- Wednesday at 10am: Assessment and analytics tool
+- Thursday at 1pm: Digital collaboration platform
+
+I know you wanted to be part of the evaluation process since you work directly with teachers on implementation. Could you let me know if those times work for you? I'm also going to need your input on the contract terms once we narrow down our top choice—especially around data privacy and the renewal clauses.
+
+One thing I've been thinking about: we should probably set up a quick scoring rubric before the demos so we're all evaluating each vendor on the same criteria. I don't want us to just go with whoever has the slickest presentation.
+
+Let me know your availability and if you have any must-have features we should be asking about.
+
+Thanks,
+Jessica

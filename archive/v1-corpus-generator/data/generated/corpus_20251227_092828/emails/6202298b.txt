@@ -1,0 +1,10 @@
+Message-ID: 6202298b-cac3-4bb2-9e40-7f474eb02ac3
+Date: Mon, 29 Apr 2024 16:09:02
+From: brian.stone@rusd.edu
+To: casey.hubbard@rusd.edu, diana.bass@rusd.edu, william.hill@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: substitute coverage
+
+Please remember to display your parking permits.\n\nThanks,\nBrian

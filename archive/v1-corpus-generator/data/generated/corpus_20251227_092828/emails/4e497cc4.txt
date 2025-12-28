@@ -1,0 +1,10 @@
+Message-ID: 4e497cc4-36ff-4826-ba15-4ffc1697169d
+Date: Wed, 12 Feb 2025 14:02:11
+From: richard.davis@rusd.edu
+To: harry.jefferson@rusd.edu, brian.gutierrez@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: report
+X-Department: None
+X-Topics: safety protocols
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nRichard

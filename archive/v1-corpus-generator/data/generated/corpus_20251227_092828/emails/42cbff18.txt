@@ -1,0 +1,10 @@
+Message-ID: 42cbff18-80b8-4f67-b5eb-4cfe548b8718
+Date: Thu, 23 Jan 2025 16:38:51
+From: eduardo.barry@rusd.edu
+To: samuel.ross@rusd.edu, justin.hines@rusd.edu
+Subject: Technology Issue
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: standardized testing
+
+The projector in room 205 needs replacement.\n\nThanks,\nEduardo

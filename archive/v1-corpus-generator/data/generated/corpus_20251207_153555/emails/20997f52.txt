@@ -1,0 +1,21 @@
+Message-ID: 20997f52-15b4-4646-b4be-7c50abc09039
+Date: Mon, 20 May 2024 10:47:46
+From: jessica.herrera@rusd.edu
+To: joseph.schaefer@rusd.edu
+Subject: EdTech Vendor Contract Review - Need Your Input
+X-Email-Type: regular
+X-Department: Technology
+X-Topics: technology procurement, vendor evaluation
+
+Hi Joseph,
+
+Hope you're having a good week. I wanted to touch base about the EdTech vendor contracts we've been evaluating for next year. We've narrowed it down to three options for the math and literacy platforms, but I'm running into some questions on the technical requirements that I think you'd be better positioned to answer than me.
+
+The main vendor we're leaning toward has some solid features and pricing, but their contract includes some language around data storage and API access that I want to make sure we're comfortable with before we move forward. Can we schedule some time next week to go over the specs? I've got their proposal docs ready to share.
+
+Also, do you know if we still have the evaluation matrix from the last round of vendor comparisons? Might be helpful to reference as we finalize this decision.
+
+Let me know what day works best for you.
+
+Thanks,
+Jessica

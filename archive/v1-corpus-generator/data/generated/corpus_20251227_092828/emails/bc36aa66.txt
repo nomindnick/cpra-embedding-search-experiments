@@ -1,0 +1,11 @@
+Message-ID: bc36aa66-01ca-44c0-bd76-3c8b6ca663cf
+Date: Thu, 19 Sep 2024 15:20:34
+From: adam.arnold@rusd.edu
+To: franklin.bond@rusd.edu
+Cc: john.middleton@rusd.edu, amy.li@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, technology infrastructure
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nAdam

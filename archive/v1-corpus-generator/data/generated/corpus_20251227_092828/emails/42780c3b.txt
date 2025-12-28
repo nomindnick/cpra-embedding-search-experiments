@@ -1,0 +1,11 @@
+Message-ID: 42780c3b-9477-4cf2-967b-dd0a75cff3ef
+Date: Wed, 28 Feb 2024 08:02:08
+From: brent.gray@rusd.edu
+To: steven.petersen@rusd.edu
+Cc: joseph.schaefer@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation, budget planning
+
+The lunch schedule has been updated for next week.\n\nThanks,\nBrent

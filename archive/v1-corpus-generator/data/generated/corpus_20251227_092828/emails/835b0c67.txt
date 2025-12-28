@@ -1,0 +1,10 @@
+Message-ID: 835b0c67-8d5c-4193-9e63-f3e9153c2063
+Date: Thu, 17 Apr 2025 09:54:54
+From: christopher.miller@rusd.edu
+To: joseph.pena@rusd.edu, stephen.adkins@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: grant applications
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nChristopher

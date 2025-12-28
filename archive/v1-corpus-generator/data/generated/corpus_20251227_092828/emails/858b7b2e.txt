@@ -1,0 +1,10 @@
+Message-ID: 858b7b2e-7805-4c77-b5eb-ab017f63e0d0
+Date: Tue, 07 Oct 2025 08:03:22
+From: rodney.bennett@rusd.edu
+To: christopher.miller@rusd.edu, patrick.simmons@rusd.edu, christina.glover@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: budget planning
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nRodney

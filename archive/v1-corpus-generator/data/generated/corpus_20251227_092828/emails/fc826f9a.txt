@@ -1,0 +1,11 @@
+Message-ID: fc826f9a-6fdc-4c12-858e-d1f949cd8866
+Date: Sun, 08 Jun 2025 10:35:00
+From: stephen.sanchez@rusd.edu
+To: andrew.edwards@rusd.edu, valerie.kennedy@rusd.edu, jeanne.evans@rusd.edu
+Cc: sharon.taylor@rusd.edu, carly.preston@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nStephen

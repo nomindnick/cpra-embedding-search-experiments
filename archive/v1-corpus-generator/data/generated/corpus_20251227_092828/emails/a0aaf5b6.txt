@@ -1,0 +1,10 @@
+Message-ID: a0aaf5b6-5def-4796-b6aa-1888466fd4f9
+Date: Sun, 19 Jan 2025 08:39:18
+From: danny.jones@rusd.edu
+To: angela.cooper@rusd.edu, brent.gray@rusd.edu, linda.dominguez@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation, facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nDanny

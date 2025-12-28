@@ -1,0 +1,10 @@
+Message-ID: dc8deeca-05fc-49f3-b500-4d1d2871e76e
+Date: Fri, 09 May 2025 15:57:30
+From: jane.lewis@rusd.edu
+To: zoe.moore@rusd.edu, angelica.schneider@rusd.edu, andrew.morse@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, transportation
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJane

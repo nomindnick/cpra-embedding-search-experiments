@@ -1,0 +1,10 @@
+Message-ID: c1bc1c0b-71e2-495e-8123-b09451ff9be0
+Date: Sat, 06 Dec 2025 17:59:31
+From: robert.silva@rusd.edu
+To: scott.lowe@rusd.edu, lauren.rodriguez@rusd.edu, kaitlyn.williams@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+The lunch schedule has been updated for next week.\n\nThanks,\nRobert

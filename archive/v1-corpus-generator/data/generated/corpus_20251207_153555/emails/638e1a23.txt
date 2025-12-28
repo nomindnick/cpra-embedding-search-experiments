@@ -1,0 +1,21 @@
+Message-ID: 638e1a23-fe51-4a11-aaeb-81c1e5740df1
+Date: Thu, 09 May 2024 07:19:05
+From: alexander.greer@rusd.edu
+To: jose.williams@rusd.edu, leonard.hayes@rusd.edu, kristina.shannon@rusd.edu
+Subject: Technology Issue - Lab Computers Down Today
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Hi Jose, Leonard, and Kristina,
+
+I wanted to give you a heads up that the computer lab experienced a power surge this morning and several machines are currently offline. IT is working on diagnostics and hopes to have everything back up and running by end of day.
+
+If you had lessons planned in the lab for today, you may want to pivot to an alternative activity or reschedule for tomorrow. Please let me know if you need any resources or have questions.
+
+I'll send out an update once we get confirmation that the systems are restored.
+
+Thanks for your flexibility!
+
+Best,
+Alexander Greer

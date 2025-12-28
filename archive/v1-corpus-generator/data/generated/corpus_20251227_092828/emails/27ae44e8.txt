@@ -1,0 +1,10 @@
+Message-ID: 27ae44e8-84f5-4615-8c1e-34ed2cd69665
+Date: Fri, 16 May 2025 09:19:52
+From: cameron.davis@rusd.edu
+To: amy.li@rusd.edu, raymond.banks@rusd.edu, amy.morris@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, vendor contracts
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nCameron

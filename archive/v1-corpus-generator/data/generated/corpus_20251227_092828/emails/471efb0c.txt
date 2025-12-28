@@ -1,0 +1,10 @@
+Message-ID: 471efb0c-c5c2-4cec-ba55-2fa6ac5c5bb6
+Date: Mon, 29 Sep 2025 06:07:33
+From: christopher.cortez@rusd.edu
+To: james.robinson@rusd.edu
+Subject: Schedule Change
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nChristopher

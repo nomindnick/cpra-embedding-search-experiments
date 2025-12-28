@@ -1,0 +1,10 @@
+Message-ID: bde04ae4-8be9-43cf-bf87-b9da5bdbb062
+Date: Sat, 11 Oct 2025 16:59:13
+From: michael.mullen@rusd.edu
+To: andrea.roberts@rusd.edu, shannon.frazier@rusd.edu
+Subject: Supply Order
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: vendor contracts, grant applications
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nMichael

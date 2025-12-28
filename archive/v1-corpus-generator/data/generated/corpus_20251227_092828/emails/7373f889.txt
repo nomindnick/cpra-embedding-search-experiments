@@ -1,0 +1,10 @@
+Message-ID: 7373f889-7b04-4584-b99c-9c8c19f5703b
+Date: Tue, 09 Sep 2025 17:24:57
+From: jeffrey.rodriguez@rusd.edu
+To: robert.peterson@rusd.edu
+Subject: Parent Conference
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: student achievement, budget planning
+
+Available times for parent conferences have been posted.\n\nThanks,\nJeffrey

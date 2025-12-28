@@ -1,0 +1,11 @@
+Message-ID: 12df3e05-9bc2-402a-b7f5-8efdb395d2b3
+Date: Sun, 30 Jun 2024 09:14:15
+From: jonathan.rodriguez@rusd.edu
+To: susan.brooks@rusd.edu, gail.perry@rusd.edu
+Cc: dalton.moreno@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJonathan

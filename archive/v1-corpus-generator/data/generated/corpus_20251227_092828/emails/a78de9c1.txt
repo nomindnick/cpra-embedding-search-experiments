@@ -1,0 +1,10 @@
+Message-ID: a78de9c1-1c7c-41fb-864a-84a3f714c5c8
+Date: Sun, 02 Jun 2024 15:22:46
+From: diana.bass@rusd.edu
+To: jeffrey.joyce@rusd.edu, oscar.harper@rusd.edu, scott.reed@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: forward
+X-Department: None
+X-Topics: technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nDiana

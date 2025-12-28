@@ -1,0 +1,11 @@
+Message-ID: 4f359980-063f-4023-8afa-4c1f0bf94dd1
+Date: Wed, 12 Feb 2025 06:13:53
+From: alexander.greer@rusd.edu
+To: heather.montoya@rusd.edu, jorge.ewing@rusd.edu
+Cc: shannon.ramos@rusd.edu, ashley.lee@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: transportation, safety protocols
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nAlexander

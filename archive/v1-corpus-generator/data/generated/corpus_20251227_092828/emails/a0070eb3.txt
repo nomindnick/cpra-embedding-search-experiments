@@ -1,0 +1,10 @@
+Message-ID: a0070eb3-5206-4109-9ca2-c503a313975c
+Date: Mon, 22 Apr 2024 10:05:08
+From: elizabeth.olsen@rusd.edu
+To: john.middleton@rusd.edu, anthony.jackson@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning
+
+Please remember to display your parking permits.\n\nThanks,\nElizabeth

@@ -1,0 +1,20 @@
+Message-ID: ccf53088-1c5a-4147-a3f9-058a305f00e6
+Date: Thu, 27 Jun 2024 13:45:31
+From: charles.martin@rusd.edu
+To: jeffrey.rodriguez@rusd.edu, brian.harmon@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning, professional development
+
+Good morning Jeffrey and Brian,
+
+I wanted to notify you of a technology issue we're currently experiencing in the east wing computer lab. The network connection has been intermittent since this morning, which may affect any classes scheduled to use that space today.
+
+Our IT department is working on a resolution and expects to have it resolved by early afternoon. In the meantime, please consider rescheduling any computer lab sessions if possible, or contact me if you need to use an alternative location.
+
+I'll send an update once the issue has been resolved. Thank you for your flexibility as we work through this.
+
+Best regards,
+Charles Martin
+Vice Principal

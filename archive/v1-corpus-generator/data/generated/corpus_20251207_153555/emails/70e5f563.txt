@@ -1,0 +1,27 @@
+Message-ID: 70e5f563-cc53-45ff-a55f-117bf2ce961a
+Date: Thu, 06 Jun 2024 07:11:15
+From: joseph.schaefer@rusd.edu
+To: jessica.herrera@rusd.edu
+Subject: Following up on EdTech Vendor Contracts - Need Your Input
+X-Email-Type: regular
+X-Department: Finance
+X-Topics: technology procurement, vendor evaluation
+
+Hi Jessica,
+
+Hope you're having a good week. I wanted to touch base about the EdTech vendor contracts we've been evaluating for next school year.
+
+As you know, we're down to three finalists for the learning management system, and I've been reviewing the contract terms with our legal department. A few things came up that I think we should discuss with the vendor reps before we move forward:
+
+1. The pricing structure for the first vendor seems to jump significantly in year two - I want to make sure we understand what's driving that increase.
+
+2. The second vendor's contract has some language around data storage that might need clarification given our new privacy policies.
+
+3. I'm still waiting on implementation timelines from the third option.
+
+Would you have time next week to sit down and go through these together? I'm thinking we should also loop in someone from IT to make sure we're not missing any technical considerations before we finalize anything.
+
+Let me know what your schedule looks like - maybe Tuesday or Wednesday afternoon?
+
+Thanks,
+Joseph

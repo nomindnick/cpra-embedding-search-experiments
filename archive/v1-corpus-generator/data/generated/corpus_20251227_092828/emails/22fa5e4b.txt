@@ -1,0 +1,10 @@
+Message-ID: 22fa5e4b-2c66-4867-9ef9-700d41a27412
+Date: Tue, 23 Dec 2025 14:33:36
+From: joel.walter@rusd.edu
+To: gavin.adams@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJoel

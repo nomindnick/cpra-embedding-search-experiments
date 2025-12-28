@@ -1,0 +1,10 @@
+Message-ID: 9686cf61-fef8-403f-ae3e-e777eff048ea
+Date: Mon, 23 Jun 2025 10:07:15
+From: sarah.garcia@rusd.edu
+To: kenneth.price@rusd.edu, michelle.cherry@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: substitute coverage
+
+The lunch schedule has been updated for next week.\n\nThanks,\nSarah

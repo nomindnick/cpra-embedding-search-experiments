@@ -1,0 +1,20 @@
+Message-ID: 33e3ccb1-ca92-4238-adf1-30de83a57034
+Date: Sat, 27 Apr 2024 16:35:46
+From: rodney.bennett@rusd.edu
+To: robert.pierce@rusd.edu
+Subject: Printer Issue - Room 204
+X-Email-Type: reply
+X-Department: Facilities
+X-Topics: standardized testing
+
+Hi Robert,
+
+I wanted to let you know that I noticed the printer in Room 204 isn't responding to print jobs. I've checked the power connections and restarted it, but it's still not communicating with the network.
+
+Could you take a look at it when you get a chance? It might need a driver update or a full restart of the system. I don't want to mess with the software settings without checking with you first.
+
+Let me know if you need me to do anything else on my end.
+
+Thanks,
+Rodney Bennett
+Maintenance Staff

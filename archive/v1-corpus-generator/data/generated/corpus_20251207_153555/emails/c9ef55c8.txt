@@ -1,0 +1,22 @@
+Message-ID: c9ef55c8-fc20-4910-89fa-5f2f14c9a984
+Date: Tue, 29 Oct 2024 13:51:51
+From: fernando.donovan@rusd.edu
+To: robert.marshall@rusd.edu, samuel.rodriguez@rusd.edu, andrea.roberts@rusd.edu
+Subject: Technology Issue - Classroom Device Access
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: technology infrastructure, student achievement
+
+Hi Robert, Samuel, and Andrea,
+
+I wanted to reach out regarding a technology issue I've been experiencing in my classroom this morning. The interactive display in Room 204 is not connecting to the network, which is affecting my ability to access digital learning materials for my students.
+
+I've already tried the standard troubleshooting steps (restarting the device and checking connections), but the issue persists. Could someone from the IT department look into this when you have a chance?
+
+In the meantime, I'll be using alternative materials, but I wanted to flag this so it can be resolved for future lessons.
+
+Thank you for your assistance!
+
+Best regards,
+Fernando Donovan
+Special Education Teacher

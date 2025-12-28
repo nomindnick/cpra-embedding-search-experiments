@@ -1,0 +1,11 @@
+Message-ID: 3456812d-e85c-4ef4-998a-b053abfb94f0
+Date: Tue, 17 Jun 2025 17:59:18
+From: david.young@rusd.edu
+To: christina.davis@rusd.edu, amy.morris@rusd.edu
+Cc: jesse.mann@rusd.edu, joseph.nunez@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nDavid

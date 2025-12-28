@@ -1,0 +1,10 @@
+Message-ID: f47721d3-8aad-46e6-ab30-a05ccba3c2df
+Date: Thu, 19 Sep 2024 13:41:45
+From: robert.peterson@rusd.edu
+To: cindy.sanders@rusd.edu, crystal.mccall@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, safety protocols
+
+Please remember to display your parking permits.\n\nThanks,\nRobert

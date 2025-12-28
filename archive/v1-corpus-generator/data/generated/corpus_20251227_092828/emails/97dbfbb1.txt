@@ -1,0 +1,10 @@
+Message-ID: 97dbfbb1-6e3f-4e6a-8d08-b45aa2a8268c
+Date: Thu, 20 Jun 2024 17:19:22
+From: joel.walter@rusd.edu
+To: michael.nelson@rusd.edu, erica.fernandez@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJoel

@@ -1,0 +1,10 @@
+Message-ID: 1aa09ce2-4d9b-4dd1-b508-6c7499947a67
+Date: Sat, 05 Oct 2024 15:57:52
+From: jesse.mann@rusd.edu
+To: dana.oliver@rusd.edu, jennifer.collins@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, vendor contracts
+
+Please remember to display your parking permits.\n\nThanks,\nJesse

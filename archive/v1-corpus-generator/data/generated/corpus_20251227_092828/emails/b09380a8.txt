@@ -1,0 +1,10 @@
+Message-ID: b09380a8-71ab-4df8-9738-3ffbff63ee90
+Date: Sat, 12 Apr 2025 09:32:02
+From: casey.elliott@rusd.edu
+To: dalton.moreno@rusd.edu, joel.green@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: special education, safety protocols
+
+Please remember to display your parking permits.\n\nThanks,\nCasey

@@ -1,0 +1,10 @@
+Message-ID: ece3f8d7-24d3-482e-91c3-37ed4cc37ebe
+Date: Wed, 08 Jan 2025 10:10:27
+From: elizabeth.olsen@rusd.edu
+To: margaret.terry@rusd.edu, craig.mendoza@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+The lunch schedule has been updated for next week.\n\nThanks,\nElizabeth

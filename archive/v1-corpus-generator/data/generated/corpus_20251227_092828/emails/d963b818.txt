@@ -1,0 +1,10 @@
+Message-ID: d963b818-78cf-4fc8-ac6c-127a687b780e
+Date: Mon, 17 Mar 2025 06:32:14
+From: susan.miller@rusd.edu
+To: erica.orr@rusd.edu, michelle.cherry@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+The lunch schedule has been updated for next week.\n\nThanks,\nSusan

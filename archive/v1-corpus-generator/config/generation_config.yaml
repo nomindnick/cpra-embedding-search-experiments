@@ -1,0 +1,83 @@
+# Configuration for CPRA Email Corpus Generation
+# Updated for harder, more realistic corpus (v2)
+
+# Email Generation Settings
+generation:
+  total_emails: 5000              # Total number of emails to generate (expanded from 2500)
+  responsive_rate: 0.20           # Percentage of emails responsive to CPRA requests (increased from 0.15)
+  challenge_email_rate: 0.30      # Percentage of responsive emails with challenge patterns
+
+  # Keyword-free rates by request (overrides request-level settings)
+  # Higher = harder for keyword search (requires semantic understanding)
+  keyword_free_rate_by_request:
+    cpra_001: 0.60                # Lead Testing - HARDEST (60% have no keywords)
+    cpra_002: 0.40                # COVID Relief - moderate
+    cpra_003: 0.30                # Special Ed - moderate
+    cpra_004: 0.20                # EdTech Vendor - EASIEST
+    cpra_005: 0.50                # Safety Incidents - hard (sensitive topics)
+
+  # Thread settings for buried responsive content
+  thread_rate: 0.20               # 20% of responsive emails in threads
+  thread_min_length: 3            # Minimum emails per thread
+  thread_max_length: 5            # Maximum emails per thread
+
+# Email Content Settings
+email:
+  min_length: 50                  # Minimum email body length in characters
+  max_length: 500                 # Maximum email body length in characters
+  attachment_probability: 0.10    # Probability an email has attachments
+  thread_probability: 0.25        # Probability an email is part of a thread
+  cc_probability: 0.30           # Probability an email has CC recipients
+
+# LLM Settings (REQUIRED for keyword-free generation)
+llm:
+  use_llm: true                  # Must be true for harder corpus
+  provider: "anthropic"          # LLM provider: "openai" or "anthropic"
+  model: "claude-haiku-4-5-20251001"  # Fast, cheap model for generation
+  temperature: 0.7                # Generation temperature (0.0-1.0)
+  max_tokens: 1000                # Maximum tokens per generation
+
+# District Settings
+district:
+  seed: 42                        # Random seed for reproducibility
+  schools:
+    elementary: 3                 # Number of elementary schools
+    middle: 1                     # Number of middle schools
+    high: 1                       # Number of high schools
+
+# CPRA Request Settings
+requests:
+  complexity_weights:
+    simple: 0.2                   # Weight for simple requests
+    moderate: 0.6                 # Weight for moderate requests
+    complex: 0.2                  # Weight for complex requests
+
+# Challenge Pattern Settings
+challenges:
+  # Legacy challenge types
+  ambiguous_terms: 0.2            # Weight for ambiguous term challenges
+  near_miss: 0.2                  # Weight for near-miss challenges
+  indirect_reference: 0.2         # Weight for indirect reference challenges
+  # New challenge types for harder corpus
+  keyword_free: 0.25              # Weight for keyword-free challenges
+  euphemism: 0.1                  # Weight for euphemism challenges
+  buried_in_thread: 0.05          # Weight for buried-in-thread challenges
+
+# Export Settings
+export:
+  output_dir: "data/generated"    # Output directory for generated files
+  formats:
+    json: true                    # Export as JSON
+    excel: true                   # Export as Excel
+    individual_emails: true       # Export emails as individual files
+  include_statistics: true        # Generate statistics file
+  include_keyword_analysis: true  # Generate keyword analysis stats
+
+# Expected Outcomes (for reference)
+# With these settings, keyword baseline should achieve:
+# - Overall recall: ~60-70% (down from 94%)
+# - cpra_001 (Lead): ~40-50% recall
+# - cpra_002 (COVID): ~60-70% recall
+# - cpra_003 (SPED): ~70-80% recall
+# - cpra_004 (EdTech): ~80-90% recall
+# - cpra_005 (Safety): ~50-60% recall

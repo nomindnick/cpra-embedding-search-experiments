@@ -1,0 +1,19 @@
+Message-ID: 9a32f6b2-512e-4654-bc18-779fe1fe0c77
+Date: Sun, 31 Aug 2025 14:39:34
+From: dana.oliver@rusd.edu
+To: dawn.johnson@rusd.edu, diana.bass@rusd.edu, raymond.lopez@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: memo
+X-Department: None
+X-Topics: special education
+
+Hi Dawn, Diana, and Raymond,
+
+I wanted to give you a heads up that I've been experiencing some issues accessing the computer lab this morning. When I tried to log in around 9:15 AM, the system wasn't recognizing my credentials.
+
+I was able to work around it by using the backup lab, but wanted to flag this in case any of you encounter the same problem. You may want to contact IT to report it if you haven't already.
+
+Let me know if you need anything else or if you've experienced similar issues.
+
+Thanks,
+Dana Oliver

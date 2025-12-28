@@ -1,0 +1,10 @@
+Message-ID: 3c970b3b-cd9a-4ad5-b5b2-174f8df780af
+Date: Fri, 24 Jan 2025 11:25:27
+From: danny.jones@rusd.edu
+To: anne.robinson@rusd.edu, samantha.hooper@rusd.edu, lauren.rodriguez@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nDanny

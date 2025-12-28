@@ -1,0 +1,10 @@
+Message-ID: a03d6e77-cf8b-46d1-8132-c227954d4a4e
+Date: Thu, 24 Jul 2025 15:47:12
+From: james.walters@rusd.edu
+To: lauren.rodriguez@rusd.edu, sarah.garcia@rusd.edu, samantha.hooper@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: memo
+X-Department: None
+X-Topics: safety protocols, budget planning
+
+Please remember to display your parking permits.\n\nThanks,\nJames

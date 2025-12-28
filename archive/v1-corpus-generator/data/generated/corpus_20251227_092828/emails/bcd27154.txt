@@ -1,0 +1,10 @@
+Message-ID: bcd27154-b1b3-45d1-905d-3f5dc5cd4783
+Date: Sun, 10 Aug 2025 17:26:30
+From: steven.petersen@rusd.edu
+To: javier.washington@rusd.edu, michele.jones@rusd.edu, samantha.hooper@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: student achievement
+
+Please remember to display your parking permits.\n\nThanks,\nSteven

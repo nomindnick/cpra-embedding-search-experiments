@@ -1,0 +1,21 @@
+Message-ID: 2df40bd7-199a-465b-b71c-75bf8c9af844
+Date: Wed, 08 Oct 2025 08:22:14
+From: christopher.spencer@rusd.edu
+To: jeffrey.dudley@rusd.edu, joshua.pineda@rusd.edu, jennifer.miller@rusd.edu
+Subject: Technology Issue - Classroom Projector Not Responding
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates
+
+Hi Jeffrey, Joshua, and Jennifer,
+
+I wanted to reach out about a technical issue I've been experiencing in my classroom this morning. The projector in Room 214 is not responding to any input from my laptop or the remote control. The power light appears to be on, but there's no display output.
+
+I've tried the standard troubleshooting steps (restarting the projector, checking all cable connections, and switching to different input sources), but the issue persists. I have back-to-back classes today, so I wanted to flag this for our tech support team as soon as possible.
+
+Could someone please look into this when you have availability? I can work around it for today's lessons, but I'd like to get this resolved before my presentations scheduled for tomorrow.
+
+Thank you for your help!
+
+Best regards,
+Christopher Spencer

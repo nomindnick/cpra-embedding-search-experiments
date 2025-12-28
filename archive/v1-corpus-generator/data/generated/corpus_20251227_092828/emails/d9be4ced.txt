@@ -1,0 +1,10 @@
+Message-ID: d9be4ced-27fc-48fb-9995-0c16514e6abf
+Date: Wed, 03 Dec 2025 13:46:24
+From: lindsey.lee@rusd.edu
+To: michele.jones@rusd.edu, sarah.garcia@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing, food services
+
+The lunch schedule has been updated for next week.\n\nThanks,\nLindsey

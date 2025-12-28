@@ -1,0 +1,10 @@
+Message-ID: bd33d117-b224-4bdb-a50e-a8aa33afeb3e
+Date: Fri, 21 Nov 2025 08:45:08
+From: brian.harmon@rusd.edu
+To: jennifer.collins@rusd.edu
+Subject: Field Trip Permission
+X-Email-Type: meeting_request
+X-Department: Special Education
+X-Topics: technology infrastructure
+
+Permission slips for the upcoming field trip are due Monday.\n\nThanks,\nBrian

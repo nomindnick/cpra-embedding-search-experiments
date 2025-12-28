@@ -1,0 +1,22 @@
+Message-ID: 29d6189b-926c-4e40-8206-0a03717b6905
+Date: Fri, 28 Feb 2025 14:09:25
+From: ebony.tucker@rusd.edu
+To: donald.shah@rusd.edu, brian.stone@rusd.edu, raymond.lopez@rusd.edu
+Subject: Computer Lab Equipment Issue - Room 214
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: facility maintenance, substitute coverage
+
+Hi Donald, Brian, and Raymond,
+
+I wanted to give you a heads up that we've identified an issue with several desktop computers in the computer lab (Room 214). A number of the machines are not powering on properly this morning.
+
+I've already checked the power connections and surge protectors, and everything appears to be physically connected correctly. This may be a software or hardware issue that requires IT support to diagnose further.
+
+I recommend we contact our technology support team to schedule an inspection before the computer lab is used for classes today. I can reach out to them if needed, or please let me know if any of you would prefer to handle that.
+
+Please let me know if you have any questions or if you've noticed similar issues with other equipment around campus.
+
+Thank you,
+Ebony Tucker
+Maintenance Staff

@@ -1,0 +1,29 @@
+Message-ID: d909a7e2-b918-4161-b26c-7467ac850d0b
+Date: Sun, 27 Apr 2025 08:22:18
+From: kevin.sharp@rusd.edu
+To: amy.gibbs@rusd.edu
+Cc: norman.chavez@rusd.edu
+Subject: Upcoming Field Trip - Permission Slip and Details
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, transportation
+
+Dear Amy,
+
+I hope this email finds you well. I'm writing to inform you about an upcoming field trip for our class.
+
+Trip Details:
+- Date: [Date]
+- Destination: [Location]
+- Purpose: [Educational objective]
+- Departure Time: [Time]
+- Return Time: [Time]
+- Cost: [Amount, if applicable]
+
+Please ensure that all students have completed and returned their permission slips by [deadline date]. Students should wear comfortable clothing and bring a packed lunch and water bottle.
+
+If you have any questions or concerns about this field trip, please don't hesitate to reach out.
+
+Best regards,
+Kevin Sharp
+Teacher

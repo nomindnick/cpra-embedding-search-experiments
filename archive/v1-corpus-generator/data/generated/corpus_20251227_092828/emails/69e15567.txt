@@ -1,0 +1,10 @@
+Message-ID: 69e15567-5f9b-4739-a55c-24a0c77c4f15
+Date: Mon, 09 Sep 2024 14:48:23
+From: dalton.moreno@rusd.edu
+To: patrick.simmons@rusd.edu
+Subject: Schedule Change
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nDalton

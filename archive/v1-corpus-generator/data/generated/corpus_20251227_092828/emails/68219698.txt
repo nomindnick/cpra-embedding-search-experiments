@@ -1,0 +1,10 @@
+Message-ID: 68219698-8d2b-4c91-ae5e-4f3dbb845a80
+Date: Fri, 04 Apr 2025 17:23:35
+From: anthony.rosales@rusd.edu
+To: brent.gray@rusd.edu, samantha.hooper@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, grant applications
+
+The lunch schedule has been updated for next week.\n\nThanks,\nAnthony

@@ -1,0 +1,10 @@
+Message-ID: 8fae02a8-e96b-492a-951d-30858c49b6c6
+Date: Thu, 20 Feb 2025 14:17:57
+From: ashley.lee@rusd.edu
+To: samuel.ross@rusd.edu, john.kim@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation, grant applications
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nAshley

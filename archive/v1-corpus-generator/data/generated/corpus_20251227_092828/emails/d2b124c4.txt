@@ -1,0 +1,10 @@
+Message-ID: d2b124c4-6ff9-417e-937c-0e8e731393ab
+Date: Mon, 07 Apr 2025 10:31:55
+From: gregory.medina@rusd.edu
+To: kathy.gutierrez@rusd.edu, andrew.edwards@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing
+
+The lunch schedule has been updated for next week.\n\nThanks,\nGregory

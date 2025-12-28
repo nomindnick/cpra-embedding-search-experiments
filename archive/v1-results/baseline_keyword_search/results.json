@@ -1,0 +1,213 @@
+{
+  "experiment_name": "Baseline Keyword Search",
+  "pipeline_name": "Keyword Search",
+  "timestamp": "2025-12-27T16:50:19.549407",
+  "overall": {
+    "precision": 0.9339130434782609,
+    "recall": 0.537,
+    "f1": 0.6819047619047619,
+    "map": 0.5188450748162092
+  },
+  "totals": {
+    "emails": 5000,
+    "responsive": 1000,
+    "predicted": 571
+  },
+  "by_request": [
+    {
+      "request_id": "cpra_001",
+      "request_title": "Lead Testing in Water Systems",
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714285714285715,
+      "true_positives": 80,
+      "false_positives": 0,
+      "false_negatives": 120,
+      "total_responsive": 200,
+      "ranked_metrics": {
+        "average_precision": 0.4,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.25,
+        "precision_at_100": 1.0,
+        "recall_at_100": 0.4,
+        "precision_at_200": 1.0,
+        "recall_at_200": 0.4,
+        "precision_at_375": 1.0,
+        "recall_at_375": 0.4
+      }
+    },
+    {
+      "request_id": "cpra_002",
+      "request_title": "COVID Relief Fund Allocation",
+      "precision": 0.8928571428571429,
+      "recall": 0.375,
+      "f1": 0.5281690140845071,
+      "true_positives": 75,
+      "false_positives": 9,
+      "false_negatives": 125,
+      "total_responsive": 200,
+      "ranked_metrics": {
+        "average_precision": 0.37273606497899503,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.25,
+        "precision_at_100": 0.8928571428571429,
+        "recall_at_100": 0.375,
+        "precision_at_200": 0.8928571428571429,
+        "recall_at_200": 0.375,
+        "precision_at_375": 0.8928571428571429,
+        "recall_at_375": 0.375
+      }
+    },
+    {
+      "request_id": "cpra_003",
+      "request_title": "Special Education Program Changes",
+      "precision": 0.9866666666666667,
+      "recall": 0.74,
+      "f1": 0.8457142857142858,
+      "true_positives": 148,
+      "false_positives": 2,
+      "false_negatives": 52,
+      "total_responsive": 200,
+      "ranked_metrics": {
+        "average_precision": 0.7392203931894555,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.25,
+        "precision_at_100": 1.0,
+        "recall_at_100": 0.5,
+        "precision_at_200": 0.9866666666666667,
+        "recall_at_200": 0.74,
+        "precision_at_375": 0.9866666666666667,
+        "recall_at_375": 0.74
+      }
+    },
+    {
+      "request_id": "cpra_004",
+      "request_title": "EdTech Vendor Contracts",
+      "precision": 0.9875776397515528,
+      "recall": 0.795,
+      "f1": 0.8808864265927977,
+      "true_positives": 159,
+      "false_positives": 2,
+      "false_negatives": 41,
+      "total_responsive": 200,
+      "ranked_metrics": {
+        "average_precision": 0.795,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.25,
+        "precision_at_100": 1.0,
+        "recall_at_100": 0.5,
+        "precision_at_200": 0.9875776397515528,
+        "recall_at_200": 0.795,
+        "precision_at_375": 0.9875776397515528,
+        "recall_at_375": 0.795
+      }
+    },
+    {
+      "request_id": "cpra_005",
+      "request_title": "Student Safety Incidents",
+      "precision": 0.75,
+      "recall": 0.375,
+      "f1": 0.5,
+      "true_positives": 75,
+      "false_positives": 25,
+      "false_negatives": 125,
+      "total_responsive": 200,
+      "ranked_metrics": {
+        "average_precision": 0.28726891591259546,
+        "precision_at_50": 0.78,
+        "recall_at_50": 0.195,
+        "precision_at_100": 0.75,
+        "recall_at_100": 0.375,
+        "precision_at_200": 0.75,
+        "recall_at_200": 0.375,
+        "precision_at_375": 0.75,
+        "recall_at_375": 0.375
+      }
+    }
+  ],
+  "by_challenge": [
+    {
+      "challenge_type": "ambiguous_terms",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "total_emails": 20,
+      "correctly_identified": 20
+    },
+    {
+      "challenge_type": "near_miss",
+      "precision": 1.0,
+      "recall": 0.6216216216216216,
+      "f1": 0.7666666666666667,
+      "total_emails": 74,
+      "correctly_identified": 46
+    },
+    {
+      "challenge_type": "indirect_reference",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "total_emails": 60,
+      "correctly_identified": 0
+    },
+    {
+      "challenge_type": "temporal_mismatch",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "total_emails": 50,
+      "correctly_identified": 50
+    },
+    {
+      "challenge_type": "partial_match",
+      "precision": 1.0,
+      "recall": 0.9655172413793104,
+      "f1": 0.9824561403508771,
+      "total_emails": 29,
+      "correctly_identified": 28
+    }
+  ],
+  "threshold_analysis": [],
+  "k_values": [
+    50,
+    100,
+    200,
+    375
+  ],
+  "config": {
+    "name": "Baseline Keyword Search",
+    "description": "Traditional keyword matching using the keywords defined in each CPRA request. Uses boolean OR matching - a document is considered a match if it contains any of the primary or secondary keywords. No semantic understanding.\n",
+    "embedding_model": null,
+    "llm_model": null,
+    "pipeline": {
+      "method": "keyword",
+      "keyword_search": {
+        "use_request_keywords": true,
+        "match_mode": "any",
+        "case_sensitive": false,
+        "apply_exclusions": true
+      },
+      "query_expansion": {
+        "enabled": false
+      },
+      "reranking": {
+        "enabled": false
+      }
+    },
+    "evaluation": {
+      "metrics": [
+        "precision",
+        "recall",
+        "f1",
+        "map"
+      ],
+      "breakdown_by": [
+        "cpra_request",
+        "challenge_type"
+      ],
+      "thresholds": [
+        0.5
+      ]
+    }
+  }
+}

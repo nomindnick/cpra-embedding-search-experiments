@@ -1,0 +1,10 @@
+Message-ID: 56f0b0b5-000f-4a7e-88b4-1f2a19a0e72a
+Date: Mon, 19 Feb 2024 06:48:22
+From: craig.mendoza@rusd.edu
+To: martin.mendez@rusd.edu, wendy.gonzalez@rusd.edu, margaret.terry@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nCraig

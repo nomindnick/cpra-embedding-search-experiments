@@ -1,0 +1,10 @@
+Message-ID: f77a54c3-29bd-49cf-b721-83fdf33d2c29
+Date: Sun, 11 Aug 2024 14:52:51
+From: mike.griffin@rusd.edu
+To: brittany.snyder@rusd.edu, julie.phillips@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Please remember to display your parking permits.\n\nThanks,\nMike

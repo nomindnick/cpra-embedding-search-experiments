@@ -1,0 +1,10 @@
+Message-ID: bb015f54-1471-437c-8da3-d50d823755b4
+Date: Fri, 26 Sep 2025 08:59:20
+From: brandon.brown@rusd.edu
+To: samantha.hooper@rusd.edu
+Subject: Supply Order
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: safety protocols
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nBrandon

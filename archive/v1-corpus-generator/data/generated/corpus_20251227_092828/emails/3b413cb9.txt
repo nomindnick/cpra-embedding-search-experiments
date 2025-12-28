@@ -1,0 +1,10 @@
+Message-ID: 3b413cb9-55fa-4cf5-b455-5b400a525666
+Date: Wed, 29 Jan 2025 10:06:31
+From: randy.koch@rusd.edu
+To: mary.cochran@rusd.edu, jorge.ewing@rusd.edu, brenda.bailey@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Please remember to display your parking permits.\n\nThanks,\nRandy

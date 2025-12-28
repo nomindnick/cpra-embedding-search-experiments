@@ -1,0 +1,10 @@
+Message-ID: 7bd2162e-2258-4bd8-94d5-e6f98669364e
+Date: Mon, 31 Mar 2025 14:54:21
+From: martin.hines@rusd.edu
+To: robert.simpson@rusd.edu, william.hill@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates, student achievement
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nMartin

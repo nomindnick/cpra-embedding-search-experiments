@@ -1,0 +1,10 @@
+Message-ID: ab61a512-c634-49a3-87df-59b84d0a206b
+Date: Tue, 04 Mar 2025 18:10:58
+From: jorge.ewing@rusd.edu
+To: natalie.cline@rusd.edu, joseph.pena@rusd.edu, craig.mendoza@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJorge

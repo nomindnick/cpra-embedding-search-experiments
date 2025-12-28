@@ -1,0 +1,10 @@
+Message-ID: ebf9f9d6-dec1-47ac-86a3-fd8ba1853c56
+Date: Sat, 05 Apr 2025 17:20:25
+From: randall.mclaughlin@rusd.edu
+To: erica.fernandez@rusd.edu, joshua.pineda@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nRandall

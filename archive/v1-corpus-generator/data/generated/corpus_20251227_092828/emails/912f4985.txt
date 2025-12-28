@@ -1,0 +1,10 @@
+Message-ID: 912f4985-0509-4d78-9bd3-dd0221fe08b9
+Date: Mon, 25 Mar 2024 13:01:25
+From: raymond.lopez@rusd.edu
+To: sarah.romero@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts
+
+Please remember to display your parking permits.\n\nThanks,\nRaymond

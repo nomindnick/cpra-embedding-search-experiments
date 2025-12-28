@@ -1,0 +1,10 @@
+Message-ID: 10b43e9d-39de-47a4-b81e-7c3b715f1add
+Date: Sun, 06 Oct 2024 06:54:45
+From: christopher.cortez@rusd.edu
+To: jeffrey.morgan@rusd.edu, samantha.hooper@rusd.edu, danny.jones@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+The lunch schedule has been updated for next week.\n\nThanks,\nChristopher

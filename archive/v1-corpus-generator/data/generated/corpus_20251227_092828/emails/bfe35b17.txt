@@ -1,0 +1,10 @@
+Message-ID: bfe35b17-14c9-44e9-bd34-1471d75fc8fd
+Date: Fri, 12 Dec 2025 14:48:13
+From: ashley.larsen@rusd.edu
+To: steven.russell@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, facility maintenance
+
+The lunch schedule has been updated for next week.\n\nThanks,\nAshley

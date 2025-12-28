@@ -1,0 +1,11 @@
+Message-ID: 6b4396da-c5f0-41c8-a9ba-e617c0f59d8b
+Date: Tue, 01 Apr 2025 08:45:47
+From: amy.li@rusd.edu
+To: steven.campbell@rusd.edu, christina.bullock@rusd.edu, erin.macias@rusd.edu
+Cc: erin.wilson@rusd.edu, michele.jones@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+The lunch schedule has been updated for next week.\n\nThanks,\nAmy

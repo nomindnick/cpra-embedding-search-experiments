@@ -1,0 +1,10 @@
+Message-ID: 5fc180e9-8fa7-4e44-b31e-4396861870e6
+Date: Mon, 28 Jul 2025 15:42:36
+From: crystal.mccall@rusd.edu
+To: brian.stone@rusd.edu
+Subject: Technology Issue
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+The projector in room 205 needs replacement.\n\nThanks,\nCrystal

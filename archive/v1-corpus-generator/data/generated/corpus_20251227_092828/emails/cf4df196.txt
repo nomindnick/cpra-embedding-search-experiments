@@ -1,0 +1,10 @@
+Message-ID: cf4df196-d7fa-4547-8b5e-8bcb43168f85
+Date: Mon, 01 Dec 2025 11:54:29
+From: tyler.johnson@rusd.edu
+To: william.hill@rusd.edu, oscar.harper@rusd.edu, raymond.lopez@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, standardized testing
+
+Please remember to display your parking permits.\n\nThanks,\nTyler

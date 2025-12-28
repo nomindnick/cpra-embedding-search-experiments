@@ -1,0 +1,10 @@
+Message-ID: aee9fcd6-befb-4e05-b9e9-d3678b9d598a
+Date: Tue, 09 Sep 2025 07:20:45
+From: brent.gray@rusd.edu
+To: donna.moore@rusd.edu, michele.jones@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: parent communication
+
+The lunch schedule has been updated for next week.\n\nThanks,\nBrent

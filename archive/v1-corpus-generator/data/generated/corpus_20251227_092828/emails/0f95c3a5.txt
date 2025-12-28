@@ -1,0 +1,10 @@
+Message-ID: 0f95c3a5-e1f0-4629-8b48-c533f0633dfa
+Date: Wed, 10 Jan 2024 18:58:27
+From: patrick.howard@rusd.edu
+To: amber.lindsey@rusd.edu, robert.simpson@rusd.edu, donald.shah@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please remember to display your parking permits.\n\nThanks,\nPatrick

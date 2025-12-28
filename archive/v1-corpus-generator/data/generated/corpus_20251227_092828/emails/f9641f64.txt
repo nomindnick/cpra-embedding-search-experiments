@@ -1,0 +1,10 @@
+Message-ID: f9641f64-0ead-4faf-b805-0ef15c975d53
+Date: Sat, 14 Jun 2025 13:24:05
+From: fernando.donovan@rusd.edu
+To: eduardo.barry@rusd.edu, kathryn.jimenez@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: vendor contracts
+
+Please remember to display your parking permits.\n\nThanks,\nFernando

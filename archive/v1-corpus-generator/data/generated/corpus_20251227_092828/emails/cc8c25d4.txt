@@ -1,0 +1,14 @@
+Message-ID: cc8c25d4-88e5-46ef-9917-29c88b0e267a
+Date: Thu, 01 Aug 2024 14:14:32
+From: erin.wilson@rusd.edu
+To: heather.dixon@rusd.edu
+Cc: robert.pierce@rusd.edu, hannah.fowler@rusd.edu
+Subject: General Update - Safety
+X-Email-Type: regular
+X-Department: Safety
+X-Topics: student safety, incident management
+
+Team update on various initiatives and ongoing projects.
+
+--- Attachments ---
+  - data_export.csv (CSV, 156 KB)

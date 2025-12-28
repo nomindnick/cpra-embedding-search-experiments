@@ -1,0 +1,10 @@
+Message-ID: 25e60261-24f0-4ad4-8023-881b2d1c7689
+Date: Mon, 21 Jul 2025 13:49:20
+From: tyler.dixon@rusd.edu
+To: kristina.shannon@rusd.edu, jessica.ellis@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+The lunch schedule has been updated for next week.\n\nThanks,\nTyler

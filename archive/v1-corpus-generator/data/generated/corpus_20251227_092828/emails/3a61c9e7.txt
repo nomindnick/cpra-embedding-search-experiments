@@ -1,0 +1,10 @@
+Message-ID: 3a61c9e7-3f9e-402e-b510-ee7d362d21e5
+Date: Tue, 06 Feb 2024 15:30:12
+From: scott.callahan@rusd.edu
+To: doris.jones@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications, vendor contracts
+
+The lunch schedule has been updated for next week.\n\nThanks,\nScott

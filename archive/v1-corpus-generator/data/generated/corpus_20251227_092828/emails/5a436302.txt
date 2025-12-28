@@ -1,0 +1,11 @@
+Message-ID: 5a436302-052c-4eeb-8f8e-e9e35f6a3679
+Date: Tue, 15 Apr 2025 12:08:34
+From: justin.hines@rusd.edu
+To: kathryn.jimenez@rusd.edu, tyler.jordan@rusd.edu
+Cc: sharon.taylor@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, student achievement
+
+Please remember to display your parking permits.\n\nThanks,\nJustin

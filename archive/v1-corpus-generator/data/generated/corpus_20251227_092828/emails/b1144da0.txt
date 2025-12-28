@@ -1,0 +1,10 @@
+Message-ID: b1144da0-8053-4772-b67d-58ccc328832e
+Date: Wed, 09 Jul 2025 10:43:47
+From: javier.washington@rusd.edu
+To: doris.jones@rusd.edu, daniel.cox@rusd.edu, danny.jones@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: special education
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJavier

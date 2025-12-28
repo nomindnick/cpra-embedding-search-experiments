@@ -1,0 +1,11 @@
+Message-ID: 855a380d-1794-438d-8fde-15ee54717ef3
+Date: Fri, 01 Aug 2025 07:02:57
+From: joe.vang@rusd.edu
+To: debra.wang@rusd.edu, eduardo.barry@rusd.edu, christina.davis@rusd.edu
+Cc: franklin.bond@rusd.edu, samuel.ross@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJoe

@@ -1,0 +1,10 @@
+Message-ID: 2185ba21-899c-40f4-9853-85226a6db392
+Date: Wed, 12 Feb 2025 07:27:54
+From: steven.campbell@rusd.edu
+To: bobby.berg@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services
+
+The lunch schedule has been updated for next week.\n\nThanks,\nSteven

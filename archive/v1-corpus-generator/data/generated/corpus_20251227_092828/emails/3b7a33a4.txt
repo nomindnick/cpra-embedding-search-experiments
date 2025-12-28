@@ -1,0 +1,10 @@
+Message-ID: 3b7a33a4-7ea6-4a22-b817-6995b7f53cd7
+Date: Tue, 13 May 2025 10:43:12
+From: michele.jones@rusd.edu
+To: charles.lewis@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing, technology infrastructure
+
+The lunch schedule has been updated for next week.\n\nThanks,\nMichele

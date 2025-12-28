@@ -1,0 +1,10 @@
+Message-ID: b72bdb94-2b9f-4d7d-814a-f531cee11c9d
+Date: Sat, 20 Dec 2025 08:50:32
+From: joseph.nunez@rusd.edu
+To: jeanne.evans@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, curriculum updates
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJoseph

@@ -1,0 +1,10 @@
+Message-ID: 695c498b-2553-4d0b-8b5b-b284c299997a
+Date: Sat, 31 May 2025 07:30:01
+From: samantha.hooper@rusd.edu
+To: jason.morales@rusd.edu, doris.jones@rusd.edu, scott.callahan@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nSamantha

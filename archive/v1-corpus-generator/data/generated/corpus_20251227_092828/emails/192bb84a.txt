@@ -1,0 +1,10 @@
+Message-ID: 192bb84a-609e-42bf-9e0a-37921074414f
+Date: Sun, 11 Aug 2024 17:57:52
+From: mike.griffin@rusd.edu
+To: craig.mendoza@rusd.edu, keith.adams@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nMike

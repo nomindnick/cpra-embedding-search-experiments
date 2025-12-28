@@ -1,0 +1,10 @@
+Message-ID: 76fe8deb-0d60-47d3-88df-f424d9f63b03
+Date: Thu, 15 May 2025 13:14:53
+From: jorge.ewing@rusd.edu
+To: brenda.bailey@rusd.edu, luis.acosta@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: substitute coverage
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJorge

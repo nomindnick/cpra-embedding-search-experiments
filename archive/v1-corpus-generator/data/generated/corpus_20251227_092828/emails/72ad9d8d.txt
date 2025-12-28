@@ -1,0 +1,10 @@
+Message-ID: 72ad9d8d-7e44-4805-8da8-d5c6c2d6e5b8
+Date: Sat, 27 Apr 2024 10:33:38
+From: javier.washington@rusd.edu
+To: sarah.garcia@rusd.edu, maria.kelley@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services
+
+Please remember to display your parking permits.\n\nThanks,\nJavier

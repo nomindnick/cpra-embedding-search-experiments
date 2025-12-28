@@ -1,0 +1,10 @@
+Message-ID: 0c726b0e-29a1-4fb6-a9cc-deba95b0eaaa
+Date: Sat, 20 Sep 2025 07:00:47
+From: john.middleton@rusd.edu
+To: christopher.miller@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications, food services
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJohn

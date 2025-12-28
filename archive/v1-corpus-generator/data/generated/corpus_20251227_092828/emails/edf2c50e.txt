@@ -1,0 +1,11 @@
+Message-ID: edf2c50e-cd1f-4056-8e21-d52f5caf25ab
+Date: Fri, 01 Mar 2024 17:55:26
+From: samuel.ross@rusd.edu
+To: theresa.long@rusd.edu, eduardo.barry@rusd.edu
+Cc: zachary.moore@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning, standardized testing
+
+Please remember to display your parking permits.\n\nThanks,\nSamuel

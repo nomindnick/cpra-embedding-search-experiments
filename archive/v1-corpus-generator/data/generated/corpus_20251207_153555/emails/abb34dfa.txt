@@ -1,0 +1,22 @@
+Message-ID: abb34dfa-5f78-4a8a-ac95-e2ddd4516cd8
+Date: Thu, 28 Nov 2024 06:04:23
+From: tyler.jordan@rusd.edu
+To: david.young@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: reply
+X-Department: None
+X-Topics: curriculum updates
+
+Hi David,
+
+I wanted to reach out regarding an issue with the computer lab that was reported this morning. Several of the desktop computers are not connecting to the network properly, which is affecting student access during scheduled lab periods.
+
+Could you please have IT take a look at this when you get a chance? I believe it may be a network connectivity issue rather than individual machine problems, but I wanted to flag it for your attention.
+
+Please let me know what you find and if there's anything I need to do on my end to help expedite a fix. In the meantime, I'll work with teachers to adjust their lab schedules if needed.
+
+Thank you for your quick attention to this matter.
+
+Best regards,
+Tyler Jordan
+Principal

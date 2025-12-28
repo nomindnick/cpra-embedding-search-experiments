@@ -1,0 +1,10 @@
+Message-ID: 54d9f660-a01e-49f3-a4d6-0c719d8b88d1
+Date: Mon, 31 Mar 2025 17:23:48
+From: helen.peterson@rusd.edu
+To: wendy.taylor@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: Business Services
+X-Topics: standardized testing
+
+Please remember to display your parking permits.\n\nThanks,\nHelen

@@ -1,0 +1,11 @@
+Message-ID: d1dafd55-a2bd-46aa-a8e0-c48b114f96e3
+Date: Fri, 02 May 2025 10:51:19
+From: maria.kelley@rusd.edu
+To: john.alvarez@rusd.edu, angela.cooper@rusd.edu
+Cc: gregory.medina@rusd.edu, kristin.dean@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nMaria

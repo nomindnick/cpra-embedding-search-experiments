@@ -1,0 +1,11 @@
+Message-ID: b57e5820-6980-422d-a33a-901d441d32f9
+Date: Sat, 04 Jan 2025 16:23:31
+From: chad.beck@rusd.edu
+To: samantha.hooper@rusd.edu
+Cc: samantha.warren@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: parent communication
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nChad

@@ -1,0 +1,26 @@
+Message-ID: 004c59aa-73a1-4e90-abfd-833fda8424aa
+Date: Mon, 17 Jun 2024 06:00:58
+From: rodney.bennett@rusd.edu
+To: luis.acosta@rusd.edu, brittany.snyder@rusd.edu, ashley.larsen@rusd.edu
+Cc: natalie.cline@rusd.edu
+Subject: Network Connectivity Issues - Elementary Building
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: safety protocols
+
+Hi Luis, Brittany, and Ashley,
+
+I wanted to give you a heads up that we've been experiencing some intermittent network connectivity issues in the elementary building this morning. Our IT department is currently investigating the problem.
+
+In the meantime, please be aware that:
+- WiFi access may be unstable in classrooms on the east wing
+- Printing services may be affected
+- Online learning platforms may experience delays
+
+We're working to resolve this as quickly as possible. I'll send an update once the issue has been corrected. If you encounter any specific problems, please let me know right away.
+
+Thank you for your patience.
+
+Best regards,
+Rodney Bennett
+Maintenance Staff

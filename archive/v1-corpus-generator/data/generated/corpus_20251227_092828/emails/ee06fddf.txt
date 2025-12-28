@@ -1,0 +1,10 @@
+Message-ID: ee06fddf-9207-40b8-9809-30ba24d09c6f
+Date: Sun, 23 Nov 2025 13:04:51
+From: franklin.bond@rusd.edu
+To: kevin.sharp@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nFranklin

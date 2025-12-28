@@ -1,0 +1,21 @@
+Message-ID: b8b3789f-322f-4fb8-8057-897806eb7a0c
+Date: Tue, 01 Jul 2025 10:00:34
+From: mark.owens@rusd.edu
+To: charles.lewis@rusd.edu
+Cc: martin.mendez@rusd.edu, kaitlyn.williams@rusd.edu
+Subject: Technology Issue - Classroom Projector
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing, vendor contracts
+
+Hi Charles,
+
+I wanted to reach out regarding a technical issue I've been experiencing in my classroom. The projector in Room 214 hasn't been working properly since this morning. It's displaying a blue screen and won't connect to my laptop via HDMI.
+
+I've tried restarting both the projector and my computer, but the issue persists. Could you or someone from the IT department take a look at it when you have a chance? I have classes throughout the day, so any time works as long as there's advance notice.
+
+Please let me know what the next steps are or if you need any additional information from me.
+
+Thank you,
+Mark Owens
+Teacher, Room 214

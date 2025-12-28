@@ -1,0 +1,11 @@
+Message-ID: b5297f8a-aeac-4289-9bff-22ca59ff5adc
+Date: Sun, 05 Jan 2025 12:14:01
+From: crystal.mccall@rusd.edu
+To: april.ramos@rusd.edu
+Cc: tammy.patton@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, safety protocols
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nCrystal

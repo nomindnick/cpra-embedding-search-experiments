@@ -1,0 +1,11 @@
+Message-ID: d676b8a6-102f-455d-a95d-95f9edab0dc4
+Date: Thu, 08 Aug 2024 14:57:29
+From: john.middleton@rusd.edu
+To: keith.adams@rusd.edu
+Cc: stacy.cole@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJohn

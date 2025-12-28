@@ -1,0 +1,11 @@
+Message-ID: 1035c7b8-d9e3-4c0a-8524-5dd19748a26c
+Date: Wed, 30 Jul 2025 12:01:39
+From: john.alvarez@rusd.edu
+To: jeffrey.morgan@rusd.edu, monica.garrison@rusd.edu
+Cc: zoe.moore@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation, food services
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJohn

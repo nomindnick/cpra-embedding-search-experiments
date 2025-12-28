@@ -1,0 +1,27 @@
+Message-ID: 3dd733ae-89e3-4383-97c8-e30e8042ce49
+Date: Sun, 11 Feb 2024 14:58:12
+From: jessica.herrera@rusd.edu
+To: joseph.schaefer@rusd.edu
+Subject: Follow-up on EdTech Vendor Proposals - Need Your Input
+X-Email-Type: regular
+X-Department: Technology
+X-Topics: technology procurement, vendor evaluation
+
+Hi Joseph,
+
+Hope you're having a good week. I wanted to touch base about the EdTech vendor proposals we've been reviewing for the new learning management system.
+
+I've been going through the contract terms with our three finalists, and I'm noticing some inconsistencies in their pricing models and support tiers. Before we move forward, I think we should schedule time to discuss which vendor features are actually priorities for our schools versus nice-to-haves.
+
+A couple of specific questions:
+
+1. For the contract negotiations, do we have flexibility on the implementation timeline? One vendor is pushing for a faster rollout than I think is realistic.
+
+2. Are there any specific integrations with our existing systems that are must-haves for your department?
+
+I'm planning to have initial conversations with each vendor next week to clarify some terms. Would you be available for a quick call Thursday afternoon to align on our priorities first? That way I can go into those discussions with a clear picture of what we actually need.
+
+Let me know what works for you.
+
+Thanks,
+Jessica

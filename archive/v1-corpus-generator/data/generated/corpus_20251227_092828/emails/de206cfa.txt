@@ -1,0 +1,10 @@
+Message-ID: de206cfa-4afb-4aec-8746-f0ac46d52977
+Date: Fri, 25 Apr 2025 08:17:56
+From: franklin.bond@rusd.edu
+To: michael.andrade@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nFranklin

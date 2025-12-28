@@ -1,0 +1,10 @@
+Message-ID: 9be0085c-f5d6-45e7-b128-1dd34ef66db3
+Date: Mon, 01 Jul 2024 13:20:51
+From: erin.wilson@rusd.edu
+To: dr. patricia.johnson@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: Safety
+X-Topics: technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nErin

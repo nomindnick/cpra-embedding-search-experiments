@@ -1,0 +1,40 @@
+{
+  "total_emails": 100,
+  "responsive_emails": 20,
+  "responsive_rate": 0.2,
+  "emails_per_request": {
+    "cpra_001": 4,
+    "cpra_002": 4,
+    "cpra_003": 4,
+    "cpra_004": 4,
+    "cpra_005": 4
+  },
+  "challenge_distribution": {
+    "ChallengeType.KEYWORD_FREE": 6,
+    "ChallengeType.INDIRECT_REFERENCE": 1,
+    "ChallengeType.PARTIAL_MATCH": 1,
+    "ChallengeType.NEAR_MISS": 1,
+    "ChallengeType.TEMPORAL_MISMATCH": 1
+  },
+  "responsiveness_reasons": {
+    "direct_match": 19,
+    "attachment_ref": 1
+  },
+  "keyword_analysis": {
+    "keyword_free_count": 6,
+    "keyword_containing_count": 14,
+    "keyword_free_rate": 0.3,
+    "expected_keyword_recall": 0.7
+  },
+  "thread_analysis": {
+    "total_threads": 0,
+    "threaded_responsive_count": 0,
+    "buried_responsive_count": 0
+  },
+  "generation_metadata": {
+    "timestamp": "2025-12-27T06:07:51.380297",
+    "version": "1.0",
+    "challenge_emails": 9,
+    "emails_with_attachments": 1
+  }
+}

@@ -1,0 +1,10 @@
+Message-ID: 8751ea16-543f-45b2-b7e4-c40887b96899
+Date: Thu, 07 Mar 2024 18:06:39
+From: lauren.rodriguez@rusd.edu
+To: samantha.hooper@rusd.edu, shannon.ramos@rusd.edu, lindsey.lee@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+The lunch schedule has been updated for next week.\n\nThanks,\nLauren

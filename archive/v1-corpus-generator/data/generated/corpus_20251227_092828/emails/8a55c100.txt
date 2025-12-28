@@ -1,0 +1,10 @@
+Message-ID: 8a55c100-68ff-43a3-b2a9-f8e8aaa0c729
+Date: Wed, 15 Jan 2025 16:50:37
+From: john.alvarez@rusd.edu
+To: linda.dominguez@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJohn

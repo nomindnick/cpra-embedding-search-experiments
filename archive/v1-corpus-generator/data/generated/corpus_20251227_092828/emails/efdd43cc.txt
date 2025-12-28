@@ -1,0 +1,11 @@
+Message-ID: efdd43cc-d402-4f78-9af3-3008210dbcc5
+Date: Mon, 22 Jan 2024 17:10:45
+From: carly.preston@rusd.edu
+To: oscar.harper@rusd.edu, dawn.johnson@rusd.edu
+Cc: samuel.rodriguez@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: parent communication
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nCarly

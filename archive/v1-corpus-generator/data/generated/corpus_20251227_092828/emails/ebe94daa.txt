@@ -1,0 +1,10 @@
+Message-ID: ebe94daa-1db4-4948-9b67-2b2204fc75d6
+Date: Thu, 14 Aug 2025 07:26:53
+From: erin.macias@rusd.edu
+To: zoe.moore@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Please remember to display your parking permits.\n\nThanks,\nErin

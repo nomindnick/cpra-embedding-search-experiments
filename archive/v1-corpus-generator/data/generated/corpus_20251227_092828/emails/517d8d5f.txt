@@ -1,0 +1,10 @@
+Message-ID: 517d8d5f-584f-4dfc-b901-936c8a773a9e
+Date: Thu, 19 Jun 2025 13:42:37
+From: theresa.long@rusd.edu
+To: andrea.roberts@rusd.edu, jane.lewis@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: facility maintenance, technology infrastructure
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nTheresa

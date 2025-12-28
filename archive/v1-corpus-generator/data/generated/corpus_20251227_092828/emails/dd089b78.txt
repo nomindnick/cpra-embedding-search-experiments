@@ -1,0 +1,10 @@
+Message-ID: dd089b78-378c-4b32-a2de-445569650532
+Date: Sat, 20 Dec 2025 17:35:35
+From: fernando.donovan@rusd.edu
+To: tyler.jordan@rusd.edu, debra.wang@rusd.edu, christina.davis@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: meeting_request
+X-Department: Special Education
+X-Topics: food services, standardized testing
+
+The lunch schedule has been updated for next week.\n\nThanks,\nFernando

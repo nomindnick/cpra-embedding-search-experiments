@@ -1,0 +1,2327 @@
+{
+  "metadata": {
+    "generated_date": "2025-12-07T12:26:28.479019",
+    "total_emails": 30,
+    "responsive_emails": 4,
+    "responsive_rate": 0.13333333333333333,
+    "total_requests": 5
+  },
+  "emails": [
+    {
+      "id": "7df6eb8c-4591-4f01-9dc3-56d0873a1a5c",
+      "sender": "anne.robinson@rusd.edu",
+      "recipients": [
+        "kaitlyn.williams@rusd.edu",
+        "brent.gray@rusd.edu"
+      ],
+      "cc": [
+        "patrick.howard@rusd.edu",
+        "dennis.mccann@rusd.edu"
+      ],
+      "subject": "Classroom Supplies - Please Review Order List",
+      "body": "Hi Kaitlyn and Brent,\n\nI hope this email finds you well. I'm reaching out to coordinate our classroom supply orders for the upcoming semester.\n\nI've attached a list of supplies that I'd like to request for my special education classroom, including:\n- Manipulatives and learning aids\n- Writing and organizational materials\n- Adaptive equipment and tools\n- General classroom consumables\n\nCould you each review the list and let me know:\n1. If any items need to be adjusted or removed\n2. Your estimated timeline for processing orders\n3. Any budget constraints I should be aware of\n\nI'd like to finalize this order by the end of next week if possible, so we're well-stocked before students arrive.\n\nPlease feel free to reach out if you have any questions or need clarification on any items.\n\nThank you for your help!\n\nBest regards,\nAnne Robinson\nSpecial Education Teacher",
+      "date_sent": "2024-10-22T06:10:24.968676",
+      "email_type": "reply",
+      "department": "Special Education",
+      "topics": [
+        "professional development",
+        "special education"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "d148709b-9729-4107-a6dc-dcd333a880fc",
+      "sender": "adriana.bailey@rusd.edu",
+      "recipients": [
+        "lauren.herrera@rusd.edu",
+        "erica.fernandez@rusd.edu",
+        "ryan.colon@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Substitute Coverage Needed - Tuesday, March 14th",
+      "body": "Good morning,\n\nI am reaching out to request substitute coverage for Tuesday, March 14th. We have several staff members who will be attending a professional development conference that day.\n\nPlease let me know as soon as possible if you are available to cover any of the following positions:\n\n• 3rd Grade - Room 204 (Full day)\n• 5th Grade - Room 301 (Full day)\n• Middle School Math - Room 115 (Half day, 12:00 PM - 3:30 PM)\n\nIf you are able to assist with coverage, please reply to this email or stop by the main office. Lesson plans and class rosters will be prepared and available by end of day Monday.\n\nThank you for your flexibility and support!\n\nBest regards,\nAdriana Bailey\nSchool Secretary\nDistrict Office",
+      "date_sent": "2025-07-01T09:18:13.976585",
+      "email_type": "regular",
+      "department": null,
+      "topics": [
+        "transportation"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "047d0596-9b7b-4cd8-9c94-47bcac05f6d4",
+      "sender": "brian.harmon@rusd.edu",
+      "recipients": [
+        "april.ramos@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Parent Conference Scheduled - [Student Name]",
+      "body": "Dear April,\n\nI hope this email finds you well. I am writing to confirm our upcoming parent conference and provide you with some details.\n\nConference Details:\nDate: [Date]\nTime: [Time]\nLocation: [Room Number/Location]\nDuration: Approximately 20-30 minutes\n\nDuring our conference, I would like to discuss your child's academic progress, classroom participation, and any strategies we can implement together to support their continued growth. Please feel free to bring any questions or concerns you may have.\n\nIf this time does not work with your schedule, please let me know as soon as possible so we can arrange an alternative time that is more convenient for you.\n\nYou can reach me via email or by calling the school office at [phone number] if you need to reschedule or have any questions before our meeting.\n\nI look forward to speaking with you soon.\n\nBest regards,\nBrian Harmon\nSpecial Education Teacher\n[School Name]\n[Contact Information]",
+      "date_sent": "2024-08-05T14:58:54.698505",
+      "email_type": "regular",
+      "department": "Special Education",
+      "topics": [
+        "grant applications"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "2b58a1ea-b989-4de5-a176-2aa4d70d97df",
+      "sender": "christopher.cortez@rusd.edu",
+      "recipients": [
+        "javier.washington@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Schedule Change Notice - Library Hours Next Week",
+      "body": "Hi Javier,\n\nI wanted to let you know about a change to the library schedule for next week. Due to the scheduled professional development day on Wednesday, the library will be closed that afternoon starting at 12:00 PM.\n\nRegular hours will resume on Thursday. If you have any classes scheduled during that time, please let me know so we can arrange an alternative time for your visit.\n\nPlease feel free to reach out if you have any questions.\n\nBest regards,\nChristopher Cortez\nLibrarian",
+      "date_sent": "2024-01-15T09:25:07.483870",
+      "email_type": "regular",
+      "department": null,
+      "topics": [
+        "standardized testing"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "1eeef80f-00f4-42e6-90ae-484c40639d99",
+      "sender": "robert.silva@rusd.edu",
+      "recipients": [
+        "donna.moore@rusd.edu",
+        "angela.cooper@rusd.edu"
+      ],
+      "cc": [
+        "tyler.johnson@rusd.edu",
+        "patrick.howard@rusd.edu"
+      ],
+      "subject": "Upcoming Parent-Teacher Conferences - Please Schedule Your Time Slot",
+      "body": "Dear Donna and Angela,\n\nI hope this message finds you well. I am writing to remind you that parent-teacher conferences are scheduled for next week, October 16th and 17th, from 3:30 PM to 6:00 PM.\n\nI would like to meet with you to discuss your child's academic progress, classroom behavior, and overall development. These conferences are an important opportunity for us to work together and ensure your child's success.\n\nPlease use the sign-up link below to select a 15-minute time slot that works best for your schedule:\n[Conference Sign-Up Link]\n\nIf you have any questions or need to arrange a different time, please don't hesitate to contact me.\n\nThank you for your continued support and involvement in your child's education.\n\nBest regards,\nRobert Silva\nTeacher",
+      "date_sent": "2024-06-19T11:59:16.999930",
+      "email_type": "regular",
+      "department": null,
+      "topics": [
+        "curriculum updates",
+        "safety protocols"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "5ea528c3-d074-4d90-a820-b0a608c02ea4",
+      "sender": "kristin.dean@rusd.edu",
+      "recipients": [
+        "michael.bruce@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Substitute Coverage Needed - Tomorrow, [Date]",
+      "body": "Hi Michael,\n\nI wanted to reach out to let you know that I will need substitute coverage for my classes tomorrow, [Date]. I have a professional development meeting scheduled that day.\n\nMy classes are:\n- Period 2: Special Education Resource (Room 214)\n- Period 4: Inclusion Support - English (Room 215)\n- Period 6: Life Skills (Room 214)\n\nI have lesson plans prepared and will have them ready by end of day today. Materials and assignments are organized on my desk. Please let me know if you need any additional information or if there are any issues securing coverage.\n\nThank you for your help!\n\nBest regards,\nKristin Dean\nSpecial Education Teacher",
+      "date_sent": "2024-03-10T15:06:04.151325",
+      "email_type": "regular",
+      "department": "Special Education",
+      "topics": [
+        "vendor contracts"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "2e66b8fb-cc7f-42b7-ae34-fa393efa3925",
+      "sender": "jeffrey.joyce@rusd.edu",
+      "recipients": [
+        "scott.reed@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Lunch Schedule Update - Week of March 18th",
+      "body": "Hi Scott,\n\nI wanted to give you a heads up about the lunch schedule for next week. We have a few changes due to the spring testing schedule:\n\n• Monday-Wednesday: Regular lunch periods (11:30 AM - 1:15 PM)\n• Thursday-Friday: Adjusted schedule with early lunch starting at 11:00 AM\n\nThis means the cafeteria will need extra setup time on Thursday morning. I'll make sure the serving lines are ready by 10:45 AM.\n\nPlease let me know if you need any additional support or have questions about the changes.\n\nThanks,\nJeffrey Joyce\nMaintenance Staff",
+      "date_sent": "2025-02-18T08:28:53.383530",
+      "email_type": "regular",
+      "department": "Facilities",
+      "topics": [
+        "food services"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "c37a72e7-6d97-46ca-a0be-736805c1deb0",
+      "sender": "joseph.schaefer@rusd.edu",
+      "recipients": [
+        "jessica.herrera@rusd.edu"
+      ],
+      "cc": [
+        "dana.oliver@rusd.edu"
+      ],
+      "subject": "Following up on EdTech vendor contracts for next budget cycle",
+      "body": "Hi Jessica,\n\nHope you're having a good week. I wanted to touch base about the EdTech vendor contracts we need to finalize before the new fiscal year kicks in.\n\nI've been reviewing the proposals that came in, and I have a few questions before we move forward with any of them. The pricing structure on a couple of these is a bit unclear to me, and I want to make sure we're comparing apples to apples.\n\nCould you send over the evaluation notes from your team on the three finalists? I know you all spent considerable time on the selection process, and I want to make sure I'm not missing anything on my end before we lock in these contracts.\n\nAlso, do you know if we're still on track to have everything signed by end of month? I want to make sure we budget appropriately and don't end up with any gaps in service over the summer.\n\nLet me know if you have time for a quick call next week to walk through this together.\n\nThanks,\nJoseph",
+      "date_sent": "2024-03-09T10:07:56",
+      "email_type": "regular",
+      "department": "Finance",
+      "topics": [
+        "technology procurement",
+        "vendor evaluation"
+      ],
+      "generated_for_requests": [
+        "cpra_004"
+      ],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "3596d88f-bf04-42f4-9a82-02f3facd5fc4",
+      "sender": "robert.peterson@rusd.edu",
+      "recipients": [
+        "patrick.howard@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "POS System Issue in Cafeteria - Needs IT Support",
+      "body": "Hi Patrick,\n\nI wanted to reach out regarding a technical issue we're experiencing in the cafeteria. Our point-of-sale (POS) system has been running slowly this morning, and we're having intermittent connectivity problems when processing student meal payments.\n\nThis is affecting our ability to efficiently process transactions during lunch periods. We've tried the standard restart, but the issue persists.\n\nCould you please have someone from IT take a look at this when you get a chance? I want to make sure we get this resolved before the lunch rush tomorrow.\n\nThank you for your help!\n\nBest regards,\nRobert Peterson\nCafeteria Manager",
+      "date_sent": "2024-07-24T10:57:58.731489",
+      "email_type": "regular",
+      "department": null,
+      "topics": [
+        "grant applications",
+        "professional development"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "03c9e401-2a3b-4663-8bb7-b9d9151320b9",
+      "sender": "allison.obrien@rusd.edu",
+      "recipients": [
+        "scott.lowe@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Parking Lot Reminder - Staff Spaces",
+      "body": "Hi Scott,\n\nI wanted to send a quick reminder about our staff parking lot procedures. We've had a few instances recently where vehicles have been parked in visitor spaces or blocking access lanes.\n\nAs a friendly reminder, please ensure that:\n\n• Staff park only in designated staff spaces\n• Access lanes remain clear at all times\n• Visitor spaces are reserved for parents and guests during school hours\n• The loading zone is kept clear during arrival and dismissal times\n\nThank you for your cooperation in keeping our parking areas organized and safe for everyone. If you have any questions about parking assignments, please let me know.\n\nBest regards,\nAllison O'Brien\nVice Principal",
+      "date_sent": "2024-02-23T10:10:47.261128",
+      "email_type": "reply",
+      "department": null,
+      "topics": [
+        "student achievement"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "864e51c2-28b9-4d3a-84e7-bfb319f30bf6",
+      "sender": "susan.miller@rusd.edu",
+      "recipients": [
+        "robert.silva@rusd.edu",
+        "steven.petersen@rusd.edu",
+        "jeffrey.morgan@rusd.edu"
+      ],
+      "cc": [
+        "john.kim@rusd.edu",
+        "angela.randall@rusd.edu"
+      ],
+      "subject": "Lunch Schedule Update - Week of January 15th",
+      "body": "Good morning Robert, Steven, and Jeffrey,\n\nI wanted to remind everyone of our lunch schedule for the upcoming week. Please ensure your classes are prepared for the following times:\n\nMonday - Friday:\n• Grade 3 & 4: 11:30 AM - 12:00 PM\n• Grade 5 & 6: 12:00 PM - 12:30 PM\n• Grade 7 & 8: 12:30 PM - 1:00 PM\n\nA few reminders:\n- Please have students line up 5 minutes before their designated lunch period\n- Duty assignments remain the same as posted on the staff bulletin board\n- The cafeteria will be closed on Friday for inventory, so packed lunches are recommended that day\n\nIf you have any questions or need to arrange a special lunch time for a field trip or school event, please let me know as soon as possible.\n\nThank you,\nSusan Miller",
+      "date_sent": "2024-04-19T14:09:27.077029",
+      "email_type": "meeting_request",
+      "department": null,
+      "topics": [
+        "vendor contracts"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "5f4d9de5-e670-4fa6-bd4a-4a7fab8e33c0",
+      "sender": "andrew.morse@rusd.edu",
+      "recipients": [
+        "kevin.williams@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Schedule Change Notice - Please Review",
+      "body": "Hi Kevin,\n\nI wanted to inform you of an upcoming schedule change that may affect your classroom or responsibilities.\n\nEffective next Monday, September 18th, we will be adjusting our daily bell schedule to accommodate the new library renovation project. The changes are as follows:\n\n• First period: 8:00 AM - 8:45 AM (unchanged)\n• Second period: 8:50 AM - 9:35 AM (unchanged)\n• Third period: 9:40 AM - 10:25 AM (5-minute extension)\n• Fourth period: 10:30 AM - 11:15 AM (unchanged)\n• Lunch A: 11:15 AM - 11:50 AM\n• Lunch B: 11:50 AM - 12:25 PM\n• Fifth period: 12:30 PM - 1:15 PM (unchanged)\n• Sixth period: 1:20 PM - 2:05 PM (unchanged)\n\nPlease review the attached detailed schedule and let me know if you have any questions or conflicts. A copy will also be posted in the main office.\n\nThank you for your flexibility during this transition.\n\nBest regards,\nAndrew Morse\nVice Principal",
+      "date_sent": "2024-12-09T18:35:56.131821",
+      "email_type": "announcement",
+      "department": null,
+      "topics": [
+        "vendor contracts"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "5b76229f-b8ad-4648-ae12-2c81de9dd240",
+      "sender": "joseph.pena@rusd.edu",
+      "recipients": [
+        "kristin.dean@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Parking Lot Reminder",
+      "body": "Hi Kristin,\n\nI wanted to reach out with a quick reminder about parking lot procedures. As we head into the busy morning arrival times, please remember to:\n\n• Park in designated staff spaces only\n• Keep the loading zones clear for student drop-off\n• Arrive a few minutes early to avoid congestion during peak times\n• Display your parking permit on your dashboard\n\nThese simple steps help keep our parking areas organized and safe for everyone. If you have any questions about parking assignments or need a replacement permit, please contact the main office.\n\nThank you for your cooperation!\n\nBest regards,\nJoseph Pena\nSpecial Education Teacher",
+      "date_sent": "2025-06-08T12:01:11.234103",
+      "email_type": "regular",
+      "department": "Special Education",
+      "topics": [
+        "substitute coverage",
+        "food services"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "22df8b26-ac41-4311-aeac-3e1a1798031c",
+      "sender": "barbara.mcgrath@rusd.edu",
+      "recipients": [
+        "angela.randall@rusd.edu",
+        "brittany.cruz@rusd.edu",
+        "sarah.anderson@rusd.edu"
+      ],
+      "cc": [
+        "carly.preston@rusd.edu",
+        "danny.jones@rusd.edu"
+      ],
+      "subject": "Reminder: Parking Lot Procedures and Guidelines",
+      "body": "Dear Angela, Brittany, and Sarah,\n\nI wanted to send a quick reminder about our parking lot procedures as we head into the new week.\n\nPlease keep the following in mind:\n\n• Park only in designated staff spaces\n• Arrive early enough to allow time for safe parking before the start of the school day\n• Keep the fire lane and emergency access areas clear at all times\n• Be mindful of student drop-off zones during morning and afternoon dismissal\n• Report any parking lot safety concerns to the main office\n\nThank you for your cooperation in keeping our parking areas organized and safe for everyone.\n\nBest regards,\nBarbara McGrath",
+      "date_sent": "2023-12-19T07:24:55.597018",
+      "email_type": "forward",
+      "department": null,
+      "topics": [
+        "safety protocols",
+        "professional development"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "31612005-5c5a-42cb-b495-ea9c174b165e",
+      "sender": "stephen.adkins@rusd.edu",
+      "recipients": [
+        "casey.elliott@rusd.edu"
+      ],
+      "cc": [
+        "julie.phillips@rusd.edu"
+      ],
+      "subject": "Staff Meeting Reminder - Thursday, 3:30 PM",
+      "body": "Hi Casey,\n\nI wanted to send you a quick reminder about our staff meeting scheduled for this Thursday at 3:30 PM in the library.\n\nWe'll be discussing:\n• Updates on the upcoming standardized testing schedule\n• New classroom technology resources available this semester\n• Reminders about attendance reporting procedures\n• Q&A with administration\n\nPlease plan to attend, and feel free to bring any questions or concerns you'd like to address.\n\nLooking forward to seeing you there!\n\nBest regards,\nStephen Adkins",
+      "date_sent": "2024-01-31T09:25:21.200207",
+      "email_type": "regular",
+      "department": null,
+      "topics": [
+        "food services",
+        "grant applications"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "d4bf49bf-e120-4f3e-a815-2280db40248f",
+      "sender": "brian.gutierrez@rusd.edu",
+      "recipients": [
+        "tammy.patton@rusd.edu",
+        "debbie.velez@rusd.edu"
+      ],
+      "cc": [
+        "ebony.tucker@rusd.edu",
+        "keith.adams@rusd.edu"
+      ],
+      "subject": "Upcoming Professional Development Opportunity - Spring 2024",
+      "body": "Dear Tammy and Debbie,\n\nI hope this message finds you well. I wanted to reach out regarding an upcoming professional development session that may be of interest to you both.\n\nThe district is offering a workshop on \"Effective Classroom Management Strategies\" scheduled for Thursday, March 14th from 3:30 PM to 5:00 PM in the library conference room. This session will be led by Dr. Patricia Chen from the district office and will cover evidence-based techniques for creating a positive learning environment.\n\nRegistration is required and can be completed through the district portal by March 10th. Light refreshments will be provided. If you have any questions about the content or logistics, please don't hesitate to reach out.\n\nI hope to see you both there!\n\nBest regards,\nBrian Gutierrez\nTeacher",
+      "date_sent": "2025-06-07T15:16:02.415334",
+      "email_type": "reply",
+      "department": null,
+      "topics": [
+        "standardized testing",
+        "parent communication"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "016f858d-f92a-4660-8ee8-7c960b128eb0",
+      "sender": "michael.hartman@rusd.edu",
+      "recipients": [
+        "christopher.cortez@rusd.edu",
+        "sarah.garcia@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Upcoming Professional Development Opportunities - Spring 2024",
+      "body": "Dear Christopher and Sarah,\n\nI hope this email finds you well. I wanted to reach out to share information about the professional development offerings available to our staff this spring.\n\nThe district has scheduled the following workshops:\n\n• Differentiated Instruction Strategies - March 15th, 2:00-4:00 PM\n• Technology Integration in the Classroom - March 22nd, 2:00-4:00 PM\n• Social-Emotional Learning Best Practices - April 12th, 2:00-4:00 PM\n\nAll sessions will be held in the Professional Development Center and include light refreshments. Attendance is optional but encouraged. If you're interested in attending any of these sessions, please complete the sign-up form linked in the district portal by March 1st.\n\nAdditionally, remember that we have until the end of April to complete our required 6 hours of professional development for the school year. If you need assistance identifying courses that align with your professional goals, please don't hesitate to reach out.\n\nPlease let me know if you have any questions or would like more information about any of these opportunities.\n\nBest regards,\nMichael Hartman",
+      "date_sent": "2025-10-22T17:27:00.377706",
+      "email_type": "forward",
+      "department": null,
+      "topics": [
+        "safety protocols"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "0d0b0a7d-dba4-41b8-9de6-536919872e1b",
+      "sender": "kylie.blackwell@rusd.edu",
+      "recipients": [
+        "amy.morris@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Parent-Teacher Conference Scheduling - [Student Name]",
+      "body": "Dear Amy,\n\nI hope this email finds you well. I wanted to reach out to schedule a parent-teacher conference to discuss [Student Name]'s progress and performance this term.\n\nParent-teacher conferences are an important opportunity for us to collaborate and ensure your child is receiving the support they need to succeed academically and socially. During our meeting, I'd like to review recent assignments, classroom participation, and any areas where we can work together to support their growth.\n\nPlease let me know your availability for a 15-20 minute conference. I have the following time slots available:\n\n- [Date] at [Time]\n- [Date] at [Time]\n- [Date] at [Time]\n\nIf none of these times work for you, please feel free to suggest an alternative time that fits your schedule.\n\nYou can respond to this email or call the school office to confirm your preferred time slot.\n\nThank you, and I look forward to speaking with you soon.\n\nBest regards,\nKylie Blackwell\n[School Name]\n[Contact Information]",
+      "date_sent": "2025-01-19T16:54:07.043573",
+      "email_type": "regular",
+      "department": null,
+      "topics": [
+        "food services",
+        "special education"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "fb053e12-8a28-4a48-84da-26a1e92c8ba5",
+      "sender": "raymond.blair@rusd.edu",
+      "recipients": [
+        "david.ryan@rusd.edu",
+        "sarah.romero@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Library Supply Order - Please Review",
+      "body": "Hi David and Sarah,\n\nI hope this email finds you well. I'm reaching out to coordinate our quarterly supply order for the library.\n\nWe're currently running low on several items:\n- Book processing labels and date due slips\n- Laminating sheets\n- Shelf markers and signage materials\n- Bookmarks for circulation\n- Binding supplies for damaged materials\n\nCould you please review the attached list and let me know if there are any additional supplies your departments need that I should include in this order? I'd like to submit the requisition by end of day Friday to ensure delivery before the start of next month.\n\nPlease reply with any requests or questions by Thursday afternoon.\n\nThank you,\nRaymond Blair\nLibrarian",
+      "date_sent": "2024-10-02T16:24:43.132148",
+      "email_type": "regular",
+      "department": null,
+      "topics": [
+        "special education",
+        "parent communication"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "e8720f47-e627-4ac2-a4b2-e5128da92686",
+      "sender": "margaret.terry@rusd.edu",
+      "recipients": [
+        "christopher.miller@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Professional Development Opportunity - Spring Workshop Series",
+      "body": "Dear Christopher,\n\nI hope this message finds you well. I wanted to reach out regarding the upcoming professional development workshops scheduled for this spring.\n\nOur district has organized a series of sessions focused on instructional best practices and curriculum enhancement. The workshops will be held on the following dates:\n\n• March 15th: Differentiated Instruction Strategies\n• March 22nd: Assessment and Data Analysis\n• April 5th: Technology Integration in the Classroom\n\nEach session runs from 3:30 PM to 5:00 PM in the district office conference room. Attendance is encouraged for all interested staff members.\n\nPlease let me know if you plan to attend any of these sessions by March 8th so we can ensure adequate materials and seating. If you have any questions about the content or scheduling, feel free to reach out.\n\nThank you, and I look forward to seeing you there.\n\nBest regards,\nMargaret Terry",
+      "date_sent": "2025-05-05T12:50:37.781938",
+      "email_type": "regular",
+      "department": null,
+      "topics": [
+        "curriculum updates",
+        "food services"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "e56a2691-4c94-4334-b748-b609e2ec2b9f",
+      "sender": "jesse.mann@rusd.edu",
+      "recipients": [
+        "jeffrey.rodriguez@rusd.edu",
+        "cindy.sanders@rusd.edu",
+        "jennifer.collins@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Professional Development Opportunity - Spring 2024 Workshop Series",
+      "body": "Dear Jeffrey, Cindy, and Jennifer,\n\nI hope this message finds you well. I'm writing to inform you about an upcoming professional development workshop series being offered by the district this spring.\n\nThe sessions will focus on:\n• Differentiated Instruction Strategies\n• Using Data to Inform Classroom Practice\n• Collaborative Learning Communities\n\nDetails:\nDates: Thursdays, March 7, 14, and 21\nTime: 3:30 PM - 5:00 PM\nLocation: District Office, Room 204\nFacilitator: Dr. Patricia Hayes, District Curriculum Coordinator\n\nAttendance is optional but highly encouraged. Please let me know by February 28th if you plan to participate so I can provide the facilitator with an accurate headcount. Light refreshments will be provided.\n\nIf you have any questions or need additional information about the workshops, please don't hesitate to reach out.\n\nBest regards,\nJesse Mann\nPrincipal",
+      "date_sent": "2024-06-27T16:40:39.841915",
+      "email_type": "forward",
+      "department": null,
+      "topics": [
+        "food services"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "d0a11e35-9673-4b15-9d03-676dc6cf53cc",
+      "sender": "amber.lindsey@rusd.edu",
+      "recipients": [
+        "crystal.mccall@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Parking Lot Reminders for Staff",
+      "body": "Hi Crystal,\n\nI wanted to reach out with a quick reminder about our parking lot procedures. With the start of the new week, I've noticed a few parking spots have been blocked, which makes it difficult for everyone to find accessible spaces.\n\nA few reminders:\n- Please park only in designated staff spaces\n- Keep the loading zone clear during arrival and dismissal times\n- Ensure your vehicle is parked completely within the lines\n\nI know we all have busy schedules, but these guidelines help keep our parking lot safe and organized for students, staff, and visitors.\n\nThanks for your attention to this!\n\nBest regards,\nAmber Lindsey\nSpecial Education Teacher",
+      "date_sent": "2025-11-11T06:15:30.187503",
+      "email_type": "reply",
+      "department": "Special Education",
+      "topics": [
+        "special education",
+        "food services"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "bad16c43-b4bb-4c66-8040-ca1c8ef4e5d9",
+      "sender": "valerie.kennedy@rusd.edu",
+      "recipients": [
+        "daniel.garcia@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Upcoming Field Trip - Permission Form Required",
+      "body": "Dear Daniel,\n\nI hope this email finds you well. I wanted to reach out regarding an upcoming field trip for our class.\n\nTrip Details:\n- Destination: Local Science Museum\n- Date: Friday, April 14th\n- Departure Time: 9:00 AM\n- Return Time: 2:30 PM\n- Cost: $12 per student\n\nPlease complete and return the attached permission form by Wednesday, April 12th. Students should wear comfortable walking shoes and bring a packed lunch or lunch money for the museum café.\n\nIf you have any questions or concerns about the trip, please don't hesitate to contact me.\n\nBest regards,\nValerie Kennedy\nTeacher",
+      "date_sent": "2024-07-18T12:15:09.135837",
+      "email_type": "regular",
+      "department": null,
+      "topics": [
+        "substitute coverage"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "f5644476-2f9d-4c47-b23a-7d2d12a63d86",
+      "sender": "tina.king@rusd.edu",
+      "recipients": [
+        "jennifer.williams@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Technology Issue - Classroom Projector",
+      "body": "Hi Jennifer,\n\nI wanted to reach out regarding a technical issue I've been experiencing in my classroom. The projector in Room 204 has been displaying intermittently throughout the week. Sometimes it takes several minutes to connect, and occasionally the image cuts out during lessons.\n\nI've tried the basic troubleshooting steps (restarting the projector and checking the cable connections), but the problem persists. Could you please have someone from the IT department take a look at it when they have availability?\n\nIn the meantime, I'm using alternative methods to deliver content, so there's no immediate impact on instruction. However, I'd appreciate any assistance you can provide.\n\nThank you for your help!\n\nBest regards,\nTina King\nTeacher, Room 204",
+      "date_sent": "2024-08-18T06:35:15.529049",
+      "email_type": "regular",
+      "department": null,
+      "topics": [
+        "substitute coverage"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "d685daa5-435e-4d93-8acf-a90ae3b69e6e",
+      "sender": "joseph.schaefer@rusd.edu",
+      "recipients": [
+        "maria.nelson@rusd.edu",
+        "kathleen.becker@rusd.edu",
+        "angela.anderson@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "ESSER Fund Allocation Timeline - Need Input from Curriculum & Operations",
+      "body": "Hi Maria, Kathleen, and Angela,\n\nI wanted to touch base about where we stand with our remaining ESSER funds before the end of the fiscal year. As you know, we still have a balance from the ARP funds that we need to obligate by June 30th, and I'd like to make sure we're aligned on the best use of those dollars.\n\nI've been reviewing our CARES Act spending from earlier phases, and I think we have a good opportunity to strengthen some of our initiatives that were successful. However, I need input from each of your departments:\n\nMaria - Curriculum is looking at some professional development and instructional materials, correct? Can you send me a breakdown of what you're considering and rough costs? I want to make sure it aligns with our timeline.\n\nKathleen - I know Operations has been discussing some technology infrastructure improvements. Are those still priorities, or has that shifted? Let me know what's realistic to implement before year-end.\n\nAngela - Similar question on your end with student support services. I want to make sure we're not duplicating efforts across departments.\n\nCan we set up a brief meeting next week to go through the numbers? I'm thinking 30 minutes should do it. I want to make sure we're using these funds strategically and that everything is properly documented for our audit.\n\nThanks,\nJoseph",
+      "date_sent": "2024-05-25T13:39:52",
+      "email_type": "regular",
+      "department": "Finance",
+      "topics": [
+        "federal funding",
+        "pandemic response"
+      ],
+      "generated_for_requests": [
+        "cpra_002"
+      ],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "970627ad-29f0-4d70-9a46-e1b613848cb1",
+      "sender": "joshua.lamb@rusd.edu",
+      "recipients": [
+        "richard.davis@rusd.edu",
+        "adriana.bailey@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Substitute Coverage Needed - Monday, [Date]",
+      "body": "Hi Richard and Adriana,\n\nI wanted to reach out regarding substitute coverage for my classroom on Monday, [Date]. I have a professional development meeting that day and will need coverage for all four of my class periods.\n\nI've already submitted the absence request through the district portal and uploaded my lesson plans. The substitute should find everything they need in the shared folder on the staff drive.\n\nPlease let me know if you're able to cover any of these periods, or if you have recommendations for available substitutes. I'm flexible and can work around the coverage schedule.\n\nThank you for your help!\n\nBest regards,\nJoshua Lamb",
+      "date_sent": "2024-09-02T10:48:15.665105",
+      "email_type": "regular",
+      "department": null,
+      "topics": [
+        "food services",
+        "technology infrastructure"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "a26bb534-e13d-4e0e-9966-13a39d288baf",
+      "sender": "patrick.howard@rusd.edu",
+      "recipients": [
+        "robert.simpson@rusd.edu",
+        "michelle.ramsey@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Classroom Supply Order - Please Review",
+      "body": "Hi Robert and Michelle,\n\nI hope this email finds you well. I'm reaching out to coordinate our classroom supply orders for the upcoming quarter.\n\nI wanted to check in with both of you about any supplies you may need for your classrooms. Please let me know if you need:\n\n• Writing materials (pencils, pens, markers)\n• Paper products (copy paper, construction paper, notebooks)\n• Cleaning and sanitation supplies\n• Classroom organizational items\n• Any other standard instructional materials\n\nPlease submit your requests by Friday, September 15th so I can consolidate everything and submit to the district office. This will help ensure we stay within our budget allocations and receive items before the end of the month.\n\nIf you have any questions or need clarification on the ordering process, feel free to reach out.\n\nThank you,\nPatrick Howard",
+      "date_sent": "2025-03-03T11:20:57.642463",
+      "email_type": "regular",
+      "department": null,
+      "topics": [
+        "special education"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "47c3b621-7bfe-43d2-bd48-b94cbfd49cce",
+      "sender": "casey.hubbard@rusd.edu",
+      "recipients": [
+        "dawn.johnson@rusd.edu",
+        "doris.jones@rusd.edu",
+        "lori.flynn@rusd.edu"
+      ],
+      "cc": [
+        "steven.campbell@rusd.edu",
+        "stacy.cole@rusd.edu"
+      ],
+      "subject": "Updates on SPED Program Changes - Need Input from Team",
+      "body": "Hi Dawn, Doris, and Lori,\n\nI wanted to touch base with you all about the special education program modifications that were discussed at last week's district meeting. As you know, we're looking at restructuring how we handle some of our resource room scheduling and IEP coordination processes.\n\nI've been working with admin on the implementation timeline, and we're looking at a soft rollout starting in January. Before we move forward, I'd really like to get your feedback on a few things:\n\n1. The new IEP meeting scheduling system - I know it's going to add some steps upfront, but I think it'll help us track parent communication better. Has anyone had a chance to look at the draft workflow?\n\n2. We're also adjusting how we allocate SPED support staff across buildings. I want to make sure we're not creating gaps in coverage, especially for our high-need students.\n\n3. There's a question about whether we need to adjust our current documentation templates to align with the new process.\n\nCould we find time this week or early next week to sync up? I'm flexible on timing - either a quick call or in-person, whatever works best. I know everyone's swamped right now, but I'd rather get this right from the start.\n\nLet me know what you think!\n\nThanks,\nCasey",
+      "date_sent": "2024-05-04T13:26:03",
+      "email_type": "reply",
+      "department": "Special Education",
+      "topics": [
+        "special education services",
+        "individualized education"
+      ],
+      "generated_for_requests": [
+        "cpra_003"
+      ],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "cf6948cc-3265-4cd9-99e4-caf70d7b98a2",
+      "sender": "joseph.schaefer@rusd.edu",
+      "recipients": [
+        "wendy.taylor@rusd.edu",
+        "erin.wilson@rusd.edu",
+        "dr. patricia.johnson@rusd.edu"
+      ],
+      "cc": [],
+      "subject": "Lunch Schedule Reminder - Week of January 15th",
+      "body": "Good morning,\n\nI wanted to send a quick reminder about our lunch schedule for the upcoming week. Please ensure all staff and students are aware of the following:\n\n• Elementary lunch periods: 11:30 AM - 1:00 PM\n• Middle school lunch periods: 12:00 PM - 1:15 PM\n• High school lunch periods: 12:15 PM - 1:30 PM\n\nCafeteria operations will run as normal with all three serving lines open during peak times. If you have any scheduling conflicts or special lunch arrangements, please let me know as soon as possible.\n\nAlso, a reminder that lunch account balances can be checked through our parent portal. If you have questions regarding meal pricing or account management, please contact the cafeteria office directly.\n\nThank you,\n\nJoseph Schaefer\nFinance Director",
+      "date_sent": "2025-02-04T18:24:54.216284",
+      "email_type": "forward",
+      "department": "Finance",
+      "topics": [
+        "curriculum updates"
+      ],
+      "generated_for_requests": [],
+      "challenge_patterns": [],
+      "has_attachments": false,
+      "attachments": []
+    },
+    {
+      "id": "2b97b966-ddef-4ac7-b73c-37a68a650718",
+      "sender": "ebony.tucker@rusd.edu",
+      "recipients": [
+        "lauren.herrera@rusd.edu",
+        "rodney.bennett@rusd.edu"
+      ],
+      "cc": [
+        "kristi.flores@rusd.edu",
+        "franklin.bond@rusd.edu"
+      ],
+      "subject": "Water Quality Testing Schedule - Need Your Input",
+      "body": "Hi Lauren and Rodney,\n\nI wanted to touch base about the water system maintenance we've got coming up this quarter. As you know, we're scheduling the lead testing across all our buildings, and I wanted to coordinate with both of you on timing and logistics.\n\nLaurence from the district office is taking the lead on getting the testing contractor scheduled, but I'll need to coordinate access to all the mechanical rooms and ensure we have proper documentation of our drinking water fixtures. The testing should cover our main lines and all the outlets in the cafeterias and classrooms.\n\nA few things I need from you:\n\n1. Lauren - can you confirm which buildings are on your maintenance route? I want to make sure we don't double-book anyone during the testing.\n\n2. Rodney - I'll need you to lead the effort on getting our current water quality records organized. The contractor will want to see our last round of results and any remediation work we've done.\n\nI'm thinking we should knock this out before the end of the month while we have good weather for any potential repairs. Once we get the lead testing results back, we can assess if we need to do any flushing protocols or filter replacements on the drinking water stations.\n\nCan you both let me know your availability for a quick meeting next week? I'd like to walk through the testing procedures and make sure everyone knows what to expect.\n\nThanks,\nEbony",
+      "date_sent": "2024-04-23T08:39:34",
+      "email_type": "reply",
+      "department": "Facilities",
+      "topics": [
+        "water quality testing",
+        "environmental safety"
+      ],
+      "generated_for_requests": [
+        "cpra_001"
+      ],
+      "challenge_patterns": [
+        "ChallengeType.NEAR_MISS",
+        "ChallengeType.AMBIGUOUS_TERMS"
+      ],
+      "has_attachments": true,
+      "attachments": [
+        {
+          "filename": "budget_summary.xlsx",
+          "file_type": "Excel",
+          "size_kb": 89
+        },
+        {
+          "filename": "presentation.pptx",
+          "file_type": "PowerPoint",
+          "size_kb": 1250
+        }
+      ]
+    }
+  ],
+  "cpra_requests": [
+    {
+      "id": "cpra_001",
+      "title": "Lead Testing in Water Systems",
+      "description": "Request for communications about lead testing in school water systems",
+      "request_text": "Please provide all emails, memos, and communications regarding lead testing, water quality testing, or drinking water safety in school facilities from January 1, 2023 to present. This includes communications about test results, remediation efforts, and communications with parents or regulatory agencies.",
+      "date_submitted": "2024-10-01T00:00:00",
+      "date_range_start": "2023-01-01T00:00:00",
+      "date_range_end": "2024-10-01T00:00:00",
+      "primary_keywords": [
+        "lead testing",
+        "water quality",
+        "drinking water",
+        "lead levels"
+      ],
+      "secondary_keywords": [
+        "water safety",
+        "contamination",
+        "EPA",
+        "testing results",
+        "water fountains"
+      ],
+      "concepts": [
+        "water quality testing",
+        "environmental safety",
+        "lead contamination",
+        "student health",
+        "regulatory compliance"
+      ],
+      "complexity": "complex",
+      "challenge_types": [
+        "ambiguous_terms",
+        "near_miss"
+      ]
+    },
+    {
+      "id": "cpra_002",
+      "title": "COVID Relief Fund Allocation",
+      "description": "Request for communications about federal COVID relief fund allocation",
+      "request_text": "All communications, including emails and attachments, related to the allocation, distribution, or use of federal COVID-19 relief funds (ESSER, CARES Act, ARP) received by the district. Include discussions of spending priorities, vendor selections, and board presentations from March 2020 to present.",
+      "date_submitted": "2024-10-01T00:00:00",
+      "date_range_start": "2020-03-01T00:00:00",
+      "date_range_end": "2024-10-01T00:00:00",
+      "primary_keywords": [
+        "ESSER",
+        "CARES Act",
+        "ARP funds",
+        "COVID relief",
+        "federal funds"
+      ],
+      "secondary_keywords": [
+        "budget allocation",
+        "pandemic funding",
+        "spending plan",
+        "relief funds"
+      ],
+      "concepts": [
+        "federal funding",
+        "pandemic response",
+        "budget planning",
+        "educational technology",
+        "facility improvements"
+      ],
+      "complexity": "moderate",
+      "challenge_types": [
+        "indirect_reference"
+      ]
+    },
+    {
+      "id": "cpra_003",
+      "title": "Special Education Program Changes",
+      "description": "Request for communications about special education program modifications",
+      "request_text": "Please provide all emails and documents discussing changes, modifications, or updates to special education programs, IEP processes, or special education staffing from August 2023 to present. Include communications with parents, staff discussions, and policy updates.",
+      "date_submitted": "2024-10-01T00:00:00",
+      "date_range_start": "2023-08-01T00:00:00",
+      "date_range_end": "2024-10-01T00:00:00",
+      "primary_keywords": [
+        "special education",
+        "IEP",
+        "SPED",
+        "504 plan"
+      ],
+      "secondary_keywords": [
+        "inclusion",
+        "mainstreaming",
+        "accommodations",
+        "modifications"
+      ],
+      "concepts": [
+        "special education services",
+        "individualized education",
+        "disability accommodations",
+        "inclusive education",
+        "parent communication"
+      ],
+      "complexity": "moderate",
+      "challenge_types": [
+        "near_miss",
+        "partial_match"
+      ]
+    },
+    {
+      "id": "cpra_004",
+      "title": "EdTech Vendor Contracts",
+      "description": "Request for communications about educational technology vendor selection",
+      "request_text": "All emails and communications regarding the selection, evaluation, or contracting with educational technology vendors, including but not limited to learning management systems, student information systems, and digital curriculum platforms from January 2024 to present.",
+      "date_submitted": "2024-10-01T00:00:00",
+      "date_range_start": "2024-01-01T00:00:00",
+      "date_range_end": "2024-10-01T00:00:00",
+      "primary_keywords": [
+        "vendor",
+        "contract",
+        "EdTech",
+        "procurement",
+        "RFP"
+      ],
+      "secondary_keywords": [
+        "software",
+        "platform",
+        "subscription",
+        "licensing",
+        "SaaS"
+      ],
+      "concepts": [
+        "technology procurement",
+        "vendor evaluation",
+        "digital learning tools",
+        "software contracts",
+        "data privacy"
+      ],
+      "complexity": "simple",
+      "challenge_types": [
+        "temporal_mismatch"
+      ]
+    },
+    {
+      "id": "cpra_005",
+      "title": "Student Safety Incidents",
+      "description": "Request for communications about student safety incidents and responses",
+      "request_text": "Please provide all emails and reports regarding student safety incidents, including but not limited to bullying reports, playground injuries requiring medical attention, and security concerns from the current school year (August 2024 to present). Exclude routine minor incidents.",
+      "date_submitted": "2024-10-01T00:00:00",
+      "date_range_start": "2024-08-01T00:00:00",
+      "date_range_end": "2024-10-01T00:00:00",
+      "primary_keywords": [
+        "safety incident",
+        "injury report",
+        "bullying",
+        "security"
+      ],
+      "secondary_keywords": [
+        "medical attention",
+        "parent notification",
+        "incident response"
+      ],
+      "concepts": [
+        "student safety",
+        "incident management",
+        "school security",
+        "parent communication",
+        "risk management"
+      ],
+      "complexity": "moderate",
+      "challenge_types": [
+        "indirect_reference",
+        "near_miss"
+      ]
+    }
+  ],
+  "responsiveness_map": {
+    "7df6eb8c-4591-4f01-9dc3-56d0873a1a5c": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "d148709b-9729-4107-a6dc-dcd333a880fc": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "047d0596-9b7b-4cd8-9c94-47bcac05f6d4": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "2b58a1ea-b989-4de5-a176-2aa4d70d97df": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "1eeef80f-00f4-42e6-90ae-484c40639d99": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "5ea528c3-d074-4d90-a820-b0a608c02ea4": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "2e66b8fb-cc7f-42b7-ae34-fa393efa3925": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "c37a72e7-6d97-46ca-a0be-736805c1deb0": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": true,
+        "confidence": 0.95,
+        "reason": "direct_match",
+        "explanation": "Email directly addresses EdTech Vendor Contracts",
+        "matching_keywords": [
+          "vendor",
+          "contract",
+          "EdTech"
+        ],
+        "matching_concepts": [
+          "technology procurement",
+          "vendor evaluation"
+        ]
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "3596d88f-bf04-42f4-9a82-02f3facd5fc4": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "03c9e401-2a3b-4663-8bb7-b9d9151320b9": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "864e51c2-28b9-4d3a-84e7-bfb319f30bf6": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "5f4d9de5-e670-4fa6-bd4a-4a7fab8e33c0": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "5b76229f-b8ad-4648-ae12-2c81de9dd240": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "22df8b26-ac41-4311-aeac-3e1a1798031c": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "31612005-5c5a-42cb-b495-ea9c174b165e": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "d4bf49bf-e120-4f3e-a815-2280db40248f": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "016f858d-f92a-4660-8ee8-7c960b128eb0": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "0d0b0a7d-dba4-41b8-9de6-536919872e1b": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "fb053e12-8a28-4a48-84da-26a1e92c8ba5": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "e8720f47-e627-4ac2-a4b2-e5128da92686": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "e56a2691-4c94-4334-b748-b609e2ec2b9f": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "d0a11e35-9673-4b15-9d03-676dc6cf53cc": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "bad16c43-b4bb-4c66-8040-ca1c8ef4e5d9": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "f5644476-2f9d-4c47-b23a-7d2d12a63d86": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "d685daa5-435e-4d93-8acf-a90ae3b69e6e": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": true,
+        "confidence": 0.95,
+        "reason": "direct_match",
+        "explanation": "Email directly addresses COVID Relief Fund Allocation",
+        "matching_keywords": [
+          "ESSER",
+          "CARES Act",
+          "ARP funds"
+        ],
+        "matching_concepts": [
+          "federal funding",
+          "pandemic response"
+        ]
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "970627ad-29f0-4d70-9a46-e1b613848cb1": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "a26bb534-e13d-4e0e-9966-13a39d288baf": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "47c3b621-7bfe-43d2-bd48-b94cbfd49cce": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": true,
+        "confidence": 0.95,
+        "reason": "direct_match",
+        "explanation": "Email directly addresses Special Education Program Changes",
+        "matching_keywords": [
+          "special education",
+          "IEP",
+          "SPED",
+          "modifications"
+        ],
+        "matching_concepts": [
+          "special education services",
+          "individualized education"
+        ]
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "cf6948cc-3265-4cd9-99e4-caf70d7b98a2": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ],
+    "2b97b966-ddef-4ac7-b73c-37a68a650718": [
+      {
+        "cpra_request_id": "cpra_001",
+        "is_responsive": true,
+        "confidence": 0.9,
+        "reason": "attachment_ref",
+        "explanation": "Email directly addresses Lead Testing in Water Systems",
+        "matching_keywords": [
+          "lead testing",
+          "water quality",
+          "drinking water",
+          "EPA",
+          "testing results"
+        ],
+        "matching_concepts": [
+          "water quality testing",
+          "environmental safety"
+        ]
+      },
+      {
+        "cpra_request_id": "cpra_002",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_003",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_004",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      },
+      {
+        "cpra_request_id": "cpra_005",
+        "is_responsive": false,
+        "confidence": 1.0,
+        "reason": "direct_match",
+        "explanation": "Email does not address the request topic",
+        "matching_keywords": [],
+        "matching_concepts": []
+      }
+    ]
+  },
+  "statistics": {
+    "total_emails": 30,
+    "responsive_emails": 4,
+    "responsive_rate": 0.13333333333333333,
+    "emails_per_request": {
+      "cpra_001": 1,
+      "cpra_002": 1,
+      "cpra_003": 1,
+      "cpra_004": 1,
+      "cpra_005": 0
+    },
+    "challenge_distribution": {
+      "ChallengeType.NEAR_MISS": 1,
+      "ChallengeType.AMBIGUOUS_TERMS": 1
+    },
+    "responsiveness_reasons": {
+      "direct_match": 3,
+      "attachment_ref": 1
+    }
+  }
+}

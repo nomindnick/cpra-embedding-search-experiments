@@ -1,0 +1,10 @@
+Message-ID: e83d6008-852e-4358-b4ff-4184d3964cf5
+Date: Thu, 05 Sep 2024 06:22:30
+From: bobby.berg@rusd.edu
+To: andrew.morse@rusd.edu, shannon.frazier@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning, standardized testing
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nBobby

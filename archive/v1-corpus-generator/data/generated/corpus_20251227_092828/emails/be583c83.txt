@@ -1,0 +1,11 @@
+Message-ID: be583c83-1349-426f-bcba-ab2aa5c68a9e
+Date: Tue, 21 May 2024 08:28:04
+From: david.young@rusd.edu
+To: theresa.long@rusd.edu, shannon.frazier@rusd.edu, tyler.jordan@rusd.edu
+Cc: martin.hines@rusd.edu, lori.flynn@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: substitute coverage, parent communication
+
+Please remember to display your parking permits.\n\nThanks,\nDavid

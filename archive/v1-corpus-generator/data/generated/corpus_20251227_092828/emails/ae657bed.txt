@@ -1,0 +1,10 @@
+Message-ID: ae657bed-e202-4951-95ba-9a14b62c0025
+Date: Tue, 28 Oct 2025 09:49:04
+From: stephen.adkins@rusd.edu
+To: dennis.mccann@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, budget planning
+
+The lunch schedule has been updated for next week.\n\nThanks,\nStephen

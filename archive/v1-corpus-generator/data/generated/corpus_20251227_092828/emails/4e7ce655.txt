@@ -1,0 +1,10 @@
+Message-ID: 4e7ce655-7270-4d4c-ae4e-e402ea576f23
+Date: Wed, 06 Aug 2025 10:29:09
+From: joshua.jones@rusd.edu
+To: john.alvarez@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, vendor contracts
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJoshua

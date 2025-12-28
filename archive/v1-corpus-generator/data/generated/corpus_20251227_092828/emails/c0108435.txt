@@ -1,0 +1,10 @@
+Message-ID: c0108435-28bc-4ee4-8c63-d3852abcbeab
+Date: Fri, 03 Oct 2025 17:56:31
+From: joseph.schaefer@rusd.edu
+To: helen.peterson@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: Finance
+X-Topics: student achievement, special education
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJoseph

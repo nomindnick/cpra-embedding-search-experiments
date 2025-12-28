@@ -1,0 +1,20 @@
+Message-ID: dd888566-5f16-49df-a77d-6ba1e23abee8
+Date: Fri, 19 Sep 2025 13:58:31
+From: anthony.nelson@rusd.edu
+To: william.hill@rusd.edu, sarah.romero@rusd.edu
+Subject: Scheduled Network Maintenance - Tuesday Evening
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing
+
+Hi William and Sarah,
+
+I wanted to give you a heads up that we have scheduled network maintenance tomorrow (Tuesday) evening from 6:00 PM to 8:00 PM. During this time, internet connectivity may be intermittent across all school buildings.
+
+Please plan accordingly if you need to access any online resources or cloud-based applications during this window. If you experience any issues after 8:00 PM, please don't hesitate to reach out to the IT help desk.
+
+Thank you for your patience as we work to keep our systems running smoothly.
+
+Best regards,
+Anthony Nelson
+IT Support

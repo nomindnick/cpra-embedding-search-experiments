@@ -1,0 +1,10 @@
+Message-ID: 8eeae6e2-98f7-4712-b28b-fe7ac8373ae8
+Date: Wed, 25 Sep 2024 08:04:03
+From: susan.miller@rusd.edu
+To: anthony.rosales@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nSusan

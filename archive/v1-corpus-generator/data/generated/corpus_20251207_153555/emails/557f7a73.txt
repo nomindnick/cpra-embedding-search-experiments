@@ -1,0 +1,21 @@
+Message-ID: 557f7a73-e60c-4f0d-b3af-5c5fc8b27f1b
+Date: Tue, 02 Sep 2025 10:16:21
+From: brian.gutierrez@rusd.edu
+To: loretta.blevins@rusd.edu, kristi.flores@rusd.edu, harry.jefferson@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: forward
+X-Department: None
+X-Topics: special education
+
+Hi Loretta, Kristi, and Harry,
+
+I wanted to give you a heads up that I've been experiencing some issues accessing the computer lab this morning. When I tried to log in around 9:00 AM, the network connection appeared to be unstable, and several of the workstations were not responding.
+
+I've already submitted a ticket to the IT department, but wanted to make sure you were aware in case you have classes scheduled in there today. You may want to have a backup lesson plan ready, or I can coordinate with you to reschedule if needed.
+
+I'll send an update once I hear back from IT about when the issue will be resolved.
+
+Thanks for your flexibility!
+
+Best,
+Brian Gutierrez

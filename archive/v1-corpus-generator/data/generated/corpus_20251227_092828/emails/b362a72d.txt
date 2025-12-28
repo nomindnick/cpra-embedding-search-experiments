@@ -1,0 +1,10 @@
+Message-ID: b362a72d-7325-4355-9b63-c61c14fec5eb
+Date: Sun, 18 Feb 2024 12:00:44
+From: raymond.banks@rusd.edu
+To: linda.arnold@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, professional development
+
+The lunch schedule has been updated for next week.\n\nThanks,\nRaymond

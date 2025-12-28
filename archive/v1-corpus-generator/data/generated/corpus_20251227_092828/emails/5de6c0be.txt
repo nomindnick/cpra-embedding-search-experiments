@@ -1,0 +1,10 @@
+Message-ID: 5de6c0be-529b-4c62-a359-9f7ef9a0dfb6
+Date: Thu, 26 Jun 2025 06:35:51
+From: allison.obrien@rusd.edu
+To: linda.dominguez@rusd.edu, maria.kelley@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: reply
+X-Department: None
+X-Topics: technology infrastructure, safety protocols
+
+Please remember to display your parking permits.\n\nThanks,\nAllison

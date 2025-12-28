@@ -1,0 +1,11 @@
+Message-ID: 7efbf006-d026-4b93-8196-c12d65f28e3f
+Date: Wed, 03 Dec 2025 15:54:54
+From: tyler.johnson@rusd.edu
+To: brian.harmon@rusd.edu
+Cc: steven.russell@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, curriculum updates
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nTyler

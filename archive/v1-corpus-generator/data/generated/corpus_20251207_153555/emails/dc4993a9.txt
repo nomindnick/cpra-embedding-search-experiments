@@ -1,0 +1,19 @@
+Message-ID: dc4993a9-a1c5-460e-8cc4-c2a2e163be8f
+Date: Fri, 08 Nov 2024 18:10:39
+From: zoe.moore@rusd.edu
+To: david.young@rusd.edu, jane.lewis@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Hi David and Jane,
+
+I wanted to give you a heads up that I've been experiencing some issues accessing the computer lab this morning. When I tried to log in around 9:30 AM, the system wasn't recognizing my credentials.
+
+I was able to work around it by using the backup lab, but wanted to flag this in case other staff members are experiencing the same problem. It might be worth checking with IT to see if there's a system-wide issue or if it's isolated to my account.
+
+Please let me know if you've had any similar issues, or if you have any information about ongoing maintenance.
+
+Thank you,
+Zoe Moore

@@ -1,0 +1,10 @@
+Message-ID: f334be4b-afd8-4caf-ba31-551ee99da1a0
+Date: Mon, 07 Jul 2025 07:23:12
+From: chris.mitchell@rusd.edu
+To: maria.kelley@rusd.edu, angela.cooper@rusd.edu
+Subject: Schedule Change
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement, technology infrastructure
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nChris

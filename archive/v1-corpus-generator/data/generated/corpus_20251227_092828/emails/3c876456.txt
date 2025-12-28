@@ -1,0 +1,11 @@
+Message-ID: 3c876456-88d9-46a2-9f0e-33bdbac5c297
+Date: Fri, 27 Sep 2024 07:48:02
+From: daniel.garcia@rusd.edu
+To: brian.gutierrez@rusd.edu
+Cc: christina.davis@rusd.edu, john.kim@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing
+
+Please remember to display your parking permits.\n\nThanks,\nDaniel

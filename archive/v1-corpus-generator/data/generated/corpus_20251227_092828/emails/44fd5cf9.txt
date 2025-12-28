@@ -1,0 +1,10 @@
+Message-ID: 44fd5cf9-61bf-4cdf-b656-13a78a5445de
+Date: Tue, 29 Apr 2025 13:04:51
+From: dalton.moreno@rusd.edu
+To: frank.benton@rusd.edu, samantha.bush@rusd.edu, ashley.larsen@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: safety protocols
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nDalton

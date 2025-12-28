@@ -1,0 +1,11 @@
+Message-ID: 6d41f944-fcda-49b8-a9b7-4d33d85a430b
+Date: Wed, 25 Sep 2024 10:18:11
+From: samuel.ross@rusd.edu
+To: shannon.frazier@rusd.edu, kathryn.jimenez@rusd.edu
+Cc: crystal.mccall@rusd.edu, lindsey.lee@rusd.edu
+Subject: Schedule Change
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: vendor contracts, student achievement
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nSamuel

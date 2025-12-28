@@ -1,0 +1,11 @@
+Message-ID: f35bf7b9-c51e-45f4-b4c2-533efc871d89
+Date: Sun, 11 May 2025 07:18:22
+From: cameron.davis@rusd.edu
+To: john.kim@rusd.edu, debra.wang@rusd.edu, jennifer.williams@rusd.edu
+Cc: chad.beck@rusd.edu, samuel.rodriguez@rusd.edu
+Subject: Schedule Change
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: vendor contracts
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nCameron

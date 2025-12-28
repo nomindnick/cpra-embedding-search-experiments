@@ -1,0 +1,10 @@
+Message-ID: 45e55018-ef2f-4d07-8d66-9fba7efc9140
+Date: Thu, 02 Jan 2025 11:58:35
+From: samuel.ross@rusd.edu
+To: eduardo.barry@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nSamuel

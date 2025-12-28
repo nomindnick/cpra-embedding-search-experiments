@@ -1,0 +1,11 @@
+Message-ID: 80444f1c-d4d6-4fb3-867d-f602d1a338d1
+Date: Mon, 10 Nov 2025 09:30:01
+From: john.middleton@rusd.edu
+To: barbara.mcgrath@rusd.edu
+Cc: shannon.ramos@rusd.edu, kristina.shannon@rusd.edu
+Subject: Technology Issue
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+The projector in room 205 needs replacement.\n\nThanks,\nJohn

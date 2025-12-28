@@ -1,0 +1,31 @@
+Message-ID: e41ffa7e-e53b-4a8e-941b-7fac0fbfd273
+Date: Wed, 04 Oct 2023 07:08:05
+From: eduardo.barry@rusd.edu
+To: theresa.long@rusd.edu, shannon.ramos@rusd.edu
+Cc: franklin.bond@rusd.edu, jeffrey.dudley@rusd.edu
+Subject: Water Quality Checks - Need Input on Timeline
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: water quality testing, environmental safety
+
+Hi Theresa and Shannon,
+
+I wanted to touch base about the drinking water testing we need to get scheduled across the buildings. As you know, we've been planning to conduct lead testing in our water systems, and I'm trying to coordinate the logistics.
+
+I'll take the lead on organizing the testing appointments with the lab, but I need to know which buildings you want prioritized. Should we start with the elementary schools first, or do you think the high school should be our lead focus given the larger population?
+
+A few questions:
+- Do we have the current water quality reports from last year's testing?
+- Who's our lead contact at the facilities department for access to the mechanical rooms?
+- Should I schedule the technicians to come during summer break to minimize disruption?
+
+The testing itself shouldn't take too long, and once we get the results back, we'll have a clearer picture of our drinking water safety. I'm hoping to get at least three locations tested before school starts again.
+
+Let me know your thoughts on the schedule. I can probably get someone out here as early as next week if that works.
+
+Thanks,
+Eduardo
+
+--- Attachments ---
+  - data_export.csv (CSV, 156 KB)
+  - test_results.pdf (PDF, 245 KB)

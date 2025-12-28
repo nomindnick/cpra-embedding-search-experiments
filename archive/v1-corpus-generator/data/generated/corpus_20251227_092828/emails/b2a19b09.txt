@@ -1,0 +1,10 @@
+Message-ID: b2a19b09-2810-42bb-abd2-e4a83ab21cdb
+Date: Tue, 19 Aug 2025 10:52:51
+From: christopher.bruce@rusd.edu
+To: anne.hansen@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications, budget planning
+
+The lunch schedule has been updated for next week.\n\nThanks,\nChristopher

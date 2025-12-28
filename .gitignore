@@ -29,8 +29,8 @@ ENV/
 # Experiment results (can be large, regenerate as needed)
 results/
 
-# Test data generator (separate repo, copied in for convenience)
-cpra-golden-emails/
+# Embedding cache (regenerate as needed)
+.cache/
 
 # OS files
 .DS_Store
@@ -41,6 +41,3 @@ Thumbs.db
 
 # Logs
 *.log
-
-# Personal drafts
-drafts/

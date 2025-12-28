@@ -1,0 +1,10 @@
+Message-ID: e84c33f5-e1c9-4bdd-a9ab-bdb2ae339ca1
+Date: Sat, 07 Jun 2025 09:27:11
+From: robert.silva@rusd.edu
+To: brent.gray@rusd.edu, chad.beck@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services, technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nRobert

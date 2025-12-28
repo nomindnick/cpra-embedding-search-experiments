@@ -1,0 +1,11 @@
+Message-ID: def6b524-640f-4325-967a-b8d5923db55a
+Date: Sat, 04 May 2024 17:32:00
+From: frank.benton@rusd.edu
+To: anthony.jackson@rusd.edu
+Cc: jennifer.collins@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services, special education
+
+The lunch schedule has been updated for next week.\n\nThanks,\nFrank

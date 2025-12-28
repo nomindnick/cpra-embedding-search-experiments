@@ -1,0 +1,11 @@
+Message-ID: 9db4985c-e82a-455d-9deb-4eb45b215134
+Date: Sun, 04 May 2025 18:22:52
+From: sarah.anderson@rusd.edu
+To: deborah.byrd@rusd.edu
+Cc: michael.andrade@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, budget planning
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nSarah

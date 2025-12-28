@@ -1,0 +1,36 @@
+{
+  "total_emails": 50,
+  "responsive_emails": 10,
+  "responsive_rate": 0.2,
+  "emails_per_request": {
+    "cpra_001": 2,
+    "cpra_002": 2,
+    "cpra_003": 2,
+    "cpra_004": 2,
+    "cpra_005": 2
+  },
+  "challenge_distribution": {
+    "ChallengeType.KEYWORD_FREE": 5
+  },
+  "responsiveness_reasons": {
+    "direct_match": 8,
+    "attachment_ref": 2
+  },
+  "keyword_analysis": {
+    "keyword_free_count": 5,
+    "keyword_containing_count": 5,
+    "keyword_free_rate": 0.5,
+    "expected_keyword_recall": 0.5
+  },
+  "thread_analysis": {
+    "total_threads": 0,
+    "threaded_responsive_count": 0,
+    "buried_responsive_count": 0
+  },
+  "generation_metadata": {
+    "timestamp": "2025-12-26T20:18:11.784306",
+    "version": "1.0",
+    "challenge_emails": 5,
+    "emails_with_attachments": 2
+  }
+}

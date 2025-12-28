@@ -1,0 +1,10 @@
+Message-ID: cb218fb6-f62a-4f2b-a061-6d74231fbbc5
+Date: Thu, 12 Dec 2024 11:44:54
+From: scott.callahan@rusd.edu
+To: mark.owens@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts, safety protocols
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nScott

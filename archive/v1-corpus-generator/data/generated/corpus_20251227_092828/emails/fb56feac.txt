@@ -1,0 +1,10 @@
+Message-ID: fb56feac-b05d-4c7b-8844-83454766cc93
+Date: Sat, 04 Oct 2025 13:53:45
+From: lance.hayes@rusd.edu
+To: john.kim@rusd.edu, samuel.ross@rusd.edu, zoe.moore@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing, food services
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nLance

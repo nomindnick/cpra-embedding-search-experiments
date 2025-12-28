@@ -1,0 +1,21 @@
+Message-ID: accb3bc0-ca59-4cbc-b3f8-5e37139dbdbc
+Date: Sun, 31 Mar 2024 08:27:59
+From: danny.jones@rusd.edu
+To: shannon.ramos@rusd.edu
+Cc: tammy.patton@rusd.edu, debbie.velez@rusd.edu
+Subject: POS System Access Issue - Cafeteria
+X-Email-Type: forward
+X-Department: None
+X-Topics: safety protocols
+
+Hi Shannon,
+
+I wanted to reach out regarding a technical issue we've been experiencing with the point-of-sale system in the cafeteria. The register on the east side has been running slowly throughout the lunch periods, which is causing delays in our checkout line.
+
+Would you be able to have IT take a look at it when they have availability? It seems to be a connectivity issue, but I'm not certain of the exact cause.
+
+Please let me know what the next steps are. In the meantime, we're managing by using the backup register, but we'd like to get this resolved as soon as possible.
+
+Thank you,
+Danny Jones
+Cafeteria Manager

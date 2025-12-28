@@ -1,0 +1,23 @@
+Message-ID: 5e79ae04-62b2-43dd-8df0-78e679dc1e39
+Date: Fri, 23 May 2025 12:24:21
+From: brandon.brown@rusd.edu
+To: james.walters@rusd.edu, jeffrey.morgan@rusd.edu, joshua.jones@rusd.edu
+Cc: mark.ramirez@rusd.edu
+Subject: Reminder: Parent-Teacher Conferences Coming Up
+X-Email-Type: regular
+X-Department: None
+X-Topics: substitute coverage, parent communication
+
+Good afternoon,
+
+I wanted to send a quick reminder that parent-teacher conferences are scheduled for next week, October 16th and 17th, from 3:30 PM to 7:00 PM.
+
+Please ensure that all classroom computers and devices are in working order before the conferences begin. If you experience any technical issues with your equipment, please submit a ticket through the IT support portal or reach out to me directly.
+
+Additionally, if you need any assistance setting up video conferencing for remote parent meetings, please let me know as soon as possible so I can get everything configured.
+
+Thank you for your attention to this matter. If you have any questions or concerns, feel free to contact me.
+
+Best regards,
+Brandon Brown
+IT Support

@@ -1,0 +1,10 @@
+Message-ID: 34b97ba2-8977-48af-911a-23504548c6fd
+Date: Tue, 09 Dec 2025 10:52:00
+From: brian.rivera@rusd.edu
+To: courtney.brooks@rusd.edu, susan.brooks@rusd.edu, dennis.mccann@rusd.edu
+Subject: Technology Issue
+X-Email-Type: announcement
+X-Department: None
+X-Topics: facility maintenance
+
+The projector in room 205 needs replacement.\n\nThanks,\nBrian

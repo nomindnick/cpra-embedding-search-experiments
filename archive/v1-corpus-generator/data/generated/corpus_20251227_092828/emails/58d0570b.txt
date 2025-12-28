@@ -1,0 +1,10 @@
+Message-ID: 58d0570b-ffa6-4179-a3ff-3c41692050ab
+Date: Thu, 12 Dec 2024 14:35:06
+From: brian.harmon@rusd.edu
+To: daniel.hall@rusd.edu, diana.bass@rusd.edu, amber.lindsey@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: curriculum updates, technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nBrian

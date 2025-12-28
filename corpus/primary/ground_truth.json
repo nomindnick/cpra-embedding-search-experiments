@@ -1,0 +1,18 @@
+{
+  "labels": {},
+  "metadata": {
+    "total_responsive": 0,
+    "total_non_responsive": 0,
+    "by_challenge_type": {
+      "DIRECT_MATCH": 0,
+      "AMBIGUOUS_TERMS": 0,
+      "INDIRECT_REFERENCE": 0,
+      "TECHNICAL_JARGON": 0,
+      "TEMPORAL_REFERENCE": 0,
+      "BURIED_IN_THREAD": 0,
+      "KEYWORD_FALSE_POSITIVE": 0,
+      "ADJACENT_TOPIC": 0,
+      "TRUE_NEGATIVE": 0
+    }
+  }
+}

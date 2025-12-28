@@ -1,0 +1,10 @@
+Message-ID: e55e7d0a-6760-437d-9778-daf906fea317
+Date: Tue, 30 Apr 2024 18:12:24
+From: chris.mitchell@rusd.edu
+To: christopher.cortez@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: student achievement, facility maintenance
+
+The lunch schedule has been updated for next week.\n\nThanks,\nChris

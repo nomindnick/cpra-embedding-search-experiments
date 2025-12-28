@@ -1,0 +1,11 @@
+Message-ID: f128f8f4-ad89-42d4-a772-2c48e6f600df
+Date: Mon, 28 Oct 2024 06:00:01
+From: ashley.larsen@rusd.edu
+To: elizabeth.olsen@rusd.edu, brittany.cruz@rusd.edu
+Cc: wendy.gonzalez@rusd.edu, stephen.adkins@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, facility maintenance
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nAshley

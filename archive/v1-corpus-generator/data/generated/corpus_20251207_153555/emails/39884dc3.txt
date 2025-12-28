@@ -1,0 +1,27 @@
+Message-ID: 39884dc3-e8a9-4a27-b945-70c63b9ec4a0
+Date: Sat, 23 Mar 2024 16:33:59
+From: charles.martin@rusd.edu
+To: tyler.johnson@rusd.edu, cindy.sanders@rusd.edu, robert.peterson@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Good morning Tyler, Cindy, and Robert,
+
+I wanted to notify you of a technology issue we're currently experiencing in the main computer lab. Our IT department has identified a network connectivity problem that is affecting student access to the lab during scheduled class periods.
+
+Please be aware of the following:
+
+• The computer lab will be unavailable until further notice, estimated to be resolved by end of day tomorrow
+• Classes scheduled to use the lab should plan alternative activities or relocate to the media center if needed
+• Students can still access computers in the library and individual classrooms
+• Our IT team is working to resolve this as quickly as possible
+
+If you have any questions or need assistance in rescheduling lab time, please don't hesitate to reach out. I'll send an update once the issue has been resolved.
+
+Thank you for your flexibility and understanding.
+
+Best regards,
+Charles Martin
+Vice Principal

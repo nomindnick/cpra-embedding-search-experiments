@@ -1,0 +1,10 @@
+Message-ID: 6a8c946f-1dfb-44f4-bf6c-31b6bbc5dbcc
+Date: Mon, 30 Sep 2024 18:59:57
+From: samantha.bush@rusd.edu
+To: rodney.bennett@rusd.edu, jonathan.rodriguez@rusd.edu, brenda.bailey@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nSamantha

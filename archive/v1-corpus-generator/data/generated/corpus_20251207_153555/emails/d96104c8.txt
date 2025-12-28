@@ -1,0 +1,27 @@
+Message-ID: d96104c8-d4ba-479c-9775-6918ae65ad74
+Date: Sun, 11 Aug 2024 06:59:32
+From: christopher.spencer@rusd.edu
+To: adam.arnold@rusd.edu, angela.anderson@rusd.edu
+Subject: Classroom Projector Issue - Room 204
+X-Email-Type: regular
+X-Department: None
+X-Topics: substitute coverage
+
+Hi Adam and Angela,
+
+I wanted to reach out regarding a technical issue I've been experiencing in my classroom this morning. The projector in Room 204 isn't displaying content from my laptop, even though it was working fine yesterday.
+
+I've tried the following troubleshooting steps:
+- Restarted the projector
+- Checked the HDMI cable connection
+- Tested with a different input source
+
+The issue persists, so I believe this may require assistance from the IT department. Could one of you help me submit a work order, or let me know the best way to report this?
+
+In the meantime, I'll be using alternative materials for today's lessons, but I'd appreciate getting this resolved soon since I have several presentations planned for this week.
+
+Thank you for your help!
+
+Best regards,
+Christopher Spencer
+Teacher, Room 204

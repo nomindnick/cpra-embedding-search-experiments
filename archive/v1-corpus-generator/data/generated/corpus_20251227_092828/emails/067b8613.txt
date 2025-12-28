@@ -1,0 +1,10 @@
+Message-ID: 067b8613-0bb2-4e0e-a9d7-9622da662597
+Date: Mon, 26 Aug 2024 09:07:01
+From: ashley.lee@rusd.edu
+To: bobby.berg@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+The lunch schedule has been updated for next week.\n\nThanks,\nAshley

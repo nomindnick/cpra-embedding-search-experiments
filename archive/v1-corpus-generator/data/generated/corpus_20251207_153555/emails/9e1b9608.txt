@@ -1,0 +1,22 @@
+Message-ID: 9e1b9608-e77c-4b08-bb01-ec73a04fe34a
+Date: Sun, 20 Oct 2024 08:57:28
+From: doris.jones@rusd.edu
+To: michelle.cherry@rusd.edu, maria.kelley@rusd.edu
+Cc: allison.obrien@rusd.edu, andrea.roberts@rusd.edu
+Subject: Chromebook Login Issues - Classroom 205
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: facility maintenance, budget planning
+
+Hi Michelle and Maria,
+
+I wanted to reach out about a technical issue I've been experiencing this morning. Several students in my classroom have been unable to log into their Chromebooks during first and second periods. The devices appear to be powered on and connected to the network, but the login screen isn't responding properly.
+
+I've already tried the basic troubleshooting steps (restarting devices, checking network connection), but the issue persists. Could one of you take a look at this when you have a chance? I have a few loaner devices available, so we're able to continue with our lessons, but I wanted to make sure IT is aware so we can resolve it for tomorrow.
+
+Please let me know if you need any additional information or if there's anything I should try on my end.
+
+Thank you,
+Doris Jones
+Special Education Teacher
+Classroom 205

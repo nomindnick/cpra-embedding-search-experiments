@@ -1,0 +1,10 @@
+Message-ID: 09fd20d6-cf0a-4986-946e-7506b5cc81ef
+Date: Mon, 07 Jul 2025 06:50:14
+From: martin.mendez@rusd.edu
+To: elizabeth.olsen@rusd.edu, zachary.moore@rusd.edu, steven.russell@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nMartin

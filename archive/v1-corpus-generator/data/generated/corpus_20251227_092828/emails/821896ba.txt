@@ -1,0 +1,11 @@
+Message-ID: 821896ba-3896-4711-905b-52daa1991b81
+Date: Mon, 27 May 2024 17:59:38
+From: luis.acosta@rusd.edu
+To: rodney.bennett@rusd.edu
+Cc: joseph.schaefer@rusd.edu, jennifer.williams@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: meeting_request
+X-Department: Special Education
+X-Topics: student achievement, technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nLuis

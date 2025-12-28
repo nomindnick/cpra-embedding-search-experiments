@@ -1,0 +1,11 @@
+Message-ID: cd3c7620-61b1-4623-8299-3a9b92ee6364
+Date: Mon, 24 Feb 2025 12:06:20
+From: lauren.rodriguez@rusd.edu
+To: erica.orr@rusd.edu, sarah.garcia@rusd.edu, allison.obrien@rusd.edu
+Cc: patrick.howard@rusd.edu, zoe.moore@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: budget planning
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nLauren

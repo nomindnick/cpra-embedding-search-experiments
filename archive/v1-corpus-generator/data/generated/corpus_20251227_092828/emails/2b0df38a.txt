@@ -1,0 +1,10 @@
+Message-ID: 2b0df38a-fcc8-4fc3-97fa-68dcd27d7f9e
+Date: Thu, 02 May 2024 15:35:27
+From: brandon.brown@rusd.edu
+To: michael.fitzpatrick@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please remember to display your parking permits.\n\nThanks,\nBrandon

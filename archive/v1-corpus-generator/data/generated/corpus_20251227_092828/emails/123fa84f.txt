@@ -1,0 +1,10 @@
+Message-ID: 123fa84f-cb5f-4afd-b1c8-589c72c81924
+Date: Fri, 14 Nov 2025 13:58:51
+From: eduardo.barry@rusd.edu
+To: shannon.frazier@rusd.edu, ashley.lee@rusd.edu
+Subject: Technology Issue
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: parent communication, facility maintenance
+
+The projector in room 205 needs replacement.\n\nThanks,\nEduardo

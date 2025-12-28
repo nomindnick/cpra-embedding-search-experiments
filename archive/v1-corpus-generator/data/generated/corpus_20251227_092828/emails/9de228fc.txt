@@ -1,0 +1,11 @@
+Message-ID: 9de228fc-f851-4148-9f5b-8db1dc26b685
+Date: Tue, 14 May 2024 06:25:49
+From: michael.bruce@rusd.edu
+To: joel.green@rusd.edu
+Cc: debra.wang@rusd.edu, kathleen.becker@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nMichael

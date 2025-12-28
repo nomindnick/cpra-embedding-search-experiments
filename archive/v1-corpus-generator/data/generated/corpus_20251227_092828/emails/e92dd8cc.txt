@@ -1,0 +1,10 @@
+Message-ID: e92dd8cc-1362-4e70-8115-e3172cc7bd07
+Date: Tue, 24 Jun 2025 06:07:39
+From: joshua.jones@rusd.edu
+To: chris.mitchell@rusd.edu, scott.callahan@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services, transportation
+
+Please remember to display your parking permits.\n\nThanks,\nJoshua

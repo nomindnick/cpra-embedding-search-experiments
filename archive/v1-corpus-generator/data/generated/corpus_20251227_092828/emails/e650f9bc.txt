@@ -1,0 +1,10 @@
+Message-ID: e650f9bc-4a17-4898-8316-efa07d580934
+Date: Wed, 08 Oct 2025 14:19:04
+From: kevin.williams@rusd.edu
+To: erin.macias@rusd.edu, tyler.jordan@rusd.edu
+Subject: Supply Order
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: vendor contracts, technology infrastructure
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nKevin

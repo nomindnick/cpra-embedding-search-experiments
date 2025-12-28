@@ -1,0 +1,10 @@
+Message-ID: 1aafc4fe-ae53-4f98-90e0-b7a9a3f91ef0
+Date: Fri, 28 Nov 2025 08:57:47
+From: michael.andrade@rusd.edu
+To: jennifer.miller@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nMichael

@@ -1,0 +1,11 @@
+Message-ID: eddb4513-d9c2-45d3-8136-1e4075bf3768
+Date: Wed, 15 Jan 2025 06:14:45
+From: jennifer.collins@rusd.edu
+To: dawn.johnson@rusd.edu, oscar.harper@rusd.edu
+Cc: kristin.dean@rusd.edu, samuel.ross@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJennifer

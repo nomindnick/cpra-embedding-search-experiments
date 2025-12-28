@@ -1,0 +1,10 @@
+Message-ID: fdad5015-e61f-45e1-9a77-b36590b6ce0d
+Date: Tue, 23 Sep 2025 11:17:14
+From: michael.hartman@rusd.edu
+To: kaitlyn.williams@rusd.edu, linda.dominguez@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: report
+X-Department: None
+X-Topics: curriculum updates, parent communication
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nMichael

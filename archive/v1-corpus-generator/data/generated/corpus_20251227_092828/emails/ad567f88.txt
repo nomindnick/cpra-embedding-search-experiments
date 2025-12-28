@@ -1,0 +1,10 @@
+Message-ID: ad567f88-e45e-495e-bcab-ebde90588c65
+Date: Wed, 01 Oct 2025 13:19:21
+From: joe.vang@rusd.edu
+To: shannon.frazier@rusd.edu, kevin.williams@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: substitute coverage
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJoe

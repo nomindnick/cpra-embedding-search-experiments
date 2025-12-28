@@ -1,0 +1,10 @@
+Message-ID: 5abde3a7-4390-46b0-9daf-c1c443b21087
+Date: Mon, 28 Apr 2025 13:32:48
+From: danny.jones@rusd.edu
+To: angela.cooper@rusd.edu
+Subject: Parent Conference
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: budget planning, safety protocols
+
+Available times for parent conferences have been posted.\n\nThanks,\nDanny

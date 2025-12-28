@@ -1,0 +1,10 @@
+Message-ID: 6f19124e-a6d5-4bc5-a98b-df58265ad64f
+Date: Thu, 14 Nov 2024 14:51:40
+From: raymond.lopez@rusd.edu
+To: william.hill@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nRaymond

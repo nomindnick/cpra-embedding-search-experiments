@@ -1,0 +1,21 @@
+Message-ID: 612aff36-f392-4f7d-858a-7cb5695e4d3b
+Date: Fri, 09 Aug 2024 14:03:38
+From: cameron.davis@rusd.edu
+To: joseph.wright@rusd.edu, john.kim@rusd.edu, theresa.long@rusd.edu
+Subject: Technology Issue - Lab Computers Not Connecting to Network
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning, professional development
+
+Hi Joseph, John, and Theresa,
+
+I wanted to reach out regarding a technical issue I encountered this morning in the computer lab during 2nd period. Several of the desktop computers (stations 5-8) are not connecting to the network and displaying connection error messages.
+
+I was able to work around this by relocating my class to the library for today's lesson, but wanted to flag this for IT support so it can be resolved before tomorrow's classes.
+
+Could one of you please submit a work order to the technology department, or let me know if this is already a known issue being addressed?
+
+Thank you for your help!
+
+Best regards,
+Cameron Davis

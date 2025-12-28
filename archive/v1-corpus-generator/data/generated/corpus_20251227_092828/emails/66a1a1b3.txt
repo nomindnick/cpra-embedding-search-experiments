@@ -1,0 +1,10 @@
+Message-ID: 66a1a1b3-ffe6-4c88-8cc1-f678e3dfacd1
+Date: Thu, 31 Oct 2024 15:21:41
+From: joseph.schaefer@rusd.edu
+To: william.rodriguez@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: Finance
+X-Topics: curriculum updates, professional development
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJoseph

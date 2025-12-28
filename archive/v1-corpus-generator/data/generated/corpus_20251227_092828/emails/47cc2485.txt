@@ -1,0 +1,10 @@
+Message-ID: 47cc2485-dbf5-45d9-aa1c-d57e8cf80f17
+Date: Sat, 01 Nov 2025 11:25:32
+From: samantha.warren@rusd.edu
+To: whitney.mendoza@rusd.edu, lauren.herrera@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nSamantha

@@ -1,0 +1,10 @@
+Message-ID: 04dfb315-3fdb-4b61-ad35-cb4a252fba42
+Date: Tue, 12 Mar 2024 15:58:55
+From: maria.kelley@rusd.edu
+To: doris.jones@rusd.edu, steven.petersen@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nMaria

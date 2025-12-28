@@ -1,0 +1,21 @@
+Message-ID: 6897e286-b8f9-4d4a-9fa1-f75174791dfc
+Date: Sun, 24 Nov 2024 08:58:55
+From: diana.padilla@rusd.edu
+To: susan.brooks@rusd.edu, zachary.moore@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: parent communication, special education
+
+Hi Susan and Zachary,
+
+I wanted to reach out regarding a technical issue I encountered this morning in the computer lab during 3rd period. Several of the desktop computers were not connecting to the network, which prevented students from accessing their learning management system.
+
+I was able to work around it by moving the class to the laptop cart for the day, but I wanted to flag this for your attention so IT can investigate when they have availability.
+
+The affected computers are stations 5, 7, and 9 in Lab A. Everything appeared to be functioning normally by the end of the period, but it may be worth having someone check the connections.
+
+Please let me know if you need any additional details or if there's anything I should do on my end.
+
+Thank you,
+Diana Padilla

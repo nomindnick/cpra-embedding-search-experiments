@@ -1,0 +1,10 @@
+Message-ID: a1af5382-408b-4a04-926d-274373afdd43
+Date: Sun, 28 Sep 2025 09:30:58
+From: anthony.rosales@rusd.edu
+To: allison.obrien@rusd.edu, danny.jones@rusd.edu, javier.washington@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nAnthony

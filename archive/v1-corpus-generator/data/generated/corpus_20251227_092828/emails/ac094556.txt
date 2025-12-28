@@ -1,0 +1,10 @@
+Message-ID: ac094556-85aa-433d-8e8d-6bae14a0c0c9
+Date: Sat, 10 May 2025 16:45:36
+From: erica.fernandez@rusd.edu
+To: whitney.mendoza@rusd.edu, joseph.nunez@rusd.edu, michael.nelson@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please remember to display your parking permits.\n\nThanks,\nErica

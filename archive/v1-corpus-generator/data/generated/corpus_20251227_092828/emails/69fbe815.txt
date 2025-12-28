@@ -1,0 +1,10 @@
+Message-ID: 69fbe815-9da5-41a5-b258-376d5ca0f7ba
+Date: Thu, 24 Jul 2025 12:54:40
+From: justin.hines@rusd.edu
+To: kevin.williams@rusd.edu, steven.campbell@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: standardized testing
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJustin

@@ -1,0 +1,10 @@
+Message-ID: 95848bb6-816c-409e-bb6e-a14410cd8279
+Date: Sun, 06 Apr 2025 07:08:10
+From: doris.jones@rusd.edu
+To: samantha.hooper@rusd.edu, john.alvarez@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: transportation
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nDoris

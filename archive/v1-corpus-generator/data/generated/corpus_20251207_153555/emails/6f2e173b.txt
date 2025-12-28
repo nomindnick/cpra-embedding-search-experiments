@@ -1,0 +1,23 @@
+Message-ID: 6f2e173b-8729-4498-a89d-69bf6b13acd3
+Date: Sun, 16 Nov 2025 18:49:43
+From: shannon.ramos@rusd.edu
+To: danny.jones@rusd.edu, chris.mitchell@rusd.edu
+Cc: michael.nelson@rusd.edu
+Subject: Network Printer Issue - Building C
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: technology infrastructure
+
+Hi Danny and Chris,
+
+I wanted to give you a heads up that we're experiencing some connectivity issues with the network printer on the third floor of Building C. The device keeps dropping its connection intermittently.
+
+I've already checked the physical connections and restarted the printer, but the problem persists. It may require IT support to troubleshoot the network side of things.
+
+In the meantime, staff in that area should use the backup printer in the main office or the one on the second floor.
+
+Please let me know if you have any questions or if this affects any of your departments.
+
+Thanks,
+Shannon Ramos
+Maintenance Staff

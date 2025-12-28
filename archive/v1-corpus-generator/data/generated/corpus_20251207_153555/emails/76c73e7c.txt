@@ -1,0 +1,25 @@
+Message-ID: 76c73e7c-0744-4ea3-8449-8c4d05c513af
+Date: Sun, 18 May 2025 13:25:41
+From: theresa.long@rusd.edu
+To: cameron.davis@rusd.edu, fernando.donovan@rusd.edu
+Subject: Computer Lab Equipment Maintenance - Thursday Afternoon
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: technology infrastructure
+
+Hi Cameron and Fernando,
+
+I wanted to give you a heads up that I'll be performing routine maintenance on the computers in the main computer lab this Thursday afternoon, starting around 2:00 PM.
+
+The following will be affected:
+- Lab A: Unavailable from 2:00 PM - 4:00 PM
+- Lab B: Available as normal
+
+I'm updating software and running system diagnostics to keep everything running smoothly. This should only take about 2 hours.
+
+Please let me know if you have any classes scheduled in Lab A during that time so we can coordinate an alternative location if needed.
+
+Thanks,
+Theresa Long
+Maintenance Staff
+School District

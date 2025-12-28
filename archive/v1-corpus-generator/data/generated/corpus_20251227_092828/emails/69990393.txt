@@ -1,0 +1,10 @@
+Message-ID: 69990393-34c1-408a-9806-bfb311b2d9bf
+Date: Sun, 19 Jan 2025 06:06:40
+From: danny.jones@rusd.edu
+To: anthony.rosales@rusd.edu, maria.kelley@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications, curriculum updates
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nDanny

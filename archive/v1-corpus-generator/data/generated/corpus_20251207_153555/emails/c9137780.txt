@@ -1,0 +1,19 @@
+Message-ID: c9137780-7006-4412-917b-4ee53b697766
+Date: Sun, 01 Dec 2024 06:15:24
+From: joyce.smith@rusd.edu
+To: michael.bruce@rusd.edu, heather.montoya@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, standardized testing
+
+Hi Michael and Heather,
+
+I wanted to reach out regarding an issue I encountered this morning in the computer lab during 2nd period. Several of the desktop computers were not responding to login attempts, and students were unable to access their files.
+
+I was able to work around this by moving the class to the library laptops, but wanted to flag this so IT can investigate when they have a chance. It may be a network connectivity issue or a server-side problem.
+
+Please let me know if either of you experienced similar issues with your classes today. If this continues, I'll submit a formal IT ticket.
+
+Thanks,
+Joyce Smith

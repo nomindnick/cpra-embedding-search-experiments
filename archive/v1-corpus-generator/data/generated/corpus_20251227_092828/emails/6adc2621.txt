@@ -1,0 +1,10 @@
+Message-ID: 6adc2621-86bd-436c-aba8-f60dfdd55350
+Date: Mon, 22 Dec 2025 16:20:11
+From: john.alvarez@rusd.edu
+To: anne.robinson@rusd.edu, michael.hartman@rusd.edu, shannon.ramos@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services, grant applications
+
+Please remember to display your parking permits.\n\nThanks,\nJohn

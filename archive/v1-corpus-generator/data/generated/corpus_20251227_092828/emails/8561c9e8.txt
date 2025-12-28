@@ -1,0 +1,10 @@
+Message-ID: 8561c9e8-a786-4150-a66b-6e46faf72a8f
+Date: Tue, 27 May 2025 17:35:58
+From: debra.wang@rusd.edu
+To: justin.hines@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+The lunch schedule has been updated for next week.\n\nThanks,\nDebra

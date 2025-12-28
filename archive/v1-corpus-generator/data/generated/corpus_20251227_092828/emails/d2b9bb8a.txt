@@ -1,0 +1,10 @@
+Message-ID: d2b9bb8a-e0c5-46e8-8a8c-beb416ace66a
+Date: Thu, 18 Apr 2024 14:47:12
+From: tyler.johnson@rusd.edu
+To: patrick.howard@rusd.edu, jennifer.collins@rusd.edu, donald.shah@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nTyler

@@ -1,0 +1,24 @@
+Message-ID: 635f28ba-e224-4bcb-9019-8744598a7d5a
+Date: Sun, 26 May 2024 08:07:22
+From: joel.green@rusd.edu
+To: sarah.anderson@rusd.edu, luis.acosta@rusd.edu, randy.koch@rusd.edu
+Subject: Technology Issue - Projector in Room 204
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, parent communication
+
+Hi Sarah, Luis, and Randy,
+
+I wanted to let you know that I'm experiencing an issue with the projector in Room 204. It's not displaying anything from my laptop, even though it was working fine yesterday.
+
+I've tried:
+- Restarting the projector
+- Checking the HDMI cable connection
+- Restarting my laptop
+
+The projector appears to be powering on, but there's no signal being received. I have classes in this room for the rest of the week, so I'd appreciate any assistance troubleshooting this issue.
+
+Please let me know if you've experienced similar problems or if you have any suggestions. If needed, I can submit a work order to IT.
+
+Thank you,
+Joel Green

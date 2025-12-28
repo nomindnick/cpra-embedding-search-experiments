@@ -1,0 +1,10 @@
+Message-ID: a12381c2-ffd5-4317-a007-7b96bd2404a0
+Date: Sun, 28 Jan 2024 11:42:22
+From: james.robinson@rusd.edu
+To: sarah.garcia@rusd.edu, samantha.hooper@rusd.edu
+Subject: Schedule Change
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts, professional development
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nJames

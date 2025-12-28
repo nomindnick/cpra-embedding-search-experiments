@@ -1,0 +1,22 @@
+Message-ID: 0c975c09-52c2-4668-ae13-adc18919ffb3
+Date: Sun, 03 Nov 2024 18:28:07
+From: samantha.hooper@rusd.edu
+To: erica.orr@rusd.edu, brent.gray@rusd.edu, donna.moore@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Hi Erica, Brent, and Donna,
+
+I wanted to reach out regarding a technical issue I encountered this morning in the computer lab during 2nd period. Several of the desktop computers (stations 5, 7, and 9) are not connecting to the network printer, which prevented students from completing their assignment.
+
+I was able to work around it by having students save their documents to a shared drive instead, but wanted to flag this so IT can investigate when they have a chance.
+
+Please let me know if any of you have experienced similar issues with these stations, or if there's a known outage I should be aware of.
+
+Thank you!
+
+Best regards,
+Samantha Hooper
+Teacher

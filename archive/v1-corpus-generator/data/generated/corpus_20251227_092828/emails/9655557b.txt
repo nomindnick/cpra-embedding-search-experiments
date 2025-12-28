@@ -1,0 +1,10 @@
+Message-ID: 9655557b-5d0f-4f69-9a71-f2b16d2b0661
+Date: Sun, 28 Jul 2024 14:48:01
+From: john.middleton@rusd.edu
+To: curtis.greer@rusd.edu, martin.mendez@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: substitute coverage
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJohn

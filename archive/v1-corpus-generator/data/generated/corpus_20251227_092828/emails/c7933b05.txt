@@ -1,0 +1,10 @@
+Message-ID: c7933b05-6ffc-4ae5-854e-326e28029c72
+Date: Mon, 08 Dec 2025 12:37:40
+From: jane.lewis@rusd.edu
+To: tina.king@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts, curriculum updates
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJane

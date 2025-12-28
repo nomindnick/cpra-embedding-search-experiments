@@ -1,0 +1,10 @@
+Message-ID: 820acd92-5851-4fc9-b568-70f96cd8a0b8
+Date: Fri, 08 Nov 2024 06:22:03
+From: chris.mitchell@rusd.edu
+To: anne.robinson@rusd.edu
+Subject: Supply Order
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: grant applications
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nChris

@@ -1,0 +1,275 @@
+{
+  "experiment_name": "Simple Embedding Search",
+  "pipeline_name": "Embedding Search (st:all-mpnet-base-v2)",
+  "timestamp": "2025-12-09T11:02:55.040257",
+  "overall": {
+    "precision": 0.3991228070175439,
+    "recall": 0.9706666666666667,
+    "f1": 0.5656565656565657,
+    "map": 0.949409004085437
+  },
+  "totals": {
+    "emails": 2500,
+    "responsive": 375,
+    "predicted": 912
+  },
+  "by_request": [
+    {
+      "request_id": "cpra_001",
+      "request_title": "Lead Testing in Water Systems",
+      "precision": 1.0,
+      "recall": 0.88,
+      "f1": 0.9361702127659575,
+      "true_positives": 66,
+      "false_positives": 0,
+      "false_negatives": 9,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 0.9958227848101266,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.6666666666666666,
+        "precision_at_100": 0.75,
+        "recall_at_100": 1.0,
+        "precision_at_200": 0.375,
+        "recall_at_200": 1.0,
+        "precision_at_375": 0.2,
+        "recall_at_375": 1.0
+      }
+    },
+    {
+      "request_id": "cpra_002",
+      "request_title": "COVID Relief Fund Allocation",
+      "precision": 0.9863013698630136,
+      "recall": 0.96,
+      "f1": 0.9729729729729729,
+      "true_positives": 72,
+      "false_positives": 1,
+      "false_negatives": 3,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 0.99874009468148,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.6666666666666666,
+        "precision_at_100": 0.75,
+        "recall_at_100": 1.0,
+        "precision_at_200": 0.375,
+        "recall_at_200": 1.0,
+        "precision_at_375": 0.2,
+        "recall_at_375": 1.0
+      }
+    },
+    {
+      "request_id": "cpra_003",
+      "request_title": "Special Education Program Changes",
+      "precision": 0.10178817056396149,
+      "recall": 0.9866666666666667,
+      "f1": 0.18453865336658354,
+      "true_positives": 74,
+      "false_positives": 653,
+      "false_negatives": 1,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 0.7655283169791054,
+        "precision_at_50": 0.84,
+        "recall_at_50": 0.56,
+        "precision_at_100": 0.63,
+        "recall_at_100": 0.84,
+        "precision_at_200": 0.34,
+        "recall_at_200": 0.9066666666666666,
+        "precision_at_375": 0.19466666666666665,
+        "recall_at_375": 0.9733333333333334
+      }
+    },
+    {
+      "request_id": "cpra_004",
+      "request_title": "EdTech Vendor Contracts",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "true_positives": 75,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 1.0,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.6666666666666666,
+        "precision_at_100": 0.75,
+        "recall_at_100": 1.0,
+        "precision_at_200": 0.375,
+        "recall_at_200": 1.0,
+        "precision_at_375": 0.2,
+        "recall_at_375": 1.0
+      }
+    },
+    {
+      "request_id": "cpra_005",
+      "request_title": "Student Safety Incidents",
+      "precision": 0.925,
+      "recall": 0.9866666666666667,
+      "f1": 0.9548387096774195,
+      "true_positives": 74,
+      "false_positives": 6,
+      "false_negatives": 1,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 0.9869538239564738,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.6666666666666666,
+        "precision_at_100": 0.74,
+        "recall_at_100": 0.9866666666666667,
+        "precision_at_200": 0.37,
+        "recall_at_200": 0.9866666666666667,
+        "precision_at_375": 0.2,
+        "recall_at_375": 1.0
+      }
+    }
+  ],
+  "by_challenge": [
+    {
+      "challenge_type": "ambiguous_terms",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "total_emails": 18,
+      "correctly_identified": 18
+    },
+    {
+      "challenge_type": "near_miss",
+      "precision": 0.7692307692307693,
+      "recall": 0.8,
+      "f1": 0.7843137254901961,
+      "total_emails": 50,
+      "correctly_identified": 40
+    },
+    {
+      "challenge_type": "indirect_reference",
+      "precision": 0.5423728813559322,
+      "recall": 0.9142857142857143,
+      "f1": 0.6808510638297872,
+      "total_emails": 35,
+      "correctly_identified": 32
+    },
+    {
+      "challenge_type": "temporal_mismatch",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "total_emails": 24,
+      "correctly_identified": 24
+    },
+    {
+      "challenge_type": "partial_match",
+      "precision": 1.0,
+      "recall": 0.9166666666666666,
+      "f1": 0.9565217391304348,
+      "total_emails": 12,
+      "correctly_identified": 11
+    }
+  ],
+  "threshold_analysis": [
+    {
+      "threshold": 0.3,
+      "precision": 0.16823687752355315,
+      "recall": 1.0,
+      "f1": 0.2880184331797235,
+      "total_predicted": 2229,
+      "true_positives": 375,
+      "false_positives": 1854,
+      "false_negatives": 0
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.23433583959899748,
+      "recall": 0.9973333333333333,
+      "f1": 0.37950279046169455,
+      "total_predicted": 1596,
+      "true_positives": 374,
+      "false_positives": 1222,
+      "false_negatives": 1
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.3991228070175439,
+      "recall": 0.9706666666666667,
+      "f1": 0.5656565656565657,
+      "total_predicted": 912,
+      "true_positives": 364,
+      "false_positives": 548,
+      "false_negatives": 11
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0.8653295128939829,
+      "recall": 0.8053333333333333,
+      "f1": 0.8342541436464088,
+      "total_predicted": 349,
+      "true_positives": 302,
+      "false_positives": 47,
+      "false_negatives": 73
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0.9708029197080292,
+      "recall": 0.3546666666666667,
+      "f1": 0.51953125,
+      "total_predicted": 137,
+      "true_positives": 133,
+      "false_positives": 4,
+      "false_negatives": 242
+    }
+  ],
+  "k_values": [
+    50,
+    100,
+    200,
+    375
+  ],
+  "config": {
+    "name": "Simple Embedding Search",
+    "description": "Pure semantic similarity search using sentence-transformers embeddings. No query expansion, no reranking - just embed the request and emails, then rank by cosine similarity. This tests whether embeddings alone can outperform keyword matching.\n",
+    "embedding_model": "st:all-mpnet-base-v2",
+    "llm_model": null,
+    "pipeline": {
+      "method": "embedding",
+      "embedding_search": {
+        "embed_fields": [
+          "subject",
+          "body"
+        ],
+        "similarity_metric": "cosine"
+      },
+      "query_expansion": {
+        "enabled": false
+      },
+      "reranking": {
+        "enabled": false
+      }
+    },
+    "evaluation": {
+      "metrics": [
+        "precision",
+        "recall",
+        "f1",
+        "map"
+      ],
+      "k_values": [
+        50,
+        100,
+        200,
+        375
+      ],
+      "breakdown_by": [
+        "cpra_request",
+        "challenge_type"
+      ],
+      "thresholds": [
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7
+      ]
+    }
+  }
+}

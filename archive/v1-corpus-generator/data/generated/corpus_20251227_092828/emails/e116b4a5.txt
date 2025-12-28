@@ -1,0 +1,10 @@
+Message-ID: e116b4a5-097d-4987-876b-b27754779c49
+Date: Thu, 02 May 2024 14:05:09
+From: samuel.ross@rusd.edu
+To: christina.davis@rusd.edu, cameron.davis@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services, vendor contracts
+
+Please remember to display your parking permits.\n\nThanks,\nSamuel

@@ -1,0 +1,10 @@
+Message-ID: 6b405a92-7984-40fc-aa98-06bef7d4b00c
+Date: Mon, 10 Jun 2024 16:26:39
+From: martin.mendez@rusd.edu
+To: alexander.greer@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications
+
+The lunch schedule has been updated for next week.\n\nThanks,\nMartin

@@ -1,0 +1,10 @@
+Message-ID: 27027131-4513-48dd-ad3f-3e7fd3d8eff8
+Date: Fri, 09 Feb 2024 16:01:51
+From: charles.lewis@rusd.edu
+To: christopher.cortez@rusd.edu, lauren.rodriguez@rusd.edu, doris.jones@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+The lunch schedule has been updated for next week.\n\nThanks,\nCharles

@@ -1,0 +1,10 @@
+Message-ID: a8ca5832-c060-4a00-b1d5-3f7a80364aab
+Date: Sun, 19 Jan 2025 13:34:23
+From: anne.hansen@rusd.edu
+To: adam.arnold@rusd.edu, gavin.adams@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, standardized testing
+
+Please remember to display your parking permits.\n\nThanks,\nAnne

@@ -1,0 +1,22 @@
+Message-ID: a38d8545-d5a0-4aed-b6b1-44352bf800dc
+Date: Tue, 29 Oct 2024 09:31:20
+From: rodney.bennett@rusd.edu
+To: deborah.byrd@rusd.edu
+Subject: IT Support Needed - Computer Lab Equipment Issue
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: vendor contracts
+
+Hi Deborah,
+
+I wanted to reach out regarding an issue I noticed in the east wing computer lab during my morning rounds today. Several of the desktop computers appear to be running slowly, and a few aren't connecting to the network properly.
+
+I've already checked the physical connections and power supplies on my end, but this seems to be a software or network-related issue that will need IT support to resolve.
+
+When you get a chance, could you please submit a work order or contact our tech support team to have someone take a look at these machines? I want to make sure everything is up and running before the computer classes resume next week.
+
+Please let me know if you need any additional details about which specific computers are affected.
+
+Thank you,
+Rodney Bennett
+Maintenance Staff

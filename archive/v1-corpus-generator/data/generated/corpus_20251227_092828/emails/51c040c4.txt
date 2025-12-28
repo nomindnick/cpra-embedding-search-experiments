@@ -1,0 +1,10 @@
+Message-ID: 51c040c4-f028-4819-9a35-8c44dcc78689
+Date: Wed, 14 May 2025 07:01:00
+From: oscar.harper@rusd.edu
+To: robert.simpson@rusd.edu, crystal.mccall@rusd.edu
+Subject: Technology Issue
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, vendor contracts
+
+The projector in room 205 needs replacement.\n\nThanks,\nOscar

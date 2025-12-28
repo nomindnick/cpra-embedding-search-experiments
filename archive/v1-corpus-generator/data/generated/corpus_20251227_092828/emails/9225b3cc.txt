@@ -1,0 +1,10 @@
+Message-ID: 9225b3cc-f618-4fe1-8df2-8211cac3b233
+Date: Tue, 12 Aug 2025 07:37:38
+From: jacob.curry@rusd.edu
+To: franklin.bond@rusd.edu, kelsey.chapman@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts, standardized testing
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJacob

@@ -1,0 +1,10 @@
+Message-ID: 73ffe3ca-ec3f-4e65-ad9d-4d2215a95311
+Date: Wed, 13 Aug 2025 07:01:12
+From: jason.morales@rusd.edu
+To: maria.kelley@rusd.edu
+Subject: Field Trip Permission
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: grant applications, facility maintenance
+
+Permission slips for the upcoming field trip are due Monday.\n\nThanks,\nJason

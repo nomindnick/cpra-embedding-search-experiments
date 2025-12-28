@@ -1,0 +1,10 @@
+Message-ID: d70803fe-b918-471f-8fac-b68a56b5a853
+Date: Fri, 27 Jun 2025 15:41:06
+From: brian.rivera@rusd.edu
+To: anthony.jackson@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services, student achievement
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nBrian

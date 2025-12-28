@@ -1,0 +1,10 @@
+Message-ID: fbb27b39-2bb2-496b-a8b0-023c008fb1be
+Date: Thu, 02 Jan 2025 14:16:25
+From: kathy.gutierrez@rusd.edu
+To: erica.fernandez@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, safety protocols
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nKathy

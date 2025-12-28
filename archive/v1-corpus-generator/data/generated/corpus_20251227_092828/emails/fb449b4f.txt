@@ -1,0 +1,11 @@
+Message-ID: fb449b4f-b1ef-43c1-91c2-bfbd192e43eb
+Date: Sun, 05 May 2024 18:33:47
+From: bobby.berg@rusd.edu
+To: eduardo.barry@rusd.edu, shannon.frazier@rusd.edu
+Cc: anthony.nelson1@rusd.edu, kelsey.chapman@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nBobby

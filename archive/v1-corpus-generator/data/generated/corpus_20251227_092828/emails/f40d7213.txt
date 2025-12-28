@@ -1,0 +1,11 @@
+Message-ID: f40d7213-7071-4ec2-b1f3-770255f3c186
+Date: Fri, 13 Dec 2024 15:30:04
+From: john.alvarez@rusd.edu
+To: joshua.jones@rusd.edu, erica.orr@rusd.edu, linda.dominguez@rusd.edu
+Cc: kylie.blackwell@rusd.edu, laura.carter@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation, technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nJohn

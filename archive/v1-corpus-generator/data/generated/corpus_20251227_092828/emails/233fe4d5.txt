@@ -1,0 +1,11 @@
+Message-ID: 233fe4d5-e995-4809-bb81-b116cb34fea9
+Date: Sat, 16 Mar 2024 16:54:39
+From: kelsey.chapman@rusd.edu
+To: joshua.lamb@rusd.edu, angela.anderson@rusd.edu, maria.nelson@rusd.edu
+Cc: jacob.curry@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: grant applications, technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nKelsey

@@ -1,0 +1,22 @@
+Message-ID: d246a184-fd44-4d48-884e-417dd8a153bb
+Date: Fri, 24 Oct 2025 13:23:39
+From: deborah.byrd@rusd.edu
+To: margaret.terry@rusd.edu, barbara.mcgrath@rusd.edu, michael.bruce@rusd.edu
+Subject: POS System Outage - Cafeteria Payment Processing
+X-Email-Type: forward
+X-Department: None
+X-Topics: curriculum updates, facility maintenance
+
+Good morning Margaret, Barbara, and Michael,
+
+I wanted to notify you of a technology issue we experienced this morning in the cafeteria. Our point-of-sale (POS) system went offline from approximately 7:45 AM to 8:30 AM, which affected our ability to process student meal payments during the first lunch period.
+
+During this time, we manually recorded all transactions and will input them into the system once it comes back online. All students were able to receive their meals without interruption.
+
+Our IT department has confirmed the system is now back online and functioning normally. I will follow up with them to ensure this doesn't happen again during peak lunch times.
+
+Please let me know if you have any questions or if you notice any discrepancies in the system.
+
+Thank you,
+Deborah Byrd
+Cafeteria Manager

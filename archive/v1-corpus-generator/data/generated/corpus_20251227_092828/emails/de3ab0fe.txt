@@ -1,0 +1,11 @@
+Message-ID: de3ab0fe-35e1-4199-aa6c-6c562f18d8bd
+Date: Sat, 24 May 2025 08:42:44
+From: brian.harmon@rusd.edu
+To: charles.martin@rusd.edu, jesse.mann@rusd.edu, brenda.hoffman@rusd.edu
+Cc: jeffrey.dudley@rusd.edu, tyler.aguilar@rusd.edu
+Subject: Schedule Change
+X-Email-Type: meeting_request
+X-Department: Special Education
+X-Topics: special education, curriculum updates
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nBrian

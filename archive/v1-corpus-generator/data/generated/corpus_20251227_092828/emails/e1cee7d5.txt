@@ -1,0 +1,10 @@
+Message-ID: e1cee7d5-cc8b-40f1-873c-166862ee351a
+Date: Mon, 26 Feb 2024 11:07:11
+From: shannon.pacheco@rusd.edu
+To: kathryn.jimenez@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Please remember to display your parking permits.\n\nThanks,\nShannon

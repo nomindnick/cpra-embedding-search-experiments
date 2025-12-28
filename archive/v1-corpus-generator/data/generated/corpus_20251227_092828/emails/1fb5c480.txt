@@ -1,0 +1,11 @@
+Message-ID: 1fb5c480-735a-4dd5-8e65-e05a710651e8
+Date: Thu, 24 Oct 2024 11:44:18
+From: jose.williams@rusd.edu
+To: kristin.dean@rusd.edu
+Cc: samantha.warren@rusd.edu, jeffrey.rodriguez@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: reply
+X-Department: None
+X-Topics: technology infrastructure, budget planning
+
+Please remember to display your parking permits.\n\nThanks,\nJose

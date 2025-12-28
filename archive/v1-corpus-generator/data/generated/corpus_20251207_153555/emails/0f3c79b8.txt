@@ -1,0 +1,27 @@
+Message-ID: 0f3c79b8-f187-43cd-b936-e397c063218e
+Date: Fri, 26 Apr 2024 10:50:25
+From: brenda.bailey@rusd.edu
+To: elizabeth.olsen@rusd.edu
+Subject: Printer Setup Assistance - Room 204
+X-Email-Type: regular
+X-Department: None
+X-Topics: parent communication
+
+Hi Elizabeth,
+
+I hope this email finds you well. I wanted to follow up regarding the printer setup in Room 204 that you mentioned during our conversation yesterday.
+
+I've completed the network configuration on your end, and the device should now be ready to use. Here are a few quick steps to get started:
+
+1. Look for "Room204-Printer" in your available printers list
+2. Select it and click "Connect"
+3. Test with a small print job to confirm everything is working
+
+If you encounter any issues or the printer doesn't appear in your device list, please let me know and I can troubleshoot further. You can also reach out to our IT Help Desk at ext. 5555 if you need immediate assistance.
+
+Please let me know if you have any questions!
+
+Best regards,
+Brenda Bailey
+IT Support
+School District Technology Services

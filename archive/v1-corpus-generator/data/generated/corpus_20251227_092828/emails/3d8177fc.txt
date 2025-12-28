@@ -1,0 +1,10 @@
+Message-ID: 3d8177fc-1e87-4ab1-9dfc-74141481df05
+Date: Thu, 26 Jun 2025 07:45:41
+From: elizabeth.olsen@rusd.edu
+To: curtis.greer@rusd.edu, michael.bruce@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation, facility maintenance
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nElizabeth

@@ -1,0 +1,10 @@
+Message-ID: ef90d0cb-ee54-444e-8121-5a3f88d36f75
+Date: Fri, 09 May 2025 09:21:14
+From: curtis.greer@rusd.edu
+To: frank.benton@rusd.edu, steven.russell@rusd.edu, luis.acosta@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nCurtis

@@ -1,0 +1,11 @@
+Message-ID: 1d5b8b60-97ef-4580-974d-9923c9df0770
+Date: Sun, 14 Dec 2025 15:16:11
+From: anthony.rosales@rusd.edu
+To: michael.hartman@rusd.edu
+Cc: ashley.larsen@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Please remember to display your parking permits.\n\nThanks,\nAnthony

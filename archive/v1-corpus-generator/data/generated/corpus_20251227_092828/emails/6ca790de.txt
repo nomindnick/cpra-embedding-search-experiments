@@ -1,0 +1,10 @@
+Message-ID: 6ca790de-b83a-4879-a072-ae0c390c467d
+Date: Sat, 13 Apr 2024 09:51:15
+From: jose.williams@rusd.edu
+To: jessica.ellis@rusd.edu, anthony.jackson@rusd.edu, robert.pierce@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: parent communication, standardized testing
+
+Please remember to display your parking permits.\n\nThanks,\nJose

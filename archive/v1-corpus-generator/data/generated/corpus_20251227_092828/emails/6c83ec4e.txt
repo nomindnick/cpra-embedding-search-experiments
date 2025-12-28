@@ -1,0 +1,10 @@
+Message-ID: 6c83ec4e-0b23-4223-8db2-7539f0795359
+Date: Thu, 01 May 2025 15:23:48
+From: david.young@rusd.edu
+To: samuel.ross@rusd.edu, shannon.pacheco@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, professional development
+
+Please remember to display your parking permits.\n\nThanks,\nDavid

@@ -1,0 +1,10 @@
+Message-ID: ddf39df6-fdf5-445c-b0ef-82146a09acc7
+Date: Wed, 12 Feb 2025 12:52:45
+From: jason.morales@rusd.edu
+To: joyce.arnold@rusd.edu, susan.miller@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing, technology infrastructure
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJason

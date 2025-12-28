@@ -1,0 +1,27 @@
+Message-ID: 361b3a77-251d-4ae9-8cd3-f4bbd9ab1f27
+Date: Tue, 21 Jan 2025 18:51:31
+From: juan.harper@rusd.edu
+To: samuel.ross@rusd.edu
+Subject: Field Trip Technology Support - Please Review
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Hi Samuel,
+
+I hope this email finds you well. I'm reaching out regarding the upcoming field trip scheduled for next month.
+
+From an IT support perspective, I wanted to confirm a few details:
+
+1. Will students be taking school-issued devices on the trip? If so, please let me know the quantity and device types so I can ensure they're properly charged and configured.
+
+2. Do you need any technical support or troubleshooting assistance before departure?
+
+3. Will there be any connectivity requirements at the destination? I can provide information about accessing our remote support services if needed.
+
+Please let me know the trip date, destination, and number of participants at your earliest convenience so I can coordinate accordingly.
+
+Thank you,
+Juan Harper
+IT Support
+School District

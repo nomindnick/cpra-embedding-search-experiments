@@ -1,0 +1,10 @@
+Message-ID: 68a080cb-8cbd-4185-9732-e6c0402a75f5
+Date: Thu, 07 Mar 2024 06:31:48
+From: samantha.hooper@rusd.edu
+To: james.walters@rusd.edu, brent.gray@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: reply
+X-Department: None
+X-Topics: technology infrastructure
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nSamantha

@@ -1,0 +1,10 @@
+Message-ID: 31432c5b-986d-40f2-b360-3a880a2aef4a
+Date: Tue, 19 Aug 2025 17:28:44
+From: danny.jones@rusd.edu
+To: michelle.cherry@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing
+
+The lunch schedule has been updated for next week.\n\nThanks,\nDanny

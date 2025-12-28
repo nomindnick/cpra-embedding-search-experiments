@@ -1,0 +1,10 @@
+Message-ID: 0ac60eee-b24d-458f-b9ea-1c6c91d7b814
+Date: Sun, 23 Nov 2025 12:48:00
+From: maria.kelley@rusd.edu
+To: sarah.garcia@rusd.edu
+Subject: Supply Order
+X-Email-Type: announcement
+X-Department: None
+X-Topics: transportation
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nMaria

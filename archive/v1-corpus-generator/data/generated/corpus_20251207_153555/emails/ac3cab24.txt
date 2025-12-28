@@ -1,0 +1,30 @@
+Message-ID: ac3cab24-b42e-4d91-a24d-2819828bafab
+Date: Fri, 08 Dec 2023 09:31:18
+From: jeffrey.joyce@rusd.edu
+To: daniel.hall@rusd.edu, donald.shah@rusd.edu, carly.preston@rusd.edu
+Subject: Network Connectivity Issues - Building B
+X-Email-Type: reply
+X-Department: Facilities
+X-Topics: student achievement
+
+Good morning Daniel, Donald, and Carly,
+
+I wanted to alert you to some network connectivity issues we've been experiencing in Building B this morning. Our IT department is currently investigating the problem, which appears to be affecting several classrooms on the second and third floors.
+
+Impacted areas:
+- Rooms 201-210
+- Rooms 301-305
+
+Students and staff in these areas may experience:
+- Slow internet speeds
+- Intermittent connection drops
+- Difficulty accessing online learning platforms
+
+We expect to have this resolved by early afternoon. In the meantime, please consider using alternative spaces if your classes require reliable internet access, or contact IT directly at ext. 4521 if you need immediate assistance.
+
+Thank you for your patience and flexibility as we work through this issue.
+
+Best regards,
+Jeffrey Joyce
+Maintenance Staff
+School District

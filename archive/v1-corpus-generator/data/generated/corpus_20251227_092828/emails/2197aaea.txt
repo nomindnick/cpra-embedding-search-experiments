@@ -1,0 +1,11 @@
+Message-ID: 2197aaea-436e-4217-b715-1d9059937469
+Date: Mon, 30 Jun 2025 07:23:53
+From: david.young@rusd.edu
+To: joseph.wright@rusd.edu
+Cc: rodney.bennett@rusd.edu, michele.jones@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, safety protocols
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nDavid

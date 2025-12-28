@@ -1,0 +1,10 @@
+Message-ID: f5b63c26-1d9e-4281-8a37-20c4f24c163a
+Date: Tue, 24 Dec 2024 15:40:57
+From: jorge.ewing@rusd.edu
+To: patrick.simmons@rusd.edu, charles.jackson@rusd.edu, margaret.terry@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: budget planning
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJorge

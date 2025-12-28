@@ -1,0 +1,11 @@
+Message-ID: a6b1340c-03a2-4f10-8dbd-4c4dfe5d9d24
+Date: Wed, 10 Jul 2024 10:44:06
+From: jeanne.evans@rusd.edu
+To: joshua.lamb@rusd.edu, debbie.velez@rusd.edu, gregory.medina@rusd.edu
+Cc: heather.montoya@rusd.edu, justin.hines@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJeanne

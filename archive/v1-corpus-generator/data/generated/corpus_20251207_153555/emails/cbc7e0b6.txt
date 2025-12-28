@@ -1,0 +1,20 @@
+Message-ID: cbc7e0b6-a28f-48ab-9bca-c2d47b3f23d4
+Date: Mon, 10 Feb 2025 14:58:17
+From: stephen.adkins@rusd.edu
+To: dennis.mccann@rusd.edu
+Cc: brittany.cruz@rusd.edu, martin.mendez@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: substitute coverage
+
+Hi Dennis,
+
+I wanted to reach out regarding a technical issue I encountered this morning in the computer lab. Several of the desktop computers in Lab B are not connecting to the network properly. Students were unable to access the learning management system during my 2nd period class.
+
+I've already restarted the affected machines, but the connectivity issue persists. Could you take a look when you have a chance? I have classes scheduled in that lab again tomorrow at 10:00 AM, so hopefully we can get this resolved before then.
+
+Please let me know if you need any additional information or if there's anything I should do on my end.
+
+Thank you,
+Stephen Adkins

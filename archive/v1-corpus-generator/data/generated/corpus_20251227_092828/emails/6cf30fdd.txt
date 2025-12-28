@@ -1,0 +1,10 @@
+Message-ID: 6cf30fdd-8528-4135-9567-cb98b17c9f9a
+Date: Sat, 05 Jul 2025 15:07:00
+From: amy.li@rusd.edu
+To: kevin.williams@rusd.edu, angelica.schneider@rusd.edu, lance.hayes@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications, food services
+
+The lunch schedule has been updated for next week.\n\nThanks,\nAmy

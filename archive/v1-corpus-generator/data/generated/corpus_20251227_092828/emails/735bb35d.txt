@@ -1,0 +1,10 @@
+Message-ID: 735bb35d-56a4-4291-92c5-b3fddb7b5c7c
+Date: Mon, 08 Jan 2024 15:30:04
+From: brian.gutierrez@rusd.edu
+To: kathy.gutierrez@rusd.edu, mark.ramirez@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nBrian

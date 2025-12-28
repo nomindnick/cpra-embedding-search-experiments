@@ -1,0 +1,11 @@
+Message-ID: 1e4957e2-7f1d-470e-a59a-9cd9d073ed77
+Date: Tue, 18 Nov 2025 10:43:40
+From: steven.russell@rusd.edu
+To: gail.perry@rusd.edu, sharon.taylor@rusd.edu, jonathan.rodriguez@rusd.edu
+Cc: william.hill@rusd.edu, shannon.ramos@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: substitute coverage
+
+The lunch schedule has been updated for next week.\n\nThanks,\nSteven

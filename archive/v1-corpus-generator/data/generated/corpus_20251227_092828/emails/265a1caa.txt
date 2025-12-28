@@ -1,0 +1,10 @@
+Message-ID: 265a1caa-4d20-48a0-ab96-7b6878334252
+Date: Sun, 14 Jan 2024 16:43:31
+From: chad.beck@rusd.edu
+To: danny.jones@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates, professional development
+
+The lunch schedule has been updated for next week.\n\nThanks,\nChad

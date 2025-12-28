@@ -1,0 +1,11 @@
+Message-ID: d3a59294-5ffe-4353-9938-d2d34bdb5f3e
+Date: Fri, 06 Sep 2024 14:02:00
+From: ryan.colon@rusd.edu
+To: daniel.garcia@rusd.edu, erica.fernandez@rusd.edu, angela.anderson@rusd.edu
+Cc: lori.flynn@rusd.edu, sharon.taylor@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: technology infrastructure
+
+The lunch schedule has been updated for next week.\n\nThanks,\nRyan

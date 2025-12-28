@@ -1,0 +1,286 @@
+{
+  "experiment_name": "Ollama nomic-embed-text",
+  "pipeline_name": "Embedding Search (ollama:nomic-embed-text)",
+  "timestamp": "2025-12-09T11:25:08.219440",
+  "overall": {
+    "precision": 0.15,
+    "recall": 1.0,
+    "f1": 0.2608695652173913,
+    "map": 0.9051595540646284
+  },
+  "totals": {
+    "emails": 2500,
+    "responsive": 375,
+    "predicted": 2500
+  },
+  "by_request": [
+    {
+      "request_id": "cpra_001",
+      "request_title": "Lead Testing in Water Systems",
+      "precision": 0.03033980582524272,
+      "recall": 1.0,
+      "f1": 0.05889281507656066,
+      "true_positives": 75,
+      "false_positives": 2397,
+      "false_negatives": 0,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 0.8995445782132826,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.6666666666666666,
+        "precision_at_100": 0.66,
+        "recall_at_100": 0.88,
+        "precision_at_200": 0.335,
+        "recall_at_200": 0.8933333333333333,
+        "precision_at_375": 0.18133333333333335,
+        "recall_at_375": 0.9066666666666666
+      }
+    },
+    {
+      "request_id": "cpra_002",
+      "request_title": "COVID Relief Fund Allocation",
+      "precision": 0.030512611879576892,
+      "recall": 1.0,
+      "f1": 0.05921831819976313,
+      "true_positives": 75,
+      "false_positives": 2383,
+      "false_negatives": 0,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 0.9867368365981513,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.6666666666666666,
+        "precision_at_100": 0.74,
+        "recall_at_100": 0.9866666666666667,
+        "precision_at_200": 0.375,
+        "recall_at_200": 1.0,
+        "precision_at_375": 0.2,
+        "recall_at_375": 1.0
+      }
+    },
+    {
+      "request_id": "cpra_003",
+      "request_title": "Special Education Program Changes",
+      "precision": 0.030654515327257662,
+      "recall": 0.9866666666666667,
+      "f1": 0.05946163117717959,
+      "true_positives": 74,
+      "false_positives": 2340,
+      "false_negatives": 1,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 0.7814887178476482,
+        "precision_at_50": 0.9,
+        "recall_at_50": 0.6,
+        "precision_at_100": 0.57,
+        "recall_at_100": 0.76,
+        "precision_at_200": 0.31,
+        "recall_at_200": 0.8266666666666667,
+        "precision_at_375": 0.17333333333333334,
+        "recall_at_375": 0.8666666666666667
+      }
+    },
+    {
+      "request_id": "cpra_004",
+      "request_title": "EdTech Vendor Contracts",
+      "precision": 0.03117206982543641,
+      "recall": 1.0,
+      "f1": 0.06045949214026603,
+      "true_positives": 75,
+      "false_positives": 2331,
+      "false_negatives": 0,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 0.8877743696538037,
+        "precision_at_50": 0.98,
+        "recall_at_50": 0.6533333333333333,
+        "precision_at_100": 0.67,
+        "recall_at_100": 0.8933333333333333,
+        "precision_at_200": 0.355,
+        "recall_at_200": 0.9466666666666667,
+        "precision_at_375": 0.19733333333333333,
+        "recall_at_375": 0.9866666666666667
+      }
+    },
+    {
+      "request_id": "cpra_005",
+      "request_title": "Student Safety Incidents",
+      "precision": 0.030662305805396566,
+      "recall": 1.0,
+      "f1": 0.05950019833399445,
+      "true_positives": 75,
+      "false_positives": 2371,
+      "false_negatives": 0,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 0.9702532680102562,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.6666666666666666,
+        "precision_at_100": 0.72,
+        "recall_at_100": 0.96,
+        "precision_at_200": 0.365,
+        "recall_at_200": 0.9733333333333334,
+        "precision_at_375": 0.19733333333333333,
+        "recall_at_375": 0.9866666666666667
+      }
+    }
+  ],
+  "by_challenge": [
+    {
+      "challenge_type": "ambiguous_terms",
+      "precision": 0.20454545454545456,
+      "recall": 1.0,
+      "f1": 0.339622641509434,
+      "total_emails": 18,
+      "correctly_identified": 18
+    },
+    {
+      "challenge_type": "near_miss",
+      "precision": 0.1991869918699187,
+      "recall": 0.98,
+      "f1": 0.3310810810810811,
+      "total_emails": 50,
+      "correctly_identified": 49
+    },
+    {
+      "challenge_type": "indirect_reference",
+      "precision": 0.20958083832335328,
+      "recall": 1.0,
+      "f1": 0.3465346534653465,
+      "total_emails": 35,
+      "correctly_identified": 35
+    },
+    {
+      "challenge_type": "temporal_mismatch",
+      "precision": 0.22641509433962265,
+      "recall": 1.0,
+      "f1": 0.36923076923076925,
+      "total_emails": 24,
+      "correctly_identified": 24
+    },
+    {
+      "challenge_type": "partial_match",
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "total_emails": 12,
+      "correctly_identified": 12
+    }
+  ],
+  "threshold_analysis": [
+    {
+      "threshold": 0.3,
+      "precision": 0.15,
+      "recall": 1.0,
+      "f1": 0.2608695652173913,
+      "total_predicted": 2500,
+      "true_positives": 375,
+      "false_positives": 2125,
+      "false_negatives": 0
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.15,
+      "recall": 1.0,
+      "f1": 0.2608695652173913,
+      "total_predicted": 2500,
+      "true_positives": 375,
+      "false_positives": 2125,
+      "false_negatives": 0
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.15,
+      "recall": 1.0,
+      "f1": 0.2608695652173913,
+      "total_predicted": 2500,
+      "true_positives": 375,
+      "false_positives": 2125,
+      "false_negatives": 0
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0.17895247332686712,
+      "recall": 0.984,
+      "f1": 0.30283135002051703,
+      "total_predicted": 2062,
+      "true_positives": 369,
+      "false_positives": 1693,
+      "false_negatives": 6
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0.8724035608308606,
+      "recall": 0.784,
+      "f1": 0.8258426966292135,
+      "total_predicted": 337,
+      "true_positives": 294,
+      "false_positives": 43,
+      "false_negatives": 81
+    },
+    {
+      "threshold": 0.8,
+      "precision": 1.0,
+      "recall": 0.042666666666666665,
+      "f1": 0.08184143222506395,
+      "total_predicted": 16,
+      "true_positives": 16,
+      "false_positives": 0,
+      "false_negatives": 359
+    }
+  ],
+  "k_values": [
+    50,
+    100,
+    200,
+    375
+  ],
+  "config": {
+    "name": "Ollama nomic-embed-text",
+    "description": "Test nomic-embed-text via Ollama. This is a popular open-source embedding model optimized for retrieval tasks.\n",
+    "embedding_model": "ollama:nomic-embed-text",
+    "llm_model": null,
+    "pipeline": {
+      "method": "embedding",
+      "embedding_search": {
+        "embed_fields": [
+          "subject",
+          "body"
+        ],
+        "similarity_metric": "cosine"
+      },
+      "query_expansion": {
+        "enabled": false
+      },
+      "reranking": {
+        "enabled": false
+      }
+    },
+    "evaluation": {
+      "metrics": [
+        "precision",
+        "recall",
+        "f1",
+        "map"
+      ],
+      "k_values": [
+        50,
+        100,
+        200,
+        375
+      ],
+      "breakdown_by": [
+        "cpra_request",
+        "challenge_type"
+      ],
+      "thresholds": [
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8
+      ]
+    }
+  }
+}

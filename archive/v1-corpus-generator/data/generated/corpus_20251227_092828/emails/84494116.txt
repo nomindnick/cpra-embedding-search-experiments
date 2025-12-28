@@ -1,0 +1,10 @@
+Message-ID: 84494116-bc08-42fe-9cdc-e5aa61a8ef73
+Date: Fri, 26 Apr 2024 18:55:17
+From: anthony.jackson@rusd.edu
+To: marc.butler@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, standardized testing
+
+Please remember to display your parking permits.\n\nThanks,\nAnthony

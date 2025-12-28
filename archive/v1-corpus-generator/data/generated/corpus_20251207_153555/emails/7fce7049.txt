@@ -1,0 +1,23 @@
+Message-ID: 7fce7049-ba29-44ad-9702-166829050d98
+Date: Mon, 08 Sep 2025 13:06:29
+From: jessica.herrera@rusd.edu
+To: joseph.schaefer@rusd.edu
+Subject: Printer Setup Assistance Needed - Room 204
+X-Email-Type: meeting_request
+X-Department: Technology
+X-Topics: student achievement
+
+Hi Joseph,
+
+I hope this email finds you well. I wanted to reach out regarding the networked printer in Room 204. Several staff members have reported that it's not appearing on their device list when trying to print.
+
+I believe this is just a connectivity issue, but I wanted to check in with you first before I send out a district-wide tech notice. Could you let me know if you've experienced any problems on your end, or if you've heard from other teachers in that wing?
+
+In the meantime, I can push out a quick driver update to affected machines if needed. Just let me know your availability for a brief troubleshooting session.
+
+Thanks for your help!
+
+Best regards,
+Jessica Herrera
+IT Director
+School District

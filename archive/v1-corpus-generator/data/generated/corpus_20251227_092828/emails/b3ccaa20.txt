@@ -1,0 +1,11 @@
+Message-ID: b3ccaa20-71d8-440d-aaa7-24186ff9ae46
+Date: Sun, 09 Jun 2024 06:00:47
+From: jeffrey.morgan@rusd.edu
+To: maria.kelley@rusd.edu, mark.owens@rusd.edu
+Cc: alexander.greer@rusd.edu, jennifer.collins@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: substitute coverage, standardized testing
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJeffrey

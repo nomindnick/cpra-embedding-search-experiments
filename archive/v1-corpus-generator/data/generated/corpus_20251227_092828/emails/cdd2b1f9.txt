@@ -1,0 +1,10 @@
+Message-ID: cdd2b1f9-f54c-4aae-b265-cd9f203efa91
+Date: Sun, 30 Mar 2025 15:20:01
+From: shannon.ramos@rusd.edu
+To: maria.kelley@rusd.edu, brandon.brown@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: budget planning, transportation
+
+The lunch schedule has been updated for next week.\n\nThanks,\nShannon

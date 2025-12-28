@@ -1,0 +1,36 @@
+Message-ID: e00b9858-220d-4a51-9d04-d796561f9c88
+Date: Fri, 17 May 2024 13:38:51
+From: jessica.herrera@rusd.edu
+To: joseph.schaefer@rusd.edu
+Cc: charles.jackson@rusd.edu, john.middleton@rusd.edu
+Subject: Follow-up on Our Discussion Regarding Educational Technology Partners and Their Terms
+X-Email-Type: regular
+X-Department: Technology
+X-Topics: technology procurement, vendor evaluation
+
+Hi Joseph,
+
+I wanted to reach out regarding the matter we discussed last week about bringing in new learning management partners for our district.
+
+As you know, we've been evaluating several organizations that provide digital classroom tools and assessment systems. We're currently in the phase of reviewing their standard terms, pricing models, and service agreements to determine which relationships would be the best fit for our schools.
+
+I've compiled a summary of the key points from our preliminary conversations:
+
+• The three organizations we're considering each have different approaches to their annual fee structures
+• Each one offers varying levels of technical support and professional development for our staff
+• We need to clarify the data ownership and security provisions in their standard documents
+• Implementation timelines differ significantly between the three options
+
+Before we move forward with formal discussions, I'd like to schedule time with you to review:
+- The terms each organization is proposing
+- Our internal requirements and non-negotiables
+- The total cost of ownership over a 3-year period
+- What customization or integration work might be needed with our existing systems
+
+Could you find time this week to meet? I think we should also loop in our finance team to ensure we're aligned on budget considerations.
+
+Please let me know your availability.
+
+Best regards,
+Jessica Herrera
+IT Director

@@ -1,0 +1,11 @@
+Message-ID: 2e321484-fc6d-4e29-af4b-f5235741b4c9
+Date: Sat, 17 May 2025 06:03:01
+From: jessica.herrera@rusd.edu
+To: diana.foster@rusd.edu, dr. patricia.johnson@rusd.edu
+Cc: crystal.mccall@rusd.edu, marc.butler@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: Technology
+X-Topics: curriculum updates, technology infrastructure
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJessica

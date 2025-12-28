@@ -1,0 +1,11 @@
+Message-ID: 58454e03-eb3f-4295-8c96-9074cae6a1b0
+Date: Sun, 09 Mar 2025 07:29:34
+From: brian.harmon@rusd.edu
+To: sarah.romero@rusd.edu, amber.lindsey@rusd.edu
+Cc: christopher.bruce@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nBrian

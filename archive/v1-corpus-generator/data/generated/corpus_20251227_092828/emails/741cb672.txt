@@ -1,0 +1,10 @@
+Message-ID: 741cb672-339b-433e-826b-3ccd63a6738a
+Date: Thu, 28 Aug 2025 17:45:09
+From: joel.green@rusd.edu
+To: gail.perry@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, budget planning
+
+Please remember to display your parking permits.\n\nThanks,\nJoel

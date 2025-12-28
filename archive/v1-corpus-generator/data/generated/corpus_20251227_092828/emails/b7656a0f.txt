@@ -1,0 +1,10 @@
+Message-ID: b7656a0f-a527-4018-8fc5-488e3736fb71
+Date: Mon, 21 Apr 2025 15:48:37
+From: raymond.lopez@rusd.edu
+To: laura.carter@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nRaymond

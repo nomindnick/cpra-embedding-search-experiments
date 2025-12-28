@@ -1,0 +1,22 @@
+Message-ID: 75096071-2a76-4f84-9be5-4b0a5b58a9ac
+Date: Sun, 17 Mar 2024 10:43:35
+From: mark.ramirez@rusd.edu
+To: amy.gibbs@rusd.edu
+Subject: Chromebook Access Issue - Need IT Support
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: food services, vendor contracts
+
+Hi Amy,
+
+I hope this email finds you well. I wanted to reach out regarding a technical issue I've been experiencing with the Chromebooks in my classroom.
+
+Several of my students have been unable to log in to their devices since this morning. They're getting an error message that says "Unable to connect to school network." I've tried the standard troubleshooting steps (restarting the devices, clearing the cache), but the issue persists.
+
+Would you be able to help troubleshoot this, or should I submit a ticket with the IT department? I have a class working on their assignments this afternoon, so any assistance would be greatly appreciated.
+
+Thank you for your help!
+
+Best regards,
+Mark Ramirez
+Special Education Teacher

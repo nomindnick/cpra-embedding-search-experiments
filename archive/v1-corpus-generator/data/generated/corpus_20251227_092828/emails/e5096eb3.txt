@@ -1,0 +1,10 @@
+Message-ID: e5096eb3-003a-46dc-bc13-d004463161e9
+Date: Thu, 25 Dec 2025 14:00:00
+From: lauren.rodriguez@rusd.edu
+To: michele.jones@rusd.edu, linda.dominguez@rusd.edu, jason.morales@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications, student achievement
+
+Please remember to display your parking permits.\n\nThanks,\nLauren

@@ -1,0 +1,10 @@
+Message-ID: a70c835c-dedb-4708-a98f-3ce7f3ad3e9f
+Date: Mon, 30 Jun 2025 07:53:27
+From: tyler.aguilar@rusd.edu
+To: brian.harmon@rusd.edu, scott.reed@rusd.edu, carly.preston@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+The lunch schedule has been updated for next week.\n\nThanks,\nTyler

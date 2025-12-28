@@ -1,0 +1,11 @@
+Message-ID: 53074d1a-0c29-4d48-9920-d0c1c3c75567
+Date: Mon, 06 Oct 2025 17:49:30
+From: brian.stone@rusd.edu
+To: charles.martin@rusd.edu
+Cc: leonard.hayes@rusd.edu, michael.nelson@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates, vendor contracts
+
+The lunch schedule has been updated for next week.\n\nThanks,\nBrian

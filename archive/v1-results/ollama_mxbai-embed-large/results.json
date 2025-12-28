@@ -1,0 +1,286 @@
+{
+  "experiment_name": "Ollama mxbai-embed-large",
+  "pipeline_name": "Embedding Search (ollama:mxbai-embed-large)",
+  "timestamp": "2025-12-09T11:41:51.315015",
+  "overall": {
+    "precision": 0.151637687019814,
+    "recall": 1.0,
+    "f1": 0.2633426966292135,
+    "map": 0.9817956675736838
+  },
+  "totals": {
+    "emails": 2500,
+    "responsive": 375,
+    "predicted": 2473
+  },
+  "by_request": [
+    {
+      "request_id": "cpra_001",
+      "request_title": "Lead Testing in Water Systems",
+      "precision": 0.031942078364565585,
+      "recall": 1.0,
+      "f1": 0.061906727197688804,
+      "true_positives": 75,
+      "false_positives": 2273,
+      "false_negatives": 0,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 0.9834305247075145,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.6666666666666666,
+        "precision_at_100": 0.72,
+        "recall_at_100": 0.96,
+        "precision_at_200": 0.375,
+        "recall_at_200": 1.0,
+        "precision_at_375": 0.2,
+        "recall_at_375": 1.0
+      }
+    },
+    {
+      "request_id": "cpra_002",
+      "request_title": "COVID Relief Fund Allocation",
+      "precision": 0.10869565217391304,
+      "recall": 1.0,
+      "f1": 0.19607843137254902,
+      "true_positives": 75,
+      "false_positives": 615,
+      "false_negatives": 0,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 0.970034035906397,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.6666666666666666,
+        "precision_at_100": 0.73,
+        "recall_at_100": 0.9733333333333334,
+        "precision_at_200": 0.37,
+        "recall_at_200": 0.9866666666666667,
+        "precision_at_375": 0.2,
+        "recall_at_375": 1.0
+      }
+    },
+    {
+      "request_id": "cpra_003",
+      "request_title": "Special Education Program Changes",
+      "precision": 0.03087690407575134,
+      "recall": 1.0,
+      "f1": 0.059904153354632596,
+      "true_positives": 75,
+      "false_positives": 2354,
+      "false_negatives": 0,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 0.9779323972838206,
+        "precision_at_50": 0.98,
+        "recall_at_50": 0.6533333333333333,
+        "precision_at_100": 0.74,
+        "recall_at_100": 0.9866666666666667,
+        "precision_at_200": 0.375,
+        "recall_at_200": 1.0,
+        "precision_at_375": 0.2,
+        "recall_at_375": 1.0
+      }
+    },
+    {
+      "request_id": "cpra_004",
+      "request_title": "EdTech Vendor Contracts",
+      "precision": 0.04419563936358279,
+      "recall": 1.0,
+      "f1": 0.08465011286681716,
+      "true_positives": 75,
+      "false_positives": 1622,
+      "false_negatives": 0,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 1.0,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.6666666666666666,
+        "precision_at_100": 0.75,
+        "recall_at_100": 1.0,
+        "precision_at_200": 0.375,
+        "recall_at_200": 1.0,
+        "precision_at_375": 0.2,
+        "recall_at_375": 1.0
+      }
+    },
+    {
+      "request_id": "cpra_005",
+      "request_title": "Student Safety Incidents",
+      "precision": 0.0319693094629156,
+      "recall": 1.0,
+      "f1": 0.061957868649318466,
+      "true_positives": 75,
+      "false_positives": 2271,
+      "false_negatives": 0,
+      "total_responsive": 75,
+      "ranked_metrics": {
+        "average_precision": 0.9775813799706867,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.6666666666666666,
+        "precision_at_100": 0.74,
+        "recall_at_100": 0.9866666666666667,
+        "precision_at_200": 0.37,
+        "recall_at_200": 0.9866666666666667,
+        "precision_at_375": 0.19733333333333333,
+        "recall_at_375": 0.9866666666666667
+      }
+    }
+  ],
+  "by_challenge": [
+    {
+      "challenge_type": "ambiguous_terms",
+      "precision": 0.225,
+      "recall": 1.0,
+      "f1": 0.36734693877551017,
+      "total_emails": 18,
+      "correctly_identified": 18
+    },
+    {
+      "challenge_type": "near_miss",
+      "precision": 0.22727272727272727,
+      "recall": 1.0,
+      "f1": 0.37037037037037035,
+      "total_emails": 50,
+      "correctly_identified": 50
+    },
+    {
+      "challenge_type": "indirect_reference",
+      "precision": 0.21604938271604937,
+      "recall": 1.0,
+      "f1": 0.35532994923857864,
+      "total_emails": 35,
+      "correctly_identified": 35
+    },
+    {
+      "challenge_type": "temporal_mismatch",
+      "precision": 0.2823529411764706,
+      "recall": 1.0,
+      "f1": 0.44036697247706424,
+      "total_emails": 24,
+      "correctly_identified": 24
+    },
+    {
+      "challenge_type": "partial_match",
+      "precision": 0.24489795918367346,
+      "recall": 1.0,
+      "f1": 0.39344262295081966,
+      "total_emails": 12,
+      "correctly_identified": 12
+    }
+  ],
+  "threshold_analysis": [
+    {
+      "threshold": 0.3,
+      "precision": 0.15,
+      "recall": 1.0,
+      "f1": 0.2608695652173913,
+      "total_predicted": 2500,
+      "true_positives": 375,
+      "false_positives": 2125,
+      "false_negatives": 0
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.15,
+      "recall": 1.0,
+      "f1": 0.2608695652173913,
+      "total_predicted": 2500,
+      "true_positives": 375,
+      "false_positives": 2125,
+      "false_negatives": 0
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.151637687019814,
+      "recall": 1.0,
+      "f1": 0.2633426966292135,
+      "total_predicted": 2473,
+      "true_positives": 375,
+      "false_positives": 2098,
+      "false_negatives": 0
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0.2733918128654971,
+      "recall": 0.9973333333333333,
+      "f1": 0.4291451520367182,
+      "total_predicted": 1368,
+      "true_positives": 374,
+      "false_positives": 994,
+      "false_negatives": 1
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0.9355828220858896,
+      "recall": 0.8133333333333334,
+      "f1": 0.8701854493580599,
+      "total_predicted": 326,
+      "true_positives": 305,
+      "false_positives": 21,
+      "false_negatives": 70
+    },
+    {
+      "threshold": 0.8,
+      "precision": 1.0,
+      "recall": 0.11733333333333333,
+      "f1": 0.2100238663484487,
+      "total_predicted": 44,
+      "true_positives": 44,
+      "false_positives": 0,
+      "false_negatives": 331
+    }
+  ],
+  "k_values": [
+    50,
+    100,
+    200,
+    375
+  ],
+  "config": {
+    "name": "Ollama mxbai-embed-large",
+    "description": "Test mxbai-embed-large via Ollama. This model has 1024 dimensions and is known for higher quality embeddings.\n",
+    "embedding_model": "ollama:mxbai-embed-large",
+    "llm_model": null,
+    "pipeline": {
+      "method": "embedding",
+      "embedding_search": {
+        "embed_fields": [
+          "subject",
+          "body"
+        ],
+        "similarity_metric": "cosine"
+      },
+      "query_expansion": {
+        "enabled": false
+      },
+      "reranking": {
+        "enabled": false
+      }
+    },
+    "evaluation": {
+      "metrics": [
+        "precision",
+        "recall",
+        "f1",
+        "map"
+      ],
+      "k_values": [
+        50,
+        100,
+        200,
+        375
+      ],
+      "breakdown_by": [
+        "cpra_request",
+        "challenge_type"
+      ],
+      "thresholds": [
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8
+      ]
+    }
+  }
+}

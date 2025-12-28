@@ -1,0 +1,10 @@
+Message-ID: cf12b1ce-4964-42ab-9493-19ed19b65d41
+Date: Tue, 10 Jun 2025 06:06:25
+From: joseph.nunez@rusd.edu
+To: christopher.spencer@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: announcement
+X-Department: None
+X-Topics: facility maintenance, parent communication
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJoseph

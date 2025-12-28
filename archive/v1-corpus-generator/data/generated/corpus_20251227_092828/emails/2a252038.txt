@@ -1,0 +1,10 @@
+Message-ID: 2a252038-31b2-47a7-b2fb-059ae97e2387
+Date: Wed, 08 May 2024 07:59:38
+From: brian.gutierrez@rusd.edu
+To: kathleen.becker@rusd.edu, samantha.warren@rusd.edu, jennifer.miller@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, standardized testing
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nBrian

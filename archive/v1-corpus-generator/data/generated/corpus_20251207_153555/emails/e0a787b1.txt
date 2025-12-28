@@ -1,0 +1,19 @@
+Message-ID: e0a787b1-6463-4807-bd71-3faa20ca064a
+Date: Sun, 29 Jun 2025 09:57:14
+From: susan.miller@rusd.edu
+To: robert.silva@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Hi Robert,
+
+I wanted to reach out regarding a technical issue I encountered this morning in the computer lab. Several of the workstations in the lab are not connecting to the network properly, which prevented my 3rd period class from accessing the online learning platform for today's lesson.
+
+Could you please look into this when you have a chance? I have a class scheduled in the lab again tomorrow at 10:00 AM, so if this could be resolved by then, that would be greatly appreciated.
+
+Please let me know if you need any additional information or if there's anything I should do on my end to help troubleshoot.
+
+Thank you,
+Susan Miller

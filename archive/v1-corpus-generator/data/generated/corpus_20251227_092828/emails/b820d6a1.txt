@@ -1,0 +1,10 @@
+Message-ID: b820d6a1-caa1-4f00-9f9f-ef620ee035e8
+Date: Sun, 26 Jan 2025 12:25:10
+From: lindsey.lee@rusd.edu
+To: doris.jones@rusd.edu, daniel.cox@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates, transportation
+
+Please remember to display your parking permits.\n\nThanks,\nLindsey

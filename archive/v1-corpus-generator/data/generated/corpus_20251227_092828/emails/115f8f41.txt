@@ -1,0 +1,10 @@
+Message-ID: 115f8f41-e769-4326-b0ec-1a2aa77cb9bc
+Date: Tue, 11 Mar 2025 18:18:58
+From: martin.mendez@rusd.edu
+To: julie.phillips@rusd.edu, elizabeth.olsen@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation, standardized testing
+
+The lunch schedule has been updated for next week.\n\nThanks,\nMartin

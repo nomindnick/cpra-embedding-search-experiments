@@ -1,0 +1,10 @@
+Message-ID: e3c0895c-10e3-4430-8873-9d5d2f1d95f1
+Date: Thu, 16 May 2024 17:59:32
+From: jason.morales@rusd.edu
+To: kaitlyn.williams@rusd.edu, maria.kelley@rusd.edu, javier.washington@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Please remember to display your parking permits.\n\nThanks,\nJason

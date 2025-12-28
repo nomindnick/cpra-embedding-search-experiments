@@ -1,0 +1,10 @@
+Message-ID: 639685bc-0b68-4f48-a36f-452ca500435d
+Date: Mon, 03 Nov 2025 09:53:51
+From: robert.pierce@rusd.edu
+To: stacy.cole@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: substitute coverage, facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nRobert

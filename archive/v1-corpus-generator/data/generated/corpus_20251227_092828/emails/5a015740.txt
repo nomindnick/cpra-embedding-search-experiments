@@ -1,0 +1,10 @@
+Message-ID: 5a015740-28be-49c9-ad8f-a5855635b4a8
+Date: Mon, 03 Mar 2025 09:41:05
+From: amy.gibbs@rusd.edu
+To: samantha.warren@rusd.edu, randall.mclaughlin@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, standardized testing
+
+The lunch schedule has been updated for next week.\n\nThanks,\nAmy

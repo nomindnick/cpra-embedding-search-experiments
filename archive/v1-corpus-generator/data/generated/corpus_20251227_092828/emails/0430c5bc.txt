@@ -1,0 +1,11 @@
+Message-ID: 0430c5bc-5d6e-40e6-a118-b283459c3f32
+Date: Tue, 17 Jun 2025 16:54:42
+From: danny.jones@rusd.edu
+To: susan.miller@rusd.edu, james.walters@rusd.edu, linda.dominguez@rusd.edu
+Cc: daniel.hall@rusd.edu, raymond.banks@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: special education
+
+The lunch schedule has been updated for next week.\n\nThanks,\nDanny

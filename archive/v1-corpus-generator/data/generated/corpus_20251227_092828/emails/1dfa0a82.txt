@@ -1,0 +1,10 @@
+Message-ID: 1dfa0a82-7dda-4426-bbe6-7cbc64028812
+Date: Fri, 03 Oct 2025 12:20:09
+From: raymond.banks@rusd.edu
+To: bobby.berg@rusd.edu, shannon.frazier@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: special education
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nRaymond

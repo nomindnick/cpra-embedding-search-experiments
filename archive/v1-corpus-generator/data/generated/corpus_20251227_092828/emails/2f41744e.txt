@@ -1,0 +1,10 @@
+Message-ID: 2f41744e-3782-45f5-bd08-2035a59c4240
+Date: Mon, 22 Jan 2024 09:32:46
+From: joshua.lamb@rusd.edu
+To: jennifer.miller@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJoshua

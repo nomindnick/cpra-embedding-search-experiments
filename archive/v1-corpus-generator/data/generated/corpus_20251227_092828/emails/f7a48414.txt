@@ -1,0 +1,10 @@
+Message-ID: f7a48414-c6b7-4b17-a6e9-1ef3f1e93e9a
+Date: Mon, 03 Feb 2025 17:48:40
+From: sarah.romero@rusd.edu
+To: donald.shah@rusd.edu, michelle.ramsey@rusd.edu, jennifer.collins@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nSarah

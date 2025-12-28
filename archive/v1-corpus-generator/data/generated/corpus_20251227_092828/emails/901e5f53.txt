@@ -1,0 +1,10 @@
+Message-ID: 901e5f53-a42d-4e74-bdd7-0c944ababaea
+Date: Mon, 17 Mar 2025 11:08:02
+From: jessica.herrera@rusd.edu
+To: jeffery.wagner@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: Technology
+X-Topics: student achievement, vendor contracts
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJessica

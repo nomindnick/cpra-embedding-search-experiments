@@ -1,0 +1,32 @@
+Message-ID: 08fc6bd5-3508-47b2-9494-b3a7a86fae4c
+Date: Sun, 10 Mar 2024 17:58:34
+From: jessica.herrera@rusd.edu
+To: joseph.schaefer@rusd.edu
+Cc: angela.anderson@rusd.edu, hannah.fowler@rusd.edu
+Subject: Follow-up on Our Discussion Regarding Educational Technology Partners and Service Agreements
+X-Email-Type: reply
+X-Department: Technology
+X-Topics: technology procurement, vendor evaluation
+
+Hi Joseph,
+
+I wanted to reach out regarding the matter we discussed last week about bringing in new learning tools and digital resources for our district.
+
+As you know, we're evaluating several organizations that provide classroom technology solutions. I've been reviewing the terms and conditions from the three finalists, and I wanted to get your input before we move forward.
+
+A few key items I'd like us to discuss:
+
+1. The payment structure - we need to clarify whether we're looking at annual recurring fees or a one-time purchase model for each of these providers
+
+2. The terms of service - specifically around data privacy, student information handling, and what happens if we decide to discontinue the relationship
+
+3. Implementation timeline - each organization has different onboarding requirements, and I want to ensure we pick something our IT team can realistically support
+
+4. Support and maintenance - we should confirm what technical assistance is included versus what would be additional costs
+
+I've attached the comparison spreadsheet with details on each option. Could you review it and let me know your thoughts? I'd also like to schedule a call with you and the curriculum team to finalize our selection.
+
+The board is expecting an update at next month's meeting, so ideally we'd have this decision wrapped up by end of month.
+
+Thanks,
+Jessica

@@ -1,0 +1,10 @@
+Message-ID: 850ea42d-5fde-4bbd-9fc7-558987e48f8d
+Date: Fri, 28 Jun 2024 16:21:29
+From: casey.hubbard@rusd.edu
+To: david.ryan@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: Special Education
+X-Topics: facility maintenance, vendor contracts
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nCasey

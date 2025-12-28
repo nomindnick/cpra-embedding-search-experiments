@@ -1,0 +1,11 @@
+Message-ID: 205de9ea-603d-4183-b2a3-9dbc1447b23e
+Date: Sat, 12 Apr 2025 08:54:27
+From: chris.mitchell@rusd.edu
+To: robert.silva@rusd.edu, james.walters@rusd.edu, james.robinson@rusd.edu
+Cc: joe.vang@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please remember to display your parking permits.\n\nThanks,\nChris

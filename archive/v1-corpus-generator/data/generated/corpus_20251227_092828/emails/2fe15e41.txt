@@ -1,0 +1,10 @@
+Message-ID: 2fe15e41-725b-40d1-b013-1098f3c16ae9
+Date: Fri, 17 Oct 2025 06:46:40
+From: kaitlyn.williams@rusd.edu
+To: brent.gray@rusd.edu, maria.kelley@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Please remember to display your parking permits.\n\nThanks,\nKaitlyn

@@ -1,0 +1,11 @@
+Message-ID: 65e83f4b-d83f-43ee-ae77-22d34c2d4127
+Date: Fri, 16 Aug 2024 08:55:43
+From: kimberly.howard@rusd.edu
+To: wendy.gonzalez@rusd.edu
+Cc: samuel.ross@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: standardized testing
+
+Please remember to display your parking permits.\n\nThanks,\nKimberly

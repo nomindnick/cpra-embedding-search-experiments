@@ -1,0 +1,22 @@
+Message-ID: b5fa6b92-0589-401c-9687-fd2cd0dfce1b
+Date: Sun, 05 Oct 2025 08:04:38
+From: robert.pierce@rusd.edu
+To: kristina.shannon@rusd.edu, gail.perry@rusd.edu, deborah.byrd@rusd.edu
+Cc: justin.hines@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing
+
+Hi Kristina, Gail, and Deborah,
+
+I wanted to reach out regarding a technical issue I encountered this morning in the computer lab. Several of the desktop computers in Room 205 are not connecting to the network properly, which prevented my 3rd period class from accessing the online learning platform for today's lesson.
+
+I was able to work around it by moving the class to the library for the session, but I wanted to make sure IT is aware of the issue so they can investigate and resolve it before tomorrow's classes.
+
+Could one of you please submit a work order or notify the technology support team? Let me know if you need any additional details about which machines are affected.
+
+Thank you for your help!
+
+Best regards,
+Robert Pierce

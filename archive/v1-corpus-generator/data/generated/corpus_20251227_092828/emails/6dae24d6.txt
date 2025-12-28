@@ -1,0 +1,10 @@
+Message-ID: 6dae24d6-ed97-4c86-8948-27e72965b223
+Date: Fri, 04 Apr 2025 12:16:27
+From: jennifer.collins@rusd.edu
+To: martin.hines@rusd.edu, scott.reed@rusd.edu, jesse.mann@rusd.edu
+Subject: Schedule Change
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: technology infrastructure
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nJennifer

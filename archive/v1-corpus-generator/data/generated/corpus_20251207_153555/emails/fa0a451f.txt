@@ -1,0 +1,22 @@
+Message-ID: fa0a451f-318a-4d8e-b572-f05b7faa7139
+Date: Fri, 03 Jan 2025 16:38:51
+From: eduardo.barry@rusd.edu
+To: samuel.ross@rusd.edu, justin.hines@rusd.edu
+Subject: Network Connectivity Issues - Building C
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: standardized testing
+
+Hi Samuel and Justin,
+
+I wanted to reach out regarding some intermittent network connectivity issues we've been experiencing in Building C over the past couple of days. A few classrooms have reported dropped connections during instructional time.
+
+I've checked the main server and routers in that section, and everything appears to be functioning normally on my end. However, I'd like to schedule a time to do a more thorough inspection of the cabling and connection points in the hallway closets.
+
+Would either of you be available to meet with me sometime next week to walk through the affected areas? I'm flexible with my schedule and can work around your availability.
+
+Please let me know what works best for you.
+
+Thanks,
+Eduardo Barry
+Maintenance Staff

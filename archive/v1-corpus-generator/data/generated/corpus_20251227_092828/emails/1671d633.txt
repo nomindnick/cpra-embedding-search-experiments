@@ -1,0 +1,10 @@
+Message-ID: 1671d633-41d7-4605-a18c-e7c8e2149cbb
+Date: Tue, 15 Jul 2025 15:38:55
+From: helen.peterson@rusd.edu
+To: norman.chavez@rusd.edu, joseph.schaefer@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: Business Services
+X-Topics: technology infrastructure, facility maintenance
+
+Please remember to display your parking permits.\n\nThanks,\nHelen

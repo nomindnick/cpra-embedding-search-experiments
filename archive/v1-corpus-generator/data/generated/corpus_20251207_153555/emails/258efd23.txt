@@ -1,0 +1,21 @@
+Message-ID: 258efd23-0ccd-48b4-89d2-8a39fa17ab7e
+Date: Thu, 11 Jan 2024 16:49:08
+From: dana.oliver@rusd.edu
+To: jeffrey.rodriguez@rusd.edu, april.ramos@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: forward
+X-Department: None
+X-Topics: curriculum updates
+
+Hi Jeffrey and April,
+
+I wanted to reach out regarding a technical issue I encountered this morning in the computer lab during 3rd period. Several of the desktop computers were not connecting to the network, which prevented students from accessing their learning management system.
+
+I was able to work around it by using the Chromebooks for the lesson, but wanted to flag this for your awareness in case other classes experienced the same problem.
+
+Could one of you check the network connectivity in the lab when you have a chance? It may just need a quick restart of the router.
+
+Thank you for your help!
+
+Best regards,
+Dana Oliver

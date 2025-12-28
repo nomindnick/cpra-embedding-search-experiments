@@ -1,0 +1,25 @@
+Message-ID: 76886915-47c8-4451-98e6-6a3c8adbe307
+Date: Sun, 26 Oct 2025 06:17:36
+From: shannon.ramos@rusd.edu
+To: scott.callahan@rusd.edu, joyce.arnold@rusd.edu, danny.jones@rusd.edu
+Subject: Network Connectivity Issues - Building A Classrooms
+X-Email-Type: forward
+X-Department: Facilities
+X-Topics: student achievement
+
+Good morning Scott, Joyce, and Danny,
+
+I wanted to notify you of some network connectivity issues we've been experiencing in Building A this morning, specifically affecting classrooms 105-110. Our IT department is currently investigating the problem.
+
+In the meantime, please be aware that:
+- WiFi access may be intermittent in those areas
+- Teachers should have backup plans for any technology-dependent lessons
+- Wired connections in the main office remain stable
+
+We expect this to be resolved by early afternoon. I'll send an update once IT confirms the issue is fixed.
+
+Please let me know if you notice any additional problems or have questions.
+
+Best regards,
+Shannon Ramos
+Maintenance Staff

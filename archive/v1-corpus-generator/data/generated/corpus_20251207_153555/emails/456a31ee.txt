@@ -1,0 +1,20 @@
+Message-ID: 456a31ee-7d63-4a33-8c54-161a5e07d708
+Date: Sun, 30 Nov 2025 07:11:12
+From: michelle.ramsey@rusd.edu
+To: april.ramos@rusd.edu, raymond.blair@rusd.edu, cindy.sanders@rusd.edu
+Cc: heather.dixon@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+Hi April, Raymond, and Cindy,
+
+I wanted to give you a heads up that there's currently a technical issue affecting access to the computer lab this afternoon. Our IT department is working on resolving a network connectivity problem that's impacting several machines.
+
+If you have classes scheduled in the lab today, please plan to use an alternative location or activity for now. I'll send out an update once the issue has been resolved and the lab is back online.
+
+Thank you for your flexibility and understanding as we work through this.
+
+Best regards,
+Michelle Ramsey

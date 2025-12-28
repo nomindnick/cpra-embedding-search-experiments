@@ -1,0 +1,10 @@
+Message-ID: fbc040f0-9723-44b0-9e82-6672e53140a6
+Date: Fri, 17 Jan 2025 15:55:42
+From: joshua.lamb@rusd.edu
+To: andrew.edwards@rusd.edu, randall.mclaughlin@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please remember to display your parking permits.\n\nThanks,\nJoshua

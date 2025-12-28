@@ -1,0 +1,10 @@
+Message-ID: d2eddef7-ae3d-4abf-a976-813a62f36ab0
+Date: Thu, 31 Jul 2025 08:51:16
+From: natalie.cline@rusd.edu
+To: christopher.miller@rusd.edu, jessica.ellis@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, transportation
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nNatalie

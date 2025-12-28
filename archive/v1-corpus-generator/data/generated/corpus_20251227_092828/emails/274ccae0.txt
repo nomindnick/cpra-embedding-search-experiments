@@ -1,0 +1,10 @@
+Message-ID: 274ccae0-453f-4986-87f3-c5dd707919d5
+Date: Mon, 13 Jan 2025 09:26:27
+From: zachary.moore@rusd.edu
+To: michael.bruce@rusd.edu, margaret.terry@rusd.edu, mike.griffin@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, standardized testing
+
+The lunch schedule has been updated for next week.\n\nThanks,\nZachary

@@ -1,0 +1,11 @@
+Message-ID: 6a76a797-7a5f-401e-b800-460e6f0b0605
+Date: Mon, 30 Sep 2024 09:20:17
+From: mary.cochran@rusd.edu
+To: martin.mendez@rusd.edu, carla.johnson@rusd.edu, patrick.simmons@rusd.edu
+Cc: samantha.hooper@rusd.edu, david.young@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nMary

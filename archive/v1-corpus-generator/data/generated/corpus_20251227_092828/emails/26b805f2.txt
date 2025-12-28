@@ -1,0 +1,10 @@
+Message-ID: 26b805f2-81d3-449a-bbe2-151ef4c1d3b5
+Date: Wed, 24 Jul 2024 10:04:34
+From: charles.martin@rusd.edu
+To: laura.carter@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, food services
+
+The lunch schedule has been updated for next week.\n\nThanks,\nCharles

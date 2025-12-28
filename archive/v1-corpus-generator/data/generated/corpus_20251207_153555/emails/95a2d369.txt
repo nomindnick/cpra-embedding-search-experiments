@@ -1,0 +1,25 @@
+Message-ID: 95a2d369-fca7-4a50-ac4b-b14b147d448b
+Date: Sun, 19 Nov 2023 11:07:15
+From: rodney.bennett@rusd.edu
+To: lauren.herrera@rusd.edu
+Subject: Follow-up on Water Quality Testing Schedule
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: water quality testing, environmental safety
+
+Hi Lauren,
+
+I wanted to touch base with you about the lead testing we've got coming up at the elementary school. I know facilities has been coordinating with the county health department on the drinking water quality assessment, and I wanted to make sure we're aligned on timing and logistics.
+
+From what I understand, they'll be sampling from multiple locations - the main cafeteria lines, the nurse's office, and several classroom fountains. I'm planning to be there to provide access to the mechanical rooms and help identify all the water sources they'll need to test.
+
+Do you know if they've confirmed a date yet? I want to make sure I'm not double-booked that day. Also, I'm assuming we'll need to put up some signage or let staff know not to use certain fountains during the testing period?
+
+Let me know what you need from my end to keep this moving forward. I want to make sure we get good baseline data on our water systems.
+
+Thanks,
+Rodney
+
+--- Attachments ---
+  - data_export.csv (CSV, 156 KB)
+  - test_results.pdf (PDF, 245 KB)

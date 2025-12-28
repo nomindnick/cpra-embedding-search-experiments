@@ -1,0 +1,22 @@
+Message-ID: 7f1c1b17-be8a-492a-86e8-af3973673e19
+Date: Wed, 24 Sep 2025 11:31:42
+From: raymond.blair@rusd.edu
+To: dawn.johnson@rusd.edu, amber.lindsey@rusd.edu
+Subject: Library Computer Lab - Printer Issue
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts
+
+Hi Dawn and Amber,
+
+I wanted to reach out regarding an issue we've been experiencing in the library computer lab. The networked printer has been offline since this morning, and I've had several classes unable to print their research materials.
+
+I've already restarted the device and checked the connections, but the problem persists. Could one of you take a look at it when you have a chance? It may need IT support if it's a network connectivity issue.
+
+In the meantime, I'm directing students to use the backup printer near the circulation desk, though it's slower and can only handle small jobs.
+
+Please let me know what you find. Thanks for your help!
+
+Best regards,
+Raymond Blair
+Librarian

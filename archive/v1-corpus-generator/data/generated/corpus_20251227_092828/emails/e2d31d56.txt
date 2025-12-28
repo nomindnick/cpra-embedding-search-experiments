@@ -1,0 +1,11 @@
+Message-ID: e2d31d56-3995-474d-8d5b-ad9d06cf2af1
+Date: Mon, 02 Dec 2024 17:50:40
+From: james.robinson@rusd.edu
+To: joshua.jones@rusd.edu
+Cc: raymond.blair@rusd.edu, erin.macias@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: professional development
+
+Please remember to display your parking permits.\n\nThanks,\nJames

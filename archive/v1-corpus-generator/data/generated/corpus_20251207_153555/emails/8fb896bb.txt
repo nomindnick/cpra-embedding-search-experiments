@@ -1,0 +1,22 @@
+Message-ID: 8fb896bb-0a79-4ee6-8bb4-b98f03173722
+Date: Thu, 21 Dec 2023 06:25:25
+From: dennis.mccann@rusd.edu
+To: brittany.snyder@rusd.edu
+Subject: Library Computer Lab - Printer Issue
+X-Email-Type: reply
+X-Department: None
+X-Topics: vendor contracts
+
+Hi Brittany,
+
+I wanted to reach out regarding an issue we've been experiencing in the library computer lab. The networked printer has been offline since this morning, and students haven't been able to print their research assignments.
+
+I've already restarted the device and checked the connections, but the problem persists. Could you or someone from the IT department have a chance to take a look at it when you have a moment? I'm not sure if it's a driver issue or a network connectivity problem.
+
+In the meantime, I've let students know they can email their documents to me for printing, but it would be great to get the printer back up and running as soon as possible.
+
+Thanks for your help!
+
+Best regards,
+Dennis Mccann
+Librarian

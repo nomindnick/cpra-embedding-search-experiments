@@ -1,0 +1,31 @@
+Message-ID: 980293ad-e767-43ad-bf95-cb7e909698d1
+Date: Tue, 17 Sep 2024 13:32:53
+From: brent.gray@rusd.edu
+To: mark.owens@rusd.edu
+Subject: Upcoming Field Trip - Permission Forms Due
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates
+
+Hi Mark,
+
+I hope this email finds you well. I wanted to reach out regarding an upcoming field trip for our class.
+
+Trip Details:
+- Date: [Date]
+- Destination: [Location]
+- Purpose: [Educational objective]
+- Departure Time: [Time]
+- Return Time: [Time]
+
+Please ensure that all students have completed and returned their permission forms by [Due Date]. Students without signed forms will not be able to participate in the trip.
+
+Additionally, please remind students to:
+- Wear comfortable clothing and closed-toe shoes
+- Bring a packed lunch and water bottle
+- Arrive on time for departure
+
+If you have any questions or concerns about the field trip, please don't hesitate to reach out.
+
+Best regards,
+Brent Gray

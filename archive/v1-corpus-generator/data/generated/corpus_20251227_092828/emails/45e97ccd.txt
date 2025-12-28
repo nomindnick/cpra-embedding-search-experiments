@@ -1,0 +1,10 @@
+Message-ID: 45e97ccd-ac25-4c4d-8c29-414ed26e8930
+Date: Thu, 13 Mar 2025 15:38:36
+From: harry.jefferson@rusd.edu
+To: kevin.sharp@rusd.edu, richard.davis@rusd.edu, erica.martin@rusd.edu
+Subject: Schedule Change
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: technology infrastructure
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nHarry

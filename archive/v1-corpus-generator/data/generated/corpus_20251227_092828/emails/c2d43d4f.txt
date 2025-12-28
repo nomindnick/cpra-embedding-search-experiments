@@ -1,0 +1,10 @@
+Message-ID: c2d43d4f-199d-45b4-9cd9-63c36ce9a2d9
+Date: Mon, 30 Sep 2024 11:45:35
+From: samuel.ross@rusd.edu
+To: debra.wang@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nSamuel

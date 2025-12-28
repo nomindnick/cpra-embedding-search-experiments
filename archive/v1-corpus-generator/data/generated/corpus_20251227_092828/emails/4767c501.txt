@@ -1,0 +1,10 @@
+Message-ID: 4767c501-f6fa-4d57-98c0-dc8becfbc686
+Date: Sat, 18 Oct 2025 13:32:04
+From: gavin.adams@rusd.edu
+To: stephen.sanchez@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: grant applications, food services
+
+Please remember to display your parking permits.\n\nThanks,\nGavin

@@ -1,0 +1,20 @@
+Message-ID: f2fbdb1d-662c-496f-8b9b-65c9f50cefca
+Date: Fri, 31 May 2024 16:42:12
+From: casey.elliott@rusd.edu
+To: samantha.bush@rusd.edu, sarah.anderson@rusd.edu
+Cc: michelle.cherry@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: reply
+X-Department: None
+X-Topics: facility maintenance, professional development
+
+Hi Samantha and Sarah,
+
+I wanted to let you know that I've been experiencing some issues accessing the computer lab this morning. When I tried to log in around 9:30 AM, the system wasn't recognizing my credentials, and several of the workstations appeared to be offline.
+
+I was able to work around it by using the laptops in my classroom instead, but wanted to flag this in case other teachers are experiencing the same problem. It may be worth checking with IT to see if there's a broader connectivity issue or if my account needs to be reset.
+
+Please let me know if you've encountered similar issues or if IT has already been notified.
+
+Thanks,
+Casey Elliott

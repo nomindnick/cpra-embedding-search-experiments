@@ -1,0 +1,10 @@
+Message-ID: 25544bae-a78d-42d8-b733-0f938d5a6904
+Date: Sat, 15 Jun 2024 16:11:48
+From: john.alvarez@rusd.edu
+To: christopher.cortez@rusd.edu, mark.owens@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: report
+X-Department: None
+X-Topics: budget planning
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJohn

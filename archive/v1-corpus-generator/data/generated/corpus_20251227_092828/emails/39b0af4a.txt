@@ -1,0 +1,11 @@
+Message-ID: 39b0af4a-6706-4964-a98a-164723224513
+Date: Sun, 02 Nov 2025 08:41:39
+From: charles.jackson@rusd.edu
+To: leonard.hayes@rusd.edu
+Cc: jonathan.rodriguez@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: standardized testing
+
+The lunch schedule has been updated for next week.\n\nThanks,\nCharles

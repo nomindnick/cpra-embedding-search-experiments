@@ -1,0 +1,10 @@
+Message-ID: f57431ee-72dd-42c5-b0bb-ecf2aac54c3a
+Date: Mon, 16 Jun 2025 09:00:36
+From: maria.nelson@rusd.edu
+To: joshua.pineda@rusd.edu, adriana.bailey@rusd.edu
+Subject: Technology Issue
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, technology infrastructure
+
+The projector in room 205 needs replacement.\n\nThanks,\nMaria

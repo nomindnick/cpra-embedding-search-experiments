@@ -1,0 +1,10 @@
+Message-ID: e15eba45-4c32-4018-8cbd-3f1a1e784787
+Date: Tue, 26 Aug 2025 06:38:04
+From: james.robinson@rusd.edu
+To: robert.silva@rusd.edu, joshua.jones@rusd.edu
+Subject: Supply Order
+X-Email-Type: forward
+X-Department: None
+X-Topics: parent communication, technology infrastructure
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJames

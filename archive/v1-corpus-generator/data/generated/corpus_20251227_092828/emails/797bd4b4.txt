@@ -1,0 +1,10 @@
+Message-ID: 797bd4b4-0c09-4c46-8584-8e28c715f520
+Date: Wed, 17 Jan 2024 15:28:55
+From: michael.nelson@rusd.edu
+To: lauren.herrera@rusd.edu, debbie.velez@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: grant applications
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nMichael

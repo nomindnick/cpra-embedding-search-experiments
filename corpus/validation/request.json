@@ -1,0 +1,12 @@
+{
+  "id": "pfas-contamination-2020-present",
+  "title": "PFAS Contamination in Water Supply",
+  "request_text": "Pursuant to the California Public Records Act, I request all documents, emails, and communications related to PFAS, PFOA, PFOS, or 'forever chemicals' contamination in the city's water supply or groundwater from January 1, 2020 to present.",
+  "date_submitted": "2024-12-15",
+  "date_range": {
+    "start": "2020-01-01",
+    "end": "2024-12-31"
+  },
+  "keywords": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"],
+  "notes": "Validation request. Tests generalization beyond 'lead' ambiguity. Acronyms present different challenges than common words."
+}

@@ -1,0 +1,10 @@
+Message-ID: 6d6bcef6-bd87-4247-90ba-79fcd449b48a
+Date: Tue, 10 Jun 2025 15:00:38
+From: nancy.mcdowell@rusd.edu
+To: carla.johnson@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nNancy

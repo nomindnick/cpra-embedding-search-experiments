@@ -1,0 +1,10 @@
+Message-ID: 6843a171-c10a-467e-9c9d-3a74ce49e73f
+Date: Wed, 22 Jan 2025 13:38:39
+From: john.middleton@rusd.edu
+To: sarah.anderson@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: facility maintenance, safety protocols
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJohn

@@ -1,0 +1,10 @@
+Message-ID: 48447ed3-ee89-4489-9273-5c22a7483e91
+Date: Mon, 29 Sep 2025 16:23:05
+From: michael.nelson@rusd.edu
+To: erica.martin@rusd.edu, hannah.fowler@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nMichael

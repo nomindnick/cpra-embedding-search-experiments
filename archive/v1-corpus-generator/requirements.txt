@@ -1,0 +1,30 @@
+# Core dependencies
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+pyyaml>=6.0
+
+# Data processing
+pandas>=2.0.0
+openpyxl>=3.1.0  # For Excel export
+faker>=20.0.0    # For generating realistic fake data
+
+# LLM integration
+openai>=1.0.0
+anthropic>=0.15.0
+
+# Email handling
+python-dateutil>=2.8.0
+
+# Templating
+jinja2>=3.1.0
+
+# Testing and development
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Progress tracking
+tqdm>=4.65.0
+
+# Type hints
+typing-extensions>=4.8.0

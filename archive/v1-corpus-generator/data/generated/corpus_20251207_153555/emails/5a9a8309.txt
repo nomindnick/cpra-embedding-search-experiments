@@ -1,0 +1,19 @@
+Message-ID: 5a9a8309-81da-471e-971b-f81d19abd11b
+Date: Sat, 30 Nov 2024 14:14:44
+From: carla.johnson@rusd.edu
+To: alexander.greer@rusd.edu, gail.perry@rusd.edu, angela.randall@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, student achievement
+
+Hi Alexander, Gail, and Angela,
+
+I wanted to give you a heads up that I've been experiencing intermittent connectivity issues with the computer lab this morning. Several of the desktop stations are showing "no network connection" errors, though the issue seems to be sporadic.
+
+I've already reported this to the IT department and they're looking into it. In the meantime, if you have classes scheduled in the lab today, you may want to have a backup lesson plan ready just in case.
+
+I'll send an update once IT confirms the issue is resolved.
+
+Thank you,
+Carla Johnson

@@ -1,0 +1,11 @@
+Message-ID: 03ae056a-cbc9-4943-a44a-f880d29e94f4
+Date: Tue, 08 Oct 2024 14:51:50
+From: amy.morris@rusd.edu
+To: tina.king@rusd.edu, joe.vang@rusd.edu, steven.campbell@rusd.edu
+Cc: erica.fernandez@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: announcement
+X-Department: None
+X-Topics: technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nAmy

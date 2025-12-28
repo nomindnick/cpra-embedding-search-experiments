@@ -1,0 +1,10 @@
+Message-ID: a1c29e9f-feb8-49f2-a424-4d65a1a6d609
+Date: Fri, 25 Jul 2025 16:44:49
+From: michael.nelson@rusd.edu
+To: hannah.fowler@rusd.edu, franklin.bond@rusd.edu, jacob.curry@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts
+
+Please remember to display your parking permits.\n\nThanks,\nMichael

@@ -1,0 +1,10 @@
+Message-ID: 19722be6-f432-409a-abca-42948cec167a
+Date: Sat, 22 Nov 2025 08:05:12
+From: christopher.cortez@rusd.edu
+To: anne.robinson@rusd.edu, doris.jones@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nChristopher

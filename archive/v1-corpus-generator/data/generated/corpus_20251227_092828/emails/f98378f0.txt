@@ -1,0 +1,10 @@
+Message-ID: f98378f0-f316-45f5-989e-632c090551b6
+Date: Mon, 24 Feb 2025 13:51:27
+From: angelica.schneider@rusd.edu
+To: amy.li@rusd.edu, zoe.moore@rusd.edu
+Subject: Schedule Change
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: safety protocols
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nAngelica

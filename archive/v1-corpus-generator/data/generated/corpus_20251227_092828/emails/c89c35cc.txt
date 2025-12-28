@@ -1,0 +1,11 @@
+Message-ID: c89c35cc-f78b-49b1-a891-1bd972626d4b
+Date: Fri, 10 Jan 2025 08:42:26
+From: joel.green@rusd.edu
+To: alexander.greer@rusd.edu
+Cc: natalie.cline@rusd.edu, joel.walter@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: facility maintenance
+
+Please remember to display your parking permits.\n\nThanks,\nJoel

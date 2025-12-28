@@ -1,0 +1,10 @@
+Message-ID: 33d251db-46e6-4a76-9be5-d3b455a2b1ea
+Date: Tue, 30 Jul 2024 14:24:48
+From: jeffrey.morgan@rusd.edu
+To: randy.espinoza@rusd.edu, chris.mitchell@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing, facility maintenance
+
+Please remember to display your parking permits.\n\nThanks,\nJeffrey

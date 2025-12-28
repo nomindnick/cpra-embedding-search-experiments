@@ -1,0 +1,10 @@
+Message-ID: f39252fb-7415-4162-b5b1-1454cf72d981
+Date: Tue, 16 Sep 2025 07:10:35
+From: kimberly.cunningham@rusd.edu
+To: tyler.dixon@rusd.edu, elizabeth.olsen@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning
+
+The lunch schedule has been updated for next week.\n\nThanks,\nKimberly

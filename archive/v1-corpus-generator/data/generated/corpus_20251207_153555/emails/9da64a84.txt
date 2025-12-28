@@ -1,0 +1,19 @@
+Message-ID: 9da64a84-b3b1-4119-beef-e278649ac1ab
+Date: Sun, 10 Mar 2024 11:38:17
+From: robert.pierce@rusd.edu
+To: martin.mendez@rusd.edu, dennis.mccann@rusd.edu, samantha.bush@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: technology infrastructure
+
+Hi Martin, Dennis, and Samantha,
+
+I wanted to give you a heads up that we're experiencing some connectivity issues with the computer lab this morning. IT is aware and working on a resolution, but I wanted to let you know in case you had planned to use the lab for your classes today.
+
+I'll send an update once the issue is resolved. In the meantime, please feel free to reach out if you need any alternative resources or have questions about rescheduling lab time.
+
+Thank you for your patience!
+
+Best regards,
+Robert Pierce

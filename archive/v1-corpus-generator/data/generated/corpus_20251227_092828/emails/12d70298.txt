@@ -1,0 +1,10 @@
+Message-ID: 12d70298-2790-4926-a155-3402ec7914d4
+Date: Sat, 01 Feb 2025 17:48:58
+From: fernando.donovan@rusd.edu
+To: juan.harper@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: vendor contracts
+
+The lunch schedule has been updated for next week.\n\nThanks,\nFernando

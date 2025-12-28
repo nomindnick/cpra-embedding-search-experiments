@@ -1,0 +1,10 @@
+Message-ID: 0320f5ac-350a-4a2d-af87-bc909d7b08bf
+Date: Wed, 24 Jul 2024 16:38:42
+From: john.kim@rusd.edu
+To: samuel.rodriguez@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: transportation, special education
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJohn

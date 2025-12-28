@@ -1,0 +1,19 @@
+Message-ID: d4e1b1dd-90ed-496d-a5a4-68d61598038c
+Date: Tue, 20 Aug 2024 17:36:48
+From: joe.vang@rusd.edu
+To: tina.king@rusd.edu, andrea.roberts@rusd.edu, jennifer.williams@rusd.edu
+Subject: Technology Issue - Classroom Projector Not Responding
+X-Email-Type: regular
+X-Department: None
+X-Topics: professional development, parent communication
+
+Hi Tina, Andrea, and Jennifer,
+
+I wanted to give you a heads up that I'm experiencing an issue with the projector in my classroom (Room 214). It's not responding to the wireless connection from my laptop, and the HDMI cable connection isn't working either.
+
+I've already tried the basic troubleshooting steps (restarting the projector and my laptop), but the issue persists. I'm able to work around this for today by using the document camera, but I wanted to report it so IT can take a look when they have availability.
+
+Please let me know if you need any additional information or if there's a preferred way to submit technology requests.
+
+Thank you,
+Joe Vang

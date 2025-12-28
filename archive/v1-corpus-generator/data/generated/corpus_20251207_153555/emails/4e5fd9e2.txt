@@ -1,0 +1,21 @@
+Message-ID: 4e5fd9e2-aef0-47d1-9be4-a2357fac06aa
+Date: Mon, 21 Oct 2024 13:24:30
+From: luis.acosta@rusd.edu
+To: brittany.cruz@rusd.edu
+Cc: diana.foster@rusd.edu
+Subject: Technology Issue - Chromebook Cart Access
+X-Email-Type: meeting_request
+X-Department: Special Education
+X-Topics: professional development, special education
+
+Hi Brittany,
+
+I wanted to reach out about a technical issue I encountered this morning. The Chromebook cart in the special education wing isn't connecting to the network properly. Several devices are showing "no internet connection" even though they're on the school WiFi.
+
+I have a class scheduled to use them for math practice this afternoon. Could you let me know if IT is aware of this issue, or if I should submit a help ticket? In the meantime, I can adjust my lesson plans if needed.
+
+Thanks for your help!
+
+Best regards,
+Luis Acosta
+Special Education Teacher

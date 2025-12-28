@@ -1,0 +1,10 @@
+Message-ID: 400c5b51-d87a-419d-9677-317276edf189
+Date: Sun, 18 Feb 2024 10:47:44
+From: christopher.cortez@rusd.edu
+To: james.robinson@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement, vendor contracts
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nChristopher

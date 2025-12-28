@@ -1,0 +1,10 @@
+Message-ID: 180ea444-dc79-4d9c-8c43-dfae9f26abc6
+Date: Fri, 08 Mar 2024 15:10:49
+From: anne.hansen@rusd.edu
+To: tammy.patton@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: food services, budget planning
+
+Please remember to display your parking permits.\n\nThanks,\nAnne

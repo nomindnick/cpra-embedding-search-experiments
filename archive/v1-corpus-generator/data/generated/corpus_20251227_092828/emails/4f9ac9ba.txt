@@ -1,0 +1,11 @@
+Message-ID: 4f9ac9ba-0f43-45c2-86af-48da9ac6d08c
+Date: Wed, 27 Aug 2025 11:18:56
+From: valerie.kennedy@rusd.edu
+To: joshua.lamb@rusd.edu, franklin.bond@rusd.edu
+Cc: charles.lewis@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: safety protocols
+
+Please remember to display your parking permits.\n\nThanks,\nValerie

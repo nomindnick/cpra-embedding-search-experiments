@@ -1,0 +1,10 @@
+Message-ID: 602e2781-2e68-4568-a9d2-55d9331f8907
+Date: Thu, 21 Aug 2025 15:08:46
+From: robert.peterson@rusd.edu
+To: patrick.howard@rusd.edu, daniel.hall@rusd.edu, april.ramos@rusd.edu
+Subject: Schedule Change
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, technology infrastructure
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nRobert

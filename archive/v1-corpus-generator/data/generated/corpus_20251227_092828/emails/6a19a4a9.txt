@@ -1,0 +1,11 @@
+Message-ID: 6a19a4a9-0639-4757-8e68-bc07de52857e
+Date: Mon, 14 Jul 2025 13:40:03
+From: charles.lewis@rusd.edu
+To: kenneth.price@rusd.edu, michael.fitzpatrick@rusd.edu, michele.jones@rusd.edu
+Cc: justin.hines@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+The lunch schedule has been updated for next week.\n\nThanks,\nCharles

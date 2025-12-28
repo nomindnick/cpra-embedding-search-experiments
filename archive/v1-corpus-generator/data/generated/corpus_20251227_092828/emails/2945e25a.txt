@@ -1,0 +1,11 @@
+Message-ID: 2945e25a-b455-42e7-86cf-da712587694d
+Date: Mon, 01 Dec 2025 15:01:42
+From: patrick.howard@rusd.edu
+To: robert.simpson@rusd.edu, donald.shah@rusd.edu, laura.carter@rusd.edu
+Cc: kristina.shannon@rusd.edu, brittany.cruz@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning, special education
+
+The lunch schedule has been updated for next week.\n\nThanks,\nPatrick

@@ -1,0 +1,11 @@
+Message-ID: 797cdf1a-a295-4728-af31-fd877a0a4959
+Date: Sun, 07 Jan 2024 07:15:23
+From: charles.lewis@rusd.edu
+To: mark.owens@rusd.edu, doris.jones@rusd.edu, christopher.cortez@rusd.edu
+Cc: shannon.pacheco@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nCharles

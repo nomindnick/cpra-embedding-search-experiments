@@ -1,0 +1,11 @@
+Message-ID: ba9d1760-7739-4ea3-b0b1-134f41895f9e
+Date: Fri, 31 Oct 2025 12:19:43
+From: joe.vang@rusd.edu
+To: eduardo.barry@rusd.edu, tina.king@rusd.edu, amy.morris@rusd.edu
+Cc: joseph.schaefer@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts
+
+Please remember to display your parking permits.\n\nThanks,\nJoe

@@ -1,0 +1,10 @@
+Message-ID: 5dc2e7d8-ca79-4a69-a252-129cebfe156e
+Date: Tue, 19 Nov 2024 14:21:56
+From: robert.peterson@rusd.edu
+To: jeffrey.rodriguez@rusd.edu, michelle.ramsey@rusd.edu
+Subject: Schedule Change
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, technology infrastructure
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nRobert

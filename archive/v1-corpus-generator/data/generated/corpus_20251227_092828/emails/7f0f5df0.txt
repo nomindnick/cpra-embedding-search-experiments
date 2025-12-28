@@ -1,0 +1,10 @@
+Message-ID: 7f0f5df0-e0bd-4fb2-b775-c8cd2f8316f4
+Date: Tue, 09 Jan 2024 07:46:59
+From: doris.jones@rusd.edu
+To: samantha.hooper@rusd.edu, susan.miller@rusd.edu, james.robinson@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: parent communication
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nDoris

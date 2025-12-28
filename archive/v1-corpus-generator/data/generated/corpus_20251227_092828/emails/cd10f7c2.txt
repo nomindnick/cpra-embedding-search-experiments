@@ -1,0 +1,10 @@
+Message-ID: cd10f7c2-b120-478c-ade6-76b5e5e708ae
+Date: Mon, 01 Jan 2024 15:39:15
+From: jose.williams@rusd.edu
+To: kimberly.howard@rusd.edu, rodney.bennett@rusd.edu, zachary.moore@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts, budget planning
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJose

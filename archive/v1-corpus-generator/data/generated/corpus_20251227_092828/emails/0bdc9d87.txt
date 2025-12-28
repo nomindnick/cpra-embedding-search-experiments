@@ -1,0 +1,10 @@
+Message-ID: 0bdc9d87-2044-419d-9890-9cea85941e0c
+Date: Thu, 24 Apr 2025 14:06:12
+From: craig.mendoza@rusd.edu
+To: martin.mendez@rusd.edu, dalton.moreno@rusd.edu, casey.elliott@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: announcement
+X-Department: None
+X-Topics: curriculum updates, transportation
+
+Please remember to display your parking permits.\n\nThanks,\nCraig

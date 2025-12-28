@@ -1,0 +1,10 @@
+Message-ID: c91135ef-d874-4a33-933a-368fbe317a5e
+Date: Wed, 29 Jan 2025 09:28:26
+From: jeffrey.joyce@rusd.edu
+To: martin.hines@rusd.edu, robert.peterson@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: safety protocols
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJeffrey

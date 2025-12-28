@@ -1,0 +1,10 @@
+Message-ID: a48a4e21-00d0-4eed-8653-28601383c607
+Date: Sun, 28 Apr 2024 17:37:49
+From: kathleen.becker@rusd.edu
+To: loretta.blevins@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nKathleen

@@ -1,0 +1,10 @@
+Message-ID: cf0a4849-78d9-4204-b050-9c26842597e9
+Date: Sat, 31 May 2025 12:49:59
+From: erin.wilson@rusd.edu
+To: william.rodriguez@rusd.edu, norman.chavez@rusd.edu
+Subject: Technology Issue
+X-Email-Type: meeting_request
+X-Department: Safety
+X-Topics: curriculum updates, facility maintenance
+
+The projector in room 205 needs replacement.\n\nThanks,\nErin

@@ -1,0 +1,10 @@
+Message-ID: 77aff2c1-6f7d-4869-8996-397a288f1be8
+Date: Mon, 12 Feb 2024 12:38:14
+From: kevin.sharp@rusd.edu
+To: brian.gutierrez@rusd.edu, adriana.bailey@rusd.edu, joy.morales@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services, budget planning
+
+Please remember to display your parking permits.\n\nThanks,\nKevin

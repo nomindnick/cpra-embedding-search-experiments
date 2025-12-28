@@ -1,0 +1,10 @@
+Message-ID: d90f092c-0dd2-4ead-9ce0-3cda0c8e49d7
+Date: Sun, 02 Feb 2025 13:42:54
+From: scott.lowe@rusd.edu
+To: michael.hartman@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing
+
+Please remember to display your parking permits.\n\nThanks,\nScott

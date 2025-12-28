@@ -1,0 +1,10 @@
+Message-ID: a2ea7fc3-c6ca-46aa-8088-fbec29931f78
+Date: Sat, 19 Jul 2025 14:02:19
+From: charles.martin@rusd.edu
+To: scott.reed@rusd.edu
+Subject: Parent Conference
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: budget planning, facility maintenance
+
+Available times for parent conferences have been posted.\n\nThanks,\nCharles

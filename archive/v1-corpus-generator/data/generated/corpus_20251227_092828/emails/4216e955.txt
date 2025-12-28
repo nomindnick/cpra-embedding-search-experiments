@@ -1,0 +1,10 @@
+Message-ID: 4216e955-5bdb-4ad7-a863-75f8a82a9371
+Date: Tue, 03 Sep 2024 06:56:37
+From: frank.benton@rusd.edu
+To: carla.johnson@rusd.edu, kimberly.howard@rusd.edu, jessica.ellis@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement, budget planning
+
+The lunch schedule has been updated for next week.\n\nThanks,\nFrank

@@ -1,0 +1,10 @@
+Message-ID: b83d3e71-938b-45db-9c0b-dcaaf4d35776
+Date: Thu, 25 Jan 2024 14:54:49
+From: samuel.ross@rusd.edu
+To: christina.bullock@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement, curriculum updates
+
+Please remember to display your parking permits.\n\nThanks,\nSamuel

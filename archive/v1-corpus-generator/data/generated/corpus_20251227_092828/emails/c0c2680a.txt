@@ -1,0 +1,10 @@
+Message-ID: c0c2680a-889a-4bfd-9e0a-167b1d3f478b
+Date: Tue, 05 Mar 2024 11:10:32
+From: lindsey.lee@rusd.edu
+To: randy.espinoza@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+The lunch schedule has been updated for next week.\n\nThanks,\nLindsey

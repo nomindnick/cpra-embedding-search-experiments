@@ -1,0 +1,10 @@
+Message-ID: 1c0516d2-3d3b-45b6-872f-3238cd921fab
+Date: Wed, 06 Mar 2024 08:44:34
+From: adam.arnold@rusd.edu
+To: whitney.mendoza@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+The lunch schedule has been updated for next week.\n\nThanks,\nAdam

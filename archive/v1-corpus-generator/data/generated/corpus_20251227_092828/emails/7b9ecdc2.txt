@@ -1,0 +1,10 @@
+Message-ID: 7b9ecdc2-9ada-4733-954d-bc413ec876ac
+Date: Mon, 22 Sep 2025 13:28:17
+From: juan.harper@rusd.edu
+To: kevin.williams@rusd.edu, tyler.jordan@rusd.edu, christina.bullock@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: announcement
+X-Department: None
+X-Topics: student achievement
+
+Please remember to display your parking permits.\n\nThanks,\nJuan

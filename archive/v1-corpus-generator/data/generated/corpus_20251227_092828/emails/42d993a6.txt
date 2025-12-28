@@ -1,0 +1,11 @@
+Message-ID: 42d993a6-26e1-4461-9679-94da14dc83ae
+Date: Sun, 19 May 2024 10:26:57
+From: michael.andrade@rusd.edu
+To: brian.gutierrez@rusd.edu
+Cc: jason.morales@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: memo
+X-Department: None
+X-Topics: parent communication
+
+Please remember to display your parking permits.\n\nThanks,\nMichael

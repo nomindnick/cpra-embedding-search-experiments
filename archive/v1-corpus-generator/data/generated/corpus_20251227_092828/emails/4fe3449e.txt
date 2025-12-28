@@ -1,0 +1,10 @@
+Message-ID: 4fe3449e-cd7f-4b59-bdfb-0d72f562a385
+Date: Fri, 07 Feb 2025 13:39:03
+From: anne.robinson@rusd.edu
+To: joshua.jones@rusd.edu, james.robinson@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: announcement
+X-Department: Special Education
+X-Topics: facility maintenance, technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nAnne

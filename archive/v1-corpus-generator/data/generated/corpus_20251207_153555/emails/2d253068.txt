@@ -1,0 +1,19 @@
+Message-ID: 2d253068-d02e-468a-8a31-06b3ace1d57c
+Date: Sun, 02 Jun 2024 13:28:05
+From: shannon.frazier@rusd.edu
+To: amy.li@rusd.edu, raymond.banks@rusd.edu, christina.allen@rusd.edu
+Subject: Chromebook Cart Issue - Room 204
+X-Email-Type: forward
+X-Department: None
+X-Topics: standardized testing, professional development
+
+Hi Amy, Raymond, and Christina,
+
+I wanted to give you a heads up that the Chromebook cart assigned to Room 204 is experiencing some connectivity issues. Several devices are not connecting to our WiFi network, and a few won't power on at all.
+
+I've already submitted a work order to IT, but wanted to let you know in case any of you had plans to use that cart this week. I'd recommend checking with IT about the status before scheduling any computer lab activities.
+
+Please let me know if you have any questions or if you're experiencing similar issues with other equipment.
+
+Thanks,
+Shannon Frazier

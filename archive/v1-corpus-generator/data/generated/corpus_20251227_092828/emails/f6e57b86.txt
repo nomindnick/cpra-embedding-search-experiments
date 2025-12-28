@@ -1,0 +1,10 @@
+Message-ID: f6e57b86-5dee-4dbc-b89e-aa932a2caac9
+Date: Thu, 11 Apr 2024 08:49:49
+From: tyler.aguilar@rusd.edu
+To: donald.shah@rusd.edu, raymond.lopez@rusd.edu, brian.stone@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: safety protocols, grant applications
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nTyler

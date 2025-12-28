@@ -1,0 +1,10 @@
+Message-ID: 110d6aaf-3b4b-4c01-aaca-cb44f70f7def
+Date: Sat, 07 Dec 2024 15:01:13
+From: scott.reed@rusd.edu
+To: raymond.blair@rusd.edu, jeffrey.rodriguez@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, student achievement
+
+Please remember to display your parking permits.\n\nThanks,\nScott

@@ -1,0 +1,10 @@
+Message-ID: c6a60f5a-8486-4139-a752-e6e294f6724d
+Date: Wed, 27 Mar 2024 09:59:34
+From: kevin.williams@rusd.edu
+To: shannon.pacheco@rusd.edu, samuel.ross@rusd.edu, juan.harper@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nKevin

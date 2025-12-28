@@ -1,0 +1,10 @@
+Message-ID: 6fa827e7-4792-4a69-a5f5-653ce4e4e272
+Date: Mon, 21 Oct 2024 10:12:21
+From: fernando.donovan@rusd.edu
+To: andrew.morse@rusd.edu, samuel.rodriguez@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: parent communication
+
+The lunch schedule has been updated for next week.\n\nThanks,\nFernando

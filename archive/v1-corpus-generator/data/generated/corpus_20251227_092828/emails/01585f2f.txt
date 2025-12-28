@@ -1,0 +1,10 @@
+Message-ID: 01585f2f-74cd-4531-b9f6-1c03e3ad71e5
+Date: Fri, 27 Sep 2024 08:29:54
+From: jessica.herrera@rusd.edu
+To: diana.foster@rusd.edu, william.rodriguez@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: Technology
+X-Topics: food services
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJessica

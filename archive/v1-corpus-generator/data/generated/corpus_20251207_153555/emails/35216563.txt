@@ -1,0 +1,19 @@
+Message-ID: 35216563-f7b4-45e1-ba8d-479956d5c0bb
+Date: Sun, 01 Sep 2024 12:10:11
+From: sarah.anderson@rusd.edu
+To: brian.rivera@rusd.edu, carla.johnson@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services
+
+Hi Brian and Carla,
+
+I wanted to reach out regarding an issue I encountered this morning in the computer lab. Several of the desktop computers in Lab B were not responding when I tried to log in for my 2nd period class.
+
+I was able to work around it by using Lab A instead, but wanted to flag this so IT can take a look when they have a chance. The affected machines are stations 5, 7, and 9.
+
+Please let me know if you've experienced similar issues or if there's a better way to report this in the future.
+
+Thank you,
+Sarah Anderson

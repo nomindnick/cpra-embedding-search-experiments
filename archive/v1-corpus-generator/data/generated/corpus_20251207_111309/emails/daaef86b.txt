@@ -1,0 +1,20 @@
+Message-ID: daaef86b-8163-4d5a-8696-d3be3428a20c
+Date: Mon, 29 Jan 2024 17:31:09
+From: laura.carter@rusd.edu
+To: michelle.ramsey@rusd.edu, oscar.harper@rusd.edu
+Cc: lindsey.lee@rusd.edu
+Subject: Chromebook Cart Issue - Room 204
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Hi Michelle and Oscar,
+
+I wanted to give you a heads up that the Chromebook cart assigned to Room 204 is having some connectivity issues. Several devices are not connecting to the school WiFi network, and a couple appear to have outdated software.
+
+I've already submitted a ticket to IT, but wanted to let you know in case you were planning to use the cart for your classes this week. You may want to request an alternate cart from the library or plan computer lab time instead.
+
+I'll send an update once IT gets back to me on the timeline for repairs.
+
+Thanks,
+Laura Carter

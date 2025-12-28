@@ -1,0 +1,10 @@
+Message-ID: d7802e25-03fa-4303-8c7a-6b56383ca584
+Date: Thu, 23 May 2024 06:53:59
+From: amy.li@rusd.edu
+To: andrea.roberts@rusd.edu, cameron.davis@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+The lunch schedule has been updated for next week.\n\nThanks,\nAmy

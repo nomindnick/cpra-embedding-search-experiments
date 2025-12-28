@@ -1,0 +1,10 @@
+Message-ID: af2f195f-9960-49f1-a618-2ce1e7dfa221
+Date: Tue, 02 Sep 2025 08:03:35
+From: jeanne.evans@rusd.edu
+To: jennifer.simpson@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, safety protocols
+
+Please remember to display your parking permits.\n\nThanks,\nJeanne

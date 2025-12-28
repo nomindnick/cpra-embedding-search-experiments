@@ -1,0 +1,286 @@
+{
+  "experiment_name": "Snowflake Arctic Embed L v2.0",
+  "pipeline_name": "Embedding Search (st:snowflake-arctic-embed-l-v2.0)",
+  "timestamp": "2025-12-27T16:51:55.035194",
+  "overall": {
+    "precision": 0.9103825136612022,
+    "recall": 0.833,
+    "f1": 0.8699738903394256,
+    "map": 0.9485573731653346
+  },
+  "totals": {
+    "emails": 5000,
+    "responsive": 1000,
+    "predicted": 833
+  },
+  "by_request": [
+    {
+      "request_id": "cpra_001",
+      "request_title": "Lead Testing in Water Systems",
+      "precision": 1.0,
+      "recall": 0.61,
+      "f1": 0.7577639751552795,
+      "true_positives": 122,
+      "false_positives": 0,
+      "false_negatives": 78,
+      "total_responsive": 200,
+      "ranked_metrics": {
+        "average_precision": 0.969429554280323,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.25,
+        "precision_at_100": 1.0,
+        "recall_at_100": 0.5,
+        "precision_at_200": 0.925,
+        "recall_at_200": 0.925,
+        "precision_at_375": 0.5226666666666666,
+        "recall_at_375": 0.98
+      }
+    },
+    {
+      "request_id": "cpra_002",
+      "request_title": "COVID Relief Fund Allocation",
+      "precision": 1.0,
+      "recall": 0.745,
+      "f1": 0.8538681948424068,
+      "true_positives": 149,
+      "false_positives": 0,
+      "false_negatives": 51,
+      "total_responsive": 200,
+      "ranked_metrics": {
+        "average_precision": 0.8278978630785174,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.25,
+        "precision_at_100": 1.0,
+        "recall_at_100": 0.5,
+        "precision_at_200": 0.795,
+        "recall_at_200": 0.795,
+        "precision_at_375": 0.424,
+        "recall_at_375": 0.795
+      }
+    },
+    {
+      "request_id": "cpra_003",
+      "request_title": "Special Education Program Changes",
+      "precision": 0.7050359712230215,
+      "recall": 0.98,
+      "f1": 0.8200836820083681,
+      "true_positives": 196,
+      "false_positives": 82,
+      "false_negatives": 4,
+      "total_responsive": 200,
+      "ranked_metrics": {
+        "average_precision": 0.9874716757302376,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.25,
+        "precision_at_100": 1.0,
+        "recall_at_100": 0.5,
+        "precision_at_200": 0.98,
+        "recall_at_200": 0.98,
+        "precision_at_375": 0.528,
+        "recall_at_375": 0.99
+      }
+    },
+    {
+      "request_id": "cpra_004",
+      "request_title": "EdTech Vendor Contracts",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "true_positives": 200,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "total_responsive": 200,
+      "ranked_metrics": {
+        "average_precision": 1.0,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.25,
+        "precision_at_100": 1.0,
+        "recall_at_100": 0.5,
+        "precision_at_200": 1.0,
+        "recall_at_200": 1.0,
+        "precision_at_375": 0.5333333333333333,
+        "recall_at_375": 1.0
+      }
+    },
+    {
+      "request_id": "cpra_005",
+      "request_title": "Student Safety Incidents",
+      "precision": 1.0,
+      "recall": 0.83,
+      "f1": 0.9071038251366119,
+      "true_positives": 166,
+      "false_positives": 0,
+      "false_negatives": 34,
+      "total_responsive": 200,
+      "ranked_metrics": {
+        "average_precision": 0.9579877727375953,
+        "precision_at_50": 1.0,
+        "recall_at_50": 0.25,
+        "precision_at_100": 1.0,
+        "recall_at_100": 0.5,
+        "precision_at_200": 0.955,
+        "recall_at_200": 0.955,
+        "precision_at_375": 0.5093333333333333,
+        "recall_at_375": 0.955
+      }
+    }
+  ],
+  "by_challenge": [
+    {
+      "challenge_type": "ambiguous_terms",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "total_emails": 20,
+      "correctly_identified": 20
+    },
+    {
+      "challenge_type": "near_miss",
+      "precision": 1.0,
+      "recall": 0.6216216216216216,
+      "f1": 0.7666666666666667,
+      "total_emails": 74,
+      "correctly_identified": 46
+    },
+    {
+      "challenge_type": "indirect_reference",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "total_emails": 60,
+      "correctly_identified": 0
+    },
+    {
+      "challenge_type": "temporal_mismatch",
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "total_emails": 50,
+      "correctly_identified": 50
+    },
+    {
+      "challenge_type": "partial_match",
+      "precision": 1.0,
+      "recall": 0.9655172413793104,
+      "f1": 0.9824561403508771,
+      "total_emails": 29,
+      "correctly_identified": 28
+    }
+  ],
+  "threshold_analysis": [
+    {
+      "threshold": 0.3,
+      "precision": 0.09096131750287247,
+      "recall": 0.95,
+      "f1": 0.1660258650821391,
+      "total_predicted": 3631,
+      "true_positives": 950,
+      "false_positives": 9494,
+      "false_negatives": 50
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.2903225806451613,
+      "recall": 0.945,
+      "f1": 0.44418331374853115,
+      "total_predicted": 2145,
+      "true_positives": 945,
+      "false_positives": 2310,
+      "false_negatives": 55
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.9103825136612022,
+      "recall": 0.833,
+      "f1": 0.8699738903394256,
+      "total_predicted": 833,
+      "true_positives": 833,
+      "false_positives": 82,
+      "false_negatives": 167
+    },
+    {
+      "threshold": 0.6,
+      "precision": 1.0,
+      "recall": 0.48,
+      "f1": 0.6486486486486487,
+      "total_predicted": 480,
+      "true_positives": 480,
+      "false_positives": 0,
+      "false_negatives": 520
+    },
+    {
+      "threshold": 0.7,
+      "precision": 1.0,
+      "recall": 0.327,
+      "f1": 0.4928409947249435,
+      "total_predicted": 327,
+      "true_positives": 327,
+      "false_positives": 0,
+      "false_negatives": 673
+    },
+    {
+      "threshold": 0.8,
+      "precision": 1.0,
+      "recall": 0.082,
+      "f1": 0.15157116451016636,
+      "total_predicted": 82,
+      "true_positives": 82,
+      "false_positives": 0,
+      "false_negatives": 918
+    }
+  ],
+  "k_values": [
+    50,
+    100,
+    200,
+    375
+  ],
+  "config": {
+    "name": "Snowflake Arctic Embed L v2.0",
+    "description": "Test Snowflake's newest arctic-embed-l-v2.0 model (Dec 2024). 334M params, 1024 dimensions, multilingual, Apache 2.0 license.\n",
+    "embedding_model": "st:snowflake-arctic-embed-l-v2.0",
+    "llm_model": null,
+    "pipeline": {
+      "method": "embedding",
+      "embedding_search": {
+        "embed_fields": [
+          "subject",
+          "body"
+        ],
+        "similarity_metric": "cosine"
+      },
+      "query_expansion": {
+        "enabled": false
+      },
+      "reranking": {
+        "enabled": false
+      }
+    },
+    "evaluation": {
+      "metrics": [
+        "precision",
+        "recall",
+        "f1",
+        "map"
+      ],
+      "k_values": [
+        50,
+        100,
+        200,
+        375
+      ],
+      "breakdown_by": [
+        "cpra_request",
+        "challenge_type"
+      ],
+      "thresholds": [
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8
+      ]
+    }
+  }
+}

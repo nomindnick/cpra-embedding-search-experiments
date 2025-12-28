@@ -1,0 +1,10 @@
+Message-ID: bcda28c0-da06-4e7d-9de4-712096077362
+Date: Thu, 30 Oct 2025 17:08:12
+From: gavin.adams@rusd.edu
+To: christopher.spencer@rusd.edu
+Subject: Schedule Change
+X-Email-Type: meeting_request
+X-Department: Special Education
+X-Topics: student achievement
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nGavin

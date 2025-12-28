@@ -1,0 +1,25 @@
+Message-ID: a7c199c0-2170-4212-b253-1c2c6de5e0e3
+Date: Wed, 22 May 2024 07:33:09
+From: lauren.herrera@rusd.edu
+To: samantha.warren@rusd.edu, erica.martin@rusd.edu, kevin.sharp@rusd.edu
+Subject: Network Connectivity Issues - Building C
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: technology infrastructure, professional development
+
+Good morning Samantha, Erica, and Kevin,
+
+I wanted to give you a heads up that we've been experiencing intermittent WiFi connectivity issues in Building C this morning. Our IT department is currently investigating the problem and working on a resolution.
+
+In the meantime, please advise your staff and students to:
+- Use wired connections where possible
+- Avoid streaming video content
+- Report any specific outages to the main office
+
+We expect this to be resolved by early afternoon. I'll send an update once IT confirms the issue has been fixed.
+
+Thank you for your patience and understanding.
+
+Best regards,
+Lauren Herrera
+Maintenance Staff

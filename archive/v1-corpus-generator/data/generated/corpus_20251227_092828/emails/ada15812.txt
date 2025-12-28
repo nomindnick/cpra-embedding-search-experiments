@@ -1,0 +1,10 @@
+Message-ID: ada15812-96ef-46e4-9400-c748edab29f6
+Date: Wed, 01 Oct 2025 12:23:11
+From: doris.jones@rusd.edu
+To: angela.cooper@rusd.edu, chad.beck@rusd.edu, joshua.jones@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: budget planning
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nDoris

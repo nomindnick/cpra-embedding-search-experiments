@@ -1,0 +1,10 @@
+Message-ID: 111cd407-7c98-4eab-9eb9-522b0181186b
+Date: Sun, 20 Oct 2024 17:50:42
+From: christopher.miller@rusd.edu
+To: margaret.terry@rusd.edu, barbara.mcgrath@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nChristopher

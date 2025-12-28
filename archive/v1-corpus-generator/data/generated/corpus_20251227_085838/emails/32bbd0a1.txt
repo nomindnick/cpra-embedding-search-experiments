@@ -1,0 +1,10 @@
+Message-ID: 32bbd0a1-cd08-4af9-a598-c050d4f678a8
+Date: Tue, 04 Feb 2025 17:30:45
+From: cameron.davis@rusd.edu
+To: andrea.roberts@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nCameron

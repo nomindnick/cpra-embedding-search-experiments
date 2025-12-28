@@ -1,0 +1,11 @@
+Message-ID: 9ca89fb1-0446-4615-a0aa-11d61185710b
+Date: Wed, 13 Mar 2024 15:55:06
+From: patrick.howard@rusd.edu
+To: martin.hines@rusd.edu
+Cc: monica.garrison@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts, facility maintenance
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nPatrick

@@ -1,0 +1,10 @@
+Message-ID: 9bd8a660-cad9-4c97-96d0-57a41d66b284
+Date: Wed, 23 Oct 2024 13:30:34
+From: diana.bass@rusd.edu
+To: crystal.mccall@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, transportation
+
+The lunch schedule has been updated for next week.\n\nThanks,\nDiana

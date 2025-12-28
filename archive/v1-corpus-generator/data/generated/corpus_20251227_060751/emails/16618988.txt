@@ -1,0 +1,25 @@
+Message-ID: 16618988-a5ed-444e-8b73-1caee8515e0d
+Date: Mon, 18 Mar 2024 07:33:32
+From: carly.preston@rusd.edu
+To: cindy.sanders@rusd.edu, brian.stone@rusd.edu
+Cc: samuel.rodriguez@rusd.edu, keith.adams@rusd.edu
+Subject: Technology Issue - Classroom Projector Not Working
+X-Email-Type: announcement
+X-Department: None
+X-Topics: technology infrastructure
+
+Hi Cindy and Brian,
+
+I wanted to reach out regarding a technical issue in my classroom. The projector in Room 204 has not been displaying properly since this morning. The device powers on, but the image appears very dim and pixelated.
+
+I've tried the following troubleshooting steps:
+- Restarted the projector
+- Checked all cable connections
+- Tested with a different input source
+
+Unfortunately, the issue persists. Could one of you please take a look at it when you have a chance? I have classes throughout the day, but I'm flexible if you need access during a planning period.
+
+Thank you for your help!
+
+Best regards,
+Carly Preston

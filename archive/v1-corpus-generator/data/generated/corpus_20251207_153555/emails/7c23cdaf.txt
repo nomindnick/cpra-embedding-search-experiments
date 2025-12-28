@@ -1,0 +1,25 @@
+Message-ID: 7c23cdaf-4ebe-4deb-811a-32e17435b498
+Date: Mon, 22 Jul 2024 18:13:15
+From: jessica.herrera@rusd.edu
+To: joseph.schaefer@rusd.edu
+Subject: EdTech Vendor Contracts - Need Your Input on Selection
+X-Email-Type: reply
+X-Department: Technology
+X-Topics: technology procurement, vendor evaluation
+
+Hi Joseph,
+
+Hope you're doing well. I'm reaching out because we're in the middle of evaluating some EdTech vendors for the upcoming school year, and I wanted to get your perspective before we move forward with any contract negotiations.
+
+Right now we're looking at three main options for our learning management system upgrade. Each vendor has different pricing models and implementation timelines, which will obviously impact our budget and the contract terms we'll be negotiating. I've attached a comparison sheet with the basics on each one.
+
+Before I schedule meetings with the finalists, I wanted to know:
+- Do you see any red flags with any of these vendors from a technical integration standpoint?
+- Are there specific contract requirements or support clauses you think we should prioritize?
+
+I'm planning to have preliminary vendor demos scheduled for next month, so if you could take a look and get back to me by end of week, that would be really helpful. Once we narrow it down, I'll definitely want you in on the contract review process.
+
+Let me know if you have any questions or want to grab coffee to talk through this in person.
+
+Thanks,
+Jessica

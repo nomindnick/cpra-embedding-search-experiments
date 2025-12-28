@@ -1,0 +1,10 @@
+Message-ID: c8d5e308-dd5f-44c3-a0fb-e9d291d44b95
+Date: Tue, 23 Jan 2024 13:04:05
+From: amy.li@rusd.edu
+To: kevin.williams@rusd.edu, david.young@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Please remember to display your parking permits.\n\nThanks,\nAmy

@@ -1,0 +1,28 @@
+Message-ID: b9ffae60-c735-4f78-88ee-7fdb1cdafa35
+Date: Fri, 06 Sep 2024 18:03:29
+From: shannon.ramos@rusd.edu
+To: christopher.cortez@rusd.edu, kaitlyn.williams@rusd.edu, lauren.rodriguez@rusd.edu
+Cc: fernando.donovan@rusd.edu, gregory.medina@rusd.edu
+Subject: Network Connectivity Issues - Building C
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: food services, substitute coverage
+
+Hi Christopher, Kaitlyn, and Lauren,
+
+I wanted to give you a heads up that we're experiencing some intermittent network connectivity issues in Building C today. Our IT team is currently investigating the problem.
+
+In the meantime, please be aware that:
+- WiFi may be unstable in classrooms C-101 through C-115
+- Wired connections in the computer lab should remain functional
+- We recommend having backup lesson plans available in case you need to work offline
+
+We expect this to be resolved by end of day. I'll send out a follow-up email once the issue is cleared.
+
+If you experience any significant problems, please let me know right away.
+
+Thanks for your patience!
+
+Best regards,
+Shannon Ramos
+Maintenance Staff

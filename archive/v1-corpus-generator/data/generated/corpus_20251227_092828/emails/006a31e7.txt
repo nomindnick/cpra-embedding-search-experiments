@@ -1,0 +1,10 @@
+Message-ID: 006a31e7-5e93-4151-a2da-2e6e99f65b7f
+Date: Sat, 09 Aug 2025 09:09:35
+From: joyce.arnold@rusd.edu
+To: javier.washington@rusd.edu, randy.espinoza@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, vendor contracts
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJoyce

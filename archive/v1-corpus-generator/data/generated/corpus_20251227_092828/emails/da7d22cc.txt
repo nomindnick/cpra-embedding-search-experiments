@@ -1,0 +1,10 @@
+Message-ID: da7d22cc-ee6d-47ab-9b24-f457eadc5267
+Date: Tue, 02 Apr 2024 17:18:49
+From: kevin.williams@rusd.edu
+To: lance.hayes@rusd.edu, joe.vang@rusd.edu, ashley.lee@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: announcement
+X-Department: None
+X-Topics: transportation
+
+The lunch schedule has been updated for next week.\n\nThanks,\nKevin

@@ -1,0 +1,25 @@
+Message-ID: 52303717-7695-4339-bbb9-dc8b522da528
+Date: Sun, 09 Mar 2025 12:30:08
+From: christopher.miller@rusd.edu
+To: heather.dixon@rusd.edu
+Subject: Technology Issue - Classroom Projector Not Working
+X-Email-Type: reply
+X-Department: None
+X-Topics: professional development, technology infrastructure
+
+Hi Heather,
+
+I wanted to reach out regarding a technical issue I'm experiencing in my classroom. The projector in Room 247 has not been displaying any image since this morning, though the device appears to power on normally.
+
+I've tried the following troubleshooting steps:
+- Restarted the projector
+- Checked all cable connections
+- Tested with a different input source
+
+Unfortunately, the issue persists. Could you please have someone from IT Services take a look at this when they have availability? I'm able to work around it for today, but it would be great to get it resolved before my next unit begins.
+
+Please let me know what information you need from me or if there's a preferred way to submit tech support requests.
+
+Thank you,
+Christopher Miller
+Room 247

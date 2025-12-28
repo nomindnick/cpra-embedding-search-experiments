@@ -1,0 +1,11 @@
+Message-ID: e00e6404-8f0c-4c46-b3a2-aeee50b72cb7
+Date: Sun, 05 Oct 2025 18:37:25
+From: carla.johnson@rusd.edu
+To: joseph.pena@rusd.edu, john.middleton@rusd.edu, brian.rivera@rusd.edu
+Cc: doris.jones@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning, substitute coverage
+
+The lunch schedule has been updated for next week.\n\nThanks,\nCarla

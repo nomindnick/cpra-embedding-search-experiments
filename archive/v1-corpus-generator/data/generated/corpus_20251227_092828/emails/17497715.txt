@@ -1,0 +1,11 @@
+Message-ID: 17497715-14b1-4aa1-86e5-09b7c014661b
+Date: Wed, 17 Dec 2025 07:27:31
+From: jeffery.wagner@rusd.edu
+To: jessica.herrera@rusd.edu, wendy.taylor@rusd.edu
+Cc: tina.king@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: Curriculum
+X-Topics: budget planning, facility maintenance
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJeffery

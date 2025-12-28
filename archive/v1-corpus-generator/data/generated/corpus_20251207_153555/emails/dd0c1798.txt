@@ -1,0 +1,22 @@
+Message-ID: dd0c1798-a226-45d6-9de7-186d3c6ebb63
+Date: Sun, 26 Oct 2025 15:48:29
+From: christopher.bruce@rusd.edu
+To: mark.ramirez@rusd.edu, angela.anderson@rusd.edu, samantha.warren@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications
+
+Hi Mark, Angela, and Samantha,
+
+I wanted to give you a heads up that I've been experiencing some intermittent connectivity issues with the computers in the east wing lab this morning. A few devices are taking longer than usual to boot up and connect to the network.
+
+I've already submitted a ticket to our IT department, but wanted to make sure you were aware in case any of your classes are scheduled to use that lab today. You may want to consider using an alternative space or rescheduling if you have a session planned.
+
+I'll send an update once IT confirms the issue has been resolved. In the meantime, the west wing lab and library computers appear to be functioning normally.
+
+Thanks for your flexibility!
+
+Best regards,
+Christopher Bruce
+Teacher

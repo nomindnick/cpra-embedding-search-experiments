@@ -1,0 +1,22 @@
+Message-ID: 3cde34b5-183e-48d8-9676-df8c2b4bbc5c
+Date: Sat, 05 Jul 2025 11:01:30
+From: lance.hayes@rusd.edu
+To: fernando.donovan@rusd.edu, theresa.long@rusd.edu
+Cc: joseph.pena@rusd.edu, charles.lewis@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Hi Fernando and Theresa,
+
+I wanted to reach out regarding a technical issue I encountered this morning in the computer lab. Several of the desktop computers in the back row (stations 12-15) are not connecting to the network properly.
+
+Students are unable to access the shared drive and educational software needed for today's lessons. I've already tried the basic troubleshooting steps (restarting devices, checking cables), but the issue persists.
+
+Could one of you please check on this when you have a moment? I have classes scheduled in the lab this afternoon, so any quick assistance would be greatly appreciated.
+
+Thank you for your help!
+
+Best regards,
+Lance Hayes

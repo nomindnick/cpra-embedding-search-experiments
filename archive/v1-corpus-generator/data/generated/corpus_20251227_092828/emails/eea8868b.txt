@@ -1,0 +1,10 @@
+Message-ID: eea8868b-3806-4b6f-bfc7-31154e6333b0
+Date: Tue, 06 Aug 2024 10:01:43
+From: john.middleton@rusd.edu
+To: christopher.miller@rusd.edu, charles.jackson@rusd.edu, gail.perry@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: parent communication, facility maintenance
+
+Please remember to display your parking permits.\n\nThanks,\nJohn

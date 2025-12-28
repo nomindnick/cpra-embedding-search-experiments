@@ -1,0 +1,11 @@
+Message-ID: 870b9d81-ad2b-485f-a0b4-270c8324dd1c
+Date: Sat, 09 Mar 2024 13:02:38
+From: patrick.howard@rusd.edu
+To: crystal.mccall@rusd.edu
+Cc: ashley.larsen@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: budget planning, facility maintenance
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nPatrick

@@ -1,0 +1,11 @@
+Message-ID: aa5d0fc3-3e37-40ba-b04a-4f2855e5c2e6
+Date: Thu, 06 Feb 2025 17:15:59
+From: erin.wilson@rusd.edu
+To: joseph.schaefer@rusd.edu, dr. patricia.johnson@rusd.edu
+Cc: joshua.pineda@rusd.edu
+Subject: Schedule Change
+X-Email-Type: meeting_request
+X-Department: Safety
+X-Topics: budget planning, grant applications
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nErin

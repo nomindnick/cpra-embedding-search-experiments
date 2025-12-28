@@ -1,0 +1,10 @@
+Message-ID: b1df904a-d9ed-4bfe-b9b1-354a620011a5
+Date: Wed, 24 Apr 2024 06:58:58
+From: casey.elliott@rusd.edu
+To: frank.benton@rusd.edu
+Subject: Supply Order
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: substitute coverage
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nCasey

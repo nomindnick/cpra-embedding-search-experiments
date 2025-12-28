@@ -1,0 +1,10 @@
+Message-ID: d4143fa2-ae3a-4e8f-8f86-3d453afdaec9
+Date: Wed, 13 Mar 2024 11:22:15
+From: jonathan.rodriguez@rusd.edu
+To: carla.johnson@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, substitute coverage
+
+Please remember to display your parking permits.\n\nThanks,\nJonathan

@@ -1,0 +1,10 @@
+Message-ID: 71bcc7fa-f7ae-4896-916c-5ab2ed40eb6d
+Date: Sat, 14 Jun 2025 18:17:18
+From: juan.harper@rusd.edu
+To: joe.vang@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications, technology infrastructure
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJuan

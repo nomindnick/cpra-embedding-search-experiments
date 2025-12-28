@@ -1,0 +1,10 @@
+Message-ID: a9bd3798-5ec9-4ea2-9545-b1e77ea5d836
+Date: Mon, 09 Sep 2024 07:49:04
+From: daniel.cox@rusd.edu
+To: angela.cooper@rusd.edu, allison.obrien@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications
+
+The lunch schedule has been updated for next week.\n\nThanks,\nDaniel

@@ -1,0 +1,10 @@
+Message-ID: db73c9b3-64df-49bd-8748-112c73606c37
+Date: Sun, 15 Dec 2024 16:36:28
+From: brian.stone@rusd.edu
+To: patrick.howard@rusd.edu, daniel.hall@rusd.edu, jeffrey.rodriguez@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: parent communication, vendor contracts
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nBrian

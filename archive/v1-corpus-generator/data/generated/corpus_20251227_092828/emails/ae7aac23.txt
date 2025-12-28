@@ -1,0 +1,14 @@
+Message-ID: ae7aac23-e1c0-4133-9fac-c83ff67ce69d
+Date: Sun, 08 Sep 2024 10:35:17
+From: erin.wilson@rusd.edu
+To: christopher.cortez@rusd.edu, kelsey.chapman@rusd.edu, dennis.mccann@rusd.edu
+Cc: courtney.brooks@rusd.edu
+Subject: General Update - Safety
+X-Email-Type: forward
+X-Department: Safety
+X-Topics: student safety, incident management
+
+Team update on various initiatives and ongoing projects.
+
+--- Attachments ---
+  - data_export.csv (CSV, 156 KB)

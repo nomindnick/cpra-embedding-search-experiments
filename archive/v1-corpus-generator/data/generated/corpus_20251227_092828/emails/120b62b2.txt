@@ -1,0 +1,15 @@
+Message-ID: 120b62b2-0b78-44c9-8eb6-4aa2e7240d99
+Date: Thu, 15 Aug 2024 07:37:21
+From: jeffrey.joyce@rusd.edu
+To: theresa.long@rusd.edu
+Cc: kylie.blackwell@rusd.edu, donna.moore@rusd.edu
+Subject: Water Quality Testing Schedule
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: water quality testing, environmental safety
+
+Hi Team,\n\nI wanted to update you on the lead testing results from last week. The water samples from all fountains in Oak Valley Elementary have been tested. Results show lead levels below 5 ppb, well within EPA standards of 15 ppb.\n\nPlease share with concerned parents.\n\nBest,\nJeffrey
+
+--- Attachments ---
+  - data_export.csv (CSV, 156 KB)
+  - meeting_notes.docx (Word, 34 KB)

@@ -1,0 +1,10 @@
+Message-ID: 283e7710-41f5-47ed-ba61-66ba5f0b28cd
+Date: Tue, 06 Feb 2024 16:58:32
+From: sharon.taylor@rusd.edu
+To: martin.mendez@rusd.edu, kristina.shannon@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Please remember to display your parking permits.\n\nThanks,\nSharon

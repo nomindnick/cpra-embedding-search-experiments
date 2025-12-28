@@ -1,0 +1,11 @@
+Message-ID: 79ff429d-5f0e-47a1-964d-4b2360ef0e8e
+Date: Wed, 04 Dec 2024 17:26:28
+From: joshua.lamb@rusd.edu
+To: anthony.nelson1@rusd.edu
+Cc: ryan.colon@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates, technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nJoshua

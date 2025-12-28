@@ -1,0 +1,10 @@
+Message-ID: 3cad6aa4-6cec-4113-b145-0e94146ab4a1
+Date: Sat, 06 Apr 2024 12:17:40
+From: bobby.berg@rusd.edu
+To: shannon.frazier@rusd.edu, samuel.rodriguez@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: food services
+
+The lunch schedule has been updated for next week.\n\nThanks,\nBobby

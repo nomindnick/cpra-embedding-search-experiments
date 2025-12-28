@@ -1,0 +1,10 @@
+Message-ID: ceffebac-b731-4b83-9076-eda600f14277
+Date: Mon, 05 Feb 2024 10:00:14
+From: steven.petersen@rusd.edu
+To: john.alvarez@rusd.edu, michelle.cherry@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: standardized testing
+
+The lunch schedule has been updated for next week.\n\nThanks,\nSteven

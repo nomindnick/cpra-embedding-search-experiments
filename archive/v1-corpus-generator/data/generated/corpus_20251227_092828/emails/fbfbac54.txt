@@ -1,0 +1,10 @@
+Message-ID: fbfbac54-4653-4d7b-be3b-dbc4c285f37a
+Date: Tue, 25 Jun 2024 07:29:18
+From: daniel.hall@rusd.edu
+To: patrick.howard@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services, technology infrastructure
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nDaniel

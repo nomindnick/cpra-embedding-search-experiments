@@ -1,0 +1,10 @@
+Message-ID: e4d7c992-93da-4b81-89f9-da414bf0379c
+Date: Wed, 22 May 2024 17:14:15
+From: helen.peterson@rusd.edu
+To: joseph.schaefer@rusd.edu, jessica.herrera@rusd.edu, jeffery.wagner@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: meeting_request
+X-Department: Business Services
+X-Topics: substitute coverage
+
+The lunch schedule has been updated for next week.\n\nThanks,\nHelen

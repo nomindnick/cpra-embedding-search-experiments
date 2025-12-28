@@ -1,0 +1,22 @@
+Message-ID: 421ecc17-0282-4c69-bd28-7af1d6df38c2
+Date: Sat, 16 Mar 2024 12:42:17
+From: jessica.herrera@rusd.edu
+To: joseph.schaefer@rusd.edu
+Cc: gregory.medina@rusd.edu, cameron.davis@rusd.edu
+Subject: Quick question on the vendor contract renewals
+X-Email-Type: regular
+X-Department: Technology
+X-Topics: technology procurement, vendor evaluation
+
+Hi Joseph,
+
+Hope you're having a good week. I wanted to touch base about the EdTech contracts we've been reviewing. We're coming up on renewal time for a couple of our key platforms, and I wanted to get your thoughts before we move forward.
+
+I've been comparing proposals from three different vendors for our learning management system. The current vendor is pushing for a 3-year commitment, but I'm wondering if we should negotiate for a shorter term given how quickly the EdTech landscape is changing. Have you seen other districts go either direction on this?
+
+Also, I wanted to loop you in because I know you've got insights on the integration side. One of the new vendors claims their platform plays better with our existing infrastructure, but I'd rather get your take on that before we commit.
+
+Could you grab 15-20 minutes next week to discuss? I'm pretty open on timing—just want to make sure we're making the best choice for the district before I finalize anything with these vendors.
+
+Thanks,
+Jessica

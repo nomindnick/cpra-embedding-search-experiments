@@ -1,0 +1,20 @@
+Message-ID: e36deb61-5e96-49eb-9509-41ff2c7e2a80
+Date: Wed, 24 Jul 2024 10:57:58
+From: robert.peterson@rusd.edu
+To: patrick.howard@rusd.edu
+Subject: POS System Down in Cafeteria - Need IT Support
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications, professional development
+
+Hi Patrick,
+
+I'm reaching out because we're experiencing an issue with our point-of-sale system in the cafeteria. The registers went down this morning around 8:30 AM, and we're currently unable to process student lunch purchases.
+
+We're managing with manual transactions for now, but this is creating delays during peak lunch periods. Could you please check on this when you have a chance? Let me know if you need any additional information about the error messages we're seeing.
+
+Thank you for your help!
+
+Best regards,
+Robert Peterson
+Cafeteria Manager

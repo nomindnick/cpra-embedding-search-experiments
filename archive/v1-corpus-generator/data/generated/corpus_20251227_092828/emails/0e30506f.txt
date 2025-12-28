@@ -1,0 +1,10 @@
+Message-ID: 0e30506f-6472-4d3b-ba24-b2c654d6237a
+Date: Sat, 15 Nov 2025 12:04:00
+From: robert.marshall@rusd.edu
+To: bobby.berg@rusd.edu, john.kim@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nRobert

@@ -1,0 +1,10 @@
+Message-ID: 72d200bc-d599-4070-a2b9-f40bfd5b778d
+Date: Wed, 11 Dec 2024 06:44:42
+From: casey.elliott@rusd.edu
+To: stephen.adkins@rusd.edu, joel.green@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, food services
+
+The lunch schedule has been updated for next week.\n\nThanks,\nCasey

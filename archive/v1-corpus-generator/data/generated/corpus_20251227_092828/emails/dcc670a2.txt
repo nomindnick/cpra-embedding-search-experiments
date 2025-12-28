@@ -1,0 +1,11 @@
+Message-ID: dcc670a2-3061-4f8b-8ea1-b46ee3683c17
+Date: Sun, 03 Mar 2024 06:45:40
+From: robert.pierce@rusd.edu
+To: zachary.moore@rusd.edu, julie.phillips@rusd.edu
+Cc: sarah.anderson@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates, facility maintenance
+
+The lunch schedule has been updated for next week.\n\nThanks,\nRobert

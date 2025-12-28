@@ -1,0 +1,10 @@
+Message-ID: 1d37ff4e-9bbf-41af-8ffd-5e53f6b36751
+Date: Wed, 19 Jun 2024 18:02:48
+From: joshua.jones@rusd.edu
+To: jason.morales@rusd.edu, monica.garrison@rusd.edu, steven.petersen@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement, transportation
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJoshua

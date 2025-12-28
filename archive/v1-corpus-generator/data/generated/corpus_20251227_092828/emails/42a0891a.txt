@@ -1,0 +1,10 @@
+Message-ID: 42a0891a-b41f-4ae2-99bd-081bca079599
+Date: Tue, 28 Oct 2025 18:12:48
+From: dr. patricia.johnson@rusd.edu
+To: helen.peterson@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: transportation
+
+Please remember to display your parking permits.\n\nThanks,\nDr. Patricia

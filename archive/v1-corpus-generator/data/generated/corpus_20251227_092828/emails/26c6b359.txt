@@ -1,0 +1,10 @@
+Message-ID: 26c6b359-0bc4-4060-8359-12cd119379a2
+Date: Mon, 07 Jul 2025 16:01:25
+From: lori.flynn@rusd.edu
+To: whitney.mendoza@rusd.edu, mark.ramirez@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: safety protocols
+
+Please remember to display your parking permits.\n\nThanks,\nLori

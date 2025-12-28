@@ -1,0 +1,10 @@
+Message-ID: 11d3d3c6-31c6-44c6-9084-2c3fe98269d4
+Date: Tue, 30 Jul 2024 08:04:17
+From: gail.perry@rusd.edu
+To: diana.padilla@rusd.edu, jonathan.rodriguez@rusd.edu, john.middleton@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nGail

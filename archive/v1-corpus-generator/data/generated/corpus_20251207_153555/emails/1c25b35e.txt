@@ -1,0 +1,25 @@
+Message-ID: 1c25b35e-3d52-4e01-a2fa-2135c24e441d
+Date: Mon, 09 Dec 2024 15:19:00
+From: juan.harper@rusd.edu
+To: debra.wang@rusd.edu
+Subject: Lunch Schedule Update - Week of March 18th
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+Hi Debra,
+
+I wanted to reach out with an update on the lunch schedule for the upcoming week. The IT department has made some adjustments to the cafeteria system to ensure smooth operations during peak lunch periods.
+
+Key details:
+- Elementary lunch periods remain: 11:30 AM - 12:15 PM and 12:15 PM - 1:00 PM
+- Middle school lunch: 12:00 PM - 12:45 PM
+- High school lunch: 12:45 PM - 1:30 PM
+
+Please note that the point-of-sale terminals in the cafeteria will be undergoing routine maintenance on Friday, March 22nd from 7:00 AM - 8:00 AM. This should not impact any lunch periods.
+
+If you experience any technical issues with the lunch system or have questions, please don't hesitate to contact our IT support team.
+
+Best regards,
+Juan Harper
+IT Support

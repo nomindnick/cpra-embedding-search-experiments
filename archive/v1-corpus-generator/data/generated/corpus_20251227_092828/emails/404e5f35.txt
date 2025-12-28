@@ -1,0 +1,11 @@
+Message-ID: 404e5f35-170e-42ae-9b8f-efcf8ceeff03
+Date: Thu, 03 Apr 2025 11:37:45
+From: gregory.medina@rusd.edu
+To: maria.nelson@rusd.edu, joshua.lamb@rusd.edu
+Cc: stephen.adkins@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nGregory

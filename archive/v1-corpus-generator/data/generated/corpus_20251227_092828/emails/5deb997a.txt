@@ -1,0 +1,10 @@
+Message-ID: 5deb997a-5ace-44ae-827f-ea11bec34204
+Date: Mon, 03 Feb 2025 11:35:20
+From: leonard.hayes@rusd.edu
+To: barbara.mcgrath@rusd.edu, kimberly.howard@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: standardized testing, vendor contracts
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nLeonard

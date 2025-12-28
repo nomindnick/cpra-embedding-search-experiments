@@ -1,0 +1,10 @@
+Message-ID: db19c8e9-9bd1-4465-beda-dc65da4f0cc0
+Date: Wed, 16 Oct 2024 06:50:05
+From: daniel.garcia@rusd.edu
+To: hannah.fowler@rusd.edu, suzanne.wilson@rusd.edu, harry.jefferson@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nDaniel

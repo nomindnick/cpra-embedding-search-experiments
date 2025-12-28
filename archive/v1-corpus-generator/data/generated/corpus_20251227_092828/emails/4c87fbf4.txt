@@ -1,0 +1,10 @@
+Message-ID: 4c87fbf4-1284-45e8-b03a-4be6b2f047e7
+Date: Fri, 19 Jan 2024 10:42:04
+From: allison.obrien@rusd.edu
+To: susan.miller@rusd.edu, randy.espinoza@rusd.edu, jeffrey.morgan@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: grant applications
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nAllison

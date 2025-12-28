@@ -1,0 +1,30 @@
+Message-ID: 3eb1e50a-e007-4f65-90d3-273c22ec0274
+Date: Mon, 18 Mar 2024 16:19:39
+From: joseph.schaefer@rusd.edu
+To: jessica.herrera@rusd.edu
+Subject: Follow-up on Educational Technology Provider Selection - Next Steps Required
+X-Email-Type: meeting_request
+X-Department: Finance
+X-Topics: technology procurement, vendor evaluation
+
+Hi Jessica,
+
+I hope this message finds you well. I'm writing to follow up on our discussion from last week regarding the selection of our new learning management partner for the upcoming academic year.
+
+As we move forward with evaluating the proposals we've received from the three finalists, I wanted to touch base on a few key items:
+
+1. **Timeline and Budget**: We need to finalize our decision by the end of this month to ensure implementation is complete before the fall semester. Finance has allocated the approved funds for this initiative, and we should confirm the payment terms with whichever organization we ultimately choose.
+
+2. **Agreement Terms**: Once we've selected our preferred partner, we'll need to review and execute the formal agreement. Legal has indicated they'll need approximately two weeks to complete their review of the standard terms, so we should submit our selection to them promptly.
+
+3. **Implementation Details**: The winning organization will need to provide detailed information about deployment timelines, training for staff, data migration, and ongoing support arrangements. These should all be clearly outlined in what we finalize with them.
+
+4. **Renewal and Termination Clauses**: Please ensure the final arrangement includes acceptable terms regarding renewal periods, price adjustments, and exit provisions should we need to transition to another provider in the future.
+
+Could you please send over your recommendation by Friday? I'd like to schedule a brief call with you and Mark from IT to align on the final decision before we proceed.
+
+Thanks for your attention to this matter.
+
+Best regards,
+Joseph Schaefer
+Director of Finance

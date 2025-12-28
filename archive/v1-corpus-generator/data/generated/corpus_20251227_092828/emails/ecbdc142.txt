@@ -1,0 +1,11 @@
+Message-ID: ecbdc142-086f-4e0c-b47c-b92bc8ad08e5
+Date: Wed, 03 Jul 2024 17:16:14
+From: robert.peterson@rusd.edu
+To: raymond.lopez@rusd.edu, brenda.hoffman@rusd.edu, brian.stone@rusd.edu
+Cc: anthony.jackson@rusd.edu, zoe.moore@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services
+
+The lunch schedule has been updated for next week.\n\nThanks,\nRobert

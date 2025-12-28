@@ -1,0 +1,15 @@
+Message-ID: 4995cfa0-db1d-4949-bd07-3775312c8d5d
+Date: Sun, 08 Sep 2024 18:50:12
+From: erin.wilson@rusd.edu
+To: jessica.ellis@rusd.edu, jennifer.williams@rusd.edu
+Cc: michael.hartman@rusd.edu
+Subject: Update on Student Safety Incidents
+X-Email-Type: forward
+X-Department: Safety
+X-Topics: student safety, incident management
+
+Regarding Request for communications about student safety incidents and responses, we need to discuss the implementation details.
+
+--- Attachments ---
+  - test_results.pdf (PDF, 245 KB)
+  - data_export.csv (CSV, 156 KB)

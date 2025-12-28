@@ -1,0 +1,10 @@
+Message-ID: 466fcca0-8401-4ba0-8acb-4ec1f173c873
+Date: Sun, 02 Jun 2024 06:18:54
+From: michael.andrade@rusd.edu
+To: tammy.may@rusd.edu, jeffrey.dudley@rusd.edu, maria.nelson@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, grant applications
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nMichael

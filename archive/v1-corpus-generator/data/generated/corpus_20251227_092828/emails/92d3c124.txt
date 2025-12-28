@@ -1,0 +1,10 @@
+Message-ID: 92d3c124-79d1-4ace-937b-cdeb952720f7
+Date: Sat, 10 Feb 2024 16:01:10
+From: randy.espinoza@rusd.edu
+To: anthony.rosales@rusd.edu, monica.garrison@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: budget planning, transportation
+
+Please remember to display your parking permits.\n\nThanks,\nRandy

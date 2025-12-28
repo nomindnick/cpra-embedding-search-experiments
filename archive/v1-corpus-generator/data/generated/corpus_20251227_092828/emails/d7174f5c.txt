@@ -1,0 +1,10 @@
+Message-ID: d7174f5c-5a87-4c31-947e-e4668e51fbc8
+Date: Mon, 18 Aug 2025 07:18:16
+From: joe.vang@rusd.edu
+To: cameron.davis@rusd.edu
+Subject: Field Trip Permission
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: safety protocols
+
+Permission slips for the upcoming field trip are due Monday.\n\nThanks,\nJoe

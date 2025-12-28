@@ -1,0 +1,10 @@
+Message-ID: 2bbfdb8e-35f7-46f4-97db-e9d8eff34d85
+Date: Sun, 31 Dec 2023 14:51:07
+From: jason.morales@rusd.edu
+To: chris.mitchell@rusd.edu, kenneth.price@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJason

@@ -1,0 +1,143 @@
+{
+  "responsive_templates": {
+    "lead_testing": {
+      "direct": [
+        {
+          "subject": "Lead Testing Results - {location}",
+          "body": "Team,\n\nThe lead testing results for {location} are now available. All water samples tested below the EPA action level of 15 ppb. Detailed results are attached.\n\nPlease share with concerned parents and staff.\n\n{sender_name}"
+        },
+        {
+          "subject": "Urgent: Water Quality Testing Required",
+          "body": "All,\n\nWe need to schedule lead testing for all drinking water sources by {date}. This is required for compliance with state regulations.\n\nThe testing company can accommodate us next week. Please confirm availability.\n\n{sender_name}"
+        }
+      ],
+      "ambiguous": [
+        {
+          "subject": "Taking the Lead on Water Safety",
+          "body": "Hi Team,\n\nI'll be taking the lead on our water safety initiative. As the lead coordinator, I want to ensure we lead by example in protecting student health.\n\nTesting details to follow.\n\n{sender_name}"
+        }
+      ],
+      "near_miss": [
+        {
+          "subject": "General Facilities Maintenance Update",
+          "body": "Maintenance Team,\n\nWe're scheduling routine maintenance for all water systems next month. This includes checking pipes, fountains, and general plumbing issues.\n\n{sender_name}"
+        }
+      ],
+      "indirect": [
+        {
+          "subject": "Follow-up on Yesterday's Discussion",
+          "body": "Hi,\n\nRegarding what we discussed yesterday about the water situation, I think we should proceed with the consultant's recommendations before parents get involved.\n\nLet's discuss offline.\n\n{sender_name}"
+        }
+      ]
+    },
+    "covid_funds": {
+      "direct": [
+        {
+          "subject": "ESSER III Fund Allocation Meeting",
+          "body": "Finance Team,\n\nWe need to finalize our ESSER III fund allocation plan. Current proposal:\n- 40% Technology infrastructure\n- 30% Learning loss mitigation\n- 30% Facility improvements\n\nPlease review before the board meeting.\n\n{sender_name}"
+        },
+        {
+          "subject": "Re: CARES Act Spending Deadline",
+          "body": "All,\n\nReminder: We have $2.3M in CARES Act funding that must be obligated by {date}. Priority areas include student devices and hotspots.\n\nNeed approvals ASAP.\n\n{sender_name}"
+        }
+      ]
+    },
+    "special_education": {
+      "direct": [
+        {
+          "subject": "IEP Process Updates for 2024-25",
+          "body": "Special Ed Team,\n\nWe're implementing new IEP procedures starting next semester. Key changes include streamlined documentation and enhanced parent communication protocols.\n\nTraining scheduled for {date}.\n\n{sender_name}"
+        },
+        {
+          "subject": "Special Education Staffing Changes",
+          "body": "Team,\n\nDue to increased enrollment, we're adding two special education teachers and one aide. This will help maintain our student-teacher ratios.\n\nInterviews begin next week.\n\n{sender_name}"
+        }
+      ]
+    },
+    "technology_contracts": {
+      "direct": [
+        {
+          "subject": "EdTech Vendor Evaluation - Final Round",
+          "body": "IT Committee,\n\nWe've narrowed down to three vendors for our new LMS:\n1. Canvas - $45K/year\n2. Schoology - $38K/year\n3. Google Classroom - $25K/year\n\nDemo sessions scheduled for next week.\n\n{sender_name}"
+        },
+        {
+          "subject": "RFP: Student Information System",
+          "body": "All,\n\nThe RFP for our new SIS has been posted. Submission deadline is {date}. Key requirements include data migration support and parent portal functionality.\n\n{sender_name}"
+        }
+      ]
+    },
+    "safety_incidents": {
+      "direct": [
+        {
+          "subject": "Incident Report - Playground Injury",
+          "body": "Administration,\n\nA student sustained injuries requiring medical attention on the playground today at 10:30 AM. Parents have been notified and the student received treatment.\n\nFull report attached.\n\n{sender_name}"
+        },
+        {
+          "subject": "Bullying Investigation Update",
+          "body": "Principal {recipient_name},\n\nThe bullying incident reported last week has been investigated. Disciplinary actions have been taken and parents of all involved students have been contacted.\n\nDocumentation filed with the district.\n\n{sender_name}"
+        }
+      ]
+    }
+  },
+  "non_responsive_templates": {
+    "administrative": [
+      {
+        "subject": "Staff Meeting Reminder - {date}",
+        "body": "All Staff,\n\nReminder: Our monthly staff meeting is scheduled for {date} at 3:00 PM in the main conference room.\n\nAgenda attached.\n\n{sender_name}"
+      },
+      {
+        "subject": "Parking Lot Assignments",
+        "body": "Faculty,\n\nNew parking assignments for the spring semester are now available. Please check your assigned spot and display your permit.\n\n{sender_name}"
+      }
+    ],
+    "scheduling": [
+      {
+        "subject": "Bell Schedule Change - Testing Week",
+        "body": "Teachers,\n\nDue to state testing, we'll be on a modified bell schedule next week. Please review the attached schedule and plan accordingly.\n\n{sender_name}"
+      },
+      {
+        "subject": "Field Trip Permission Slips Due",
+        "body": "Parents,\n\nPermission slips for the upcoming science museum field trip are due by {date}. Please return signed forms to the main office.\n\n{sender_name}"
+      }
+    ],
+    "routine": [
+      {
+        "subject": "Supply Order Deadline",
+        "body": "All Departments,\n\nPlease submit your supply orders for next quarter by end of day Friday. Use the standard requisition form.\n\nThank you,\n{sender_name}"
+      },
+      {
+        "subject": "Professional Development Registration",
+        "body": "Faculty,\n\nRegistration is now open for the summer PD sessions. Space is limited, so please register early.\n\nLink: [Registration Portal]\n\n{sender_name}"
+      },
+      {
+        "subject": "Substitute Teacher Needed",
+        "body": "Admin,\n\nI need a substitute for my 3rd and 4th period classes on {date} due to a medical appointment.\n\nLesson plans will be provided.\n\n{sender_name}"
+      }
+    ],
+    "technology": [
+      {
+        "subject": "WiFi Maintenance Tonight",
+        "body": "All,\n\nThe WiFi will be down for maintenance tonight from 10 PM to 2 AM. Please plan accordingly.\n\nIT Department"
+      },
+      {
+        "subject": "New Printer in Room 205",
+        "body": "Teachers,\n\nA new printer has been installed in Room 205. Instructions for connecting are posted next to the printer.\n\n{sender_name}"
+      }
+    ],
+    "events": [
+      {
+        "subject": "Spring Concert Next Friday",
+        "body": "School Community,\n\nOur spring concert is next Friday at 7 PM in the auditorium. Students should arrive by 6:30 PM in formal attire.\n\nSee you there!\n{sender_name}"
+      },
+      {
+        "subject": "Parent-Teacher Conferences",
+        "body": "Parents,\n\nParent-teacher conference sign-ups are now available online. Please select your preferred time slots.\n\n{sender_name}"
+      }
+    ]
+  },
+  "placeholders": {
+    "dates": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "next week", "tomorrow", "March 15", "April 1", "May 30"],
+    "locations": ["Building A", "Building B", "Main Campus", "Elementary Wing", "Science Lab", "Cafeteria", "Gym"],
+    "times": ["3:00 PM", "2:30 PM", "4:00 PM", "after school", "during lunch", "morning", "afternoon"]
+  }
+}

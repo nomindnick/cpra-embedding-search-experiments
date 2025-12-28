@@ -1,0 +1,10 @@
+Message-ID: b5759a1c-4875-4281-b47b-395925879488
+Date: Wed, 18 Sep 2024 12:44:19
+From: christopher.cortez@rusd.edu
+To: shannon.ramos@rusd.edu, john.alvarez@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, transportation
+
+The lunch schedule has been updated for next week.\n\nThanks,\nChristopher

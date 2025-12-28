@@ -1,0 +1,10 @@
+Message-ID: 7d65a0f2-e4e2-4500-9ba1-fcaee8a5d17c
+Date: Mon, 23 Jun 2025 16:28:27
+From: robert.simpson@rusd.edu
+To: charles.martin@rusd.edu, jesse.mann@rusd.edu
+Subject: Schedule Change
+X-Email-Type: report
+X-Department: None
+X-Topics: facility maintenance
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nRobert

@@ -1,0 +1,10 @@
+Message-ID: 3478c32f-dc9b-45c2-b9f7-2b181802a16a
+Date: Thu, 11 Jul 2024 11:20:44
+From: jennifer.collins@rusd.edu
+To: brenda.hoffman@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Please remember to display your parking permits.\n\nThanks,\nJennifer

@@ -1,0 +1,10 @@
+Message-ID: 9b7e71aa-fdb6-4da4-917e-07b321f110c7
+Date: Thu, 04 Dec 2025 12:30:44
+From: diana.foster@rusd.edu
+To: erin.wilson@rusd.edu, william.rodriguez@rusd.edu
+Subject: Supply Order
+X-Email-Type: meeting_request
+X-Department: Human Resources
+X-Topics: facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nDiana

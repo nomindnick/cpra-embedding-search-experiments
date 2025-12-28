@@ -1,0 +1,10 @@
+Message-ID: d41dfd33-f9c2-46d3-a732-3b9f0ff71955
+Date: Tue, 03 Sep 2024 08:59:43
+From: william.rodriguez@rusd.edu
+To: wendy.taylor@rusd.edu, jeffery.wagner@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: Transportation
+X-Topics: substitute coverage, safety protocols
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nWilliam

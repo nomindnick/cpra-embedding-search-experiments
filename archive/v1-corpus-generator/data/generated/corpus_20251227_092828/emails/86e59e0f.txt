@@ -1,0 +1,11 @@
+Message-ID: 86e59e0f-4954-4809-b1c9-a11cef12f675
+Date: Sat, 12 Jul 2025 17:57:16
+From: adam.arnold@rusd.edu
+To: joel.walter@rusd.edu, amy.gibbs@rusd.edu, samantha.warren@rusd.edu
+Cc: valerie.kennedy@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, transportation
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nAdam

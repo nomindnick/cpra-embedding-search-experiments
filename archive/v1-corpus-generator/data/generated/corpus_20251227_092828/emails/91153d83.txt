@@ -1,0 +1,10 @@
+Message-ID: 91153d83-5a7b-4980-a9a5-4b6573b2233f
+Date: Sat, 08 Jun 2024 07:41:03
+From: joseph.schaefer@rusd.edu
+To: jeffery.wagner@rusd.edu, diana.foster@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: Finance
+X-Topics: facility maintenance
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJoseph

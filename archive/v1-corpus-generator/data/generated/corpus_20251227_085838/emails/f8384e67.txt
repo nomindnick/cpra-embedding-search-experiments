@@ -1,0 +1,11 @@
+Message-ID: f8384e67-e4c8-49c7-bbc4-46e329cbb552
+Date: Thu, 20 Feb 2025 06:45:34
+From: javier.washington@rusd.edu
+To: joyce.arnold@rusd.edu, john.alvarez@rusd.edu
+Cc: michele.jones@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services
+
+Please remember to display your parking permits.\n\nThanks,\nJavier

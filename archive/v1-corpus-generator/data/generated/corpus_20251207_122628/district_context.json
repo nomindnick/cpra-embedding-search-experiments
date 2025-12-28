@@ -1,0 +1,108 @@
+{
+  "name": "Riverside Unified School District",
+  "superintendent_email": "dr. patricia.johnson@rusd.edu",
+  "schools": [
+    {
+      "id": "elementary_1",
+      "name": "Riverside Elementary",
+      "type": "Elementary School",
+      "student_count": 563,
+      "staff_count": 33
+    },
+    {
+      "id": "elementary_2",
+      "name": "Oak Valley Elementary",
+      "type": "Elementary School",
+      "student_count": 406,
+      "staff_count": 38
+    },
+    {
+      "id": "elementary_3",
+      "name": "Sunset Ridge Elementary",
+      "type": "Elementary School",
+      "student_count": 462,
+      "staff_count": 37
+    },
+    {
+      "id": "middle_1",
+      "name": "Riverside Middle School",
+      "type": "Middle School",
+      "student_count": 735,
+      "staff_count": 48
+    },
+    {
+      "id": "high_1",
+      "name": "Riverside High School",
+      "type": "High School",
+      "student_count": 1479,
+      "staff_count": 72
+    },
+    {
+      "id": "district_office",
+      "name": "District Office",
+      "type": "District Office",
+      "student_count": 0,
+      "staff_count": 25
+    }
+  ],
+  "departments": [
+    {
+      "name": "Technology",
+      "head_email": "jessica.herrera@rusd.edu",
+      "member_count": 1
+    },
+    {
+      "name": "Facilities",
+      "head_email": "norman.chavez@rusd.edu",
+      "member_count": 9
+    },
+    {
+      "name": "Finance",
+      "head_email": "joseph.schaefer@rusd.edu",
+      "member_count": 1
+    },
+    {
+      "name": "Human Resources",
+      "head_email": "diana.foster@rusd.edu",
+      "member_count": 1
+    },
+    {
+      "name": "Curriculum",
+      "head_email": "wendy.taylor@rusd.edu",
+      "member_count": 2
+    },
+    {
+      "name": "Special Education",
+      "head_email": "anne.robinson@rusd.edu",
+      "member_count": 20
+    },
+    {
+      "name": "Transportation",
+      "head_email": "william.rodriguez@rusd.edu",
+      "member_count": 1
+    },
+    {
+      "name": "Safety",
+      "head_email": "erin.wilson@rusd.edu",
+      "member_count": 1
+    }
+  ],
+  "total_staff": 246,
+  "topics": [
+    "budget planning",
+    "student achievement",
+    "facility maintenance",
+    "technology infrastructure",
+    "professional development",
+    "safety protocols",
+    "special education",
+    "curriculum updates",
+    "parent communication",
+    "standardized testing",
+    "food services",
+    "transportation",
+    "substitute coverage",
+    "grant applications",
+    "vendor contracts"
+  ]
+}

@@ -1,0 +1,10 @@
+Message-ID: 9916500b-c1ea-4f15-a0f0-b52158af0ede
+Date: Wed, 24 Sep 2025 08:37:35
+From: stephen.sanchez@rusd.edu
+To: hannah.fowler@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: parent communication
+
+Please remember to display your parking permits.\n\nThanks,\nStephen

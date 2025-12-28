@@ -1,0 +1,10 @@
+Message-ID: f66f90af-56b5-460c-a63b-193fe6ac6c8c
+Date: Wed, 04 Dec 2024 15:22:22
+From: erin.wilson@rusd.edu
+To: jeffery.wagner@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: Safety
+X-Topics: facility maintenance, transportation
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nErin

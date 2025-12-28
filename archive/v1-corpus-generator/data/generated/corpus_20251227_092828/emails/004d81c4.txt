@@ -1,0 +1,30 @@
+Message-ID: 004d81c4-2379-49cb-8d65-8caf04aa38d9
+Date: Wed, 12 Jun 2024 18:42:56
+From: jessica.herrera@rusd.edu
+To: joseph.schaefer@rusd.edu
+Subject: Follow-up on Our Discussion Regarding Educational Technology Partners and Service Agreements
+X-Email-Type: regular
+X-Department: Technology
+X-Topics: technology procurement, vendor evaluation
+
+Hi Joseph,
+
+I wanted to circle back on what we discussed last week regarding our institution's selection of learning management partners and the associated service terms.
+
+As you know, we've been evaluating several options for our digital classroom tools and instructional delivery systems. I've attached the comparison matrix we reviewed, which outlines the key features, pricing structures, and support offerings from each potential partner.
+
+A few items need your attention:
+
+1. The legal team has requested we clarify the terms of use and data ownership provisions in the agreements we're considering. Specifically, they want confirmation on how student information will be handled and what our exit rights are if we decide to transition away from a particular solution.
+
+2. We need to finalize our decision on which implementation approach makes the most sense—whether we prefer annual payments, multi-year commitments, or usage-based models. This will impact our budget allocation for the next fiscal cycle.
+
+3. Once we've narrowed our selection to the top two or three candidates, I'd like to schedule a demonstration session with our teaching staff to ensure the tools meet our pedagogical requirements.
+
+Could you review the attached documentation and let me know your thoughts by end of week? I'd also appreciate your input on whether we should request additional clarifications from any of the prospective partners regarding their implementation timelines and training support.
+
+Looking forward to moving this forward.
+
+Best regards,
+Jessica Herrera
+IT Director

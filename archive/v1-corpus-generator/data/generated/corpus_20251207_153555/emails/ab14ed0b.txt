@@ -1,0 +1,32 @@
+Message-ID: ab14ed0b-1616-4113-8dca-3f2ff7d9de72
+Date: Thu, 05 Jun 2025 12:01:55
+From: carla.johnson@rusd.edu
+To: frank.benton@rusd.edu
+Subject: Upcoming Field Trip - Permission Slip Required
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+Dear Frank,
+
+I hope this email finds you well. I'm writing to inform you about an upcoming field trip for our class.
+
+Trip Details:
+• Date: [Date]
+• Destination: [Location]
+• Departure Time: [Time]
+• Return Time: [Time]
+• Purpose: [Educational objective]
+
+Please ensure that all students have completed and returned their permission slips by [deadline date]. Students without signed permission slips will not be able to attend.
+
+Additional information:
+- Students should wear comfortable clothing and closed-toe shoes
+- Please pack a lunch and water bottle
+- A detailed itinerary will be sent to families by [date]
+
+If you have any questions or concerns about this field trip, please don't hesitate to reach out.
+
+Thank you,
+Carla Johnson
+Teacher

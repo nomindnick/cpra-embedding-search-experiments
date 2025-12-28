@@ -1,0 +1,10 @@
+Message-ID: 36d23c4a-c631-4efb-ae60-39632c55d7e2
+Date: Mon, 03 Feb 2025 10:15:14
+From: robert.silva@rusd.edu
+To: scott.callahan@rusd.edu, kenneth.price@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: special education
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nRobert

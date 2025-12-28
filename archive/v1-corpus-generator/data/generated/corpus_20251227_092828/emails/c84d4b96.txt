@@ -1,0 +1,11 @@
+Message-ID: c84d4b96-05d1-4130-8b03-f06b6ed49114
+Date: Fri, 19 Jan 2024 16:07:59
+From: angela.cooper@rusd.edu
+To: allison.obrien@rusd.edu, christopher.cortez@rusd.edu
+Cc: lauren.rodriguez@rusd.edu, nancy.mcdowell@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+The lunch schedule has been updated for next week.\n\nThanks,\nAngela

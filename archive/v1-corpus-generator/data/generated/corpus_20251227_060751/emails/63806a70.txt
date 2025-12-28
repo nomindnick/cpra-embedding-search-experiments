@@ -1,0 +1,26 @@
+Message-ID: 63806a70-80c7-423b-94b5-92fdfc99e056
+Date: Thu, 16 Oct 2025 08:47:40
+From: mary.cochran@rusd.edu
+To: robert.pierce@rusd.edu
+Subject: Upcoming Field Trip - Permission Slip and Details
+X-Email-Type: regular
+X-Department: None
+X-Topics: special education
+
+Dear Robert,
+
+I hope this message finds you well. I am writing to inform you about an upcoming field trip for our class.
+
+Trip Details:
+Date: [Date]
+Destination: [Location]
+Departure Time: [Time]
+Return Time: [Time]
+Purpose: [Educational objective]
+
+Please ensure that all students have completed and returned their permission slips by [Deadline Date]. Students should wear comfortable clothing and closed-toe shoes. We will be providing [transportation method].
+
+If you have any questions or concerns about this field trip, please don't hesitate to reach out to me.
+
+Thank you,
+Mary Cochran

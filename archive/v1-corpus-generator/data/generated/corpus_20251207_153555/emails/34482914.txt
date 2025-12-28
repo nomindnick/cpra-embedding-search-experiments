@@ -1,0 +1,24 @@
+Message-ID: 34482914-4150-4878-a22a-0e00b9d0db85
+Date: Tue, 27 Feb 2024 17:31:05
+From: cindy.sanders@rusd.edu
+To: jeffrey.rodriguez@rusd.edu, william.hill@rusd.edu, sarah.romero@rusd.edu
+Subject: Technology Issue - Classroom Projector Not Working
+X-Email-Type: regular
+X-Department: None
+X-Topics: vendor contracts
+
+Hi Jeffrey, William, and Sarah,
+
+I wanted to reach out regarding a technical issue I'm experiencing in my classroom. The projector in Room 204 has not been displaying properly since this morning. The device powers on but the image is not projecting clearly onto the screen.
+
+I've tried the following troubleshooting steps:
+- Restarted the projector
+- Checked all cable connections
+- Tested with a different input source
+
+Unfortunately, the issue persists. Could someone from the IT department or facilities team look into this when you have a moment? I have classes throughout the day, so any assistance would be greatly appreciated.
+
+Please let me know if you need any additional information or if there's a specific time that works best for a visit.
+
+Thank you,
+Cindy Sanders

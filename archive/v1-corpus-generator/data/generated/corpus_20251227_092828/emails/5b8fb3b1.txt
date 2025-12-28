@@ -1,0 +1,11 @@
+Message-ID: 5b8fb3b1-ca00-4a3e-a78d-454c9d432ecb
+Date: Wed, 23 Apr 2025 08:41:40
+From: joy.morales@rusd.edu
+To: harry.jefferson@rusd.edu
+Cc: amber.lindsey@rusd.edu, joe.vang@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation, food services
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJoy

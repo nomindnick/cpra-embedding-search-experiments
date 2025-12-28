@@ -1,0 +1,10 @@
+Message-ID: 4d04b3aa-5e3d-48ad-9095-1c4da805176b
+Date: Wed, 28 May 2025 12:06:31
+From: james.walters@rusd.edu
+To: anne.robinson@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services, student achievement
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJames

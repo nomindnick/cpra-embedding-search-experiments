@@ -1,0 +1,21 @@
+Message-ID: f10add22-78fd-4b20-b2f7-b6358545755c
+Date: Thu, 01 May 2025 10:16:03
+From: danny.jones@rusd.edu
+To: brandon.brown@rusd.edu, lindsey.lee@rusd.edu
+Cc: brittany.snyder@rusd.edu, jennifer.collins@rusd.edu
+Subject: Cafeteria POS System - Temporary Slowdown Today
+X-Email-Type: reply
+X-Department: None
+X-Topics: transportation
+
+Hi Brandon and Lindsey,
+
+I wanted to give you a heads up that we experienced some technical issues with our point-of-sale system in the cafeteria this morning. The system was running slower than usual during breakfast service, but IT has confirmed it's been resolved as of 10:30 AM.
+
+Everything should be back to normal speed for lunch service. If you notice any lingering issues with payment processing or inventory tracking, please let me know right away so I can contact the IT department.
+
+Thank you for your patience during the morning transition.
+
+Best regards,
+Danny Jones
+Cafeteria Manager

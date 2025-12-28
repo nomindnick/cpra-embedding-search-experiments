@@ -1,0 +1,11 @@
+Message-ID: 3b506e75-4713-4671-b40b-1ca6838420a4
+Date: Thu, 11 Sep 2025 16:57:01
+From: raymond.banks@rusd.edu
+To: andrea.roberts@rusd.edu, joe.vang@rusd.edu, fernando.donovan@rusd.edu
+Cc: jeanne.evans@rusd.edu
+Subject: Supply Order
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: vendor contracts, facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nRaymond

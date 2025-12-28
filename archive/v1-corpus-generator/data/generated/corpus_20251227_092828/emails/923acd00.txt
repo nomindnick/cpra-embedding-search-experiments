@@ -1,0 +1,10 @@
+Message-ID: 923acd00-337b-4798-97a3-ddebbddc2c55
+Date: Thu, 06 Feb 2025 12:03:22
+From: robert.simpson@rusd.edu
+To: jennifer.collins@rusd.edu, oscar.harper@rusd.edu, anthony.nelson@rusd.edu
+Subject: Schedule Change
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, vendor contracts
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nRobert

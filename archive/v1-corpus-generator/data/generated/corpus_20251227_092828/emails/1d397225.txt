@@ -1,0 +1,32 @@
+Message-ID: 1d397225-4918-48ce-9111-0c0f637d727b
+Date: Thu, 15 Aug 2024 18:08:05
+From: jessica.herrera@rusd.edu
+To: joseph.schaefer@rusd.edu
+Subject: Follow-up on Our Discussion Regarding Educational Technology Partners and Service Agreements
+X-Email-Type: forward
+X-Department: Technology
+X-Topics: technology procurement, vendor evaluation
+
+Hi Joseph,
+
+I wanted to circle back on what we discussed last week regarding our selection of educational technology partners and the associated service agreements we'll need to finalize.
+
+As you know, we're in the process of evaluating several organizations that provide learning management systems and classroom tools for our district. I've been reviewing the proposals from the three finalists, and I'd like to schedule time with you to discuss the terms and conditions each one has outlined.
+
+Specifically, I need your input on:
+
+1. The pricing models they've proposed—particularly around per-user fees versus school-wide arrangements
+2. The terms of use and data privacy provisions in their agreements
+3. Implementation timelines and support structures during the rollout phase
+4. Renewal periods and any lock-in provisions they're requesting
+5. Integration capabilities with our existing systems
+
+I've prepared a comparison document that outlines how each organization's offerings align with the requirements we established during our initial planning sessions. The situation at the elementary school regarding their current tool expiration also factors into our timeline here.
+
+Could we meet this week to review these materials? I'm flexible on timing and happy to work around your schedule. I think we should aim to have a recommendation ready for the administrative team by the end of the month.
+
+Please let me know your availability.
+
+Best regards,
+Jessica Herrera
+IT Director

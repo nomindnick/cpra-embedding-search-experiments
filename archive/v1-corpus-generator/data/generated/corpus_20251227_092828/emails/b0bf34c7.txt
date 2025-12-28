@@ -1,0 +1,10 @@
+Message-ID: b0bf34c7-746f-47f7-bd7d-01add06f30b2
+Date: Sat, 25 Jan 2025 07:05:02
+From: kenneth.price@rusd.edu
+To: joshua.jones@rusd.edu, chris.mitchell@rusd.edu, lauren.rodriguez@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nKenneth

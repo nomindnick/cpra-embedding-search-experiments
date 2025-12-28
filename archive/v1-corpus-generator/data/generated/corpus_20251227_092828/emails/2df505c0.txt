@@ -1,0 +1,10 @@
+Message-ID: 2df505c0-b6be-4be9-b81d-8f9f5953b2fc
+Date: Thu, 27 Jun 2024 09:20:00
+From: samuel.ross@rusd.edu
+To: zoe.moore@rusd.edu, shannon.pacheco@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: professional development
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nSamuel

@@ -1,0 +1,10 @@
+Message-ID: 956ad97e-fe8d-4342-a43b-402d346c7dc5
+Date: Tue, 25 Mar 2025 18:05:09
+From: robert.peterson@rusd.edu
+To: laura.carter@rusd.edu
+Subject: Parent Conference
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: standardized testing
+
+Available times for parent conferences have been posted.\n\nThanks,\nRobert

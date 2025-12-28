@@ -1,0 +1,10 @@
+Message-ID: c7700164-a941-4922-a373-3fe1aefae736
+Date: Sun, 11 May 2025 08:00:23
+From: bobby.berg@rusd.edu
+To: amy.morris@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: announcement
+X-Department: None
+X-Topics: student achievement, safety protocols
+
+The lunch schedule has been updated for next week.\n\nThanks,\nBobby

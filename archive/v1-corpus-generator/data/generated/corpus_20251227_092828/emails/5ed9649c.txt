@@ -1,0 +1,10 @@
+Message-ID: 5ed9649c-103a-4e60-83da-7fdf9aada138
+Date: Fri, 01 Nov 2024 09:42:09
+From: amy.gibbs@rusd.edu
+To: kelsey.chapman@rusd.edu, gavin.adams@rusd.edu, tammy.patton@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nAmy

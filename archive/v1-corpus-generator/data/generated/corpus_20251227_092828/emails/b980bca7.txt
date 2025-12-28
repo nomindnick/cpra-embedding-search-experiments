@@ -1,0 +1,10 @@
+Message-ID: b980bca7-8348-41b3-b00b-e9a184624af8
+Date: Tue, 25 Nov 2025 08:54:38
+From: christopher.bruce@rusd.edu
+To: angela.anderson@rusd.edu, stephen.sanchez@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+Please remember to display your parking permits.\n\nThanks,\nChristopher

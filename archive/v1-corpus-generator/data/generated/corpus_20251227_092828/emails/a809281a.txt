@@ -1,0 +1,10 @@
+Message-ID: a809281a-81ab-4f00-921a-ca5959c852e2
+Date: Sat, 09 Aug 2025 14:49:31
+From: robert.peterson@rusd.edu
+To: jennifer.collins@rusd.edu, david.ryan@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, standardized testing
+
+The lunch schedule has been updated for next week.\n\nThanks,\nRobert

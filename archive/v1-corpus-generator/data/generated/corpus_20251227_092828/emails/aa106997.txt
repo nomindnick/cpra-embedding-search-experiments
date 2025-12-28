@@ -1,0 +1,10 @@
+Message-ID: aa106997-61e7-4d9b-bcae-1361f2420870
+Date: Sun, 28 Sep 2025 08:27:28
+From: bobby.berg@rusd.edu
+To: christina.allen@rusd.edu, shannon.pacheco@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: budget planning
+
+Please remember to display your parking permits.\n\nThanks,\nBobby

@@ -1,0 +1,10 @@
+Message-ID: 484f42f7-8842-4dfa-8947-781e147b2dda
+Date: Sun, 24 Mar 2024 15:00:50
+From: martin.hines@rusd.edu
+To: david.ryan@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: announcement
+X-Department: None
+X-Topics: parent communication
+
+Please remember to display your parking permits.\n\nThanks,\nMartin

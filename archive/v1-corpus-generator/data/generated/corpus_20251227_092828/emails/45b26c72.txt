@@ -1,0 +1,10 @@
+Message-ID: 45b26c72-96d4-4c58-a247-69e6668c64e3
+Date: Sun, 02 Feb 2025 07:20:31
+From: kristi.flores@rusd.edu
+To: michael.andrade@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications, standardized testing
+
+Please remember to display your parking permits.\n\nThanks,\nKristi

@@ -1,0 +1,10 @@
+Message-ID: 43f943ad-51a0-492d-b88d-cd02f10c6623
+Date: Fri, 01 Mar 2024 09:42:24
+From: robert.pierce@rusd.edu
+To: steven.russell@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation, vendor contracts
+
+Please remember to display your parking permits.\n\nThanks,\nRobert

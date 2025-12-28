@@ -1,0 +1,10 @@
+Message-ID: 6e1bb46a-159a-469f-8bc3-934025b8c542
+Date: Wed, 02 Oct 2024 12:14:54
+From: allison.obrien@rusd.edu
+To: shannon.ramos@rusd.edu, sarah.garcia@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+Please remember to display your parking permits.\n\nThanks,\nAllison

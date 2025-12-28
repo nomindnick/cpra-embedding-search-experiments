@@ -1,0 +1,10 @@
+Message-ID: 43cbffcf-1044-4c88-a724-16f313f3eb03
+Date: Mon, 01 Sep 2025 07:43:08
+From: angelica.schneider@rusd.edu
+To: joe.vang@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: food services
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nAngelica

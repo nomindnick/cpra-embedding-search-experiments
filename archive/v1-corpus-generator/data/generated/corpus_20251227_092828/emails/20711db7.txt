@@ -1,0 +1,11 @@
+Message-ID: 20711db7-b6ad-4882-82d2-364199698de0
+Date: Thu, 07 Mar 2024 17:57:46
+From: adriana.bailey@rusd.edu
+To: christopher.bruce@rusd.edu, harry.jefferson@rusd.edu, jennifer.miller@rusd.edu
+Cc: sarah.anderson@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: curriculum updates
+
+Please remember to display your parking permits.\n\nThanks,\nAdriana

@@ -1,0 +1,10 @@
+Message-ID: 56a2338e-549f-4188-b44f-d51e6999e2e6
+Date: Mon, 24 Jun 2024 11:40:10
+From: robert.silva@rusd.edu
+To: joyce.arnold@rusd.edu, brandon.brown@rusd.edu
+Subject: Technology Issue
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, standardized testing
+
+The projector in room 205 needs replacement.\n\nThanks,\nRobert

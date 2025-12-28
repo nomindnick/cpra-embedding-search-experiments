@@ -1,0 +1,19 @@
+Message-ID: e70f9bf7-de14-46b2-931f-9dc823689910
+Date: Mon, 04 Mar 2024 16:28:03
+From: stephen.adkins@rusd.edu
+To: joseph.pena@rusd.edu, angela.randall@rusd.edu
+Subject: Technology Issue - Computer Lab Access
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates, standardized testing
+
+Hi Joseph and Angela,
+
+I wanted to reach out regarding an issue I encountered this morning in the computer lab. Several of the desktop computers in the lab are not connecting to the network properly, which prevented my 3rd period class from accessing the online learning platform for today's lesson.
+
+I was able to work around it by moving the class to the library for the period, but wanted to flag this so it can be looked into when IT has availability.
+
+Could one of you let me know if this is a known issue or if I should submit a formal work order? I'd like to plan accordingly for my lab sessions next week.
+
+Thank you,
+Stephen Adkins

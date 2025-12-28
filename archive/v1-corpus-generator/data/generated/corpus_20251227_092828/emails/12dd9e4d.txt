@@ -1,0 +1,11 @@
+Message-ID: 12dd9e4d-6cbe-41cd-975f-ff60f2b0d83e
+Date: Fri, 25 Apr 2025 14:41:04
+From: charles.martin@rusd.edu
+To: david.ryan@rusd.edu
+Cc: leonard.hayes@rusd.edu, kathy.gutierrez@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+The lunch schedule has been updated for next week.\n\nThanks,\nCharles

@@ -1,0 +1,11 @@
+Message-ID: 8b5f4ae7-4c19-4ba5-b25c-ba9e8ac9128c
+Date: Tue, 06 Aug 2024 06:57:18
+From: brian.rivera@rusd.edu
+To: nancy.mcdowell@rusd.edu
+Cc: dennis.mccann@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nBrian

@@ -1,0 +1,10 @@
+Message-ID: 73b958a0-afe7-4826-b3c3-7af57561afae
+Date: Mon, 24 Mar 2025 12:12:25
+From: chris.mitchell@rusd.edu
+To: brent.gray@rusd.edu, javier.washington@rusd.edu, christopher.cortez@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: parent communication
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nChris

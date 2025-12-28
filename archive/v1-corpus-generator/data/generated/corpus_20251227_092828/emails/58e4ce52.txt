@@ -1,0 +1,11 @@
+Message-ID: 58e4ce52-3438-44ed-be99-9fa0f18b34ca
+Date: Mon, 04 Aug 2025 12:18:32
+From: jeffrey.morgan@rusd.edu
+To: charles.lewis@rusd.edu, angela.cooper@rusd.edu, erica.orr@rusd.edu
+Cc: david.young@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJeffrey

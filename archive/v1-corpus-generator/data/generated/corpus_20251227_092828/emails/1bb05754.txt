@@ -1,0 +1,11 @@
+Message-ID: 1bb05754-143c-4953-999d-62fcddd71f3f
+Date: Sat, 20 Dec 2025 14:06:34
+From: frank.benton@rusd.edu
+To: julie.phillips@rusd.edu, christina.glover@rusd.edu
+Cc: andrew.edwards@rusd.edu, kristi.flores@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols
+
+Please remember to display your parking permits.\n\nThanks,\nFrank

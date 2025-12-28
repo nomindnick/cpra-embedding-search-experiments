@@ -1,0 +1,10 @@
+Message-ID: 04f960d4-51e7-465b-915b-6725c4a36eb1
+Date: Mon, 23 Jun 2025 11:53:54
+From: john.alvarez@rusd.edu
+To: monica.garrison@rusd.edu, chad.beck@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: reply
+X-Department: None
+X-Topics: student achievement
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJohn

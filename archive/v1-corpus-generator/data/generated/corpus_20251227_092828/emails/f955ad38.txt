@@ -1,0 +1,10 @@
+Message-ID: f955ad38-65a2-47a5-975e-1eae0ff4221b
+Date: Thu, 08 May 2025 06:13:03
+From: barbara.mcgrath@rusd.edu
+To: courtney.brooks@rusd.edu, charles.jackson@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure
+
+The lunch schedule has been updated for next week.\n\nThanks,\nBarbara

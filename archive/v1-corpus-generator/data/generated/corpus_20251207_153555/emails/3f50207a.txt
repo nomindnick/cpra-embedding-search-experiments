@@ -1,0 +1,20 @@
+Message-ID: 3f50207a-30b1-4c0c-918e-2607cae7fa01
+Date: Thu, 04 Sep 2025 07:25:00
+From: william.rodriguez@rusd.edu
+To: norman.chavez@rusd.edu
+Subject: Technology Issue - Bus Tracking System
+X-Email-Type: regular
+X-Department: Transportation
+X-Topics: substitute coverage
+
+Hi Norman,
+
+I wanted to reach out regarding a technical issue we've been experiencing with our bus tracking system this morning. It appears the GPS mapping software is running slower than usual, which may affect real-time route monitoring.
+
+Our IT department is looking into it now, but I wanted to give you a heads up in case you notice any delays in receiving location updates. We should have this resolved by end of day.
+
+In the meantime, drivers will continue to follow their standard routes and communicate via radio as usual. Please let me know if you encounter any issues on your end.
+
+Thank you,
+William Rodriguez
+Transportation Director

@@ -1,0 +1,20 @@
+Message-ID: 0f652fdf-2d06-44ba-8faa-b12fc4038aca
+Date: Sun, 06 Apr 2025 12:00:43
+From: lauren.herrera@rusd.edu
+To: joshua.lamb@rusd.edu
+Subject: Technology Issue - Computer Lab Equipment
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: curriculum updates
+
+Hi Joshua,
+
+I wanted to reach out regarding a technology issue I noticed during my rounds this morning. Several of the desktop computers in the main computer lab (Room 214) are displaying error messages on startup and not connecting to the network properly.
+
+I've power-cycled a couple of them, but the issue persists. This may require IT support to diagnose further. Could you please submit a work order or contact our tech support team to have someone take a look at this when they have availability? It would be good to get this resolved before the next scheduled computer class on Thursday.
+
+Please let me know if you need any additional details about which specific machines are affected.
+
+Thank you,
+Lauren Herrera
+Maintenance Staff

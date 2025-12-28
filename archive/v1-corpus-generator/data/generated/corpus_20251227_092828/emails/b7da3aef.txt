@@ -1,0 +1,11 @@
+Message-ID: b7da3aef-a511-4f04-b144-a6146a8dc7ff
+Date: Tue, 18 Jun 2024 17:37:19
+From: curtis.greer@rusd.edu
+To: craig.mendoza@rusd.edu, randy.koch@rusd.edu, gail.perry@rusd.edu
+Cc: tyler.johnson@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: technology infrastructure
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nCurtis

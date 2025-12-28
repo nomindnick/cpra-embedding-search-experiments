@@ -1,0 +1,11 @@
+Message-ID: 0b17cb80-665b-473e-902c-ee537cd0f82f
+Date: Thu, 03 Jul 2025 16:59:37
+From: scott.callahan@rusd.edu
+To: jeffrey.morgan@rusd.edu
+Cc: brian.gutierrez@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+The lunch schedule has been updated for next week.\n\nThanks,\nScott

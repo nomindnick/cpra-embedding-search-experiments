@@ -1,0 +1,10 @@
+Message-ID: ed55ba84-1f2d-4664-9420-27cc6afcf2d2
+Date: Fri, 14 Mar 2025 17:29:46
+From: erica.fernandez@rusd.edu
+To: stephen.sanchez@rusd.edu, samantha.warren@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: parent communication, facility maintenance
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nErica

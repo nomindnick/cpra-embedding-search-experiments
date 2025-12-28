@@ -1,0 +1,10 @@
+Message-ID: df0a2c7b-4970-49c5-b732-217eec31a461
+Date: Thu, 07 Aug 2025 12:38:44
+From: jennifer.williams@rusd.edu
+To: amy.li@rusd.edu, shannon.frazier@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation, vendor contracts
+
+Please remember to display your parking permits.\n\nThanks,\nJennifer

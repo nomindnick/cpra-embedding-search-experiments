@@ -1,0 +1,10 @@
+Message-ID: 0de90216-0919-49c1-884e-9204bfefb548
+Date: Mon, 20 May 2024 10:53:57
+From: tyler.dixon@rusd.edu
+To: charles.jackson@rusd.edu, ashley.larsen@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: announcement
+X-Department: None
+X-Topics: technology infrastructure, student achievement
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nTyler

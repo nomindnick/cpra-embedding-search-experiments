@@ -1,0 +1,10 @@
+Message-ID: 074a37f1-d338-42d9-ab25-ea20543dacab
+Date: Tue, 18 Mar 2025 06:49:48
+From: sarah.anderson@rusd.edu
+To: sharon.taylor@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nSarah

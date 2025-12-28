@@ -1,0 +1,10 @@
+Message-ID: 41dfc86b-85a7-4970-9a1f-47d93717cc5a
+Date: Tue, 18 Mar 2025 14:42:02
+From: randy.koch@rusd.edu
+To: sarah.anderson@rusd.edu, charles.jackson@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: professional development, budget planning
+
+Please remember to display your parking permits.\n\nThanks,\nRandy

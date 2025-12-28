@@ -1,0 +1,23 @@
+Message-ID: cfcc6f16-b54b-4b2f-bc89-02e9d51c2f20
+Date: Thu, 27 Nov 2025 17:53:16
+From: brian.harmon@rusd.edu
+To: diana.bass@rusd.edu, ebony.tucker@rusd.edu
+Cc: christina.bullock@rusd.edu
+Subject: Technology Issue - Classroom Device Not Syncing
+X-Email-Type: reply
+X-Department: Special Education
+X-Topics: student achievement, parent communication
+
+Hi Diana and Ebony,
+
+I wanted to reach out about a technical issue I've been experiencing with one of the classroom tablets in my special education resource room. The device isn't syncing properly with our student management system, which is making it difficult to access student IEPs and attendance records during class.
+
+I've tried the basic troubleshooting steps (restarting the device and checking the network connection), but the issue persists. Could one of you please submit a work order to IT, or let me know if I should contact them directly?
+
+Please let me know if you need any additional information about the device or the specific error messages I'm seeing.
+
+Thank you for your help!
+
+Best regards,
+Brian Harmon
+Special Education Teacher

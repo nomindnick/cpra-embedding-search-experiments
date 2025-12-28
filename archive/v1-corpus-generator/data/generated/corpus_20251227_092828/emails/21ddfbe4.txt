@@ -1,0 +1,11 @@
+Message-ID: 21ddfbe4-a575-4821-99d3-bef1e93e3956
+Date: Tue, 07 Jan 2025 09:51:58
+From: chris.mitchell@rusd.edu
+To: charles.lewis@rusd.edu, monica.garrison@rusd.edu
+Cc: amy.gibbs@rusd.edu, justin.hines@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing, curriculum updates
+
+The lunch schedule has been updated for next week.\n\nThanks,\nChris

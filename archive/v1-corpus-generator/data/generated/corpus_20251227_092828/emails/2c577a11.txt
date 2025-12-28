@@ -1,0 +1,10 @@
+Message-ID: 2c577a11-4e0e-4e09-82a4-4423e2230128
+Date: Thu, 26 Jun 2025 17:00:12
+From: hannah.fowler@rusd.edu
+To: suzanne.wilson@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing
+
+The lunch schedule has been updated for next week.\n\nThanks,\nHannah

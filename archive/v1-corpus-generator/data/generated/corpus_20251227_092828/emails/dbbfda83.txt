@@ -1,0 +1,10 @@
+Message-ID: dbbfda83-fd3a-4f8b-83ff-d01489238373
+Date: Tue, 24 Jun 2025 12:28:04
+From: frank.benton@rusd.edu
+To: carla.johnson@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, transportation
+
+Please remember to display your parking permits.\n\nThanks,\nFrank

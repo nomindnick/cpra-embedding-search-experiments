@@ -1,0 +1,11 @@
+Message-ID: 911a6711-9778-4030-991c-8d7f2d4f3528
+Date: Sun, 21 Sep 2025 12:12:53
+From: samantha.warren@rusd.edu
+To: daniel.garcia@rusd.edu, joy.morales@rusd.edu, michael.andrade@rusd.edu
+Cc: michael.mullen@rusd.edu, patrick.simmons@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nSamantha

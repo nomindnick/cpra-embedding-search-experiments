@@ -1,0 +1,10 @@
+Message-ID: 0a508b81-9c16-4ef5-b7f9-ab556099af33
+Date: Sun, 12 Oct 2025 17:58:22
+From: joel.walter@rusd.edu
+To: gavin.adams@rusd.edu, maria.nelson@rusd.edu, kelsey.chapman@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: transportation, grant applications
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJoel

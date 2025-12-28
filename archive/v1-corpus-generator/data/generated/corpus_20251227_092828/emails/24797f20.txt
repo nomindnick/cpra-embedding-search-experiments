@@ -1,0 +1,10 @@
+Message-ID: 24797f20-c1aa-4116-876b-211961a9831f
+Date: Tue, 23 Dec 2025 15:26:02
+From: juan.harper@rusd.edu
+To: cameron.davis@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: technology infrastructure, substitute coverage
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJuan

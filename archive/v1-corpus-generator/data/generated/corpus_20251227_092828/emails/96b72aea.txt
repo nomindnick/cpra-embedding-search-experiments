@@ -1,0 +1,10 @@
+Message-ID: 96b72aea-9ca4-4c5c-8f57-779958bee05b
+Date: Thu, 08 Feb 2024 10:36:17
+From: frank.benton@rusd.edu
+To: joel.green@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, professional development
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nFrank

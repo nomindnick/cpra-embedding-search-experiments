@@ -1,0 +1,10 @@
+Message-ID: 946c54d1-a228-41fd-bda8-2ce87a17d8bf
+Date: Thu, 26 Dec 2024 12:22:03
+From: robert.peterson@rusd.edu
+To: jennifer.collins@rusd.edu, dawn.johnson@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing, student achievement
+
+The lunch schedule has been updated for next week.\n\nThanks,\nRobert

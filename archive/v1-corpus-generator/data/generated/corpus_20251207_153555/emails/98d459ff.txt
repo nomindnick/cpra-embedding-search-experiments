@@ -1,0 +1,26 @@
+Message-ID: 98d459ff-d7d1-455e-8c6a-743670c8ceff
+Date: Fri, 15 Aug 2025 12:29:22
+From: randy.espinoza@rusd.edu
+To: linda.dominguez@rusd.edu, erica.orr@rusd.edu, john.alvarez@rusd.edu
+Subject: Chromebook Access Issue - IEP Lab
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: grant applications
+
+Hi Linda, Erica, and John,
+
+I wanted to reach out regarding a technical issue I encountered this morning in the IEP lab. Several of the Chromebooks are not connecting to the district network, and students were unable to access their online learning materials during 2nd period.
+
+I've restarted the devices and cleared the cache, but the issue persists. Could someone from the IT department take a look when you have a chance? The device serial numbers are listed below:
+
+- CB-2847
+- CB-2851
+- CB-2856
+
+In the meantime, I've moved my class to the library to use the desktop computers, so instruction is continuing as planned. Please let me know if you need any additional information or if there's anything I should try on my end.
+
+Thank you for your help!
+
+Best regards,
+Randy Espinoza
+Special Education Teacher

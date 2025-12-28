@@ -1,0 +1,12 @@
+{
+  "id": "lead-contamination-2020-present",
+  "title": "Lead Contamination in Water Supply",
+  "request_text": "Pursuant to the California Public Records Act (Government Code Section 6250 et seq.), I request copies of all documents, emails, and communications related to lead contamination, lead testing, lead levels, or lead remediation in the city's water supply system from January 1, 2020 to present. This includes but is not limited to: test results, internal communications, communications with state or federal agencies, contractor communications, public notices, and budget documents related to lead issues.",
+  "date_submitted": "2024-12-15",
+  "date_range": {
+    "start": "2020-01-01",
+    "end": "2024-12-31"
+  },
+  "keywords": ["lead", "contamination", "testing", "remediation", "water", "supply"],
+  "notes": "Primary test request. 'Lead' is intentionally ambiguous - could mean metal contamination or leadership. This tests disambiguation capabilities."
+}

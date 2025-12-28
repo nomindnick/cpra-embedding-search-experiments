@@ -1,0 +1,10 @@
+Message-ID: 3c98c497-9e69-446b-a1a5-f82392b321a3
+Date: Sun, 11 Aug 2024 10:58:17
+From: john.alvarez@rusd.edu
+To: maria.kelley@rusd.edu, danny.jones@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, transportation
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJohn

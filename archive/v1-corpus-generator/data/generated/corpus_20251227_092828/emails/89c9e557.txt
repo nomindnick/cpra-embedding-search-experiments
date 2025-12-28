@@ -1,0 +1,10 @@
+Message-ID: 89c9e557-cf6b-4c6d-b987-f70f7af2c528
+Date: Tue, 02 Sep 2025 12:36:47
+From: frank.benton@rusd.edu
+To: courtney.brooks@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, substitute coverage
+
+Please remember to display your parking permits.\n\nThanks,\nFrank

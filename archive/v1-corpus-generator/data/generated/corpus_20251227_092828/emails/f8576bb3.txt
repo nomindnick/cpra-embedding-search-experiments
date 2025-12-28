@@ -1,0 +1,11 @@
+Message-ID: f8576bb3-79b9-4c5c-b6cd-eb8a22e440c8
+Date: Tue, 18 Feb 2025 07:06:42
+From: christopher.cortez@rusd.edu
+To: kaitlyn.williams@rusd.edu, john.alvarez@rusd.edu
+Cc: robert.peterson@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: transportation, substitute coverage
+
+The lunch schedule has been updated for next week.\n\nThanks,\nChristopher

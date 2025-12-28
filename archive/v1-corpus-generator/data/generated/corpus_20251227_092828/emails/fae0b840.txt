@@ -1,0 +1,10 @@
+Message-ID: fae0b840-4cfe-4185-b1e4-20daf2159970
+Date: Thu, 03 Apr 2025 13:40:05
+From: john.kim@rusd.edu
+To: justin.hines@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: forward
+X-Department: None
+X-Topics: technology infrastructure
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJohn

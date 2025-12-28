@@ -1,0 +1,10 @@
+Message-ID: 8a4d8cb5-5465-42f7-b8f4-12052648a6a5
+Date: Wed, 03 Jan 2024 15:07:42
+From: robert.simpson@rusd.edu
+To: jennifer.collins@rusd.edu, raymond.lopez@rusd.edu, crystal.mccall@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: special education
+
+Please remember to display your parking permits.\n\nThanks,\nRobert

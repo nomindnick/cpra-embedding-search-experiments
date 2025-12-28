@@ -1,0 +1,25 @@
+Message-ID: 590f0952-0299-4db6-807e-ff5f2142b2a9
+Date: Mon, 17 Jun 2024 10:44:40
+From: barbara.mcgrath@rusd.edu
+To: marc.butler@rusd.edu
+Subject: Upcoming Field Trip - Permission Slip and Details
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates, budget planning
+
+Dear Marc,
+
+I hope this email finds you well. I wanted to reach out regarding an upcoming field trip for our class.
+
+Trip Details:
+- Destination: [Location]
+- Date: [Date]
+- Time: Departure at [time], return by [time]
+- Purpose: [Educational objective]
+
+Please note that permission slips will be sent home with students this week. All slips must be signed and returned by [date] for students to participate.
+
+If you have any questions about the trip or need additional information, please don't hesitate to contact me.
+
+Thank you,
+Barbara McGrath

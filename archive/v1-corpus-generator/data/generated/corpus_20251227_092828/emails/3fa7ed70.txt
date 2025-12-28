@@ -1,0 +1,10 @@
+Message-ID: 3fa7ed70-f9ea-4418-906c-64febbaeff6c
+Date: Sun, 18 Feb 2024 15:18:04
+From: carla.johnson@rusd.edu
+To: michael.bruce@rusd.edu, robert.pierce@rusd.edu, jose.williams@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: standardized testing, vendor contracts
+
+Please remember to display your parking permits.\n\nThanks,\nCarla

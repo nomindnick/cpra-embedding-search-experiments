@@ -1,0 +1,10 @@
+Message-ID: 84b9104d-2fc8-47cb-a49d-394cb7a41f4b
+Date: Sat, 06 Jul 2024 07:58:07
+From: jorge.ewing@rusd.edu
+To: robert.pierce@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: special education, budget planning
+
+The lunch schedule has been updated for next week.\n\nThanks,\nJorge

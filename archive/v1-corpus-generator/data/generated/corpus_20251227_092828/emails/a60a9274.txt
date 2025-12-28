@@ -1,0 +1,11 @@
+Message-ID: a60a9274-f2fb-4866-b4fd-96f08467e9ab
+Date: Sun, 25 May 2025 15:55:25
+From: chris.mitchell@rusd.edu
+To: javier.washington@rusd.edu, kaitlyn.williams@rusd.edu, james.walters@rusd.edu
+Cc: danny.jones@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: forward
+X-Department: None
+X-Topics: safety protocols
+
+Please remember to display your parking permits.\n\nThanks,\nChris

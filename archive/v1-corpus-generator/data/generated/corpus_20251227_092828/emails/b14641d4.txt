@@ -1,0 +1,36 @@
+Message-ID: b14641d4-06ed-42a5-b353-282913ea1bd3
+Date: Sat, 18 Mar 2023 18:52:06
+From: joseph.schaefer@rusd.edu
+To: carly.preston@rusd.edu, natalie.cline@rusd.edu, dalton.moreno@rusd.edu
+Subject: Quarterly Distribution Strategy for Federal Educational Support Resources
+X-Email-Type: regular
+X-Department: Finance
+X-Topics: federal funding, pandemic response
+
+Team,
+
+Following up on our discussion from last month regarding the supplemental resources made available through federal education support channels, I need your input on how we should proceed with allocation across our departments.
+
+As you know, we received notification that additional funds would be coming our way to address learning recovery and operational challenges from the past several years. The amounts are substantial, and we need to be strategic about deployment.
+
+Here's what I'm proposing:
+
+1. Academic Recovery Initiatives (40%): Directed toward instructional support, tutoring programs, and curriculum enhancement that we discussed in the August meeting.
+
+2. Infrastructure and Technology (35%): Addressing the facility upgrades and remote learning capabilities that Natalie flagged as priorities.
+
+3. Mental Health and Student Services (15%): Expanding counseling and support services that have been stretched thin.
+
+4. Administrative Contingency (10%): Reserved for unanticipated needs as they arise.
+
+Carly, I'll need your recommendations on which specific programs under Academic Recovery would have the greatest impact. Natalie, please prepare a prioritized list of technology and facility projects. Dalton, coordinate with Student Services on their most critical needs.
+
+The deadline for our preliminary submission is end of month. Let's plan to meet Thursday to review your recommendations and finalize our approach to this matter.
+
+Please send me your initial thoughts by Wednesday.
+
+Best regards,
+Joseph
+
+--- Attachments ---
+  - data_export.csv (CSV, 156 KB)

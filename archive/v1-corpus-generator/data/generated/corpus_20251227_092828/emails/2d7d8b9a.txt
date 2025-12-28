@@ -1,0 +1,11 @@
+Message-ID: 2d7d8b9a-af98-4e6c-83ad-fec2e91a98db
+Date: Sat, 01 Mar 2025 15:41:43
+From: john.kim@rusd.edu
+To: tina.king@rusd.edu
+Cc: amy.gibbs@rusd.edu, william.rodriguez@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement, standardized testing
+
+Please remember to display your parking permits.\n\nThanks,\nJohn

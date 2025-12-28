@@ -1,0 +1,10 @@
+Message-ID: de84f0a4-ae88-4550-817b-9ddb4ed7a51a
+Date: Mon, 23 Dec 2024 16:31:57
+From: dana.oliver@rusd.edu
+To: brian.harmon@rusd.edu, brian.stone@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: curriculum updates, technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nDana

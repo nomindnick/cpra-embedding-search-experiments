@@ -1,0 +1,27 @@
+Message-ID: 51189433-b0bb-4ed5-b4c5-f0610bb8b457
+Date: Mon, 20 Oct 2025 14:24:48
+From: martin.mendez@rusd.edu
+To: zachary.moore@rusd.edu
+Subject: Upcoming Field Trip - Permission Form Required
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+Dear Zachary,
+
+I hope this email finds you well. I am writing to inform you about an upcoming field trip for our class.
+
+Trip Details:
+- Date: [Date]
+- Destination: [Location]
+- Departure Time: [Time]
+- Return Time: [Time]
+- Purpose: [Educational objective]
+
+Please complete and return the attached permission form by [Due Date]. Students will need to bring a packed lunch, water bottle, and wear comfortable walking shoes.
+
+If you have any questions or concerns about this field trip, please feel free to reach out to me.
+
+Best regards,
+Martin Mendez
+Teacher

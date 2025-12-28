@@ -1,0 +1,10 @@
+Message-ID: 54d6deda-6671-41cb-9016-90b4bba5f232
+Date: Sun, 23 Jun 2024 13:08:54
+From: jeffrey.joyce@rusd.edu
+To: patrick.howard@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: standardized testing, technology infrastructure
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nJeffrey

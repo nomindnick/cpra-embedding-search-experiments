@@ -1,0 +1,10 @@
+Message-ID: d5f8de62-344a-4545-8d4c-85b31320bfe5
+Date: Sun, 13 Jul 2025 10:10:23
+From: doris.jones@rusd.edu
+To: christopher.cortez@rusd.edu, linda.dominguez@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: Special Education
+X-Topics: technology infrastructure
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nDoris

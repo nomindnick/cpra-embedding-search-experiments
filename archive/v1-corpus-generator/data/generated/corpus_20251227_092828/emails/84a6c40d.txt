@@ -1,0 +1,10 @@
+Message-ID: 84a6c40d-ce0d-4112-80fd-c96401a765de
+Date: Tue, 14 May 2024 08:28:44
+From: randy.koch@rusd.edu
+To: christopher.miller@rusd.edu, joel.green@rusd.edu, martin.mendez@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: forward
+X-Department: None
+X-Topics: technology infrastructure
+
+Please remember to display your parking permits.\n\nThanks,\nRandy

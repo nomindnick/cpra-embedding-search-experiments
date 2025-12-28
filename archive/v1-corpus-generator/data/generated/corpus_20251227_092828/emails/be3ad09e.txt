@@ -1,0 +1,10 @@
+Message-ID: be3ad09e-5d4c-4439-ba1b-7b568812bff0
+Date: Thu, 11 Jul 2024 07:19:41
+From: sarah.garcia@rusd.edu
+To: joyce.arnold@rusd.edu, james.walters@rusd.edu, anne.robinson@rusd.edu
+Subject: Technology Issue
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: facility maintenance, safety protocols
+
+The projector in room 205 needs replacement.\n\nThanks,\nSarah

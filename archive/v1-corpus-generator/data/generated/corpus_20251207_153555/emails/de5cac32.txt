@@ -1,0 +1,20 @@
+Message-ID: de5cac32-3361-4fbb-b306-7f1f3c718059
+Date: Fri, 07 Mar 2025 08:50:06
+From: jason.morales@rusd.edu
+To: scott.callahan@rusd.edu, anthony.rosales@rusd.edu
+Subject: Classroom Projector Not Working - Room 214
+X-Email-Type: reply
+X-Department: None
+X-Topics: budget planning
+
+Hi Scott and Anthony,
+
+I wanted to report a technical issue with the projector in my classroom (Room 214). It hasn't been turning on since this morning, and I've tried the basic troubleshooting steps like checking the power cable and remote batteries.
+
+I have classes scheduled in that room for the rest of the week, so I'd appreciate it if someone from IT could take a look at it when you have a chance. In the meantime, I'll plan to use alternative materials for my lessons.
+
+Please let me know if you need any additional information or if there's anything I should try on my end.
+
+Thank you,
+Jason Morales
+Room 214

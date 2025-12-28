@@ -1,0 +1,10 @@
+Message-ID: ac1ec732-d05e-4153-b74f-39607d03a226
+Date: Fri, 21 Jun 2024 06:42:56
+From: angelica.schneider@rusd.edu
+To: jane.lewis@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications
+
+The lunch schedule has been updated for next week.\n\nThanks,\nAngelica

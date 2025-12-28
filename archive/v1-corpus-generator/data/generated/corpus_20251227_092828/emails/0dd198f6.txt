@@ -1,0 +1,10 @@
+Message-ID: 0dd198f6-e193-464f-a736-79532e089e9a
+Date: Wed, 24 Jul 2024 17:37:17
+From: jane.lewis@rusd.edu
+To: kylie.blackwell@rusd.edu, shannon.frazier@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates, safety protocols
+
+Please remember to display your parking permits.\n\nThanks,\nJane

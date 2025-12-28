@@ -1,0 +1,11 @@
+Message-ID: d64dae10-cfe7-4e70-9d0b-65dc238513a8
+Date: Wed, 14 Feb 2024 15:22:37
+From: raymond.blair@rusd.edu
+To: david.ryan@rusd.edu, brian.harmon@rusd.edu, cindy.sanders@rusd.edu
+Cc: chris.mitchell@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: safety protocols, technology infrastructure
+
+The lunch schedule has been updated for next week.\n\nThanks,\nRaymond

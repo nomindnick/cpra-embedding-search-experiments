@@ -1,0 +1,10 @@
+Message-ID: b8c8d564-4fda-4308-9db9-773babd0b544
+Date: Fri, 26 Dec 2025 12:07:14
+From: michelle.cherry@rusd.edu
+To: javier.washington@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance, curriculum updates
+
+Please remember to display your parking permits.\n\nThanks,\nMichelle

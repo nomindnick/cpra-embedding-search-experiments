@@ -1,0 +1,23 @@
+Message-ID: ef1a921c-0cd3-4b4e-a2c0-180b622e3a4e
+Date: Fri, 14 Nov 2025 08:06:18
+From: norman.chavez@rusd.edu
+To: dr. patricia.johnson@rusd.edu
+Cc: christina.glover@rusd.edu, jessica.herrera@rusd.edu
+Subject: Technology Issue - Computer Lab Network Connectivity
+X-Email-Type: regular
+X-Department: Facilities
+X-Topics: budget planning
+
+Dear Dr. Johnson,
+
+I wanted to bring a technology issue to your attention that our facilities team has identified. The computer lab in Building B is currently experiencing intermittent network connectivity issues that are affecting student access during class periods.
+
+Our IT support team is investigating the problem, which appears to be related to a switch malfunction. They estimate the issue should be resolved by end of business tomorrow. In the meantime, teachers have been notified and can redirect their classes to the library computer stations if needed.
+
+I will follow up with you once the repairs are complete and full connectivity has been restored.
+
+Please let me know if you have any questions or concerns.
+
+Best regards,
+Norman Chavez
+Facilities Manager

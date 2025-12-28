@@ -1,0 +1,10 @@
+Message-ID: 41673bc9-0752-4d7c-83c9-2cd4c1218350
+Date: Mon, 18 Aug 2025 11:03:27
+From: brian.stone@rusd.edu
+To: brian.harmon@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: curriculum updates
+
+Please remember to display your parking permits.\n\nThanks,\nBrian

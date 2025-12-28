@@ -1,0 +1,10 @@
+Message-ID: 1de54d01-2984-4cf1-b5fa-74a2a6e73664
+Date: Sun, 22 Dec 2024 12:34:42
+From: brian.stone@rusd.edu
+To: jeffrey.rodriguez@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nBrian

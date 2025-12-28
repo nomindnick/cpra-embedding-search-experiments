@@ -1,0 +1,10 @@
+Message-ID: 9e90f695-78f7-4d1d-8095-78418fd43774
+Date: Fri, 01 Nov 2024 10:17:56
+From: dalton.moreno@rusd.edu
+To: jose.williams@rusd.edu, luis.acosta@rusd.edu, heather.montoya@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nDalton

@@ -1,0 +1,10 @@
+Message-ID: bdea493e-b14a-4347-a1c2-941ae0fb8e5f
+Date: Fri, 03 Jan 2025 16:11:37
+From: randy.koch@rusd.edu
+To: samantha.bush@rusd.edu, jose.williams@rusd.edu
+Subject: Schedule Change
+X-Email-Type: meeting_request
+X-Department: None
+X-Topics: technology infrastructure, standardized testing
+
+Due to testing, the bell schedule will be modified next week.\n\nThanks,\nRandy

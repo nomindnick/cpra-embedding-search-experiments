@@ -1,0 +1,10 @@
+Message-ID: 555737df-a4b7-4578-a37d-c0df74cd34f1
+Date: Fri, 10 Jan 2025 12:36:57
+From: robert.pierce@rusd.edu
+To: courtney.brooks@rusd.edu
+Subject: Supply Order
+X-Email-Type: regular
+X-Department: None
+X-Topics: grant applications, transportation
+
+Please submit your supply requests by end of day Friday.\n\nThanks,\nRobert

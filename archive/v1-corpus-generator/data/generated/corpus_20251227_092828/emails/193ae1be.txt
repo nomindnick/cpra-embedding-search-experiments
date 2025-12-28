@@ -1,0 +1,10 @@
+Message-ID: 193ae1be-57b6-4ae0-97d7-73e6bf865061
+Date: Thu, 17 Jul 2025 11:06:29
+From: erica.martin@rusd.edu
+To: lauren.herrera@rusd.edu
+Subject: Parking Lot Reminder
+X-Email-Type: regular
+X-Department: None
+X-Topics: student achievement
+
+Please remember to display your parking permits.\n\nThanks,\nErica

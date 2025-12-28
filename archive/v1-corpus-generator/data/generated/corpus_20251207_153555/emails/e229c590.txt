@@ -1,0 +1,31 @@
+Message-ID: e229c590-095c-4bdf-8094-9fb941904bea
+Date: Tue, 02 Jul 2024 12:27:46
+From: joseph.schaefer@rusd.edu
+To: jessica.herrera@rusd.edu
+Subject: Follow-up on EdTech Vendor Contracts - Need Your Input
+X-Email-Type: reply
+X-Department: Finance
+X-Topics: technology procurement, vendor evaluation
+
+Hi Jessica,
+
+Hope you're having a good week. I wanted to touch base about the EdTech vendor contracts we've been working through for next fiscal year.
+
+I've been reviewing the proposals that came in, and I'm seeing some significant differences in pricing structures between the three main contenders. Before we move forward with negotiations, I think we should get your team's feedback on the actual functionality and ease of implementation for each vendor option.
+
+Could you take a look at the comparison sheet I'm attaching? I'm particularly interested in your thoughts on:
+
+- Which vendor's platform integrates best with our current systems
+- Training requirements and support responsiveness for each contract
+- Any red flags you've noticed in the terms or service level agreements
+
+I'm hoping to have a preliminary recommendation ready for the executive team by next Friday, so if you could get back to me by Wednesday that would be ideal. We should probably also schedule a quick call with IT to make sure we're not missing any technical considerations before we lock in a contract.
+
+Let me know if you need any additional documentation from the vendor proposals.
+
+Thanks,
+Joseph
+
+--- Attachments ---
+  - test_results.pdf (PDF, 245 KB)
+  - data_export.csv (CSV, 156 KB)

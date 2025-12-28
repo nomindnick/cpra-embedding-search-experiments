@@ -1,0 +1,11 @@
+Message-ID: 3386775c-239b-42f1-9aba-858723926078
+Date: Mon, 29 Jan 2024 08:05:49
+From: harry.jefferson@rusd.edu
+To: tammy.may@rusd.edu
+Cc: margaret.terry@rusd.edu, raymond.lopez@rusd.edu
+Subject: Lunch Schedule
+X-Email-Type: regular
+X-Department: None
+X-Topics: facility maintenance
+
+The lunch schedule has been updated for next week.\n\nThanks,\nHarry

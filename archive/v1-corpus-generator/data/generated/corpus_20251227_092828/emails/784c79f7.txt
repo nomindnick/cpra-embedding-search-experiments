@@ -1,0 +1,11 @@
+Message-ID: 784c79f7-8360-47bb-a615-3803c7de4590
+Date: Fri, 28 Mar 2025 06:37:22
+From: joseph.pena@rusd.edu
+To: susan.brooks@rusd.edu, mary.cochran@rusd.edu
+Cc: crystal.mccall@rusd.edu
+Subject: Staff Meeting - 01/03
+X-Email-Type: meeting_request
+X-Department: Special Education
+X-Topics: substitute coverage
+
+Reminder: Staff meeting this {day} at 3pm in the conference room.\n\nThanks,\nJoseph

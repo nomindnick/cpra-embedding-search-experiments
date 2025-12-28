@@ -1,0 +1,14 @@
+Message-ID: eb515265-6464-42ff-8798-4ab3086d4211
+Date: Thu, 05 Sep 2024 06:31:12
+From: erin.wilson@rusd.edu
+To: joseph.wright@rusd.edu, frank.benton@rusd.edu, gregory.medina@rusd.edu
+Subject: Update on Student Safety Incidents
+X-Email-Type: regular
+X-Department: Safety
+X-Topics: student safety, incident management
+
+Regarding Request for communications about student safety incidents and responses, we need to discuss the implementation details.
+
+--- Attachments ---
+  - meeting_notes.docx (Word, 34 KB)
+  - data_export.csv (CSV, 156 KB)
