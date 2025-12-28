@@ -165,18 +165,32 @@ class Evaluator:
             all_predictions, all_actuals
         )
 
-        # Compute overall metrics (aggregate across requests)
+        # Compute overall metrics using micro-averaging across requests
+        # This sums TP/FP/FN across all requests, giving proper per-request precision/recall
+        total_tp = sum(rm.true_positives for rm in request_metrics)
+        total_fp = sum(rm.false_positives for rm in request_metrics)
+        total_fn = sum(rm.false_negatives for rm in request_metrics)
+
+        overall_precision = total_tp / (total_tp + total_fp) if (total_tp + total_fp) > 0 else 0.0
+        overall_recall = total_tp / (total_tp + total_fn) if (total_tp + total_fn) > 0 else 0.0
+        overall_f1 = (
+            2 * (overall_precision * overall_recall) / (overall_precision + overall_recall)
+            if (overall_precision + overall_recall) > 0 else 0.0
+        )
+
+        map_score = mean_average_precision(all_rankings, all_actuals)
+
+        # For total_predicted and total_responsive, use unique emails (set union)
+        # to avoid double-counting emails responsive to multiple requests
         all_pred = set().union(*all_predictions.values()) if all_predictions else set()
         all_actual = set().union(*all_actuals.values()) if all_actuals else set()
-        overall = compute_binary_metrics(all_pred, all_actual)
-        map_score = mean_average_precision(all_rankings, all_actuals)
 
         return EvaluationResult(
             experiment_name=experiment_name,
             pipeline_name=pipeline.name,
-            overall_precision=overall["precision"],
-            overall_recall=overall["recall"],
-            overall_f1=overall["f1"],
+            overall_precision=overall_precision,
+            overall_recall=overall_recall,
+            overall_f1=overall_f1,
             mean_average_precision=map_score,
             by_request=request_metrics,
             by_challenge=challenge_metrics,
@@ -203,32 +217,37 @@ class Evaluator:
         # Run pipeline once to get all scores
         all_results = pipeline.search_all(self.corpus.requests, self.corpus.emails)
 
-        # Get all actual responsive emails
+        # Get all actual responsive emails per request
         all_actuals: dict[str, set[str]] = {}
         for request in self.corpus.requests:
             all_actuals[request.id] = self.corpus.get_responsive_emails(request.id)
 
-        all_actual = set().union(*all_actuals.values()) if all_actuals else set()
-
         threshold_metrics = []
         for threshold in sorted(thresholds):
-            # Get predictions at this threshold
+            # Get predictions at this threshold for each request
             all_predictions: dict[str, set[str]] = {}
             for request in self.corpus.requests:
                 results = all_results[request.id]
                 predictions = pipeline.get_predictions(results, threshold)
                 all_predictions[request.id] = predictions
 
-            all_pred = set().union(*all_predictions.values()) if all_predictions else set()
+            # Use micro-averaging: sum TP/FP/FN across all requests
+            total_tp = 0
+            total_fp = 0
+            total_fn = 0
+            for request in self.corpus.requests:
+                predictions = all_predictions[request.id]
+                actual = all_actuals[request.id]
+                total_tp += len(predictions & actual)
+                total_fp += len(predictions - actual)
+                total_fn += len(actual - predictions)
 
-            # Compute metrics
-            tp = len(all_pred & all_actual)
-            fp = len(all_pred - all_actual)
-            fn = len(all_actual - all_pred)
-
-            precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
-            recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+            precision = total_tp / (total_tp + total_fp) if (total_tp + total_fp) > 0 else 0.0
+            recall = total_tp / (total_tp + total_fn) if (total_tp + total_fn) > 0 else 0.0
             f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0.0
+
+            # For total_predicted, use unique emails
+            all_pred = set().union(*all_predictions.values()) if all_predictions else set()
 
             threshold_metrics.append(
                 ThresholdMetrics(
@@ -237,9 +256,9 @@ class Evaluator:
                     recall=recall,
                     f1=f1,
                     total_predicted=len(all_pred),
-                    true_positives=tp,
-                    false_positives=fp,
-                    false_negatives=fn,
+                    true_positives=total_tp,
+                    false_positives=total_fp,
+                    false_negatives=total_fn,
                 )
             )
 

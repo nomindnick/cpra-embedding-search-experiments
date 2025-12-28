@@ -549,12 +549,164 @@ Example keyword-free email for Lead Testing request:
 
 No keywords like "lead", "water quality", "testing", or "contamination" - but clearly about water testing to a human reader.
 
+---
+
+## v2 Corpus Experiments (2025-12-27)
+
+### Corpus v2 Generation Complete
+
+Generated 5,000 emails with LLM-assisted keyword-free content:
+
+| Metric | Value |
+|--------|-------|
+| Total Emails | 5,000 |
+| Responsive | 1,000 (20%) |
+| Keyword-Free | 538 (53.8% of responsive) |
+| Challenge Emails | 576 |
+
+**Challenge Distribution:**
+- KEYWORD_FREE: 385 emails
+- Near Miss: 74 emails
+- Indirect Reference: 60 emails
+- Temporal Mismatch: 50 emails
+- Partial Match: 29 emails
+- Ambiguous Terms: 20 emails
+
+**Bug Fixed During Generation:**
+The email generator was calling LLM for ALL non-responsive emails (4,000 unnecessary API calls). Fixed to only use LLM for keyword-free and euphemism emails.
+
+---
+
+### 001-v2 - Baseline Keyword Search (v2 Corpus)
+
+**Date:** 2025-12-27
+
+**Corpus:** `corpus_20251227_092828` (5,000 emails, v2)
+
+**Results:**
+
+| Metric | v1 Corpus | v2 Corpus | Change |
+|--------|-----------|-----------|--------|
+| Precision | 56.66% | **93.39%** | +36.7% |
+| Recall | 94.13% | **53.70%** | **-40.4%** |
+| F1 | 70.74% | 68.19% | -2.6% |
+| MAP | 0.9295 | 0.5188 | -0.41 |
+
+**Per-Request Breakdown:**
+
+| Request | Precision | Recall | F1 | TP | FP | FN |
+|---------|-----------|--------|-----|-----|-----|-----|
+| Lead Testing | 100.00% | 40.00% | 57.14% | 80 | 0 | 120 |
+| COVID Relief | 89.29% | 37.50% | 52.82% | 75 | 9 | 125 |
+| Special Education | 98.67% | 74.00% | 84.57% | 148 | 2 | 52 |
+| EdTech Vendor | 98.76% | 79.50% | 88.09% | 159 | 2 | 41 |
+| Safety Incidents | 75.00% | 37.50% | 50.00% | 75 | 25 | 125 |
+
+**Observations:**
+
+1. **v2 corpus works as designed**: Keyword recall dropped from 94% to 53.7%
+2. **Precision improved dramatically**: 93.4% vs 56.7% - fewer false positives
+3. **Recall varies by keyword-free rate**:
+   - Lead Testing: 40% recall (60% keyword-free rate)
+   - COVID Relief: 37.5% recall (40% keyword-free rate)
+   - Special Ed: 74% recall (30% keyword-free rate)
+   - EdTech: 79.5% recall (20% keyword-free rate)
+   - Safety: 37.5% recall (50% keyword-free rate)
+
+**Bug Fixed:** Keyword matcher didn't handle plurals ("safety incident" didn't match "safety incidents"). Added optional `(?:s|es)?` suffix to pattern.
+
+---
+
+### 008-v2 - Snowflake Arctic Embed L v2.0 (v2 Corpus)
+
+**Date:** 2025-12-27
+
+**Corpus:** `corpus_20251227_092828` (5,000 emails, v2)
+
+**Results:**
+
+| Metric | Keyword Baseline | Snowflake Arctic | Improvement |
+|--------|------------------|------------------|-------------|
+| Precision | 93.39% | 91.04% | -2.4% |
+| Recall | 53.70% | **83.30%** | **+29.6%** |
+| F1 | 68.19% | **87.00%** | **+18.8%** |
+| MAP | 0.5188 | **0.9486** | **+0.43** |
+
+**Per-Request Breakdown:**
+
+| Request | Precision | Recall | F1 | TP | FP | FN |
+|---------|-----------|--------|-----|-----|-----|-----|
+| Lead Testing | 100.00% | 61.00% | 75.78% | 122 | 0 | 78 |
+| COVID Relief | 100.00% | 74.50% | 85.39% | 149 | 0 | 51 |
+| Special Education | 70.50% | 98.00% | 82.01% | 196 | 82 | 4 |
+| EdTech Vendor | 100.00% | 100.00% | 100.00% | 200 | 0 | 0 |
+| Safety Incidents | 100.00% | 83.00% | 90.71% | 166 | 0 | 34 |
+
+**Threshold Analysis:**
+
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|------|-----|
+| 0.30 | 9.10% | 95.00% | 16.60% | 950 | 9494 | 50 |
+| 0.40 | 29.03% | 94.50% | 44.42% | 945 | 2310 | 55 |
+| **0.50** | **91.04%** | **83.30%** | **87.00%** | 833 | 82 | 167 |
+| 0.60 | 100.00% | 48.00% | 64.86% | 480 | 0 | 520 |
+| 0.70 | 100.00% | 32.70% | 49.28% | 327 | 0 | 673 |
+
+**Observations:**
+
+1. **Embedding search proves its value**: +29.6% recall over keyword baseline
+2. **Semantic understanding finds keyword-free emails**: The 538 keyword-free emails that keyword search missed are largely found by embeddings
+3. **Per-request recall improvements**:
+   - Lead Testing: 40% → 61% (+21%)
+   - COVID Relief: 37.5% → 74.5% (+37%)
+   - Safety Incidents: 37.5% → 83% (+45.5%)
+4. **Special Education has precision issue**: 70.5% precision with 82 FP - embeddings finding semantically similar but non-responsive content
+5. **Precision tradeoff**: Slight precision decrease (93.4% → 91.0%) for major recall gain
+
+**Key Finding:**
+On a realistic corpus where keyword search achieves only 53.7% recall, embedding search achieves **83.3% recall** - finding 29.6% more responsive documents. This validates the core hypothesis that semantic search outperforms keyword search for CPRA document discovery.
+
+---
+
+### Evaluator Bug Fix
+
+**Issue:** Overall precision/recall was computed using set union across requests, which masked per-request errors.
+
+**Example:** An email responsive to "Lead Testing" flagged for "COVID Relief" was counted as a true positive overall, hiding the per-request false positive.
+
+**Fix:** Changed to micro-averaging - sum TP/FP/FN across all requests before computing precision/recall. This properly reflects per-request correctness.
+
+**Impact:**
+- Keyword baseline precision: 100% (flawed) → 93.4% (correct)
+- Snowflake precision: 100% (flawed) → 91.0% (correct)
+
+---
+
+## v2 Corpus Model Comparison
+
+| Model | Precision | Recall | F1 | MAP |
+|-------|-----------|--------|-----|-----|
+| Keywords (baseline) | 93.39% | 53.70% | 68.19% | 0.5188 |
+| **Snowflake Arctic L v2.0** | **91.04%** | **83.30%** | **87.00%** | **0.9486** |
+
+### Key Findings (2025-12-27)
+
+1. **v2 corpus is appropriately challenging**: Keyword search drops from 94% to 54% recall, forcing semantic search to prove its value.
+
+2. **Embedding search significantly outperforms keywords**: +29.6% recall, +18.8% F1 on the harder corpus.
+
+3. **The gap widens on harder corpora**: On v1 (easy), embedding had +1% recall over keywords. On v2 (hard), embedding has +30% recall.
+
+4. **Special Education needs attention**: 82 false positives suggest embeddings over-match on education-related content. Cross-encoder reranking may help.
+
+5. **Evaluation methodology matters**: The micro-averaging fix reveals true per-request precision, which is what matters for CPRA work.
+
 ### Next Steps
 
-1. Generate full 5,000-email v2 corpus (~$2-5 API cost, 30-60 min)
-2. Run keyword baseline - verify ~65% recall
-3. Run Snowflake Arctic L v2.0 - verify it still outperforms
-4. Proceed with cross-encoder reranking experiments
+1. Test cross-encoder reranking to improve Special Education precision
+2. Test query expansion to further improve recall
+3. Run additional embedding models on v2 corpus for comparison
+4. Consider hybrid keyword + embedding approach
 
 ---
 

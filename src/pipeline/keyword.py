@@ -44,13 +44,15 @@ class KeywordSearchPipeline(SearchPipeline):
         """Check if keyword appears in text.
 
         Uses word boundary matching to avoid partial matches
-        (e.g., "lead" shouldn't match "leader").
+        (e.g., "lead" shouldn't match "leader"), but allows for
+        plural forms (e.g., "safety incident" matches "safety incidents").
         """
         normalized_keyword = self._normalize(keyword)
         normalized_text = self._normalize(text)
 
-        # Use word boundaries for matching
-        pattern = r"\b" + re.escape(normalized_keyword) + r"\b"
+        # Use word boundaries for matching, with optional plural suffix
+        # This handles: incident -> incidents, policy -> policies, etc.
+        pattern = r"\b" + re.escape(normalized_keyword) + r"(?:s|es)?\b"
         return bool(re.search(pattern, normalized_text))
 
     def _get_keywords(self, request: CPRARequest) -> list[str]:

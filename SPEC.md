@@ -259,36 +259,37 @@ python generate_corpus.py --use-llm  # Uses config defaults: 5000 emails, 20% re
 
 ## Current Status
 
-> *Last updated: 2025-12-26*
+> *Last updated: 2025-12-27*
 
 ### Completed
 
 - [x] Project structure defined
 - [x] Test data generator available (cpra-golden-emails)
 - [x] SPEC.md created
-- [x] Baseline keyword search (Experiment 001) - 94% recall, 57% precision
-- [x] 11 embedding model experiments (002-013)
+- [x] Baseline keyword search (Experiment 001) - 94% recall, 57% precision (v1 corpus)
+- [x] 11 embedding model experiments (002-013) on v1 corpus
 - [x] Evaluation framework with per-request and per-challenge breakdowns
 - [x] **Corpus v2 generator** - keyword-free email generation with LLM
-
-### In Progress
-
-- [ ] Generate full v2 corpus (5,000 emails with keyword-free challenges)
-- [ ] Re-run experiments on v2 corpus to get realistic baselines
+- [x] **Corpus v2 generated** - 5,000 emails, 53.8% keyword-free responsive
+- [x] **v2 Baseline keyword search** - 53.7% recall, 93.4% precision
+- [x] **v2 Snowflake Arctic L v2.0** - 83.3% recall, 91.0% precision, 87.0% F1
+- [x] **Evaluator bug fix** - micro-averaging for proper per-request metrics
 
 ### Next Priorities
 
-1. Generate v2 corpus and establish new keyword baseline (~65% recall expected)
-2. Verify Snowflake Arctic L v2.0 still outperforms on harder corpus
-3. Implement cross-encoder reranking pipeline
-4. Test query expansion with positive/negative examples
+1. Implement cross-encoder reranking to improve Special Education precision (82 FP)
+2. Test query expansion with positive/negative examples
+3. Run additional embedding models on v2 corpus
+4. Consider hybrid keyword + embedding approach
 
 ### Key Learnings
 
-1. **Snowflake Arctic L v2.0 is current best model**: 95.20% recall, 90.38% F1, 0.9920 MAP
-2. **Corpus v1 was too easy**: 94% keyword recall meant embeddings couldn't prove value
-3. **Keyword-free emails are essential**: Real CPRA searches have much lower keyword recall
-4. **LLM generation works well**: Claude Haiku successfully generates responsive emails without keywords
+1. **Embedding search proves value on hard corpus**: +29.6% recall over keywords (83.3% vs 53.7%)
+2. **v2 corpus is appropriately challenging**: Keyword recall dropped from 94% to 54%
+3. **The gap widens on harder corpora**: v1 showed +1% embedding advantage, v2 shows +30%
+4. **Snowflake Arctic L v2.0 remains best model**: 87.0% F1, 0.95 MAP on v2 corpus
+5. **Special Education is problematic**: 82 false positives - embeddings over-match on education content
+6. **Evaluation methodology matters**: Micro-averaging reveals true per-request precision
 
 ## Conventions
 
