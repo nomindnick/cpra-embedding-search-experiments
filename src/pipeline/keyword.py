@@ -2,7 +2,7 @@
 
 import re
 
-from src.data import CPRARequest, Email
+from src.data import CPRARequest, SearchableDocument
 
 from .base import SearchPipeline, SearchResult
 
@@ -14,21 +14,15 @@ class KeywordSearchPipeline(SearchPipeline):
         self,
         match_mode: str = "any",
         case_sensitive: bool = False,
-        apply_exclusions: bool = True,
-        use_secondary_keywords: bool = True,
     ):
         """Initialize keyword search pipeline.
 
         Args:
             match_mode: 'any' (OR) or 'all' (AND) for keyword matching
             case_sensitive: Whether to do case-sensitive matching
-            apply_exclusions: Whether to exclude docs with exclude_keywords
-            use_secondary_keywords: Whether to include secondary keywords
         """
         self.match_mode = match_mode
         self.case_sensitive = case_sensitive
-        self.apply_exclusions = apply_exclusions
-        self.use_secondary_keywords = use_secondary_keywords
 
     @property
     def name(self) -> str:
@@ -55,39 +49,23 @@ class KeywordSearchPipeline(SearchPipeline):
         pattern = r"\b" + re.escape(normalized_keyword) + r"(?:s|es)?\b"
         return bool(re.search(pattern, normalized_text))
 
-    def _get_keywords(self, request: CPRARequest) -> list[str]:
-        """Get keywords to search for from request."""
-        keywords = list(request.primary_keywords)
-        if self.use_secondary_keywords:
-            keywords.extend(request.secondary_keywords)
-        return keywords
-
     def search(
-        self, request: CPRARequest, emails: list[Email]
+        self, request: CPRARequest, documents: list[SearchableDocument]
     ) -> list[SearchResult]:
-        """Search for emails matching request keywords.
+        """Search for documents matching request keywords.
 
         Args:
             request: CPRA request with keywords
-            emails: Emails to search
+            documents: Searchable documents (emails or threads)
 
         Returns:
-            List of SearchResult for matching emails (score=1.0 for match)
+            List of SearchResult for matching documents (score=1.0 for match)
         """
-        keywords = self._get_keywords(request)
-        exclude_keywords = request.exclude_keywords if self.apply_exclusions else []
+        keywords = request.keywords
 
         results = []
-        for email in emails:
-            text = email.text
-
-            # Check exclusions first
-            if exclude_keywords:
-                excluded = any(
-                    self._keyword_matches(kw, text) for kw in exclude_keywords
-                )
-                if excluded:
-                    continue
+        for doc in documents:
+            text = doc.text
 
             # Find matching keywords
             matched = [kw for kw in keywords if self._keyword_matches(kw, text)]
@@ -101,7 +79,7 @@ class KeywordSearchPipeline(SearchPipeline):
             if is_match:
                 results.append(
                     SearchResult(
-                        email_id=email.id,
+                        doc_id=doc.id,
                         score=1.0,
                         matched_terms=matched,
                     )

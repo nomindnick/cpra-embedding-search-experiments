@@ -4,7 +4,8 @@ from .corpus import (
     Corpus,
     CPRARequest,
     Email,
-    Responsiveness,
+    GroundTruthLabel,
+    SearchableDocument,
     load_corpus,
 )
 
@@ -13,6 +14,7 @@ __all__ = [
     "Corpus",
     "CPRARequest",
     "Email",
-    "Responsiveness",
+    "GroundTruthLabel",
+    "SearchableDocument",
     "load_corpus",
 ]

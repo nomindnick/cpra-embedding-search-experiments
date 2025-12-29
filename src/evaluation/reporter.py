@@ -31,26 +31,17 @@ def format_results_table(results: EvaluationResult) -> str:
     lines.append("")
     lines.append("| Metric | Value |")
     lines.append("|--------|-------|")
-    lines.append(f"| Precision | {results.overall_precision:.2%} |")
-    lines.append(f"| Recall | {results.overall_recall:.2%} |")
-    lines.append(f"| F1 | {results.overall_f1:.2%} |")
-    lines.append(f"| MAP | {results.mean_average_precision:.4f} |")
+    lines.append(f"| Precision | {results.precision:.2%} |")
+    lines.append(f"| Recall | {results.recall:.2%} |")
+    lines.append(f"| F1 | {results.f1:.2%} |")
+    lines.append(f"| Average Precision | {results.average_precision:.4f} |")
+    lines.append(f"| True Positives | {results.true_positives:,} |")
+    lines.append(f"| False Positives | {results.false_positives:,} |")
+    lines.append(f"| False Negatives | {results.false_negatives:,} |")
     lines.append(f"| Total Emails | {results.total_emails:,} |")
+    lines.append(f"| Total Documents | {results.total_documents:,} |")
     lines.append(f"| Total Responsive | {results.total_responsive:,} |")
     lines.append(f"| Total Predicted | {results.total_predicted:,} |")
-    lines.append("")
-
-    # Per-request breakdown
-    lines.append("## Results by CPRA Request")
-    lines.append("")
-    lines.append("| Request | Precision | Recall | F1 | TP | FP | FN |")
-    lines.append("|---------|-----------|--------|----|----|----|----|")
-    for req in results.by_request:
-        lines.append(
-            f"| {req.request_title} | {req.precision:.2%} | {req.recall:.2%} | "
-            f"{req.f1:.2%} | {req.true_positives} | {req.false_positives} | "
-            f"{req.false_negatives} |"
-        )
     lines.append("")
 
     # Per-challenge breakdown
@@ -67,27 +58,16 @@ def format_results_table(results: EvaluationResult) -> str:
         lines.append("")
 
     # Ranked metrics (if available)
-    if results.k_values and results.by_request:
+    if results.k_values and results.ranked_metrics:
         lines.append("## Precision@K / Recall@K")
         lines.append("")
+        lines.append("| K | Precision@K | Recall@K |")
+        lines.append("|---|-------------|----------|")
 
-        # Build header
-        header = "| Request |"
-        separator = "|---------|"
         for k in results.k_values:
-            header += f" P@{k} | R@{k} |"
-            separator += "------|------|"
-
-        lines.append(header)
-        lines.append(separator)
-
-        for req in results.by_request:
-            row = f"| {req.request_title} |"
-            for k in results.k_values:
-                p_at_k = req.ranked_metrics.get(f"precision_at_{k}", 0)
-                r_at_k = req.ranked_metrics.get(f"recall_at_{k}", 0)
-                row += f" {p_at_k:.2%} | {r_at_k:.2%} |"
-            lines.append(row)
+            p_at_k = results.ranked_metrics.get(f"precision_at_{k}", 0)
+            r_at_k = results.ranked_metrics.get(f"recall_at_{k}", 0)
+            lines.append(f"| {k} | {p_at_k:.2%} | {r_at_k:.2%} |")
 
         lines.append("")
 
@@ -134,51 +114,27 @@ def format_log_entry(results: EvaluationResult) -> str:
     lines.append(f"### {results.experiment_name}")
     lines.append("")
     lines.append(f"**Date:** {datetime.now().strftime('%Y-%m-%d')}")
+    lines.append(f"**Pipeline:** {results.pipeline_name}")
     lines.append("")
     lines.append("**Results:**")
     lines.append("")
-    lines.append("| Metric       | Overall |", end="")
-
-    # Add per-request headers
-    for req in results.by_request:
-        short_name = req.request_title.split()[0]  # First word
-        lines[-1] += f" {short_name} |"
-    lines.append("")
-
-    lines.append("| ------------ | ------- |", end="")
-    for _ in results.by_request:
-        lines[-1] += " --- |"
-    lines.append("")
-
-    # Precision row
-    row = f"| Precision    | {results.overall_precision:.2%} |"
-    for req in results.by_request:
-        row += f" {req.precision:.2%} |"
-    lines.append(row)
-
-    # Recall row
-    row = f"| Recall       | {results.overall_recall:.2%} |"
-    for req in results.by_request:
-        row += f" {req.recall:.2%} |"
-    lines.append(row)
-
-    # F1 row
-    row = f"| F1           | {results.overall_f1:.2%} |"
-    for req in results.by_request:
-        row += f" {req.f1:.2%} |"
-    lines.append(row)
-
+    lines.append("| Metric | Value |")
+    lines.append("|--------|-------|")
+    lines.append(f"| Precision | {results.precision:.2%} |")
+    lines.append(f"| Recall | {results.recall:.2%} |")
+    lines.append(f"| F1 | {results.f1:.2%} |")
+    lines.append(f"| Average Precision | {results.average_precision:.4f} |")
     lines.append("")
 
     # Challenge breakdown
     if results.by_challenge:
         lines.append("**By Challenge Type:**")
         lines.append("")
-        lines.append("| Challenge Type     | Precision | Recall | F1  |")
-        lines.append("| ------------------ | --------- | ------ | --- |")
+        lines.append("| Challenge Type | Precision | Recall | F1 |")
+        lines.append("|----------------|-----------|--------|-----|")
         for ch in results.by_challenge:
             lines.append(
-                f"| {ch.challenge_type.value:18} | {ch.precision:.2%}    | "
+                f"| {ch.challenge_type.value} | {ch.precision:.2%} | "
                 f"{ch.recall:.2%} | {ch.f1:.2%} |"
             )
         lines.append("")
@@ -202,32 +158,22 @@ def results_to_dict(results: EvaluationResult) -> dict[str, Any]:
         "experiment_name": results.experiment_name,
         "pipeline_name": results.pipeline_name,
         "timestamp": datetime.now().isoformat(),
-        "overall": {
-            "precision": results.overall_precision,
-            "recall": results.overall_recall,
-            "f1": results.overall_f1,
-            "map": results.mean_average_precision,
+        "metrics": {
+            "precision": results.precision,
+            "recall": results.recall,
+            "f1": results.f1,
+            "average_precision": results.average_precision,
+            "true_positives": results.true_positives,
+            "false_positives": results.false_positives,
+            "false_negatives": results.false_negatives,
         },
         "totals": {
             "emails": results.total_emails,
+            "documents": results.total_documents,
             "responsive": results.total_responsive,
             "predicted": results.total_predicted,
         },
-        "by_request": [
-            {
-                "request_id": req.request_id,
-                "request_title": req.request_title,
-                "precision": req.precision,
-                "recall": req.recall,
-                "f1": req.f1,
-                "true_positives": req.true_positives,
-                "false_positives": req.false_positives,
-                "false_negatives": req.false_negatives,
-                "total_responsive": req.total_responsive,
-                "ranked_metrics": req.ranked_metrics,
-            }
-            for req in results.by_request
-        ],
+        "ranked_metrics": results.ranked_metrics,
         "by_challenge": [
             {
                 "challenge_type": ch.challenge_type.value,

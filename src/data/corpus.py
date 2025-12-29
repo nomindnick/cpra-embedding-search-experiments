@@ -11,18 +11,25 @@ import json
 class ChallengeType(Enum):
     """Types of challenges that make retrieval difficult."""
 
-    AMBIGUOUS_TERMS = "ambiguous_terms"
-    NEAR_MISS = "near_miss"
-    INDIRECT_REFERENCE = "indirect_reference"
-    TEMPORAL_MISMATCH = "temporal_mismatch"
-    PARTIAL_MATCH = "partial_match"
+    # Responsive categories
+    DIRECT_MATCH = "DIRECT_MATCH"
+    AMBIGUOUS_TERMS = "AMBIGUOUS_TERMS"
+    INDIRECT_REFERENCE = "INDIRECT_REFERENCE"
+    TECHNICAL_JARGON = "TECHNICAL_JARGON"
+    TEMPORAL_REFERENCE = "TEMPORAL_REFERENCE"
+    BURIED_IN_THREAD = "BURIED_IN_THREAD"
+
+    # Non-responsive categories
+    KEYWORD_FALSE_POSITIVE = "KEYWORD_FALSE_POSITIVE"
+    ADJACENT_TOPIC = "ADJACENT_TOPIC"
+    TRUE_NEGATIVE = "TRUE_NEGATIVE"
 
     @classmethod
     def from_string(cls, s: str) -> "ChallengeType":
-        """Parse challenge type from string like 'ChallengeType.AMBIGUOUS_TERMS'."""
-        # Handle both "ChallengeType.AMBIGUOUS_TERMS" and "ambiguous_terms" formats
+        """Parse challenge type from string."""
+        # Handle both "ChallengeType.AMBIGUOUS_TERMS" and "AMBIGUOUS_TERMS" formats
         if "." in s:
-            s = s.split(".")[-1].lower()
+            s = s.split(".")[-1]
         return cls(s)
 
 
@@ -31,47 +38,45 @@ class Email:
     """An email from the corpus."""
 
     id: str
-    sender: str
-    recipients: list[str]
+    from_addr: str  # 'from' in JSON, renamed to avoid Python keyword
+    to: list[str]
     subject: str
     body: str
-    date_sent: datetime
+    date: datetime
     cc: list[str] = field(default_factory=list)
-    department: str | None = None
-    topics: list[str] = field(default_factory=list)
-    challenge_patterns: list[ChallengeType] = field(default_factory=list)
-    has_attachments: bool = False
-    email_type: str = "regular"
+    thread_id: str | None = None
+    thread_position: int | None = None
+    thread_length: int | None = None
+    has_attachment: bool = False
+    attachment_names: list[str] = field(default_factory=list)
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> "Email":
         """Create Email from dictionary (JSON data)."""
-        challenge_patterns = []
-        for cp in data.get("challenge_patterns", []):
-            try:
-                challenge_patterns.append(ChallengeType.from_string(cp))
-            except ValueError:
-                pass  # Skip unknown challenge types
-
         return cls(
             id=data["id"],
-            sender=data["sender"],
-            recipients=data.get("recipients", []),
+            from_addr=data["from"],
+            to=data.get("to", []),
             subject=data["subject"],
             body=data["body"],
-            date_sent=datetime.fromisoformat(data["date_sent"]),
+            date=datetime.fromisoformat(data["date"]),
             cc=data.get("cc", []),
-            department=data.get("department"),
-            topics=data.get("topics", []),
-            challenge_patterns=challenge_patterns,
-            has_attachments=data.get("has_attachments", False),
-            email_type=data.get("email_type", "regular"),
+            thread_id=data.get("thread_id"),
+            thread_position=data.get("thread_position"),
+            thread_length=data.get("thread_length"),
+            has_attachment=data.get("has_attachment", False),
+            attachment_names=data.get("attachment_names", []),
         )
 
     @property
     def text(self) -> str:
         """Combined subject and body for search."""
         return f"{self.subject}\n\n{self.body}"
+
+    @property
+    def is_in_thread(self) -> bool:
+        """Check if this email is part of a thread."""
+        return self.thread_id is not None
 
 
 @dataclass
@@ -80,46 +85,40 @@ class CPRARequest:
 
     id: str
     title: str
-    description: str
     request_text: str
-    primary_keywords: list[str]
-    secondary_keywords: list[str] = field(default_factory=list)
-    exclude_keywords: list[str] = field(default_factory=list)
-    concepts: list[str] = field(default_factory=list)
+    keywords: list[str] = field(default_factory=list)
+    date_submitted: datetime | None = None
     date_range_start: datetime | None = None
     date_range_end: datetime | None = None
-    complexity: str = "moderate"
-    challenge_types: list[str] = field(default_factory=list)
+    notes: str = ""
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> "CPRARequest":
         """Create CPRARequest from dictionary (JSON data)."""
+        date_submitted = None
         date_start = None
         date_end = None
-        if data.get("date_range_start"):
-            date_start = datetime.fromisoformat(data["date_range_start"])
-        if data.get("date_range_end"):
-            date_end = datetime.fromisoformat(data["date_range_end"])
+
+        if data.get("date_submitted"):
+            date_submitted = datetime.fromisoformat(data["date_submitted"])
+
+        # Handle date_range object with nested start/end
+        date_range = data.get("date_range", {})
+        if date_range.get("start"):
+            date_start = datetime.fromisoformat(date_range["start"])
+        if date_range.get("end"):
+            date_end = datetime.fromisoformat(date_range["end"])
 
         return cls(
             id=data["id"],
             title=data["title"],
-            description=data.get("description", ""),
             request_text=data.get("request_text", ""),
-            primary_keywords=data.get("primary_keywords", []),
-            secondary_keywords=data.get("secondary_keywords", []),
-            exclude_keywords=data.get("exclude_keywords", []),
-            concepts=data.get("concepts", []),
+            keywords=data.get("keywords", []),
+            date_submitted=date_submitted,
             date_range_start=date_start,
             date_range_end=date_end,
-            complexity=data.get("complexity", "moderate"),
-            challenge_types=data.get("challenge_types", []),
+            notes=data.get("notes", ""),
         )
-
-    @property
-    def all_keywords(self) -> list[str]:
-        """All keywords (primary + secondary)."""
-        return self.primary_keywords + self.secondary_keywords
 
     @property
     def search_text(self) -> str:
@@ -128,30 +127,67 @@ class CPRARequest:
 
 
 @dataclass
-class Responsiveness:
-    """Responsiveness information for an email to a request."""
+class GroundTruthLabel:
+    """Ground truth annotation for an email's responsiveness."""
 
     email_id: str
-    cpra_request_id: str
-    is_responsive: bool
-    confidence: float = 1.0
-    reason: str = ""
-    explanation: str = ""
-    matching_keywords: list[str] = field(default_factory=list)
-    matching_concepts: list[str] = field(default_factory=list)
+    responsive: bool
+    challenge_type: ChallengeType | None
+    buried_in_thread: bool = False
+    reasoning: str = ""
+    keywords_present: list[str] = field(default_factory=list)
+    keywords_absent: list[str] = field(default_factory=list)
 
     @classmethod
-    def from_dict(cls, email_id: str, data: dict[str, Any]) -> "Responsiveness":
-        """Create Responsiveness from dictionary."""
+    def from_dict(cls, email_id: str, data: dict[str, Any]) -> "GroundTruthLabel":
+        """Create GroundTruthLabel from dictionary."""
+        challenge_type = None
+        if data.get("challenge_type"):
+            try:
+                challenge_type = ChallengeType.from_string(data["challenge_type"])
+            except ValueError:
+                pass  # Unknown challenge type
+
         return cls(
             email_id=email_id,
-            cpra_request_id=data["cpra_request_id"],
-            is_responsive=data["is_responsive"],
-            confidence=data.get("confidence", 1.0),
-            reason=data.get("reason", ""),
-            explanation=data.get("explanation", ""),
-            matching_keywords=data.get("matching_keywords", []),
-            matching_concepts=data.get("matching_concepts", []),
+            responsive=data["responsive"],
+            challenge_type=challenge_type,
+            buried_in_thread=data.get("buried_in_thread", False),
+            reasoning=data.get("reasoning", ""),
+            keywords_present=data.get("keywords_present", []),
+            keywords_absent=data.get("keywords_absent", []),
+        )
+
+
+@dataclass
+class SearchableDocument:
+    """A document for search - either a single email or concatenated thread."""
+
+    id: str  # Either email_id or thread_id
+    text: str  # Concatenated text for search
+    email_ids: list[str]  # Email IDs contained in this document
+    is_thread: bool
+
+    @classmethod
+    def from_email(cls, email: Email) -> "SearchableDocument":
+        """Create searchable document from single email."""
+        return cls(
+            id=email.id,
+            text=email.text,
+            email_ids=[email.id],
+            is_thread=False,
+        )
+
+    @classmethod
+    def from_thread(cls, thread_id: str, emails: list[Email]) -> "SearchableDocument":
+        """Create searchable document from thread (emails sorted by position)."""
+        sorted_emails = sorted(emails, key=lambda e: e.thread_position or 0)
+        combined_text = "\n\n---\n\n".join(e.text for e in sorted_emails)
+        return cls(
+            id=thread_id,
+            text=combined_text,
+            email_ids=[e.id for e in sorted_emails],
+            is_thread=True,
         )
 
 
@@ -161,64 +197,91 @@ class Corpus:
     def __init__(
         self,
         emails: list[Email],
-        requests: list[CPRARequest],
-        responsiveness_map: dict[str, list[Responsiveness]],
+        request: CPRARequest,
+        ground_truth: dict[str, GroundTruthLabel],
         metadata: dict[str, Any] | None = None,
     ):
         self.emails = emails
-        self.requests = requests
-        self._responsiveness_map = responsiveness_map
+        self.request = request
+        self._ground_truth = ground_truth
         self.metadata = metadata or {}
 
         # Build indices for fast lookup
         self._email_by_id = {e.id: e for e in emails}
-        self._request_by_id = {r.id: r for r in requests}
+
+        # Build thread index
+        self._threads: dict[str, list[Email]] = {}
+        for email in emails:
+            if email.thread_id:
+                if email.thread_id not in self._threads:
+                    self._threads[email.thread_id] = []
+                self._threads[email.thread_id].append(email)
+
+        # Cache for searchable documents
+        self._searchable_docs: list[SearchableDocument] | None = None
 
     def get_email(self, email_id: str) -> Email | None:
         """Get email by ID."""
         return self._email_by_id.get(email_id)
 
-    def get_request(self, request_id: str) -> CPRARequest | None:
-        """Get CPRA request by ID."""
-        return self._request_by_id.get(request_id)
+    def get_searchable_documents(self) -> list[SearchableDocument]:
+        """Get documents for search - threads concatenated, standalones as-is."""
+        if self._searchable_docs is not None:
+            return self._searchable_docs
 
-    def is_responsive(self, email_id: str, request_id: str) -> bool:
-        """Check if an email is responsive to a request."""
-        responses = self._responsiveness_map.get(email_id, [])
-        for resp in responses:
-            if resp.cpra_request_id == request_id:
-                return resp.is_responsive
-        return False
+        docs = []
+        seen_thread_ids: set[str] = set()
 
-    def get_responsive_emails(self, request_id: str) -> set[str]:
-        """Get set of email IDs that are responsive to a request."""
-        responsive = set()
-        for email_id, responses in self._responsiveness_map.items():
-            for resp in responses:
-                if resp.cpra_request_id == request_id and resp.is_responsive:
-                    responsive.add(email_id)
-        return responsive
+        for email in self.emails:
+            if email.thread_id:
+                if email.thread_id not in seen_thread_ids:
+                    thread_emails = self._threads[email.thread_id]
+                    docs.append(
+                        SearchableDocument.from_thread(email.thread_id, thread_emails)
+                    )
+                    seen_thread_ids.add(email.thread_id)
+            else:
+                docs.append(SearchableDocument.from_email(email))
 
-    def get_challenge_types(self, email_id: str) -> list[ChallengeType]:
-        """Get challenge types for an email."""
-        email = self.get_email(email_id)
-        if email:
-            return email.challenge_patterns
-        return []
+        self._searchable_docs = docs
+        return docs
+
+    def document_to_email_ids(self, doc_id: str) -> list[str]:
+        """Map a searchable document ID back to email IDs."""
+        if doc_id in self._threads:
+            return [e.id for e in self._threads[doc_id]]
+        return [doc_id]
+
+    def is_responsive(self, email_id: str) -> bool:
+        """Check if an email is responsive."""
+        label = self._ground_truth.get(email_id)
+        return label.responsive if label else False
+
+    def get_responsive_emails(self) -> set[str]:
+        """Get set of responsive email IDs."""
+        return {
+            eid for eid, label in self._ground_truth.items() if label.responsive
+        }
+
+    def get_challenge_type(self, email_id: str) -> ChallengeType | None:
+        """Get challenge type for an email."""
+        label = self._ground_truth.get(email_id)
+        return label.challenge_type if label else None
 
     def get_emails_by_challenge(self, challenge_type: ChallengeType) -> list[Email]:
         """Get all emails with a specific challenge type."""
-        return [e for e in self.emails if challenge_type in e.challenge_patterns]
+        return [
+            self._email_by_id[eid]
+            for eid, label in self._ground_truth.items()
+            if label.challenge_type == challenge_type and eid in self._email_by_id
+        ]
 
-    def get_responsive_by_challenge(
-        self, request_id: str, challenge_type: ChallengeType
-    ) -> set[str]:
+    def get_responsive_by_challenge(self, challenge_type: ChallengeType) -> set[str]:
         """Get responsive emails that have a specific challenge type."""
-        responsive = self.get_responsive_emails(request_id)
         return {
             eid
-            for eid in responsive
-            if challenge_type in self.get_challenge_types(eid)
+            for eid, label in self._ground_truth.items()
+            if label.responsive and label.challenge_type == challenge_type
         }
 
     @property
@@ -226,47 +289,51 @@ class Corpus:
         return len(self.emails)
 
     @property
-    def num_requests(self) -> int:
-        return len(self.requests)
+    def num_searchable_documents(self) -> int:
+        return len(self.get_searchable_documents())
+
+    @property
+    def num_threads(self) -> int:
+        return len(self._threads)
 
 
 def load_corpus(corpus_path: str | Path) -> Corpus:
-    """Load a corpus from a generated corpus directory.
+    """Load a corpus from a corpus directory.
+
+    Expected structure:
+        corpus_path/
+            request.json      # Single CPRA request
+            emails.json       # All emails
+            ground_truth.json # Responsiveness labels
 
     Args:
-        corpus_path: Path to corpus directory (e.g., data/generated/corpus_20251207_153555)
+        corpus_path: Path to corpus directory
 
     Returns:
         Loaded Corpus object
     """
     corpus_path = Path(corpus_path)
 
-    # Load ground truth (contains emails and responsiveness)
-    ground_truth_path = corpus_path / "ground_truth.json"
-    with open(ground_truth_path) as f:
-        ground_truth = json.load(f)
+    # Load single request
+    with open(corpus_path / "request.json") as f:
+        request = CPRARequest.from_dict(json.load(f))
 
-    # Load CPRA requests
-    requests_path = corpus_path / "cpra_requests.json"
-    with open(requests_path) as f:
-        requests_data = json.load(f)
+    # Load emails (separate file)
+    with open(corpus_path / "emails.json") as f:
+        emails_data = json.load(f)
+    emails = [Email.from_dict(e) for e in emails_data["emails"]]
 
-    # Parse emails
-    emails = [Email.from_dict(e) for e in ground_truth["emails"]]
-
-    # Parse requests
-    requests = [CPRARequest.from_dict(r) for r in requests_data]
-
-    # Parse responsiveness map
-    responsiveness_map: dict[str, list[Responsiveness]] = {}
-    for email_id, responses in ground_truth.get("responsiveness_map", {}).items():
-        responsiveness_map[email_id] = [
-            Responsiveness.from_dict(email_id, r) for r in responses
-        ]
+    # Load ground truth labels
+    with open(corpus_path / "ground_truth.json") as f:
+        gt_data = json.load(f)
+    ground_truth = {
+        eid: GroundTruthLabel.from_dict(eid, label)
+        for eid, label in gt_data["labels"].items()
+    }
 
     return Corpus(
         emails=emails,
-        requests=requests,
-        responsiveness_map=responsiveness_map,
-        metadata=ground_truth.get("metadata", {}),
+        request=request,
+        ground_truth=ground_truth,
+        metadata=gt_data.get("metadata", {}),
     )

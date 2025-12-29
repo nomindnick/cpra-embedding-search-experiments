@@ -6,7 +6,7 @@ from pathlib import Path
 
 import numpy as np
 
-from src.data import CPRARequest, Email
+from src.data import CPRARequest, SearchableDocument
 from src.models import cosine_similarity, get_embedding_model
 
 from .base import SearchPipeline, SearchResult
@@ -18,23 +18,20 @@ class EmbeddingSearchPipeline(SearchPipeline):
     def __init__(
         self,
         model_name: str = "st:all-mpnet-base-v2",
-        embed_fields: list[str] | None = None,
         cache_dir: str | Path | None = None,
     ):
         """Initialize embedding search pipeline.
 
         Args:
             model_name: Embedding model key from config
-            embed_fields: Which email fields to embed (default: ['subject', 'body'])
             cache_dir: Directory to cache embeddings (default: .cache/embeddings)
         """
         self.model_name = model_name
-        self.embed_fields = embed_fields or ["subject", "body"]
         self.cache_dir = Path(cache_dir) if cache_dir else Path(".cache/embeddings")
         self.cache_dir.mkdir(parents=True, exist_ok=True)
 
         self._model = None
-        self._email_embeddings: dict[str, np.ndarray] = {}
+        self._doc_embeddings: dict[str, np.ndarray] = {}
 
     @property
     def name(self) -> str:
@@ -47,24 +44,14 @@ class EmbeddingSearchPipeline(SearchPipeline):
             self._model = get_embedding_model(self.model_name)
         return self._model
 
-    def _get_email_text(self, email: Email) -> str:
-        """Extract text from email based on embed_fields."""
-        parts = []
-        for field in self.embed_fields:
-            if field == "subject":
-                parts.append(email.subject)
-            elif field == "body":
-                parts.append(email.body)
-        return "\n\n".join(parts)
-
     def _get_request_text(self, request: CPRARequest) -> str:
         """Extract text from request for embedding."""
         return request.search_text
 
-    def _get_cache_key(self, emails: list[Email]) -> str:
-        """Generate cache key for a set of emails."""
-        # Use model name and email IDs to generate cache key
-        content = f"{self.model_name}:{':'.join(sorted(e.id for e in emails))}"
+    def _get_cache_key(self, documents: list[SearchableDocument]) -> str:
+        """Generate cache key for a set of documents."""
+        # Use model name and document IDs to generate cache key
+        content = f"{self.model_name}:{':'.join(sorted(d.id for d in documents))}"
         return hashlib.md5(content.encode()).hexdigest()[:16]
 
     def _load_cached_embeddings(
@@ -81,9 +68,9 @@ class EmbeddingSearchPipeline(SearchPipeline):
             data = np.load(cache_file)
 
             embeddings = {}
-            for email_id in meta["email_ids"]:
-                if email_id in data:
-                    embeddings[email_id] = data[email_id]
+            for doc_id in meta["doc_ids"]:
+                if doc_id in data:
+                    embeddings[doc_id] = data[doc_id]
 
             return embeddings
 
@@ -102,28 +89,27 @@ class EmbeddingSearchPipeline(SearchPipeline):
         # Save metadata
         meta = {
             "model_name": self.model_name,
-            "embed_fields": self.embed_fields,
-            "email_ids": list(embeddings.keys()),
+            "doc_ids": list(embeddings.keys()),
         }
         with open(meta_file, "w") as f:
             json.dump(meta, f)
 
-    def _embed_emails(self, emails: list[Email]) -> dict[str, np.ndarray]:
-        """Embed all emails, using cache if available."""
-        cache_key = self._get_cache_key(emails)
+    def _embed_documents(
+        self, documents: list[SearchableDocument]
+    ) -> dict[str, np.ndarray]:
+        """Embed all documents, using cache if available."""
+        cache_key = self._get_cache_key(documents)
 
         # Try to load from cache
         cached = self._load_cached_embeddings(cache_key)
         if cached is not None:
             return cached
 
-        # Embed all emails
-        texts = [self._get_email_text(e) for e in emails]
+        # Embed all documents using their .text property
+        texts = [doc.text for doc in documents]
         embeddings_array = self.model.embed(texts)
 
-        embeddings = {
-            email.id: embeddings_array[i] for i, email in enumerate(emails)
-        }
+        embeddings = {doc.id: embeddings_array[i] for i, doc in enumerate(documents)}
 
         # Cache for future use
         self._save_embeddings_cache(cache_key, embeddings)
@@ -131,36 +117,36 @@ class EmbeddingSearchPipeline(SearchPipeline):
         return embeddings
 
     def search(
-        self, request: CPRARequest, emails: list[Email]
+        self, request: CPRARequest, documents: list[SearchableDocument]
     ) -> list[SearchResult]:
-        """Search for emails similar to CPRA request.
+        """Search for documents similar to CPRA request.
 
         Args:
             request: CPRA request to search for
-            emails: Emails to search through
+            documents: Searchable documents (emails or threads)
 
         Returns:
             List of SearchResult sorted by similarity (highest first)
         """
-        # Get email embeddings
-        if not self._email_embeddings:
-            self._email_embeddings = self._embed_emails(emails)
+        # Get document embeddings
+        if not self._doc_embeddings:
+            self._doc_embeddings = self._embed_documents(documents)
 
         # Embed the request
         request_text = self._get_request_text(request)
         request_embedding = self.model.embed_single(request_text)
 
-        # Build email embedding matrix
-        email_ids = [e.id for e in emails]
-        email_embeddings = np.array([self._email_embeddings[eid] for eid in email_ids])
+        # Build document embedding matrix
+        doc_ids = [d.id for d in documents]
+        doc_embeddings = np.array([self._doc_embeddings[did] for did in doc_ids])
 
         # Compute similarities
-        similarities = cosine_similarity(request_embedding, email_embeddings)
+        similarities = cosine_similarity(request_embedding, doc_embeddings)
 
         # Build results
         results = [
-            SearchResult(email_id=eid, score=float(sim))
-            for eid, sim in zip(email_ids, similarities)
+            SearchResult(doc_id=did, score=float(sim))
+            for did, sim in zip(doc_ids, similarities)
         ]
 
         # Sort by score (highest first)

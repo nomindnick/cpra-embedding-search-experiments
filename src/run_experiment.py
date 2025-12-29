@@ -12,7 +12,7 @@ from src.evaluation import Evaluator, format_results_table, save_results
 from src.pipeline import KeywordSearchPipeline
 
 # Default corpus path
-DEFAULT_CORPUS = "cpra-golden-emails/data/generated/corpus_20251207_153555"
+DEFAULT_CORPUS = "corpus/primary"
 
 
 def load_config(config_path: str) -> dict:
@@ -30,19 +30,13 @@ def create_pipeline(config: dict):
         return KeywordSearchPipeline(
             match_mode=kw_config.get("match_mode", "any"),
             case_sensitive=kw_config.get("case_sensitive", False),
-            apply_exclusions=kw_config.get("apply_exclusions", True),
-            use_secondary_keywords=True,
         )
     elif method == "embedding":
         # Import here to avoid loading models if not needed
         from src.pipeline.embedding import EmbeddingSearchPipeline
 
-        emb_config = config.get("pipeline", {}).get("embedding_search", {})
         model_name = config.get("embedding_model", "st:all-mpnet-base-v2")
-        return EmbeddingSearchPipeline(
-            model_name=model_name,
-            embed_fields=emb_config.get("embed_fields", ["subject", "body"]),
-        )
+        return EmbeddingSearchPipeline(model_name=model_name)
     else:
         raise ValueError(f"Unknown pipeline method: {method}")
 
@@ -103,38 +97,17 @@ def print_results_summary(results, console: Console):
     overall_table.add_column("Metric", style="cyan")
     overall_table.add_column("Value", style="green")
 
-    overall_table.add_row("Precision", f"{results.overall_precision:.2%}")
-    overall_table.add_row("Recall", f"{results.overall_recall:.2%}")
-    overall_table.add_row("F1", f"{results.overall_f1:.2%}")
-    overall_table.add_row("MAP", f"{results.mean_average_precision:.4f}")
+    overall_table.add_row("Precision", f"{results.precision:.2%}")
+    overall_table.add_row("Recall", f"{results.recall:.2%}")
+    overall_table.add_row("F1", f"{results.f1:.2%}")
+    overall_table.add_row("Average Precision", f"{results.average_precision:.4f}")
+    overall_table.add_row("True Positives", str(results.true_positives))
+    overall_table.add_row("False Positives", str(results.false_positives))
+    overall_table.add_row("False Negatives", str(results.false_negatives))
     overall_table.add_row("Total Predicted", str(results.total_predicted))
     overall_table.add_row("Total Responsive", str(results.total_responsive))
 
     console.print(overall_table)
-    console.print()
-
-    # Per-request table
-    request_table = Table(title="Results by CPRA Request")
-    request_table.add_column("Request", style="cyan")
-    request_table.add_column("Precision", justify="right")
-    request_table.add_column("Recall", justify="right")
-    request_table.add_column("F1", justify="right")
-    request_table.add_column("TP", justify="right")
-    request_table.add_column("FP", justify="right")
-    request_table.add_column("FN", justify="right")
-
-    for req in results.by_request:
-        request_table.add_row(
-            req.request_title[:25],
-            f"{req.precision:.2%}",
-            f"{req.recall:.2%}",
-            f"{req.f1:.2%}",
-            str(req.true_positives),
-            str(req.false_positives),
-            str(req.false_negatives),
-        )
-
-    console.print(request_table)
     console.print()
 
     # Challenge type table
@@ -206,7 +179,10 @@ def main():
     corpus = load_corpus(args.corpus)
 
     if not args.quiet:
-        console.print(f"Loaded {corpus.num_emails:,} emails, {corpus.num_requests} requests")
+        console.print(f"Loaded {corpus.num_emails:,} emails")
+        console.print(f"  {corpus.num_searchable_documents:,} searchable documents")
+        console.print(f"  {corpus.num_threads} threads")
+        console.print(f"Request: {corpus.request.title}")
         console.print()
         console.print("[bold]Creating pipeline...[/bold]")
 
@@ -220,7 +196,7 @@ def main():
 
     # Get k_values from config
     eval_config = config.get("evaluation", {})
-    k_values = eval_config.get("k_values", [50, 100, 200, 375])
+    k_values = eval_config.get("k_values", [50, 100, 200])
     thresholds = eval_config.get("thresholds", [])
 
     # Run evaluation

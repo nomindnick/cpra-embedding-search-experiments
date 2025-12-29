@@ -3,7 +3,6 @@ from .evaluator import (
     ChallengeMetrics,
     EvaluationResult,
     Evaluator,
-    RequestMetrics,
     ThresholdMetrics,
 )
 from .metrics import (
@@ -29,7 +28,6 @@ __all__ = [
     "ChallengeMetrics",
     "EvaluationResult",
     "Evaluator",
-    "RequestMetrics",
     "ThresholdMetrics",
     # Metrics
     "average_precision",

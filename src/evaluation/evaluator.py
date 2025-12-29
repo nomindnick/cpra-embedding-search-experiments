@@ -7,26 +7,10 @@ from src.data import ChallengeType, Corpus
 from src.pipeline import SearchPipeline, SearchResult
 
 from .metrics import (
+    average_precision,
     compute_binary_metrics,
     compute_ranked_metrics,
-    mean_average_precision,
 )
-
-
-@dataclass
-class RequestMetrics:
-    """Metrics for a single CPRA request."""
-
-    request_id: str
-    request_title: str
-    precision: float
-    recall: float
-    f1: float
-    true_positives: int
-    false_positives: int
-    false_negatives: int
-    total_responsive: int
-    ranked_metrics: dict[str, float] = field(default_factory=dict)
 
 
 @dataclass
@@ -63,21 +47,25 @@ class EvaluationResult:
     pipeline_name: str
 
     # Overall metrics
-    overall_precision: float
-    overall_recall: float
-    overall_f1: float
-    mean_average_precision: float
-
-    # Per-request breakdown
-    by_request: list[RequestMetrics]
+    precision: float
+    recall: float
+    f1: float
+    average_precision: float
 
     # Per-challenge-type breakdown
     by_challenge: list[ChallengeMetrics]
 
     # Raw numbers
     total_emails: int
+    total_documents: int
     total_responsive: int
     total_predicted: int
+    true_positives: int
+    false_positives: int
+    false_negatives: int
+
+    # Ranked metrics
+    ranked_metrics: dict[str, float] = field(default_factory=dict)
 
     # Threshold analysis (optional)
     threshold_analysis: list[ThresholdMetrics] = field(default_factory=list)
@@ -99,10 +87,24 @@ class Evaluator:
 
         Args:
             corpus: Corpus with ground truth
-            k_values: K values for precision@k, recall@k (default: [50, 100, 200, 375])
+            k_values: K values for precision@k, recall@k (default: [50, 100, 200])
         """
         self.corpus = corpus
-        self.k_values = k_values or [50, 100, 200, 375]
+        self.k_values = k_values or [50, 100, 200]
+
+    def _doc_predictions_to_email_ids(self, doc_ids: set[str]) -> set[str]:
+        """Map document IDs (which may include thread IDs) to email IDs."""
+        email_ids: set[str] = set()
+        for doc_id in doc_ids:
+            email_ids.update(self.corpus.document_to_email_ids(doc_id))
+        return email_ids
+
+    def _doc_rankings_to_email_ids(self, doc_ids: list[str]) -> list[str]:
+        """Map ranked document IDs to email IDs (preserving order)."""
+        email_ids: list[str] = []
+        for doc_id in doc_ids:
+            email_ids.extend(self.corpus.document_to_email_ids(doc_id))
+        return email_ids
 
     def evaluate(
         self,
@@ -120,83 +122,51 @@ class Evaluator:
         Returns:
             Complete evaluation results
         """
-        # Run pipeline on all requests
-        all_results = pipeline.search_all(self.corpus.requests, self.corpus.emails)
+        # Get searchable documents and run pipeline
+        documents = self.corpus.get_searchable_documents()
+        results = pipeline.search(self.corpus.request, documents)
 
-        # Compute per-request metrics
-        request_metrics = []
-        all_predictions: dict[str, set[str]] = {}
-        all_rankings: dict[str, list[str]] = {}
-        all_actuals: dict[str, set[str]] = {}
+        # Get document-level predictions and rankings
+        doc_predictions = pipeline.get_predictions(results, threshold)
+        doc_rankings = pipeline.get_ranked_ids(results)
 
-        for request in self.corpus.requests:
-            results = all_results[request.id]
-            predictions = pipeline.get_predictions(results, threshold)
-            ranked_ids = pipeline.get_ranked_ids(results)
-            actual = self.corpus.get_responsive_emails(request.id)
+        # Map document predictions back to email IDs
+        predicted_email_ids = self._doc_predictions_to_email_ids(doc_predictions)
+        ranked_email_ids = self._doc_rankings_to_email_ids(doc_rankings)
 
-            all_predictions[request.id] = predictions
-            all_rankings[request.id] = ranked_ids
-            all_actuals[request.id] = actual
+        # Get actual responsive emails
+        actual_email_ids = self.corpus.get_responsive_emails()
 
-            # Binary metrics
-            binary = compute_binary_metrics(predictions, actual)
+        # Compute binary metrics at email level
+        binary = compute_binary_metrics(predicted_email_ids, actual_email_ids)
 
-            # Ranked metrics
-            ranked = compute_ranked_metrics(ranked_ids, actual, self.k_values)
+        # Compute ranked metrics at email level
+        ranked = compute_ranked_metrics(ranked_email_ids, actual_email_ids, self.k_values)
 
-            request_metrics.append(
-                RequestMetrics(
-                    request_id=request.id,
-                    request_title=request.title,
-                    precision=binary["precision"],
-                    recall=binary["recall"],
-                    f1=binary["f1"],
-                    true_positives=binary["true_positives"],
-                    false_positives=binary["false_positives"],
-                    false_negatives=binary["false_negatives"],
-                    total_responsive=len(actual),
-                    ranked_metrics=ranked,
-                )
-            )
+        # Compute average precision
+        ap = average_precision(ranked_email_ids, actual_email_ids)
 
         # Compute challenge type breakdown
         challenge_metrics = self._compute_challenge_breakdown(
-            all_predictions, all_actuals
+            predicted_email_ids, actual_email_ids
         )
-
-        # Compute overall metrics using micro-averaging across requests
-        # This sums TP/FP/FN across all requests, giving proper per-request precision/recall
-        total_tp = sum(rm.true_positives for rm in request_metrics)
-        total_fp = sum(rm.false_positives for rm in request_metrics)
-        total_fn = sum(rm.false_negatives for rm in request_metrics)
-
-        overall_precision = total_tp / (total_tp + total_fp) if (total_tp + total_fp) > 0 else 0.0
-        overall_recall = total_tp / (total_tp + total_fn) if (total_tp + total_fn) > 0 else 0.0
-        overall_f1 = (
-            2 * (overall_precision * overall_recall) / (overall_precision + overall_recall)
-            if (overall_precision + overall_recall) > 0 else 0.0
-        )
-
-        map_score = mean_average_precision(all_rankings, all_actuals)
-
-        # For total_predicted and total_responsive, use unique emails (set union)
-        # to avoid double-counting emails responsive to multiple requests
-        all_pred = set().union(*all_predictions.values()) if all_predictions else set()
-        all_actual = set().union(*all_actuals.values()) if all_actuals else set()
 
         return EvaluationResult(
             experiment_name=experiment_name,
             pipeline_name=pipeline.name,
-            overall_precision=overall_precision,
-            overall_recall=overall_recall,
-            overall_f1=overall_f1,
-            mean_average_precision=map_score,
-            by_request=request_metrics,
+            precision=binary["precision"],
+            recall=binary["recall"],
+            f1=binary["f1"],
+            average_precision=ap,
             by_challenge=challenge_metrics,
             total_emails=self.corpus.num_emails,
-            total_responsive=len(all_actual),
-            total_predicted=len(all_pred),
+            total_documents=self.corpus.num_searchable_documents,
+            total_responsive=len(actual_email_ids),
+            total_predicted=len(predicted_email_ids),
+            true_positives=binary["true_positives"],
+            false_positives=binary["false_positives"],
+            false_negatives=binary["false_negatives"],
+            ranked_metrics=ranked,
             k_values=self.k_values,
         )
 
@@ -215,39 +185,26 @@ class Evaluator:
             List of ThresholdMetrics for each threshold
         """
         # Run pipeline once to get all scores
-        all_results = pipeline.search_all(self.corpus.requests, self.corpus.emails)
+        documents = self.corpus.get_searchable_documents()
+        results = pipeline.search(self.corpus.request, documents)
 
-        # Get all actual responsive emails per request
-        all_actuals: dict[str, set[str]] = {}
-        for request in self.corpus.requests:
-            all_actuals[request.id] = self.corpus.get_responsive_emails(request.id)
+        # Get actual responsive emails
+        actual_email_ids = self.corpus.get_responsive_emails()
 
         threshold_metrics = []
         for threshold in sorted(thresholds):
-            # Get predictions at this threshold for each request
-            all_predictions: dict[str, set[str]] = {}
-            for request in self.corpus.requests:
-                results = all_results[request.id]
-                predictions = pipeline.get_predictions(results, threshold)
-                all_predictions[request.id] = predictions
+            # Get predictions at this threshold
+            doc_predictions = pipeline.get_predictions(results, threshold)
+            predicted_email_ids = self._doc_predictions_to_email_ids(doc_predictions)
 
-            # Use micro-averaging: sum TP/FP/FN across all requests
-            total_tp = 0
-            total_fp = 0
-            total_fn = 0
-            for request in self.corpus.requests:
-                predictions = all_predictions[request.id]
-                actual = all_actuals[request.id]
-                total_tp += len(predictions & actual)
-                total_fp += len(predictions - actual)
-                total_fn += len(actual - predictions)
+            # Compute metrics
+            tp = len(predicted_email_ids & actual_email_ids)
+            fp = len(predicted_email_ids - actual_email_ids)
+            fn = len(actual_email_ids - predicted_email_ids)
 
-            precision = total_tp / (total_tp + total_fp) if (total_tp + total_fp) > 0 else 0.0
-            recall = total_tp / (total_tp + total_fn) if (total_tp + total_fn) > 0 else 0.0
+            precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+            recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
             f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0.0
-
-            # For total_predicted, use unique emails
-            all_pred = set().union(*all_predictions.values()) if all_predictions else set()
 
             threshold_metrics.append(
                 ThresholdMetrics(
@@ -255,10 +212,10 @@ class Evaluator:
                     precision=precision,
                     recall=recall,
                     f1=f1,
-                    total_predicted=len(all_pred),
-                    true_positives=total_tp,
-                    false_positives=total_fp,
-                    false_negatives=total_fn,
+                    total_predicted=len(predicted_email_ids),
+                    true_positives=tp,
+                    false_positives=fp,
+                    false_negatives=fn,
                 )
             )
 
@@ -266,13 +223,13 @@ class Evaluator:
 
     def _compute_challenge_breakdown(
         self,
-        predictions: dict[str, set[str]],
-        actuals: dict[str, set[str]],
+        predictions: set[str],
+        actuals: set[str],
     ) -> list[ChallengeMetrics]:
         """Compute metrics broken down by challenge type.
 
-        For each challenge type, we look at responsive emails that have that
-        challenge pattern and compute how many were correctly identified.
+        For each challenge type, we look at emails with that challenge type
+        and compute how many were correctly identified.
         """
         results = []
 
@@ -284,26 +241,18 @@ class Evaluator:
             if not challenge_email_ids:
                 continue
 
-            # For each request, get responsive emails with this challenge
-            total_responsive = 0
-            correctly_identified = 0
-            false_positives_for_challenge = 0
+            # Responsive emails with this challenge type
+            responsive_with_challenge = actuals & challenge_email_ids
 
-            for request_id, actual in actuals.items():
-                # Responsive emails with this challenge type
-                responsive_with_challenge = actual & challenge_email_ids
-                total_responsive += len(responsive_with_challenge)
+            # How many did we correctly predict?
+            correctly_identified = len(predictions & responsive_with_challenge)
 
-                # How many did we correctly predict?
-                predicted = predictions.get(request_id, set())
-                correctly_identified += len(predicted & responsive_with_challenge)
-
-                # False positives: predicted but not responsive, has this challenge
-                # (these are the "near miss" type errors we want to catch)
-                false_pos = predicted - actual
-                false_positives_for_challenge += len(false_pos & challenge_email_ids)
+            # False positives: predicted but not responsive, has this challenge
+            false_pos = predictions - actuals
+            false_positives_for_challenge = len(false_pos & challenge_email_ids)
 
             # Compute metrics for this challenge type
+            total_responsive = len(responsive_with_challenge)
             if total_responsive > 0:
                 recall = correctly_identified / total_responsive
             else:
