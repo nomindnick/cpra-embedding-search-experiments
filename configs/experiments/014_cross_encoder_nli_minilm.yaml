@@ -1,0 +1,12 @@
+# Cross-Encoder NLI MiniLM - Smaller, faster NLI model
+# Good for quick iteration and comparison
+name: "014 Cross-Encoder NLI MiniLM"
+
+pipeline:
+  method: cross_encoder
+
+cross_encoder_model: cross-encoder/nli-MiniLM2-L6-H768
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [-5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0]

@@ -1,0 +1,13 @@
+# Cross-Encoder STS-B RoBERTa Large - Trained on Semantic Textual Similarity
+# Learns similarity scores from paraphrase datasets
+name: "015 Cross-Encoder STS-B RoBERTa Large"
+
+pipeline:
+  method: cross_encoder
+
+cross_encoder_model: cross-encoder/stsb-roberta-large
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  # STS models typically output 0-5 similarity scores
+  thresholds: [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0]

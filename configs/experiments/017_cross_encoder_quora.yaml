@@ -1,0 +1,13 @@
+# Cross-Encoder Quora RoBERTa Large - Trained on paraphrase detection
+# Explicitly learns when different words mean the same thing
+name: "017 Cross-Encoder Quora RoBERTa Large"
+
+pipeline:
+  method: cross_encoder
+
+cross_encoder_model: cross-encoder/quora-roberta-large
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  # Quora model outputs probability scores 0-1
+  thresholds: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]

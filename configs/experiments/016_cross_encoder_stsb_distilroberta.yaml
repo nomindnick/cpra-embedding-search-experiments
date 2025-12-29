@@ -1,0 +1,12 @@
+# Cross-Encoder STS-B DistilRoBERTa - Smaller STS model
+# Faster inference, good for comparison
+name: "016 Cross-Encoder STS-B DistilRoBERTa"
+
+pipeline:
+  method: cross_encoder
+
+cross_encoder_model: cross-encoder/stsb-distilroberta-base
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0]

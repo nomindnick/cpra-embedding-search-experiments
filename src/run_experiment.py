@@ -37,6 +37,12 @@ def create_pipeline(config: dict):
 
         model_name = config.get("embedding_model", "st:all-mpnet-base-v2")
         return EmbeddingSearchPipeline(model_name=model_name)
+    elif method == "cross_encoder":
+        # Import here to avoid loading models if not needed
+        from src.pipeline.cross_encoder import CrossEncoderSearchPipeline
+
+        model_name = config.get("cross_encoder_model", "ms-marco-MiniLM-L-6-v2")
+        return CrossEncoderSearchPipeline(model_name=model_name)
     else:
         raise ValueError(f"Unknown pipeline method: {method}")
 
@@ -209,7 +215,7 @@ def main():
     results.config = config
 
     # Run threshold analysis if thresholds are configured
-    if thresholds and config.get("pipeline", {}).get("method") == "embedding":
+    if thresholds and config.get("pipeline", {}).get("method") in ("embedding", "cross_encoder"):
         if not args.quiet:
             console.print()
             console.print("[bold]Running threshold analysis...[/bold]")

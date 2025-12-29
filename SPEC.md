@@ -60,50 +60,45 @@ Instead of matching keywords, we:
 
 ```
 cpra-embedding-search-experiments/
-├── cpra-golden-emails/          # Test data generator (existing)
-├── SPEC.md                      # This file - project context
+├── corpus/                      # Test data (v2 manually-crafted corpus)
+│   ├── primary/                 # Lead contamination request (339 emails)
+│   └── validation/              # PFAS request (59 emails)
 │
-├── docs/
-│   └── experiments/
-│       ├── LOG.md               # Experiment overview and learnings
-│       └── NNN-experiment.md    # Detailed individual reports
+├── archive/                     # V1 corpus and old experiments
+│   ├── cpra-golden-emails/      # Original corpus generator
+│   └── v1-experiment-log.md     # V1 results for reference
 │
 ├── src/
-│   ├── models/                  # Model abstractions
-│   │   ├── embeddings.py        # Unified embedding interface
-│   │   └── llm.py               # Unified LLM interface
+│   ├── data/
+│   │   └── corpus.py            # Email, CPRARequest, Corpus data structures
 │   │
-│   ├── pipeline/                # Search pipeline components
-│   │   ├── query_expansion.py   # LLM-based candidate generation
-│   │   ├── retrieval.py         # Embedding similarity search
-│   │   ├── reranking.py         # Cross-encoder / LLM reranking
-│   │   └── scoring.py           # Relevance score computation
+│   ├── models/
+│   │   └── embeddings.py        # Model abstractions (SentenceTransformer, Ollama, OpenAI)
 │   │
-│   ├── evaluation/              # Evaluation framework
-│   │   ├── metrics.py           # Precision, recall, F1, MAP, etc.
-│   │   ├── baseline.py          # Keyword search implementation
-│   │   └── analysis.py          # Results breakdown and comparison
+│   ├── pipeline/
+│   │   ├── base.py              # SearchPipeline base class
+│   │   ├── keyword.py           # KeywordSearchPipeline
+│   │   ├── embedding.py         # EmbeddingSearchPipeline
+│   │   └── cross_encoder.py     # CrossEncoderSearchPipeline
 │   │
-│   └── data/
-│       └── loader.py            # Corpus and ground truth loading
-│
-├── experiments/                 # Executable experiment scripts
-│   └── NNN_experiment_name.py
+│   ├── evaluation/
+│   │   ├── evaluator.py         # Evaluator class
+│   │   ├── metrics.py           # Precision, recall, F1, MAP computation
+│   │   └── reporter.py          # Rich console output
+│   │
+│   └── run_experiment.py        # CLI entry point
 │
 ├── configs/
 │   ├── models.yaml              # Model registry
-│   └── experiments/             # Per-experiment configurations
-│       └── NNN_experiment.yaml
+│   └── experiments/             # Per-experiment configurations (001-019)
 │
 ├── results/                     # Experiment outputs (gitignored)
-│   └── NNN_experiment_name/
-│       ├── metrics.json
-│       ├── predictions.csv
-│       └── by_challenge_type.json
 │
-└── scripts/                     # Utility scripts
-    ├── run_experiment.py
-    └── compare_results.py
+├── SPEC.md                      # This file - project specification
+├── EXPERIMENT_LOG.md            # All experiment results and analysis
+├── RESEARCH_AGENDA.md           # Future research directions
+├── GENERATION_PLAN.md           # Corpus design documentation
+└── CLAUDE.md                    # AI assistant context
 ```
 
 ### Component Responsibilities
@@ -182,29 +177,49 @@ evaluation:
 
 These are the core questions we're trying to answer:
 
-### H1: Embeddings Beat Keywords
+### H1: Embeddings Beat Keywords ✅ CONFIRMED
 
-Basic embedding retrieval (embed query, find similar docs) outperforms keyword search, especially on:
+Basic embedding retrieval outperforms keyword search, especially on:
 
 - Ambiguous terms (polysemy)
 - Indirect references
 - Semantic similarity without keyword overlap
 
-### H2: Query Expansion Improves Recall
+**Result:** Confirmed decisively on v2 corpus. all-mpnet-base-v2 achieves 98.71% recall vs 83.87% for keywords (+14.84%). Embeddings excel on TECHNICAL_JARGON (96% vs 64%) and BURIED_IN_THREAD (90% vs 50%).
+
+### H2: Query Expansion Improves Recall ❓ NOT TESTED
 
 LLM-generated positive candidates ("what would a relevant document look like?") improve recall by covering vocabulary the original request didn't use.
 
-### H3: Negative Candidates Improve Precision
+**Status:** Not yet tested. Planned for future experiments.
+
+### H3: Negative Candidates Improve Precision ❓ NOT TESTED
 
 LLM-generated negative candidates ("what are the red herrings?") help filter out false positives from ambiguous terms.
 
-### H4: Cross-Encoder Reranking Improves Precision@K
+**Status:** Not yet tested. Planned for future experiments.
+
+### H4: Cross-Encoder Reranking Improves Precision@K ❌ REFUTED
 
 A second-pass reranker that looks at query-document pairs together improves the ranking of top results.
 
-### H5: Local Models Are Sufficient
+**Result:** Refuted on keyword-free corpora. All 9 cross-encoder experiments showed worse performance than bi-encoders:
+- MS-MARCO cross-encoders: Catastrophic lexical bias (14% recall on INDIRECT_REFERENCE)
+- NLI cross-encoders: No discrimination (score everything as relevant)
+- Best cross-encoder MAP (0.74) << best bi-encoder MAP (0.89)
 
-The approach works with Ollama-hosted models (mistral3, embeddinggemma) without significant degradation from cloud models.
+Cross-encoders may help on corpora with keyword overlap, but fail on semantic-only matching.
+
+### H5: Local Models Are Sufficient ✅ CONFIRMED
+
+The approach works with Ollama-hosted models without significant degradation from cloud models.
+
+**Result:** Confirmed. Local models meeting 94% recall:
+- embeddinggemma (Ollama): 100% recall, 49.36% precision
+- mxbai-embed-large (Ollama): 98.71% recall, 51.17% precision
+- nomic-embed-text (Ollama): 99.35% recall, 46.11% precision
+
+No cloud-only model significantly outperforms these local options.
 
 ## Metrics
 
@@ -227,69 +242,103 @@ All experiments report improvement/regression vs. Experiment 001 (keyword baseli
 
 ## Test Data
 
-The `cpra-golden-emails/` directory contains a synthetic email corpus generator:
+The `corpus/` directory contains manually-crafted email corpora designed to test semantic search capabilities:
 
-### Corpus v1 (Original)
-- **2,500 emails** across a fictional school district
-- **5 CPRA request scenarios** including the "lead testing" case
-- **~15% responsive** emails with known ground truth
-- **~30% challenge cases**: ambiguous terms, near-miss, indirect references
-- **Complete labels**: Per-email, per-request responsiveness with confidence and reasoning
+### Corpus v2 (Current)
 
-**Limitation discovered:** Keyword baseline achieves 94% recall on v1 corpus, which is unrealistically high. Analysis showed most "challenge" emails still contain searchable keywords.
+Located in `corpus/primary/` and `corpus/validation/`:
 
-### Corpus v2 (Harder - Recommended)
-- **5,000 emails** with **20% responsive**
-- **Keyword-free emails**: ~40% of responsive emails contain NO request keywords
-- **Variable difficulty** by request type (20-60% keyword-free rate)
-- **LLM-generated** using Claude Haiku to create realistic indirect language
-- **Expected keyword baseline recall**: 60-70% (vs 94% on v1)
+**Primary Corpus (Lead Contamination):** 339 emails
+- 155 responsive (46%)
+- 184 non-responsive (54%)
+- Single CPRA request about lead contamination in water supply
 
-This forces embedding-based approaches to prove their value on semantically challenging cases where keyword search genuinely fails.
+**Validation Corpus (PFAS):** 59 emails
+- 25 responsive (42%)
+- 34 non-responsive (58%)
+- Single CPRA request about PFAS contamination
 
-### Generating Corpora
-```bash
-cd cpra-golden-emails
-source ../.venv/bin/activate
-
-# v2 (recommended)
-export ANTHROPIC_API_KEY=your_key
-python generate_corpus.py --use-llm  # Uses config defaults: 5000 emails, 20% responsive
+**Corpus Files:**
 ```
+corpus/
+├── primary/
+│   ├── request.json      # CPRA request definition
+│   ├── emails.json       # All 339 emails with content
+│   └── ground_truth.json # Responsiveness labels with challenge types
+└── validation/
+    ├── request.json
+    ├── emails.json
+    └── ground_truth.json
+```
+
+### Challenge Types
+
+**Responsive categories:**
+| Type | Count | Description |
+|------|-------|-------------|
+| DIRECT_MATCH | 30 | Explicit lead contamination discussion |
+| AMBIGUOUS_TERMS | 30 | Uses "lead" (metal) with disambiguating context |
+| INDIRECT_REFERENCE | 35 | Discusses topic without "lead" keyword |
+| TECHNICAL_JARGON | 25 | Uses regulatory terms (LSL, CCT, ppb) |
+| TEMPORAL_REFERENCE | 25 | Historical events or future planning |
+| BURIED_IN_THREAD | 10 | Relevant content in thread context |
+
+**Non-responsive categories:**
+| Type | Count | Description |
+|------|-------|-------------|
+| KEYWORD_FALSE_POSITIVE | 55 | "Lead" used for leadership/leading |
+| ADJACENT_TOPIC | 45 | Related domain but not lead-specific |
+| TRUE_NEGATIVE | 55 | Clearly unrelated content |
+
+### Keyword Baseline Performance
+
+The v2 corpus successfully exposes keyword search limitations:
+- **Recall: 83.87%** (misses 25 documents — below 94% legal requirement)
+- **Precision: 55.32%** (105 false positives from "lead" ambiguity)
+- **Hardest categories**: BURIED_IN_THREAD (50%), TECHNICAL_JARGON (64%), INDIRECT_REFERENCE (77%)
+
+### V1 Corpus (Archived)
+
+The original v1 corpus (2,500 LLM-generated emails, 5 CPRA requests) is archived in `archive/`. It proved too easy — keyword baseline achieved 94% recall, leaving no room for embedding models to demonstrate value.
 
 ## Current Status
 
-> *Last updated: 2025-12-27*
+> *Last updated: 2025-12-29*
 
 ### Completed
 
 - [x] Project structure defined
-- [x] Test data generator available (cpra-golden-emails)
-- [x] SPEC.md created
-- [x] Baseline keyword search (Experiment 001) - 94% recall, 57% precision (v1 corpus)
-- [x] 11 embedding model experiments (002-013) on v1 corpus
-- [x] Evaluation framework with per-request and per-challenge breakdowns
-- [x] **Corpus v2 generator** - keyword-free email generation with LLM
-- [x] **Corpus v2 generated** - 5,000 emails, 53.8% keyword-free responsive
-- [x] **v2 Baseline keyword search** - 53.7% recall, 93.4% precision
-- [x] **v2 Snowflake Arctic L v2.0** - 83.3% recall, 91.0% precision, 87.0% F1
-- [x] **Evaluator bug fix** - micro-averaging for proper per-request metrics
+- [x] V2 corpus manually crafted (339 primary + 59 validation emails)
+- [x] Evaluation framework with per-challenge-type breakdowns
+- [x] **19 experiments completed** on v2 corpus:
+  - 001: Keyword baseline (83.87% recall, 55.32% precision)
+  - 002-010: Bi-encoder embedding models (8 of 10 meet 94% recall)
+  - 011-019: Cross-encoder models (9 experiments, all underperform bi-encoders)
+
+### Best Results
+
+| Model | Recall | Precision | F1 | MAP | Meets 94%? |
+|-------|--------|-----------|-----|-----|------------|
+| **all-mpnet-base-v2** | 98.71% | 57.74% | 72.86% | 0.8923 | **Yes (Best)** |
+| Jina v3 | 98.06% | 51.70% | 67.71% | 0.8592 | Yes |
+| nomic-embed-text | 99.35% | 46.11% | 62.99% | 0.8158 | Yes |
+| Qwen3 0.6B | 89.03% | 77.53% | 82.88% | 0.9169 | No (best F1) |
 
 ### Next Priorities
 
-1. Implement cross-encoder reranking to improve Special Education precision (82 FP)
-2. Test query expansion with positive/negative examples
-3. Run additional embedding models on v2 corpus
-4. Consider hybrid keyword + embedding approach
+1. Two-stage pipelines: high-recall bi-encoder + precision-focused reranker
+2. Query expansion with LLM-generated paraphrases
+3. Ensemble methods combining multiple models
+4. Test on validation corpus (PFAS) to verify generalization
 
 ### Key Learnings
 
-1. **Embedding search proves value on hard corpus**: +29.6% recall over keywords (83.3% vs 53.7%)
-2. **v2 corpus is appropriately challenging**: Keyword recall dropped from 94% to 54%
-3. **The gap widens on harder corpora**: v1 showed +1% embedding advantage, v2 shows +30%
-4. **Snowflake Arctic L v2.0 remains best model**: 87.0% F1, 0.95 MAP on v2 corpus
-5. **Special Education is problematic**: 82 false positives - embeddings over-match on education content
-6. **Evaluation methodology matters**: Micro-averaging reveals true per-request precision
+1. **Bi-encoders beat cross-encoders**: On keyword-free corpora, general-purpose bi-encoders (all-mpnet-base-v2) outperform specialized cross-encoders
+2. **Cross-encoder training matters**: MS-MARCO cross-encoders fail catastrophically (lexical bias); NLI/STS models saturate with no discrimination
+3. **Smaller is better for cross-encoders**: Inverse scaling observed — smaller models rank better
+4. **7 of 10 embedding models meet 94% recall**: Most bi-encoders can achieve legal compliance threshold
+5. **Precision-recall tradeoff is unavoidable**: Best precision at 94%+ recall is 57.74% (all-mpnet); models with higher precision (Qwen3: 77.53%) can't reach 94% recall
+6. **Challenge type analysis reveals model strengths**: Keywords struggle with BURIED_IN_THREAD (50%) and TECHNICAL_JARGON (64%); embeddings excel on these
 
 ## Conventions
 

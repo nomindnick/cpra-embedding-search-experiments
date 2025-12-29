@@ -1,0 +1,13 @@
+# BGE Reranker Base - BAAI's reranking model
+# Retrieval-focused, may have similar lexical bias as MS-MARCO
+name: "018 BGE Reranker Base"
+
+pipeline:
+  method: cross_encoder
+
+cross_encoder_model: BAAI/bge-reranker-base
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  # Score range TBD after first run
+  thresholds: [-5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0]

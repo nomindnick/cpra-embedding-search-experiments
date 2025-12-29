@@ -1,0 +1,14 @@
+# Cross-Encoder NLI DeBERTa Base - Trained on Natural Language Inference
+# Unlike MS-MARCO, NLI training teaches semantic entailment without lexical shortcuts
+# Should perform better on keyword-free corpus
+name: "012 Cross-Encoder NLI DeBERTa Base"
+
+pipeline:
+  method: cross_encoder
+
+cross_encoder_model: cross-encoder/nli-deberta-v3-base
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  # NLI models typically output scores in different range - will adjust after first run
+  thresholds: [-5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0]

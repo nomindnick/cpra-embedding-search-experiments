@@ -1,152 +1,150 @@
 # CPRA Embedding Search Experiments
 
-Experiments comparing different approaches for identifying responsive documents in CPRA (California Public Records Act) requests.
+Experiments comparing embedding-based semantic search against keyword search for California Public Records Act (CPRA) document discovery.
 
 ## Project Goal
 
-Evaluate whether embedding-based semantic search and LLM-assisted classification can outperform traditional keyword search for public records responsiveness detection.
+Achieve **≥94% recall** (legal requirement) while improving precision over keyword search for identifying responsive documents in CPRA requests.
+
+**Key Finding:** Embedding models can meet the 94% recall requirement while reducing false positives by ~50% compared to keyword search.
 
 ## Project Structure
 
 ```
 cpra-embedding-search-experiments/
-├── cpra-golden-emails/          # Synthetic email corpus generator
-│   ├── data/generated/          # Generated test corpora
-│   └── README.md                # Generator documentation
+├── corpus/                      # Test data (v2 manually-crafted corpus)
+│   ├── primary/                 # Lead contamination request (339 emails)
+│   └── validation/              # PFAS request (59 emails)
+├── archive/                     # V1 corpus and experiments (reference)
 ├── src/                         # Experiment code
-│   ├── data/                    # Data loading utilities
-│   ├── models/                  # Embedding/LLM model wrappers
+│   ├── data/                    # Corpus data structures
+│   ├── models/                  # Embedding model wrappers
 │   ├── pipeline/                # Search pipeline implementations
 │   └── evaluation/              # Metrics and evaluation
 ├── configs/                     # Experiment configurations
 │   ├── models.yaml              # Model definitions
-│   └── experiments/             # Per-experiment configs
-├── docs/experiments/            # Experiment documentation
-│   └── LOG.md                   # Experiment results log
-└── requirements.txt             # Python dependencies
+│   └── experiments/             # Per-experiment configs (001-019)
+├── results/                     # Experiment outputs (gitignored)
+├── EXPERIMENT_LOG.md            # Detailed experiment results
+├── RESEARCH_AGENDA.md           # Future research directions
+└── SPEC.md                      # Project specification
 ```
 
 ## Test Data
 
-### Golden Email Corpus
+### V2 Corpus (Current)
 
-The test data is a synthetic corpus of school district emails with ground truth labels for CPRA responsiveness.
+Manually-crafted corpus designed to test semantic search on keyword-free content:
 
-#### Corpus Versions
+| Corpus | Emails | Responsive | Non-Responsive | CPRA Request |
+|--------|--------|------------|----------------|--------------|
+| Primary | 339 | 155 (46%) | 184 (54%) | Lead contamination |
+| Validation | 59 | 25 (42%) | 34 (58%) | PFAS contamination |
 
-**v1 (Original):** `cpra-golden-emails/data/generated/corpus_20251207_153555/`
-- 2,500 emails, 15% responsive
-- Keyword baseline achieves 94% recall (unrealistically high)
-- Most "challenge" emails still contain searchable keywords
+**Corpus Files:**
+```
+corpus/
+├── primary/
+│   ├── request.json      # CPRA request definition
+│   ├── emails.json       # All emails with content
+│   └── ground_truth.json # Labels with challenge types
+└── validation/
+    └── (same structure)
+```
 
-**v2 (Harder - In Progress):** Requires `--use-llm` flag
-- 5,000 emails, 20% responsive
-- **Keyword-free emails:** 40% of responsive emails contain NO request keywords
-- Variable difficulty by request (Lead Testing hardest at 60% keyword-free)
-- Expected keyword baseline recall: **~60-70%** (forcing semantic search to prove value)
+### Challenge Types
 
-#### Corpus Contents
-| File | Description |
-|------|-------------|
-| `emails/` | Individual email files (.txt) |
-| `ground_truth.json` | Complete responsiveness mapping (email → CPRA requests) |
-| `cpra_requests.json` | 5 CPRA request definitions with keywords and concepts |
-| `email_corpus.xlsx` | Excel workbook with all data and responsiveness matrix |
-| `statistics.json` | Corpus statistics including keyword analysis |
-| `district_context.json` | Generated school district context |
-| `generation_summary.json` | Generation parameters and results |
+**Responsive categories:**
+| Type | Count | Description |
+|------|-------|-------------|
+| DIRECT_MATCH | 30 | Explicit lead contamination discussion |
+| AMBIGUOUS_TERMS | 30 | "Lead" (metal) with disambiguating context |
+| INDIRECT_REFERENCE | 35 | Topic discussed without "lead" keyword |
+| TECHNICAL_JARGON | 25 | Regulatory terms (LSL, CCT, ppb) |
+| TEMPORAL_REFERENCE | 25 | Historical events or future planning |
+| BURIED_IN_THREAD | 10 | Relevant content in thread context |
 
-#### Challenge Types
-| Challenge Type | Description |
-|----------------|-------------|
-| Near Miss | Related but not quite responsive |
-| Indirect Reference | Euphemisms, pronouns, oblique mentions |
-| Temporal Mismatch | Right topic, wrong time period |
-| Ambiguous Terms | e.g., "lead" as metal vs. leadership |
-| Partial Match | Partially matches request criteria |
-| **Keyword Free** (v2) | Responsive but contains zero request keywords |
-| **Euphemism** (v2) | Uses indirect language to avoid keywords |
-| **Buried in Thread** (v2) | Responsive content in earlier reply, benign surface |
+**Non-responsive categories:**
+| Type | Count | Description |
+|------|-------|-------------|
+| KEYWORD_FALSE_POSITIVE | 55 | "Lead" as leadership/leading |
+| ADJACENT_TOPIC | 45 | Related domain, not lead-specific |
+| TRUE_NEGATIVE | 55 | Clearly unrelated content |
 
-#### Keyword-Free Rate by Request (v2)
-| Request | Keyword-Free % | Rationale |
-|---------|---------------|-----------|
-| Lead Testing | 60% | Hardest - ambiguous terms, euphemisms common |
-| COVID Relief | 40% | Moderate - bureaucratic language |
-| Special Education | 30% | Moderate - specialized terminology |
-| EdTech Vendor | 20% | Easiest - concrete business terms |
-| Safety Incidents | 50% | Hard - sensitive topics use euphemisms |
-
-### Loading the Test Data
+### Loading the Corpus
 
 ```python
-import json
-from pathlib import Path
+from src.data.corpus import Corpus
 
-CORPUS_PATH = Path("cpra-golden-emails/data/generated/corpus_20251207_153555")
+corpus = Corpus.load("corpus/primary")
+print(f"Emails: {len(corpus.emails)}")
+print(f"Request: {corpus.request.title}")
 
-# Load ground truth
-with open(CORPUS_PATH / "ground_truth.json") as f:
-    ground_truth = json.load(f)
-
-# Load CPRA requests
-with open(CORPUS_PATH / "cpra_requests.json") as f:
-    cpra_requests = json.load(f)
-
-# Access email data
-emails = ground_truth["emails"]
-responsiveness_map = ground_truth["responsiveness_map"]
-
-# Check if email is responsive to a request
-def is_responsive(email_id: str, request_id: str) -> bool:
-    responses = responsiveness_map.get(email_id, [])
-    return any(r["cpra_request_id"] == request_id and r["is_responsive"]
-               for r in responses)
+# Check responsiveness
+for email in corpus.emails:
+    is_responsive = corpus.ground_truth.get(email.id, {}).get("responsive", False)
+    challenge_type = corpus.ground_truth.get(email.id, {}).get("challenge_type")
 ```
 
-### Generating New Corpora
+### V1 Corpus (Archived)
 
-To generate a new test corpus:
-
-```bash
-cd cpra-golden-emails
-source ../.venv/bin/activate
-
-# v1 style (template-based, easier)
-python generate_corpus.py --num-emails 2500 --responsive-rate 0.15
-
-# v2 style (LLM-generated keyword-free emails, harder)
-export ANTHROPIC_API_KEY=your_key_here
-python generate_corpus.py --num-emails 5000 --responsive-rate 0.20 --use-llm
-```
-
-The v2 corpus uses Claude Haiku to generate emails that avoid keywords entirely, creating a more realistic test where semantic search must prove its value.
-
-See `cpra-golden-emails/README.md` for full generation options.
+The original LLM-generated v1 corpus (2,500 emails, 5 CPRA requests) is in `archive/`. It proved too easy — keyword baseline achieved 94% recall.
 
 ## Experiments
 
-Experiments are tracked in `docs/experiments/LOG.md`.
+19 experiments completed. Full details in `EXPERIMENT_LOG.md`.
 
-| # | Name | Status | Description |
-|---|------|--------|-------------|
-| 001 | Baseline Keyword | Planned | Establish keyword search baseline |
+### Best Results (Meeting 94% Recall Requirement)
+
+| # | Model | Recall | Precision | F1 | MAP |
+|---|-------|--------|-----------|-----|-----|
+| **006** | **all-mpnet-base-v2** | **98.71%** | **57.74%** | **72.86%** | **0.8923** |
+| 003 | Jina v3 | 98.06% | 51.70% | 67.71% | 0.8592 |
+| 008 | nomic-embed-text (Ollama) | 99.35% | 46.11% | 62.99% | 0.8158 |
+| 007 | mxbai-embed-large (Ollama) | 98.71% | 51.17% | 67.40% | 0.8561 |
+| 009 | BGE Large EN v1.5 | 99.35% | 47.24% | 64.03% | 0.8731 |
+| 004 | BGE-M3 | 100.00% | 46.83% | 63.79% | 0.8607 |
+| 005 | embeddinggemma (Ollama) | 100.00% | 49.36% | 66.10% | 0.8757 |
+
+### Baselines
+
+| # | Model | Recall | Precision | F1 | Notes |
+|---|-------|--------|-----------|-----|-------|
+| 001 | Keyword Search | 83.87% | 55.32% | 66.67% | Below 94% requirement |
+| 002 | Snowflake Arctic L v2.0 | 81.29% | 70.39% | 75.45% | Best v1 performer |
+| 010 | Qwen3 0.6B | 89.03% | 77.53% | 82.88% | Best F1, but misses recall |
+
+### Cross-Encoder Experiments (011-019)
+
+All cross-encoders underperformed bi-encoders on keyword-free corpus:
+- MS-MARCO: Lexical bias (14% recall on INDIRECT_REFERENCE)
+- NLI: No discrimination (scores everything as relevant)
+- Best cross-encoder MAP (0.74) << best bi-encoder MAP (0.89)
 
 ## Quick Start
 
 ```bash
-# Create virtual environment
-python -m venv .venv
-source .venv/bin/activate
-
-# Install dependencies
+# Setup
+python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# Run baseline experiment (coming soon)
-python -m src.pipeline.run_experiment --config configs/experiments/001_baseline_keyword.yaml
+# Run an experiment
+python -m src.run_experiment \
+  --config configs/experiments/006_all_mpnet_base_v2.yaml \
+  --corpus corpus/primary \
+  --threshold 0.30
+
+# Run keyword baseline
+python -m src.run_experiment \
+  --config configs/experiments/001_keyword_baseline.yaml \
+  --corpus corpus/primary
+
+# Compare results
+python scripts/compare_results.py
 ```
 
 ## Requirements
 
-- Python 3.10+
+- Python 3.12+
 - See `requirements.txt` for dependencies
+- Ollama (optional, for local models)

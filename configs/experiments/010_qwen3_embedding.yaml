@@ -1,0 +1,13 @@
+# Qwen3 Embedding 0.6B - Highest F1 in v1 (93.37%) but did not meet 94% recall
+# Achieved 90.13% recall at 0.50 threshold, 96.85% precision
+# 0.6B params, good balance of speed and quality
+name: "010 Qwen3 Embedding 0.6B"
+
+pipeline:
+  method: embedding
+
+embedding_model: ollama:qwen3-embedding-0.6b
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.30, 0.40, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80]

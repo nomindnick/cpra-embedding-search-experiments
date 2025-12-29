@@ -1,0 +1,12 @@
+# BGE Reranker Large - BAAI's larger reranking model
+# More parameters, potentially better but same training approach
+name: "019 BGE Reranker Large"
+
+pipeline:
+  method: cross_encoder
+
+cross_encoder_model: BAAI/bge-reranker-large
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [-5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0]
