@@ -1,8 +1,490 @@
 {
-  "labels": {},
+  "labels": {
+    "pfas_001": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Directly reports Q1 PFAS monitoring results with specific PFOA/PFOS concentrations in ppt. Discusses contamination from former Air Force base.",
+      "keywords_present": ["PFAS", "PFOA", "PFOS", "contamination", "groundwater"],
+      "keywords_absent": []
+    },
+    "pfas_002": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "State Water Board notification requiring PFAS response letter due to PFOA exceedance of notification level.",
+      "keywords_present": ["PFAS", "PFOA", "contamination", "water"],
+      "keywords_absent": []
+    },
+    "pfas_003": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Operations report on PFOS breakthrough at GAC treatment unit. Discusses PFOA/PFOS loading and treatment media.",
+      "keywords_present": ["PFOS", "PFOA", "PFAS"],
+      "keywords_absent": []
+    },
+    "pfas_004": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Capital budget request for PFAS treatment system. Discusses contamination from Air Force base and treatment infrastructure.",
+      "keywords_present": ["PFAS", "contamination", "groundwater"],
+      "keywords_absent": []
+    },
+    "pfas_005": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Health department correspondence about PFAS health advisory and public messaging.",
+      "keywords_present": ["PFAS", "water"],
+      "keywords_absent": []
+    },
+    "pfas_006": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Lab submission for PFAS analysis using EPA Method 533. Discusses monitoring program.",
+      "keywords_present": ["PFAS", "water"],
+      "keywords_absent": []
+    },
+    "pfas_007": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Draft FAQ about PFAS for city website. Uses 'forever chemicals' terminology.",
+      "keywords_present": ["PFAS", "forever chemicals", "water"],
+      "keywords_absent": []
+    },
+    "pfas_008": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "EPA Region 9 communication about PFAS Strategic Roadmap and upcoming regulations including MCL for PFOA/PFOS.",
+      "keywords_present": ["PFAS", "PFOA", "PFOS", "water"],
+      "keywords_absent": []
+    },
+    "pfas_009": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Discusses contamination from airport/military base without using PFAS acronyms. Uses 'firefighting foam', 'synthetic substances that don't break down' - clear PFAS reference to domain experts.",
+      "keywords_present": ["contamination", "groundwater"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_010": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Subject mentions 'forever chemical' but body uses 'persistent fluorinated compounds' without PFAS acronyms. Tests whether embeddings understand fluorinated compound references.",
+      "keywords_present": ["forever chemicals"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS"]
+    },
+    "pfas_011": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Media inquiry about 'synthetic chemical contamination' and 'Teflon-related compounds' without using PFAS terminology.",
+      "keywords_present": ["contamination", "water"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_012": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Training memo on 'emerging contaminants' sampling. Discusses fluoropolymer contamination concerns without naming PFAS.",
+      "keywords_present": ["contamination"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_013": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Vendor email about spent media disposal for 'fluorinated substances'. Discusses incineration requirements without using PFAS acronyms.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_014": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Discusses contamination from 'aqueous film-forming foam' and 'synthetic compounds' from military base. Classic AFFF reference without PFAS acronyms.",
+      "keywords_present": ["contamination", "groundwater"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_015": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Technical discussion of analytical methods (Method 533 vs 537.1) for detecting 'short-chain compounds'. Mentions Gen-X which is a PFAS but not in standard keyword lists.",
+      "keywords_present": ["contamination"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_016": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Formal compliance response letter with specific PFOA/PFOS concentrations in ppt and notification level thresholds. Heavy regulatory terminology.",
+      "keywords_present": ["PFOA", "PFOS"],
+      "keywords_absent": []
+    },
+    "pfas_017": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Lab report with specific analyte concentrations including PFHxS. Uses technical terminology (ppt, Total PFAS, QC checks).",
+      "keywords_present": ["PFOA", "PFOS", "PFAS"],
+      "keywords_absent": []
+    },
+    "pfas_018": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Decision memo documenting Well 15 shutdown at specific point in time. PFAS mentioned but temporal decision-making aspect is central.",
+      "keywords_present": ["PFAS"],
+      "keywords_absent": []
+    },
+    "pfas_019": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "5-year anniversary reflection on contamination discovery timeline from 2018-2023. Does not use PFAS acronyms - refers to 'these compounds'.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_020": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "18-month pilot study summary discussing GAC removal efficiency, media exhaustion, cost per gallon. Uses 'target compounds' without naming PFAS.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_021": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Community member question about 'chemicals from firefighting foam' near military base. Does not use PFAS terminology.",
+      "keywords_present": ["water"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_022": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Response to resident referencing 'the compounds you mentioned' and 'contaminants' without using PFAS acronyms.",
+      "keywords_present": ["water"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_023": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Quarterly monitoring report using 'parts per trillion' terminology and notification level thresholds without spelling out PFAS.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_024": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Budget workshop schedule announcement. Part of thread but contains no PFAS-related content.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_025": {
+      "responsive": true,
+      "challenge_type": "BURIED_IN_THREAD",
+      "buried_in_thread": true,
+      "reasoning": "Buried in budget thread. Tom mentions 'contamination from the former Air Force base' and 'synthetic compounds' - responsive content surrounded by unrelated budget discussion.",
+      "keywords_present": ["contamination"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_026": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Police department budget confirmation. Thread context with no PFAS relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_027": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Budget workshop schedule confirmation. Thread context with no PFAS content.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_028": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "IT network maintenance announcement. Start of thread with no PFAS relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_029": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Rachel asks about SCADA and mentions 'contaminated groundwater samples' but context is about network timing, not PFAS discussion. Borderline but doesn't substantively discuss PFAS topic.",
+      "keywords_present": ["contamination", "groundwater"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_030": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "IT response about SCADA systems. Thread context with no PFAS content.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_031": {
+      "responsive": true,
+      "challenge_type": "BURIED_IN_THREAD",
+      "buried_in_thread": true,
+      "reasoning": "Buried in IT maintenance thread. Greg mentions 'fluorinated compounds' and GAC treatment effectiveness - responsive PFAS content in unrelated context.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_032": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Coliform bacteria sampling schedule. Water quality topic but unrelated to PFAS/chemical contamination.",
+      "keywords_present": ["water"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_033": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Disinfection byproduct (TTHM/HAA5) results. Water treatment topic but different contaminant class than PFAS.",
+      "keywords_present": ["water"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_034": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Water main replacement project for aging cast iron pipes. Infrastructure project unrelated to PFAS contamination.",
+      "keywords_present": ["water"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_035": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Arsenic monitoring results. Different contaminant - naturally occurring vs. industrial PFAS. Explicitly distinguishes from 'industrial contamination at Well 15'.",
+      "keywords_present": ["water"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_036": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Pump station motor replacement request. Water infrastructure maintenance unrelated to water quality or contamination.",
+      "keywords_present": ["water"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_037": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Lead and Copper Rule sampling schedule. Different regulatory program and contaminant type. Explicitly notes 'completely separate from our work on the contaminated wells'.",
+      "keywords_present": ["water"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_038": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Stormwater permit renewal coordination. Different water program (surface runoff vs. drinking water). Notes 'separate from your groundwater contamination issues'.",
+      "keywords_present": ["water", "groundwater", "contamination"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_039": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Copper corrosion control pH adjustment. Different water quality issue (corrosion control vs. contamination). Notes 'unrelated to the treatment systems we're working on'.",
+      "keywords_present": ["water"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination"]
+    },
+    "pfas_040": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Nitrate monitoring results from agricultural area. Different contaminant source (fertilizer vs. military PFAS). Explicitly distinguishes 'agricultural pollution vs. military base contamination'.",
+      "keywords_present": ["water", "contamination"],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals"]
+    },
+    "pfas_041": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "HR performance review deadline reminder. No water or contamination relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_042": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "HVAC maintenance announcement. Facilities management with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_043": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Fiscal year-end close process. Finance/accounting with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_044": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Records retention training announcement. Administrative with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_045": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "IT phishing alert. Cybersecurity with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_046": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Employee appreciation BBQ invitation. Social event with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_047": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Insurance renewal asset list request. Risk management with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_048": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Parking lot resurfacing notice. Facilities with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_049": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Payroll W-4 and holiday pay schedule. HR/payroll with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_050": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Health fair and flu shot announcement. Employee wellness with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_051": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Strategic planning session announcement. General management with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_052": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Holiday toy drive announcement. Community outreach with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_053": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Procurement card policy reminder. Finance/purchasing with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_054": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Council meeting schedule. Administrative with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_055": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "July 4th office closure notice. Holiday announcement with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_056": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Fleet vehicle maintenance schedule. Fleet services with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_057": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Sexual harassment prevention training reminder. HR/compliance with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_058": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Social media policy update. Communications policy with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    },
+    "pfas_059": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Fire alarm testing notice. Building safety with no water relation.",
+      "keywords_present": [],
+      "keywords_absent": ["PFAS", "PFOA", "PFOS", "forever chemicals", "contamination", "water", "groundwater"]
+    }
+  },
   "metadata": {
-    "total_responsive": 0,
-    "total_non_responsive": 0,
-    "by_challenge_type": {}
+    "total_responsive": 25,
+    "total_non_responsive": 34,
+    "by_challenge_type": {
+      "DIRECT_MATCH": 8,
+      "INDIRECT_REFERENCE": 8,
+      "TECHNICAL_JARGON": 5,
+      "TEMPORAL_REFERENCE": 2,
+      "BURIED_IN_THREAD": 2,
+      "ADJACENT_TOPIC": 9,
+      "TRUE_NEGATIVE": 25
+    },
+    "notes": "PFAS validation corpus tests generalization beyond 'lead' ambiguity. Unlike lead, PFAS/PFOA/PFOS are acronyms without linguistic ambiguity. Challenge types test: (1) baseline keyword matching, (2) semantic understanding of alternate terminology (firefighting foam, fluorinated compounds, Teflon), (3) technical regulatory language, (4) temporal context, (5) buried content retrieval."
   }
 }

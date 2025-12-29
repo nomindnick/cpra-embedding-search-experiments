@@ -1,0 +1,13 @@
+# Jina Embeddings v3 - Met 94% recall requirement in v1
+# Achieved 95.20% recall at 0.70 threshold, 68.92% precision
+# 570M params, task-specific LoRA, 8k context
+name: "003 Jina v3"
+
+pipeline:
+  method: embedding
+
+embedding_model: st:jina-embeddings-v3
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.30, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85]

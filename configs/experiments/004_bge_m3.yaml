@@ -1,0 +1,13 @@
+# BGE-M3 - Met 94% recall requirement in v1
+# Achieved 94.93% recall at 0.60 threshold, 43.73% precision
+# Multi-functional (dense + sparse), 8k context
+name: "004 BGE-M3"
+
+pipeline:
+  method: embedding
+
+embedding_model: st:bge-m3
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.30, 0.40, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80]

@@ -1,0 +1,13 @@
+# nomic-embed-text via Ollama - Local model option
+# 768 dimensions, 274MB, good general-purpose
+# Useful for testing local-only deployment scenarios
+name: "008 nomic-embed-text"
+
+pipeline:
+  method: embedding
+
+embedding_model: ollama:nomic-embed-text
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.30, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80]

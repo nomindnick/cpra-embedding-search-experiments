@@ -1,0 +1,13 @@
+# all-mpnet-base-v2 - Baseline embedding model
+# Good quality, CPU-friendly, widely used
+# Did not meet 94% recall in v1 but useful as baseline comparison
+name: "006 all-mpnet-base-v2"
+
+pipeline:
+  method: embedding
+
+embedding_model: st:all-mpnet-base-v2
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.30, 0.40, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80]

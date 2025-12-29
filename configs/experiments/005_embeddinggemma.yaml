@@ -1,0 +1,13 @@
+# Google's embeddinggemma - Met 94% recall requirement in v1
+# Achieved 95.47% recall at 0.50 threshold, 63.70% precision
+# First model to nearly match keyword recall in v1 experiments
+name: "005 Embedding Gemma"
+
+pipeline:
+  method: embedding
+
+embedding_model: ollama:embeddinggemma
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.30, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70]

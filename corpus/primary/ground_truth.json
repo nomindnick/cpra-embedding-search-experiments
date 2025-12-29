@@ -1,18 +1,4686 @@
 {
-  "labels": {},
+  "labels": {
+    "email_001": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Directly reports Q1 lead testing results with specific ppb values and action level exceedances. Discusses lead service line replacements.",
+      "keywords_present": [
+        "lead",
+        "testing",
+        "ppb",
+        "action level",
+        "lead service lines"
+      ],
+      "keywords_absent": []
+    },
+    "email_002": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Urgent alert about elevated lead levels at a school, with specific ppb readings above action level. Discusses immediate remediation steps.",
+      "keywords_present": [
+        "lead",
+        "lead levels",
+        "ppb",
+        "action level",
+        "contamination"
+      ],
+      "keywords_absent": []
+    },
+    "email_003": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "EPA compliance review notice specifically for Lead and Copper Rule program. Lists lead sampling, lead service line inventory, and lead-related documentation requirements.",
+      "keywords_present": [
+        "lead",
+        "Lead and Copper Rule",
+        "lead sampling",
+        "lead service line"
+      ],
+      "keywords_absent": []
+    },
+    "email_004": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Budget request for Lead Service Line Replacement Program with detailed statistics on lead service lines and funding for lead testing.",
+      "keywords_present": [
+        "lead",
+        "Lead Service Line",
+        "lead lines",
+        "lead testing"
+      ],
+      "keywords_absent": []
+    },
+    "email_005": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Health department correspondence correlating blood lead levels with water lead testing results. Discusses lead service line inventory overlap.",
+      "keywords_present": [
+        "lead",
+        "blood lead level",
+        "lead service line"
+      ],
+      "keywords_absent": []
+    },
+    "email_006": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Contractor proposal for Lead Service Line Replacement with detailed scope including lead-free certification and materials.",
+      "keywords_present": [
+        "lead",
+        "Lead Service Line",
+        "lead-free"
+      ],
+      "keywords_absent": []
+    },
+    "email_007": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Draft press release about expanded lead testing program. Discusses lead leaching from pipes and EPA action level.",
+      "keywords_present": [
+        "lead",
+        "lead testing",
+        "lead service line",
+        "lead can leach"
+      ],
+      "keywords_absent": []
+    },
+    "email_008": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "State agency confirmation of Annual Lead and Copper Report submission with compliance status and lead sampling records requirement.",
+      "keywords_present": [
+        "lead",
+        "Lead and Copper",
+        "lead action level",
+        "lead sampling"
+      ],
+      "keywords_absent": []
+    },
+    "email_009": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Internal memo scheduling fall lead sampling campaign with specific protocols for lead testing.",
+      "keywords_present": [
+        "lead",
+        "lead sampling",
+        "lead results"
+      ],
+      "keywords_absent": []
+    },
+    "email_010": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Council liaison requesting information about lead contamination levels, lead service lines, and school lead issues.",
+      "keywords_present": [
+        "lead",
+        "lead service lines",
+        "lead contamination",
+        "lead pipe",
+        "lead testing"
+      ],
+      "keywords_absent": []
+    },
+    "email_011": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Field technician report on resampling with specific lead ppb results. Discusses lead service line confirmation and contamination explanation to resident.",
+      "keywords_present": [
+        "lead",
+        "lead service line",
+        "lead contamination"
+      ],
+      "keywords_absent": []
+    },
+    "email_012": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Department-wide announcement about lead service line inventory milestone. Details confirmed lead service lines and replacement priorities.",
+      "keywords_present": [
+        "lead",
+        "lead service line",
+        "lead pipe"
+      ],
+      "keywords_absent": []
+    },
+    "email_013": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Laboratory certificate of analysis for lead testing with sample counts, ppb ranges, and flagged action level exceedance.",
+      "keywords_present": [
+        "lead",
+        "Lead (Pb)",
+        "ppb",
+        "action level"
+      ],
+      "keywords_absent": []
+    },
+    "email_014": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Constituent services forwarding resident complaint about lead concerns, asking about lead pipes and lead testing.",
+      "keywords_present": [
+        "lead",
+        "lead pipes",
+        "lead contamination"
+      ],
+      "keywords_absent": []
+    },
+    "email_015": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Technical update on Lead and Copper Rule revisions affecting lead sampling requirements, including fifth liter sampling targeting lead from service lines.",
+      "keywords_present": [
+        "lead",
+        "Lead and Copper Rule",
+        "lead sampling",
+        "lead service lines",
+        "lead solder"
+      ],
+      "keywords_absent": []
+    },
+    "email_016": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Grant award notification for lead remediation activities including lead service line replacement and lead testing.",
+      "keywords_present": [
+        "lead",
+        "lead remediation",
+        "Lead service line",
+        "Lead testing",
+        "lead hazards"
+      ],
+      "keywords_absent": []
+    },
+    "email_017": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Legal risk assessment regarding lead contamination liability, discussing lead service lines, school lead contamination, and lead-related decisions.",
+      "keywords_present": [
+        "lead",
+        "lead contamination",
+        "lead service lines",
+        "lead issues"
+      ],
+      "keywords_absent": []
+    },
+    "email_018": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Customer service inquiry about lead filter distribution policy for building with elevated (but below action level) lead results.",
+      "keywords_present": [
+        "lead",
+        "lead water filters",
+        "lead solder"
+      ],
+      "keywords_absent": []
+    },
+    "email_019": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Request for qualifications for Lead Service Line Replacement program with detailed requirements for lead-safe work practices and lead-free materials.",
+      "keywords_present": [
+        "lead",
+        "Lead Service Line",
+        "lead-free",
+        "lead-safe"
+      ],
+      "keywords_absent": []
+    },
+    "email_020": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Year-to-date summary of lead testing program with detailed statistics on lead samples, action level exceedances, and lead levels by area.",
+      "keywords_present": [
+        "lead",
+        "lead testing",
+        "lead levels"
+      ],
+      "keywords_absent": []
+    },
+    "email_021": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "School district confirmation of lead-free fixture replacement in response to lead testing results.",
+      "keywords_present": [
+        "lead",
+        "lead-free",
+        "lead testing"
+      ],
+      "keywords_absent": []
+    },
+    "email_022": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Analysis of concerning lead results pattern in specific neighborhood with recommendations for expanded lead sampling and LSL prioritization.",
+      "keywords_present": [
+        "lead",
+        "Lead Results",
+        "lead levels"
+      ],
+      "keywords_absent": []
+    },
+    "email_023": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Summary of community meeting on lead in drinking water covering lead testing program, lead service line replacement, and lead exposure reduction.",
+      "keywords_present": [
+        "lead",
+        "lead pipes",
+        "lead testing",
+        "lead exposure"
+      ],
+      "keywords_absent": []
+    },
+    "email_024": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Director requesting documentation of Jefferson Elementary lead contamination response process including remediation and lead testing results.",
+      "keywords_present": [
+        "lead",
+        "lead contamination",
+        "Lead Testing"
+      ],
+      "keywords_absent": []
+    },
+    "email_025": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Corrosion control optimization study report focusing on reducing lead solubility and lead release rates, with lead level comparisons.",
+      "keywords_present": [
+        "lead",
+        "lead solubility",
+        "lead release",
+        "lead levels",
+        "lead service lines"
+      ],
+      "keywords_absent": []
+    },
+    "email_026": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Health department partnership proposal for Lead Poisoning Prevention Week including lead in drinking water prevention and lead testing.",
+      "keywords_present": [
+        "lead",
+        "Lead Poisoning",
+        "lead contamination",
+        "lead exposure"
+      ],
+      "keywords_absent": []
+    },
+    "email_027": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Technical question about lead analysis methodology comparing EPA methods for lead testing precision.",
+      "keywords_present": [
+        "lead",
+        "lead analysis",
+        "lead testing",
+        "lead sampling"
+      ],
+      "keywords_absent": []
+    },
+    "email_028": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Operational alert about water main break in area with lead service lines, warning about potential lead disturbance and elevated lead levels.",
+      "keywords_present": [
+        "lead",
+        "lead service lines",
+        "Lead Disturbance",
+        "lead levels",
+        "lead pipes"
+      ],
+      "keywords_absent": []
+    },
+    "email_029": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Priority lead testing request for pregnant resident with suspected lead service line, discussing lead exposure concerns.",
+      "keywords_present": [
+        "lead",
+        "Lead Testing",
+        "lead exposure",
+        "LSL"
+      ],
+      "keywords_absent": []
+    },
+    "email_030": {
+      "responsive": true,
+      "challenge_type": "DIRECT_MATCH",
+      "buried_in_thread": false,
+      "reasoning": "Annual summary of lead program accomplishments including lead service line replacement, lead testing results, and lead compliance status.",
+      "keywords_present": [
+        "lead",
+        "Lead Service Line",
+        "Lead Testing",
+        "lead compliance"
+      ],
+      "keywords_absent": []
+    },
+    "email_031": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'the lead in the samples' where 'lead' alone could refer to leadership but context (samples, ppb, action level) disambiguates as metal.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_032": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'asking about lead' and 'Is there lead in her water' - standalone 'lead' could be ambiguous but water context clarifies it's the metal.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_033": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'the lead situation' which could refer to leadership situation, but ppb measurements and water chemistry context disambiguate as contamination.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_034": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'that lead we found' and 'the lead was through the roof' - casual language where 'lead' requires context (ppb, first draw) to clarify it's the metal.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_035": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'the lead at Roosevelt' and 'Is there lead in our water' - school principal's questions where 'lead' is contextually about contamination, not leadership.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_036": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'about lead' and 'lead numbers' and 'lead problem' - media inquiry context where these phrases could refer to leadership but water system context clarifies.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_037": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'Lead confirmed' and 'worried about the lead' - dispatch context where 'lead' alone requires ppb value and infant concern to clarify it's contamination.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_038": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'Coordinating on lead' and 'the lead seems to cluster' - health department context where 'lead' requires BLL correlation to clarify it's the metal.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_039": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'lead work' and 'more lead than the inventory predicted' - contractor update where 'lead' could mean leading work but pipe replacement context clarifies.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_040": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'Lead is our main focus' and 'the lead in Eastside' - meeting notes where 'lead' phrases could refer to leadership priorities but sampling context clarifies.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_041": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'Lead in my district' and 'have lead' and 'the lead issue' - constituent inquiry where phrases could be about leadership but pipes context clarifies.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_042": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'The lead is all over the place' and 'high lead' - field report where 'lead' could be ambiguous but ppb values and sampling context disambiguate.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_043": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'lead FAQ' and 'Is there lead in city water' and 'the lead situation' - website FAQ context where 'lead' needs water testing context to clarify meaning.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_044": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'Good news on lead' and 'the lead basically disappears' - positive update where 'lead' could refer to leadership progress but ppb reduction clarifies it's contamination.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_045": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'your lead' and 'the lead data' - state regulator question where 'lead' alone needs LSL context to clarify it's about contamination, not leadership.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_046": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'Another lead call' and 'the lead could spread' - forwarded concern where 'lead' requires service line explanation to clarify it's the metal.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_047": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'Lead - we need to talk' and 'The lead numbers' and 'if the lead continues' - urgent meeting request where 'lead' needs exceedances context to clarify contamination.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_048": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'Thanks re: lead' and 'we have some lead' and 'the lead situation' - school facilities thank-you where 'lead' needs federal limits context to clarify it's contamination.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_049": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'Lead on the hotline' and 'lead questions' and 'about lead' - call center trends where 'lead' could mean lead/primary but pipe questions clarify it's the metal.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_050": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'lead disclosure' and 'lead in the service line' and 'liability for the lead' - legal advice where 'lead' could be ambiguous but property notification context clarifies.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_051": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'That lead on Pine Street' and 'the lead source' and 'the lead is coming from' - field investigation where 'lead' alone is ambiguous but pipe section context clarifies.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_052": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'lead meeting' and 'questions about lead' and 'the lead in his home' - outreach summary where 'lead' needs contamination context to disambiguate from leadership.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_053": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'lead samples' and 'anxious about the lead' - rush lab request where 'lead' could refer to primary samples but ppb and daycare context clarifies contamination.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_054": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'Lead and pH' and 'elevated lead' and 'how lead dissolves' - technical question where 'lead' needs chemistry context to clarify it's the metal element.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_055": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'lead expenditures' and 'lead spending' and 'lead work' - grant reporting where 'lead' alone could refer to primary/leading but service line context clarifies.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_056": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'wondering about lead' and 'lead in my water' and 'lead pipes' - resident inquiry where 'lead' needs old pipes context to clarify it's contamination.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_057": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'lead priority list' and 'lead situations' and 'lead-related calls' - field crew dispatch where 'lead' alone could mean priority but ppb and LSL context clarifies.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_058": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'joint outreach on lead' and 'The lead messaging' - health campaign proposal where 'lead' could mean leading/primary but paint/water/soil sources clarify it's the metal.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_059": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'Lead in apartments' and 'the lead we're detecting' and 'The lead is real' - technical discussion where 'lead' alone is ambiguous but solder and plumbing context clarifies.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_060": {
+      "responsive": true,
+      "challenge_type": "AMBIGUOUS_TERMS",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'update on lead' and 'The lead in our system' and 'getting the lead out' - all-hands message where 'lead' phrases could mean leadership/priority but ppb and service lines clarify.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_061": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Discusses aging pipe infrastructure from the 1940s, references Flint and Newark crises, concerns about 'materials used during that era' - clearly about lead contamination without using 'lead'.",
+      "keywords_present": [
+        "Flint",
+        "Newark",
+        "infrastructure",
+        "1940s",
+        "materials"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_062": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Correlates childhood blood screening data with pre-1950 housing stock and old service connections. Discusses elevated blood levels in children - clear lead poisoning indicators without using 'lead'.",
+      "keywords_present": [
+        "blood levels",
+        "pre-1950",
+        "service connections",
+        "elevated"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_063": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "References documentary about Michigan water crisis, anticipates resident concerns about old pipes. Discusses Flint situation without using 'lead'.",
+      "keywords_present": [
+        "Michigan",
+        "water crisis",
+        "old pipes",
+        "Flint"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_064": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Discusses federal funding for replacing pre-1950 infrastructure, materials that 'pose health risks, particularly for children and pregnant women'. References Michigan and New Jersey crises.",
+      "keywords_present": [
+        "pre-1950",
+        "health risks",
+        "Michigan",
+        "New Jersey",
+        "infrastructure"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_065": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Field technician describes verification dig finding 'distinctive gray color, soft when scratched' material from 1942 house - describes lead pipe characteristics without naming it.",
+      "keywords_present": [
+        "gray color",
+        "1942",
+        "service line",
+        "filter pitcher"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_066": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "EPA reminder about service line inventory requirements, categorizing 'regulated materials', with explicit goal of preventing 'situations like those seen in Flint, MI and Newark, NJ'.",
+      "keywords_present": [
+        "regulated materials",
+        "Flint",
+        "Newark",
+        "service line",
+        "inventory"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_067": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Constituent concern about 1938 house after seeing Newark news, asking about pipe types and child safety. Worried resident references East Coast water problems.",
+      "keywords_present": [
+        "Newark",
+        "1938",
+        "pipes",
+        "water safe",
+        "child"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_068": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Monthly corrosion control review discussing phosphate treatment to minimize metal release. Explicitly references Flint's water chemistry problems without saying 'lead'.",
+      "keywords_present": [
+        "corrosion control",
+        "metal release",
+        "Flint",
+        "phosphate"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_069": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "School principal asking about 1954 building's water quality concerns. Parent mentioned 'fixtures from the 1950s potentially containing harmful materials'.",
+      "keywords_present": [
+        "1954",
+        "drinking fountains",
+        "harmful materials",
+        "plumbing"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_070": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Legal analysis of liability exposure from older service line infrastructure, referencing Michigan and Newark litigation. Discusses 'problematic infrastructure' without naming lead.",
+      "keywords_present": [
+        "Michigan",
+        "Newark",
+        "service line",
+        "liability",
+        "infrastructure"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_071": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Contractor update on Phase 2 service line replacement. Discusses pre-war lines with degrading material, EPA disposal guidelines - clearly lead work without the word.",
+      "keywords_present": [
+        "pre-war",
+        "service connections",
+        "EPA guidelines",
+        "material"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_072": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Discusses 'heavy metal results' with samples above 15 ppb for 'primary contaminant of concern' in pre-1945 houses. Uses technical language to avoid 'lead'.",
+      "keywords_present": [
+        "heavy metal",
+        "15 ppb",
+        "pre-war",
+        "contaminant"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_073": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Talking points preparation for Eastside meeting, addressing Flint/Newark fears about 'older infrastructure'. Anticipates questions about water safety for children.",
+      "keywords_present": [
+        "Flint",
+        "Newark",
+        "older infrastructure",
+        "older housing"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_074": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Filter request for pregnant woman in 1947 house worried about 'old infrastructure'. Discusses pregnancy risk and precautionary filter distribution.",
+      "keywords_present": [
+        "pregnant",
+        "1947",
+        "filter",
+        "old infrastructure"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_075": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "All-hands about inventory milestone finding 'materials of concern' in 847 connections. References preventing 'what happened in Michigan and New Jersey'.",
+      "keywords_present": [
+        "materials of concern",
+        "Michigan",
+        "New Jersey",
+        "pre-war"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_076": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "County health department 'Healthy Homes' campaign about protecting children from toxic metals, including 'older plumbing in pre-war homes'.",
+      "keywords_present": [
+        "toxic metals",
+        "pre-war homes",
+        "children",
+        "environmental hazards"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_077": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Field protocol for visual inspection describing 'dull gray color, soft when scratched' characteristics - lead pipe identification without using the word.",
+      "keywords_present": [
+        "gray color",
+        "soft",
+        "pre-1950",
+        "non-compliant materials"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_078": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "State grant award for 'replacement of non-compliant service line materials', citing 'situations on the East Coast' as motivation.",
+      "keywords_present": [
+        "non-compliant",
+        "service line",
+        "East Coast",
+        "pre-war infrastructure"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_079": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "State Water Board offering corrosion control assistance to minimize 'metal release from older infrastructure', referencing Michigan and New Jersey problems.",
+      "keywords_present": [
+        "corrosion control",
+        "metal release",
+        "Michigan",
+        "New Jersey"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_080": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Daycare testing results showing ppb values above threshold in 1952 building with original plumbing. Discusses fixture replacement for where they 'fill sippy cups'.",
+      "keywords_present": [
+        "18 ppb",
+        "threshold",
+        "1952",
+        "original plumbing",
+        "daycare"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_081": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Councilmember asking about 1940s Riverside neighborhood after constituents saw 'news coverage about problems in other cities' including Michigan.",
+      "keywords_present": [
+        "1940s",
+        "Michigan",
+        "pipes",
+        "replacement schedule"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_082": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Discusses research on 'elevated blood levels in children' linked to cognitive impacts. References 'metal levels' and cumulative exposure in pre-1950 homes.",
+      "keywords_present": [
+        "blood levels",
+        "neurodevelopmental",
+        "metal levels",
+        "pre-1950"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_083": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Urgent dispatch about main break in area with 'pre-war service lines'. Warns that pressure changes can 'potentially releasing metals into the water'.",
+      "keywords_present": [
+        "pre-war service lines",
+        "metals",
+        "pressure",
+        "protective scale"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_084": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Epidemiology study request correlating infrastructure age with childhood blood screening results. Looking at 'problematic materials' by census tract.",
+      "keywords_present": [
+        "blood screening",
+        "infrastructure age",
+        "problematic materials"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_085": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Annual infrastructure report comparing city's proactive approach to Michigan (mass poisoning, criminal charges) and Newark (emergency filter distribution).",
+      "keywords_present": [
+        "Michigan",
+        "Newark",
+        "non-compliant service lines",
+        "mass poisoning"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_086": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Resident with 1939 house and young children asking about water quality after neighbor mentioned Flint and 'similar vintage infrastructure'.",
+      "keywords_present": [
+        "1939",
+        "Flint",
+        "pipes",
+        "small children"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_087": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Field technician found 'old material' section at 1956 house causing elevated samples. Describes 'classic partial replacement issue' with metals pickup.",
+      "keywords_present": [
+        "old material",
+        "elevated samples",
+        "metals",
+        "1956"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_088": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Community meeting feedback about 'problematic infrastructure', residents asking 'Is this like Flint?' and about pipe replacement timeline.",
+      "keywords_present": [
+        "Flint",
+        "Newark",
+        "problematic infrastructure",
+        "pipes replaced"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_089": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Lab inquiry about heavy metals detection limits. Discusses 15 ppb threshold and concern that 'no truly safe level for certain metals' for children.",
+      "keywords_present": [
+        "heavy metals",
+        "15 ppb",
+        "detection limits",
+        "certain metals"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_090": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "School facilities confirmation that fixture replacement is complete with 'no material of concern in the new fixtures'. Original 1962 fixtures replaced.",
+      "keywords_present": [
+        "material of concern",
+        "1962 fixtures",
+        "certified"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_091": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Policy proposal to prioritize homes with pregnant women and young children for replacement due to 'metal exposure' causing 'irreversible neurological impacts'.",
+      "keywords_present": [
+        "metal exposure",
+        "neurological impacts",
+        "pregnant women",
+        "vulnerable population"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_092": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Media inquiry about aging water infrastructure following 'high-profile problems in Flint and Newark'. Asks about 'materials of concern' and replacement program.",
+      "keywords_present": [
+        "Flint",
+        "Newark",
+        "aging water infrastructure",
+        "materials of concern"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_093": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Field technician emotional account of telling elderly woman about 'problematic materials' in her 1941 home. Daughter had been bringing bottled water for years.",
+      "keywords_present": [
+        "problematic materials",
+        "1941",
+        "bottled water",
+        "filter"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_094": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Year-end council briefing on infrastructure program replacing 'service lines containing materials that pose health risks'. Contrasts with Michigan/New Jersey crises.",
+      "keywords_present": [
+        "materials that pose health risks",
+        "Michigan",
+        "New Jersey",
+        "service lines"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_095": {
+      "responsive": true,
+      "challenge_type": "INDIRECT_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Health department reports 47% reduction in elevated childhood blood levels, correlating with census tracts where 'service line replacements' completed. Infrastructure investments improving health outcomes.",
+      "keywords_present": [
+        "blood screening",
+        "blood levels",
+        "service line replacements",
+        "childhood health"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_096": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "EPA reminder about LCRR (Lead and Copper Rule Revisions) implementation deadlines. Uses acronyms LSL, GRR, CCT, and references 'action level' and 'fifth-liter sampling' - all lead-specific regulatory terminology without spelling out 'lead'.",
+      "keywords_present": [
+        "LCRR",
+        "LSL",
+        "GRR",
+        "CCT",
+        "action level",
+        "90th percentile"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_097": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Internal discussion of 90th percentile trending toward action level, referencing CCT effectiveness and Tier 1 sites. Uses regulatory metrics and acronyms specific to lead monitoring without using the word 'lead'.",
+      "keywords_present": [
+        "90th percentile",
+        "ppb",
+        "AL",
+        "CCT",
+        "Tier 1"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_098": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Lab certification for EPA 200.8 (metals analysis) with Pb (chemical symbol for lead) results. References LCR samples, first-draw protocol, and action level calculations - technical language for lead testing.",
+      "keywords_present": [
+        "EPA 200.8",
+        "Pb",
+        "LCR",
+        "first-draw",
+        "action level"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_099": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Engineering consultant report on CCT optimization study discussing orthophosphate treatment for LSL corrosion control, Pb solubility, and dissolved vs particulate fractions - technical lead treatment terminology.",
+      "keywords_present": [
+        "CCT",
+        "LSL",
+        "Pb solubility",
+        "orthophosphate",
+        "corrosion control",
+        "first-draw"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_100": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Field staff question about first-draw sampling protocol stagnation requirements for LCR compliance. Discusses technical sampling requirements without using 'lead'.",
+      "keywords_present": [
+        "first-draw",
+        "LCR",
+        "stagnation",
+        "sampling protocol"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_101": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "State regulator guidance on LCRR material verification methods for LSL classification. Discusses GRR category and service line inventory requirements - regulatory terminology for lead pipe identification.",
+      "keywords_present": [
+        "LCRR",
+        "LSL",
+        "GRR",
+        "material verification",
+        "service line inventory"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_102": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Lab coordination for fifth-liter sampling implementation at LSL sites per LCRR requirements. Discusses AL exceedance notification timeline - technical lead sampling protocol.",
+      "keywords_present": [
+        "fifth-liter",
+        "LSL",
+        "LCRR",
+        "AL",
+        "chain of custody"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_103": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Grant documentation request for WIIN funding covering LSL replacement and CCT optimization. Requires 'certified Pb-free' verification - lead program funding terminology.",
+      "keywords_present": [
+        "WIIN",
+        "LSL",
+        "CCT",
+        "Pb-free"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_104": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Contractor weekly progress report on LSL replacement project. Lists GRR replacements, 'Pb-free' certifications per NSF/ANSI 61 - technical construction documentation for lead pipe work.",
+      "keywords_present": [
+        "LSL",
+        "GRR",
+        "Pb-free",
+        "NSF/ANSI 61"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_105": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "EPA LCR compliance review findings letter. Evaluates 90th percentile, CCT optimization, Tier 1 site selection, and LSL inventory progress - regulatory compliance terminology for lead program.",
+      "keywords_present": [
+        "LCR",
+        "90th percentile",
+        "CCT",
+        "LSL",
+        "AL",
+        "Tier 1"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_106": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Internal protocol update on AL exceedance procedures under LCRR. Discusses 24-hour notification for LSL sites, 10-15 ppb enhanced monitoring - lead regulatory compliance procedures.",
+      "keywords_present": [
+        "AL",
+        "LCRR",
+        "LSL",
+        "ppb",
+        "exceedance"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_107": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Training registration for LCRR implementation workshop covering LSL replacement, CCT optimization, fifth-liter sampling, and 90th percentile data - professional education for lead compliance.",
+      "keywords_present": [
+        "LCRR",
+        "LSL",
+        "CCT",
+        "fifth-liter",
+        "90th percentile"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_108": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Technical discussion of AWWA paper on particulate vs dissolved Pb speciation in CCT optimization. References 15 ppb AL and potential revision to 10 or 5 ppb - scientific lead research.",
+      "keywords_present": [
+        "Pb",
+        "CCT",
+        "fifth-liter",
+        "LSL",
+        "AL",
+        "ppb"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_109": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "GIS layer development for LSL inventory showing categories: confirmed LSL, suspected LSL, GRR, unknown. References LCRR prioritization requirements - technical lead mapping.",
+      "keywords_present": [
+        "LSL",
+        "GRR",
+        "LCRR",
+        "inventory",
+        "verification method"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_110": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "State technical assistance offer for CCT optimization for systems with 90th percentile 5-15 ppb. Discusses orthophosphate vs silicate and LCRR trigger level - regulatory lead treatment support.",
+      "keywords_present": [
+        "CCT",
+        "90th percentile",
+        "ppb",
+        "orthophosphate",
+        "LCRR"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_111": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Sampling site tier reclassification under LCRR. Details new tiers for LSL, GRR, customer-side LSL, copper with Pb solder - technical lead sampling categorization.",
+      "keywords_present": [
+        "LCRR",
+        "LSL",
+        "GRR",
+        "Tier 1",
+        "Pb solder"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_112": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "AWWA call for presentations on LCRR implementation including LSL inventory, replacement programs, and CCT optimization with 90th percentile reduction strategies - industry conference on lead compliance.",
+      "keywords_present": [
+        "LCRR",
+        "LSL",
+        "CCT",
+        "90th percentile",
+        "orthophosphate"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_113": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Lab method update for EPA 200.8 aligning with LCRR. Details Pb reporting limits, fifth-liter handling, expedited reporting for >15 ppb, and Pb speciation options - technical lead analysis procedures.",
+      "keywords_present": [
+        "EPA 200.8",
+        "LCRR",
+        "Pb",
+        "fifth-liter",
+        "ppb",
+        "AL"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_114": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "CCT optimization results showing 90th percentile reduction from 9.2 to 7.1 ppb. Analyzes LSL site improvements with orthophosphate residual data - technical lead treatment success metrics.",
+      "keywords_present": [
+        "CCT",
+        "90th percentile",
+        "ppb",
+        "LSL",
+        "orthophosphate"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_115": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Operations notice about CCT chemical feed system upgrade for higher orthophosphate dosage. References WQP monitoring and compliance sampling timing - lead treatment infrastructure.",
+      "keywords_present": [
+        "CCT",
+        "orthophosphate",
+        "WQP"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_116": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Capital planning request for LSL replacement projections. Asks for GRR sites, LCRR compliance timeline, and grant funding sources (WIIN, BIL) - lead program budgeting.",
+      "keywords_present": [
+        "LSL",
+        "GRR",
+        "LCRR",
+        "WIIN",
+        "BIL"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_117": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Consumer Confidence Report draft showing LCR section with 90th percentile Pb results, AL comparison, corrosion control, and 'regulated materials' replacement - public reporting for lead compliance.",
+      "keywords_present": [
+        "CCR",
+        "LCR",
+        "90th percentile",
+        "Pb",
+        "AL",
+        "ppb",
+        "corrosion control"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_118": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "State grant opportunity for BIL funding covering LSL and GRR replacement, CCT optimization, with LCRR compliance strategy requirement - federal lead infrastructure funding.",
+      "keywords_present": [
+        "BIL",
+        "LSL",
+        "GRR",
+        "CCT",
+        "LCRR"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_119": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "State approval for reduced LCR monitoring based on 90th percentile below 10 ppb and optimized CCT. Must maintain Tier 1 LSL and GRR sites in sampling pool - lead compliance reduction.",
+      "keywords_present": [
+        "LCR",
+        "90th percentile",
+        "ppb",
+        "CCT",
+        "AL",
+        "Tier 1",
+        "LSL",
+        "GRR"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_120": {
+      "responsive": true,
+      "challenge_type": "TECHNICAL_JARGON",
+      "buried_in_thread": false,
+      "reasoning": "Final CCT optimization study report showing Pb 90th percentile reduction from 9.2 to 6.8 ppb. Discusses orthophosphate dosage, LSL improvement, particulate Pb fraction, and cost-benefit - technical lead treatment study.",
+      "keywords_present": [
+        "CCT",
+        "90th percentile",
+        "Pb",
+        "ppb",
+        "orthophosphate",
+        "LSL",
+        "LCR"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_121": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Five-year program anniversary email comparing 2019 baseline to 2024 current state. Temporal context (program evolution over 5 years) is central to understanding the lead service line replacement progress.",
+      "keywords_present": [
+        "lead",
+        "lead service line",
+        "LSL"
+      ],
+      "keywords_absent": []
+    },
+    "email_122": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Quarterly trend analysis comparing Q3 2019 vs Q3 2023 lead levels. Historical comparison over 4 years is the core purpose - demonstrating lead level improvements over time.",
+      "keywords_present": [
+        "lead",
+        "lead levels"
+      ],
+      "keywords_absent": []
+    },
+    "email_123": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "LCRR compliance deadline reminder with key dates (October 2024, 2027, 2037). Future regulatory timeline is the central element of this email about lead service line requirements.",
+      "keywords_present": [
+        "Lead and Copper Rule",
+        "lead service lines"
+      ],
+      "keywords_absent": []
+    },
+    "email_124": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Budget history spanning FY2019-FY2024 showing lead program funding trajectory. Six-year historical budget progression is central to understanding lead program evolution.",
+      "keywords_present": [
+        "lead",
+        "Lead Service Line",
+        "lead testing"
+      ],
+      "keywords_absent": []
+    },
+    "email_125": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Investigation of 2019 lead spike at Riverside Elementary with detailed September-December 2019 timeline. Historical incident review with specific dates is the core focus.",
+      "keywords_present": [
+        "lead",
+        "lead levels"
+      ],
+      "keywords_absent": []
+    },
+    "email_126": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "10-year infrastructure replacement plan spanning 2024-2034. Long-term future planning with phased timeline is central to this lead service line strategy document.",
+      "keywords_present": [
+        "lead",
+        "LSL",
+        "Lead Infrastructure"
+      ],
+      "keywords_absent": []
+    },
+    "email_127": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Six-year childhood blood lead level trend data (2018-2023). Historical health outcome correlation with lead program timeline is the central analytical focus.",
+      "keywords_present": [
+        "lead",
+        "blood lead level"
+      ],
+      "keywords_absent": []
+    },
+    "email_128": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Timeline extension request for Phase 4 LSL replacement with original vs revised completion dates. Project schedule delays and temporal milestones are the core subject.",
+      "keywords_present": [
+        "lead",
+        "LSL",
+        "Lead-free"
+      ],
+      "keywords_absent": []
+    },
+    "email_129": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "School lead testing completion timeline spanning Summer 2024 through Spring 2025. Future testing schedule with seasonal milestones is the central organizing element.",
+      "keywords_present": [
+        "lead",
+        "Lead Testing"
+      ],
+      "keywords_absent": []
+    },
+    "email_130": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Compliance journey summary spanning 2015-2023 showing evolution from reactive to proactive lead program. Decade-long historical transformation narrative is the core focus.",
+      "keywords_present": [
+        "lead",
+        "Lead Compliance"
+      ],
+      "keywords_absent": []
+    },
+    "email_131": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "BIL grant application timeline with specific 2023 dates and 2024-2026 implementation period. Future funding and project timeline is central to this lead service line grant opportunity.",
+      "keywords_present": [
+        "Lead Service Line",
+        "Lead testing"
+      ],
+      "keywords_absent": []
+    },
+    "email_132": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Before/after lead level comparison for Oak Street block (2020 vs 2023). Temporal comparison showing LSL replacement impact over 3 years is the analytical focus.",
+      "keywords_present": [
+        "lead",
+        "lead levels"
+      ],
+      "keywords_absent": []
+    },
+    "email_133": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Multi-year progress report with year-by-year tables spanning 2019-2023. Annual tracking of lead replacements, water quality, and budget over 5 years is the organizing structure.",
+      "keywords_present": [
+        "lead",
+        "Lead Program"
+      ],
+      "keywords_absent": []
+    },
+    "email_134": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "12-month countdown reminder to October 2024 LCRR deadline with future milestones through 2037. Regulatory timeline and upcoming compliance dates are the central focus.",
+      "keywords_present": [
+        "Lead and Copper Rule",
+        "lead service lines"
+      ],
+      "keywords_absent": []
+    },
+    "email_135": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Request to revisit sites last sampled pre-COVID (Q1 2020). Temporal gap in lead testing (3+ years since last sample) due to pandemic pause is the core concern.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_136": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "2024 community meeting schedule with quarterly dates tied to program milestones (5-year anniversary, October deadline). Future outreach timeline for lead program updates.",
+      "keywords_present": [
+        "lead",
+        "Lead Program"
+      ],
+      "keywords_absent": []
+    },
+    "email_137": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Year-end 2023 summary with historical comparison to 2019 program start. Temporal framing (current year accomplishments vs program inception) is the organizing principle.",
+      "keywords_present": [
+        "lead",
+        "Lead Program",
+        "lead levels"
+      ],
+      "keywords_absent": []
+    },
+    "email_138": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Neighborhood prioritization timeline for 2024-2026 with quarterly and annual targets. Future three-year phased lead replacement schedule is the central planning element.",
+      "keywords_present": [
+        "lead",
+        "LSL"
+      ],
+      "keywords_absent": []
+    },
+    "email_139": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Post-COVID return-to-testing observations comparing pre-COVID (2019-early 2020) to post-COVID (July 2020-present) lead sampling patterns. Pandemic-defined temporal periods frame the analysis.",
+      "keywords_present": [
+        "lead",
+        "lead levels"
+      ],
+      "keywords_absent": []
+    },
+    "email_140": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "5-year contractor performance review (2019-2023) with phase-by-phase annual summaries. Historical partnership timeline for lead service line replacement is the core subject.",
+      "keywords_present": [
+        "lead",
+        "Lead Service Line",
+        "LSL"
+      ],
+      "keywords_absent": []
+    },
+    "email_141": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Budget projections spanning FY2025-FY2030 for lead program. Future six-year financial planning with annual projections is the central forecasting focus.",
+      "keywords_present": [
+        "lead",
+        "Lead Program"
+      ],
+      "keywords_absent": []
+    },
+    "email_142": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Retrospective look at April 2019 program launch with original emails from that month. Historical founding moment documentation marks the program's temporal origin.",
+      "keywords_present": [
+        "lead",
+        "lead service line"
+      ],
+      "keywords_absent": []
+    },
+    "email_143": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "1,000th LSL replacement milestone announcement with year-by-year journey (2019-2023). Historical milestone achievement and cumulative progress timeline is the celebration focus.",
+      "keywords_present": [
+        "lead",
+        "Lead Service Line"
+      ],
+      "keywords_absent": []
+    },
+    "email_144": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "Action level exceedance trend analysis spanning 2018-2023 (6 years). Year-over-year historical comparison showing lead testing improvement trajectory is the analytical focus.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": []
+    },
+    "email_145": {
+      "responsive": true,
+      "challenge_type": "TEMPORAL_REFERENCE",
+      "buried_in_thread": false,
+      "reasoning": "LCRR implementation timeline discussion with completed, upcoming, and future requirements through 2037. Regulatory compliance timeline milestones for lead program are the central structure.",
+      "keywords_present": [
+        "Lead and Copper Rule",
+        "lead service lines",
+        "LSL"
+      ],
+      "keywords_absent": []
+    },
+    "email_146": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Standard HR orientation scheduling email with no connection to lead, water contamination, or related topics.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water",
+        "infrastructure"
+      ]
+    },
+    "email_147": {
+      "responsive": true,
+      "challenge_type": "BURIED_IN_THREAD",
+      "buried_in_thread": true,
+      "reasoning": "Responsive content buried in HR orientation thread. References 'what happened in Michigan and New Jersey' (Flint/Newark crises), 'infrastructure of concern', and 'older plumbing' - all indirect references to lead contamination without using the word 'lead'. Buried at position 2 of 4 in thread.",
+      "keywords_present": [
+        "Michigan",
+        "New Jersey",
+        "infrastructure",
+        "older plumbing"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_148": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Simple schedule adjustment confirmation with no connection to lead topics.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_149": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Brief thank-you message with no substantive content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_150": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Automated IT ticket confirmation with no connection to lead topics.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_151": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. IT technician asking for clarification about GIS access request. No substantive lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_152": {
+      "responsive": true,
+      "challenge_type": "BURIED_IN_THREAD",
+      "buried_in_thread": true,
+      "reasoning": "Responsive content buried in IT access thread. User explains need for 'pre-1950 infrastructure layers', 'pipe materials that caused the problems in Flint and Newark', and 'houses built before 1950'. Clear indirect reference to lead service lines without using 'lead'. Buried at position 3 of 3 in thread.",
+      "keywords_present": [
+        "pre-1950",
+        "Flint",
+        "Newark",
+        "pipe materials",
+        "infrastructure"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_153": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Employee vacation request with no connection to lead topics.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_154": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Manager asking about coverage needs with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_155": {
+      "responsive": true,
+      "challenge_type": "BURIED_IN_THREAD",
+      "buried_in_thread": true,
+      "reasoning": "Responsive content buried in vacation request thread. Uses heavy technical jargon: 'Tier 1 site sampling', 'quarterly LCR round', 'confirmed LSL addresses', '6-hour stagnation', 'first-draw samples', '90th percentile calculation', 'pre-1945 area'. All are lead-specific regulatory terminology without spelling out 'lead'. Buried at position 3 of 5 in thread.",
+      "keywords_present": [
+        "Tier 1",
+        "LCR",
+        "LSL",
+        "first-draw",
+        "90th percentile"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_156": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Vacation approval with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_157": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Brief thank-you acknowledgment with no substantive content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_158": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Facilities announcement about parking lot closure with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_159": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Employee asking about construction purpose with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_160": {
+      "responsive": true,
+      "challenge_type": "BURIED_IN_THREAD",
+      "buried_in_thread": true,
+      "reasoning": "Responsive content buried in parking lot thread. Explains building from 1948 has 'water service connection' with 'same type [of material] you folks have been removing from homes' that 'can leach into drinking water'. Indirect reference to lead pipe replacement without using 'lead'. Buried at position 3 of 4 in thread.",
+      "keywords_present": [
+        "1948",
+        "water service connection",
+        "leach",
+        "drinking water",
+        "removing from homes"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_161": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Brief acknowledgment message with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_162": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Budget office reminder about amendment deadlines with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_163": {
+      "responsive": true,
+      "challenge_type": "BURIED_IN_THREAD",
+      "buried_in_thread": true,
+      "reasoning": "Responsive content buried in budget thread. Heavy technical jargon: 'LSL program', 'CCT optimization study', 'Tier 1 sites', 'elevated 90th percentile values', '8-12 ppb range, trending toward AL', 'enhanced monitoring requirements under LCRR'. All lead-specific regulatory terminology. Buried at position 2 of 3 in thread.",
+      "keywords_present": [
+        "LSL",
+        "CCT",
+        "Tier 1",
+        "90th percentile",
+        "ppb",
+        "AL",
+        "LCRR"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_164": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Budget office confirmation about amendment process with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_165": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Community event announcement about fall fair booth assignments with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_166": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Parks department confirming booth participation with trees and trail maps - no lead connection.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_167": {
+      "responsive": true,
+      "challenge_type": "BURIED_IN_THREAD",
+      "buried_in_thread": true,
+      "reasoning": "Responsive content buried in community fair thread. Discusses 'protecting families from old plumbing in pre-war homes', 'service line replacement program', 'news coverage about Michigan and Newark', 'prevent similar situations'. Indirect reference to lead issues. Buried at position 3 of 5 in thread.",
+      "keywords_present": [
+        "old plumbing",
+        "pre-war homes",
+        "Michigan",
+        "Newark",
+        "service line replacement"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_168": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Event schedule update with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_169": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Fire department booth confirmation with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_170": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Accounts payable invoice notification with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_171": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Project manager requesting documentation with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_172": {
+      "responsive": true,
+      "challenge_type": "BURIED_IN_THREAD",
+      "buried_in_thread": true,
+      "reasoning": "Responsive content buried in invoice thread. Contractor documentation uses technical jargon: 'NSF/ANSI 61, Pb-free', 'GRR replacements', 'LSL replacements', 'certified Pb-free per LCRR requirements', 'EPA hazmat guidelines' for disposal. All lead-specific terminology. Buried at position 3 of 4 in thread.",
+      "keywords_present": [
+        "Pb-free",
+        "GRR",
+        "LSL",
+        "LCRR",
+        "NSF/ANSI 61",
+        "hazmat"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_173": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Brief invoice approval confirmation with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_174": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Meeting cancellation notice with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_175": {
+      "responsive": true,
+      "challenge_type": "BURIED_IN_THREAD",
+      "buried_in_thread": true,
+      "reasoning": "Responsive content buried in meeting reschedule thread. Uses technical jargon: '90th percentile trending upward', '9.8 ppb', 'trigger level under LCRR', 'adjust orthophosphate dosing', 'accelerate LSL work'. All lead-specific regulatory and treatment terminology. Buried at position 2 of 3 in thread.",
+      "keywords_present": [
+        "90th percentile",
+        "ppb",
+        "LCRR",
+        "orthophosphate",
+        "LSL"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_176": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Meeting confirmation with no lead-related content beyond acknowledging prior message.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_177": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. New employee welcome announcement with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_178": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. First week schedule overview with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_179": {
+      "responsive": true,
+      "challenge_type": "BURIED_IN_THREAD",
+      "buried_in_thread": true,
+      "reasoning": "Responsive content buried in new employee welcome thread. Training description includes 'dull gray color and soft texture that indicates the problematic materials', 'crisis in Flint and all the problems in Newark', and physical identification test. Indirect reference to lead pipe identification. Buried at position 3 of 4 in thread.",
+      "keywords_present": [
+        "gray color",
+        "problematic materials",
+        "Flint",
+        "Newark"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_180": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. New employee acknowledgment with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_181": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Fleet services vehicle availability inquiry with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "water"
+      ]
+    },
+    "email_182": {
+      "responsive": true,
+      "challenge_type": "BURIED_IN_THREAD",
+      "buried_in_thread": true,
+      "reasoning": "Responsive content buried in vehicle request thread. Mentions 'pre-1950 neighborhoods', 'material concerns like they had in Newark', and door-to-door sampling. Indirect reference to lead service line investigation. Buried at position 2 of 4 in thread.",
+      "keywords_present": [
+        "pre-1950",
+        "Newark",
+        "material concerns",
+        "sampling"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_183": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Vehicle assignment confirmation with no lead-related content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_184": {
+      "responsive": false,
+      "challenge_type": null,
+      "buried_in_thread": false,
+      "reasoning": "Non-responsive thread context. Brief thank-you message with no substantive content.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_185": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Uses 'lead' multiple times but exclusively about committee leadership assignments. 'James will lead', 'Diana continues to lead', 'take the lead' - all refer to leading/managing committees, not lead contamination.",
+      "keywords_present": [
+        "lead",
+        "leadership"
+      ],
+      "keywords_absent": [
+        "contamination",
+        "water",
+        "ppb",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_186": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "HR training program about leadership development. 'Leading through change', 'aspire to lead', 'lead departments' - all about professional development and management skills.",
+      "keywords_present": [
+        "lead",
+        "leading",
+        "leaders"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_187": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "IT project leadership discussion. 'Lead the IT Modernization project', 'led a similar initiative', 'lead the vendor selection committee' - all about project management.",
+      "keywords_present": [
+        "lead",
+        "led"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_188": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Strategic planning retreat roles. 'Councilmember Garcia will lead', 'co-lead', 'leadership in these sessions' - about facilitation and session leadership.",
+      "keywords_present": [
+        "lead",
+        "leadership"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_189": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Project management for permit system. 'Taking the lead', 'I'll lead with IT support', 'lead your respective workstreams' - all about project coordination roles.",
+      "keywords_present": [
+        "lead",
+        "leading"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_190": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Training workshop reminder. 'Leading Effective Meetings', 'lead meetings that stay on track', 'lead difficult discussions' - about meeting facilitation skills.",
+      "keywords_present": [
+        "lead",
+        "leading"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_191": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Declining volunteer committee role. 'Lead the Employee Wellness Committee', 'She led the holiday party planning' - about committee leadership.",
+      "keywords_present": [
+        "lead",
+        "led"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_192": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Council motion about lead agency designation for housing study. 'Lead agency', 'Lead coordination', 'lead by example' - administrative/governmental term for primary responsible agency.",
+      "keywords_present": [
+        "lead",
+        "lead agency"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_193": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Department head meeting agenda. 'Leadership transitions', 'I'll lead', 'looking for someone to lead' - about organizational leadership and meeting facilitation.",
+      "keywords_present": [
+        "lead",
+        "leadership"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_194": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "IT software rollout project leads. 'Project leads', 'Patricia Williams (lead)', 'ability to lead change' - assigning project coordinators for software implementation.",
+      "keywords_present": [
+        "lead",
+        "leads"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_195": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Mayor's thank you note for leadership. 'Outstanding leadership', 'city has led the region', 'led by example', 'proud to lead this organization' - appreciation for organizational leadership.",
+      "keywords_present": [
+        "lead",
+        "led",
+        "leaders",
+        "leadership"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_196": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "IT recruitment for Lead Developer position. 'Lead Developer position', 'lead a team', 'led technical teams', 'lead candidate' - software development job title and candidate qualifications.",
+      "keywords_present": [
+        "lead",
+        "led"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_197": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Volunteer group leads for cleanup event. 'Group leads', 'Lead a team', 'Lead by example' - volunteer coordination roles for community event.",
+      "keywords_present": [
+        "lead",
+        "leads"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_198": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Police shift lead assignments. 'Shift lead', 'Patterson will lead nights', 'Lead officers' - police supervisory positions and shift assignments.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_199": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Budget lead contact designations. 'Budget lead', 'Lead departmental budget preparation', 'personally lead' - finance/budget coordination roles.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_200": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Emergency management lead agency designations. 'Lead agency for wildfire response', 'taking the lead on evacuations', 'lead overall EOC operations' - emergency response coordination roles.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "contamination",
+        "pipes",
+        "testing",
+        "ppb"
+      ]
+    },
+    "email_201": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Staff book club about leadership. 'Leading with Empathy' book title, 'those who lead', 'aspires to lead' - book discussion about management and empathy.",
+      "keywords_present": [
+        "lead",
+        "leading"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_202": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Internship mentor assignments. 'Lead mentor', 'lead the mentorship program', 'lead our internship program' - mentor coordinator roles.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_203": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Public works crew lead meeting. 'Crew leads', 'each lead to report', 'Every crew needs a lead' - supervisor meeting for field operations.",
+      "keywords_present": [
+        "lead",
+        "leads"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_204": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "General Plan consultant selection. 'Lead consultant', 'lead all public engagement', 'ability to lead complex processes' - hiring decision for planning consultant.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_205": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Youth soccer coach recruitment. 'Lead coaches', 'leading practices', 'leading games', 'want to lead' - volunteer coaching positions for youth sports.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_206": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Union leadership election results. 'Newly elected leadership team', 'lead overall union operations', 'leaders will lead us' - labor union officer elections.",
+      "keywords_present": [
+        "lead",
+        "leaders",
+        "leadership"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_207": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Grant application lead department needed. 'Take the lead on the application', 'Lead coordination', 'who can lead' - assigning responsibility for grant submission.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_208": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Wellness walking group volunteers. 'Lead walkers', 'Patricia leads', 'willingness to lead' - coordinator roles for employee walking group.",
+      "keywords_present": [
+        "lead",
+        "leads"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_209": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Task force leadership discussion. 'Who should lead the task force', 'she led similar efforts', 'eager to lead something high-profile' - assigning downtown revitalization leader.",
+      "keywords_present": [
+        "lead",
+        "led"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_210": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Crisis communications protocol. 'Lead PIO protocol', 'Leads media briefings', 'lead must be clearly identified' - public information officer coordination.",
+      "keywords_present": [
+        "lead",
+        "leads",
+        "leading"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_211": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "HR workshop on difficult conversations. 'Leading Difficult Conversations', 'lead performance discussions', 'lead with confidence' - supervisor training.",
+      "keywords_present": [
+        "lead",
+        "leading"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_212": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Art Walk event lead artists. 'Lead artists', 'Maria Santos will lead', 'who could lead' - artist coordinator roles for cultural event.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_213": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "New supervisor training module. 'Leading Your First Team', 'transition from being led to leading', 'how did they grow as a leader' - management development curriculum.",
+      "keywords_present": [
+        "lead",
+        "leading",
+        "leader"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_214": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Building evacuation warden assignments. 'Lead warden', 'leading evacuation', 'who will lead for your department' - emergency evacuation coordinator roles.",
+      "keywords_present": [
+        "lead",
+        "leads"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_215": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Employee Resource Group leaders. 'ERG leads', 'Patricia offered to lead', 'want to lead an ERG' - employee affinity group coordinator roles.",
+      "keywords_present": [
+        "lead",
+        "leads"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_216": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Police accreditation review. 'Lead assessor', 'Lead the on-site review team', 'Garcia will lead' - accreditation process coordinator roles.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_217": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Strategic goal champions assignment. 'Who will lead each strategic goal', 'Chief Williams to lead', 'Champions lead quarterly reporting' - strategic planning accountability.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_218": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Bus operator recognition theme. 'Lead by example', 'Lead positive interactions', 'simply lead through their actions' - employee recognition about exemplary behavior.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_219": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Animal shelter adoption event volunteers. 'Lead volunteers', 'leading their area', 'want to lead' - volunteer coordinator roles for pet adoption event.",
+      "keywords_present": [
+        "lead",
+        "leads"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_220": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Code enforcement zone lead assignments. 'Zone lead', 'Martinez to lead', 'needs a strong lead' - geographic supervisor assignments for inspectors.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_221": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Summer camp counselor training. 'Lead counselor', 'Lead a group', 'every lead needs to be trained' - youth program supervisor roles.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_222": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Council committee staff assignments. 'Lead staff assignments', 'Budget Director leads support', 'leads a committee' - legislative staff support coordination.",
+      "keywords_present": [
+        "lead",
+        "leads"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_223": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Sustainability project leads. 'Who will lead this effort', 'Maria offered to lead', 'want to lead a sustainability project' - environmental initiative coordinator roles.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "contamination",
+        "pipes",
+        "testing",
+        "ppb"
+      ]
+    },
+    "email_224": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Procurement lead buyer training. 'Lead buyers', 'Leading purchases over $10,000', 'Lead buyers who don't complete training' - purchasing department senior roles.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_225": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Commission chair leadership retreat. 'You lead your respective commissions', 'Lead productive meetings', 'Leading in Public Service' - volunteer board leadership training.",
+      "keywords_present": [
+        "lead",
+        "leading"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_226": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Tech Champions program. 'Tech lead', 'Lead adoption of new technologies', 'nominate your lead' - IT change management coordinator roles.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_227": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Toolbox talk leaders schedule. 'Kevin leads', 'someone to lead', 'lead at least one toolbox talk' - safety meeting facilitator rotation.",
+      "keywords_present": [
+        "lead",
+        "leads"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_228": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Customer service representative recognition. 'Lead Representative of the Quarter', 'leads in call resolution', 'leads by example' - employee recognition for performance.",
+      "keywords_present": [
+        "lead",
+        "leads"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_229": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Multi-agency emergency exercise. 'Lead agency assignments', 'Fire to lead rescue', 'support whoever is designated to lead' - incident command roles for drill.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "contamination",
+        "pipes",
+        "testing",
+        "ppb"
+      ]
+    },
+    "email_230": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Parks maintenance crew lead vacancy. 'Crew Lead position', 'Leading a crew', 'want to lead, apply' - field supervisor job posting.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_231": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Permit counter lead schedule. 'Counter lead schedule', 'Patricia leads Monday-Wednesday', 'need a lead at all times' - customer service supervisor rotation.",
+      "keywords_present": [
+        "lead",
+        "leads"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_232": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Fire Prevention Week lead inspectors. 'Lead inspector assignments', 'Captain Martinez to lead', 'want to lead the community events' - fire marshal program coordinator roles.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_233": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Budget kickoff meeting. 'Department budget leads', 'Finance leads this section', 'each lead presents' - fiscal year budget process coordination.",
+      "keywords_present": [
+        "lead",
+        "leads"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_234": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Neighborhood council leadership training. 'Leadership training', 'lead your neighborhood council', 'led for years' - volunteer board officer development.",
+      "keywords_present": [
+        "lead",
+        "led",
+        "leadership"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_235": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Contract negotiations lead designations. 'Lead negotiator', 'Finance is lead', 'who your lead will be' - procurement negotiation roles.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_236": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Small Business Saturday lead business needed. 'Lead business to anchor', 'Lead the marketing campaign', 'Being the lead offers great exposure' - business partner coordination.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_237": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Performance review guidance. 'Lead by example', 'Lead with specific feedback', 'Lead staff should be reviewed first' - HR management guidance.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_238": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "CDBG grant application lead. 'Lead the application effort', 'Rachel led last year's application', 'who will lead this effort' - grant writing coordination.",
+      "keywords_present": [
+        "lead",
+        "led"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_239": {
+      "responsive": false,
+      "challenge_type": "KEYWORD_FALSE_POSITIVE",
+      "buried_in_thread": false,
+      "reasoning": "Fleet Lead Driver Program. 'Lead Driver Program', 'Leading in safe driving', 'Past lead drivers' - vehicle operator recognition and safety program.",
+      "keywords_present": [
+        "lead"
+      ],
+      "keywords_absent": [
+        "water",
+        "contamination",
+        "pipes",
+        "testing"
+      ]
+    },
+    "email_240": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Copper action level exceedance - discusses copper contamination and corrosion, not lead. Tests whether embeddings can distinguish between different metal contaminants.",
+      "keywords_present": [
+        "copper",
+        "water",
+        "corrosion",
+        "contamination"
+      ],
+      "keywords_absent": [
+        "lead",
+        "LSL",
+        "LCR"
+      ]
+    },
+    "email_241": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Copper service line replacement - about copper pipes with pinhole leaks and elevated copper levels, not lead service lines.",
+      "keywords_present": [
+        "copper",
+        "service line",
+        "pipes"
+      ],
+      "keywords_absent": [
+        "lead"
+      ]
+    },
+    "email_242": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Copper corrosion mitigation program - discusses pH adjustment and copper levels, similar to lead programs but specifically about copper contamination.",
+      "keywords_present": [
+        "copper",
+        "corrosion",
+        "water quality"
+      ],
+      "keywords_absent": [
+        "lead"
+      ]
+    },
+    "email_243": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Copper sampling results - laboratory results for copper testing, parallel structure to lead testing but different contaminant.",
+      "keywords_present": [
+        "copper",
+        "sampling",
+        "action level"
+      ],
+      "keywords_absent": [
+        "lead"
+      ]
+    },
+    "email_244": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Customer complaint about blue water from copper leaching - classic copper corrosion symptom, not lead-related.",
+      "keywords_present": [
+        "copper",
+        "water",
+        "plumbing"
+      ],
+      "keywords_absent": [
+        "lead"
+      ]
+    },
+    "email_245": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Total coliform bacteria detection - urgent water quality issue but about biological contamination, not lead.",
+      "keywords_present": [
+        "coliform",
+        "bacteria",
+        "water quality"
+      ],
+      "keywords_absent": [
+        "lead",
+        "metal",
+        "pipes"
+      ]
+    },
+    "email_246": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Follow-up on coliform testing - repeat samples clear. Bacterial contamination topic, not lead.",
+      "keywords_present": [
+        "coliform",
+        "sampling",
+        "chlorine"
+      ],
+      "keywords_absent": [
+        "lead"
+      ]
+    },
+    "email_247": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Sanitary survey findings from state - discusses tank vents and well security, general water system inspection not related to lead.",
+      "keywords_present": [
+        "water",
+        "contamination",
+        "well"
+      ],
+      "keywords_absent": [
+        "lead",
+        "pipes",
+        "service line"
+      ]
+    },
+    "email_248": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Boil water advisory due to pressure loss - precautionary measure for potential bacterial contamination after main break, not lead-related.",
+      "keywords_present": [
+        "water",
+        "advisory",
+        "main break"
+      ],
+      "keywords_absent": [
+        "lead"
+      ]
+    },
+    "email_249": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Legionella investigation at city buildings - bacterial contamination in hot water systems, different contamination type than lead.",
+      "keywords_present": [
+        "water",
+        "contamination",
+        "testing"
+      ],
+      "keywords_absent": [
+        "lead",
+        "pipes",
+        "service line"
+      ]
+    },
+    "email_250": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Chlorine residual complaints - water quality issue about disinfection, not metal contamination.",
+      "keywords_present": [
+        "water",
+        "chlorine",
+        "treatment"
+      ],
+      "keywords_absent": [
+        "lead",
+        "pipes"
+      ]
+    },
+    "email_251": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Chlorine dosing adjustment - disinfection operations, different water quality concern than lead.",
+      "keywords_present": [
+        "chlorine",
+        "treatment",
+        "water quality"
+      ],
+      "keywords_absent": [
+        "lead"
+      ]
+    },
+    "email_252": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Trihalomethane (TTHM) disinfection byproduct results - regulated contaminant but not lead. Tests specificity.",
+      "keywords_present": [
+        "water quality",
+        "MCL",
+        "compliance"
+      ],
+      "keywords_absent": [
+        "lead",
+        "pipes"
+      ]
+    },
+    "email_253": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Disinfection system upgrade proposal - chlorine gas to sodium hypochlorite conversion, operational improvement unrelated to lead.",
+      "keywords_present": [
+        "water",
+        "treatment",
+        "safety"
+      ],
+      "keywords_absent": [
+        "lead",
+        "pipes",
+        "contamination"
+      ]
+    },
+    "email_254": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Customer complaint about chlorine smell - water heater bacteria issue causing chloramine odor, not lead-related.",
+      "keywords_present": [
+        "water",
+        "chlorine"
+      ],
+      "keywords_absent": [
+        "lead"
+      ]
+    },
+    "email_255": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Arsenic levels trend analysis - different metal contaminant, similar regulatory structure (MCL) but not lead.",
+      "keywords_present": [
+        "arsenic",
+        "water",
+        "MCL",
+        "contamination"
+      ],
+      "keywords_absent": [
+        "lead"
+      ]
+    },
+    "email_256": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Arsenic treatment alternatives study - engineering analysis for arsenic removal, tests whether embeddings distinguish between different metal treatment programs.",
+      "keywords_present": [
+        "arsenic",
+        "treatment",
+        "water"
+      ],
+      "keywords_absent": [
+        "lead"
+      ]
+    },
+    "email_257": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Iron and manganese secondary contaminants - different metals causing aesthetic issues, not lead contamination.",
+      "keywords_present": [
+        "iron",
+        "manganese",
+        "water quality"
+      ],
+      "keywords_absent": [
+        "lead"
+      ]
+    },
+    "email_258": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Brown/rusty water complaint - iron/manganese sediment issue, different from lead contamination.",
+      "keywords_present": [
+        "water",
+        "sediment",
+        "mineral"
+      ],
+      "keywords_absent": [
+        "lead"
+      ]
+    },
+    "email_259": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Chromium-6 monitoring requirements - different regulated contaminant with its own MCL, not lead.",
+      "keywords_present": [
+        "chromium",
+        "MCL",
+        "water",
+        "monitoring"
+      ],
+      "keywords_absent": [
+        "lead"
+      ]
+    },
+    "email_260": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Major water main break - infrastructure emergency about cast iron main failure, not about lead contamination.",
+      "keywords_present": [
+        "water",
+        "main",
+        "infrastructure",
+        "pipes"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_261": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Main break repair update - describes corrosion failure of cast iron, mentions pipe age/vintage but not lead-specific.",
+      "keywords_present": [
+        "water",
+        "main",
+        "corrosion",
+        "pipes"
+      ],
+      "keywords_absent": [
+        "lead",
+        "testing",
+        "levels"
+      ]
+    },
+    "email_262": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Water main replacement priority list - infrastructure planning by break history and age, not lead service line replacement.",
+      "keywords_present": [
+        "main",
+        "replacement",
+        "infrastructure"
+      ],
+      "keywords_absent": [
+        "lead",
+        "service line",
+        "LSL"
+      ]
+    },
+    "email_263": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Valve exercising program - asset management for distribution valves, infrastructure maintenance unrelated to lead.",
+      "keywords_present": [
+        "infrastructure",
+        "valves",
+        "water"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_264": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Fire hydrant flow test results - fire protection infrastructure, not about lead or water quality.",
+      "keywords_present": [
+        "water",
+        "hydrant",
+        "infrastructure"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_265": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Sewer main cleaning schedule - wastewater infrastructure, not drinking water or lead contamination.",
+      "keywords_present": [
+        "infrastructure",
+        "cleaning"
+      ],
+      "keywords_absent": [
+        "lead",
+        "water quality",
+        "drinking water"
+      ]
+    },
+    "email_266": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Sanitary sewer overflow event - wastewater spill, different utility system entirely from drinking water lead issues.",
+      "keywords_present": [
+        "water",
+        "contamination"
+      ],
+      "keywords_absent": [
+        "lead",
+        "drinking water",
+        "pipes"
+      ]
+    },
+    "email_267": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Wastewater treatment plant upgrade - sewer system construction project, not drinking water infrastructure.",
+      "keywords_present": [
+        "treatment",
+        "infrastructure"
+      ],
+      "keywords_absent": [
+        "lead",
+        "drinking water"
+      ]
+    },
+    "email_268": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Industrial pretreatment permit violation - wastewater/discharge issue, not drinking water lead contamination.",
+      "keywords_present": [
+        "permit",
+        "violation"
+      ],
+      "keywords_absent": [
+        "lead",
+        "drinking water"
+      ]
+    },
+    "email_269": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Combined utility bill format - administrative/billing issue, no connection to lead contamination.",
+      "keywords_present": [
+        "water",
+        "utility"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_270": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Storm drain cleaning - stormwater infrastructure, different system from drinking water.",
+      "keywords_present": [
+        "water",
+        "cleaning"
+      ],
+      "keywords_absent": [
+        "lead",
+        "drinking water",
+        "contamination"
+      ]
+    },
+    "email_271": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "MS4 stormwater permit annual report - stormwater regulatory compliance, not drinking water lead issues.",
+      "keywords_present": [
+        "water",
+        "permit",
+        "compliance"
+      ],
+      "keywords_absent": [
+        "lead",
+        "drinking water"
+      ]
+    },
+    "email_272": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Low impact development stormwater requirements - land use/stormwater management, not drinking water quality.",
+      "keywords_present": [
+        "water",
+        "development"
+      ],
+      "keywords_absent": [
+        "lead",
+        "drinking water",
+        "contamination"
+      ]
+    },
+    "email_273": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Green infrastructure master plan - stormwater/urban runoff management, different water system than drinking water.",
+      "keywords_present": [
+        "water",
+        "infrastructure"
+      ],
+      "keywords_absent": [
+        "lead",
+        "drinking water",
+        "contamination"
+      ]
+    },
+    "email_274": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Flooding report from storm - drainage/stormwater emergency, not drinking water or lead contamination.",
+      "keywords_present": [
+        "water",
+        "storm"
+      ],
+      "keywords_absent": [
+        "lead",
+        "drinking water",
+        "contamination"
+      ]
+    },
+    "email_275": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Drought response Stage 2 trigger analysis - water supply/conservation issue, not water quality or lead contamination.",
+      "keywords_present": [
+        "water",
+        "supply"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_276": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Water conservation tips - customer outreach about water use reduction, not about lead or water quality.",
+      "keywords_present": [
+        "water"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "quality"
+      ]
+    },
+    "email_277": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Water conservation progress report - demand management metrics, not water quality or lead issues.",
+      "keywords_present": [
+        "water"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_278": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Park irrigation variance request - water use/conservation matter, not lead contamination.",
+      "keywords_present": [
+        "water"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "quality"
+      ]
+    },
+    "email_279": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Drought restrictions relaxation recommendation - water supply management, not water quality or lead.",
+      "keywords_present": [
+        "water",
+        "supply"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_280": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Rate study preliminary results - utility finance/rate setting, though mentions infrastructure it's not about lead specifically.",
+      "keywords_present": [
+        "water",
+        "infrastructure"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_281": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "High bill complaint - customer service success story about leak detection, not lead contamination.",
+      "keywords_present": [
+        "water",
+        "meter"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "quality"
+      ]
+    },
+    "email_282": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "Water treatment operator job posting - HR/staffing matter, not lead contamination.",
+      "keywords_present": [
+        "water",
+        "treatment"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination"
+      ]
+    },
+    "email_283": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "SCADA system upgrade - IT/operational technology matter, not water quality or lead.",
+      "keywords_present": [
+        "water"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_284": {
+      "responsive": false,
+      "challenge_type": "ADJACENT_TOPIC",
+      "buried_in_thread": false,
+      "reasoning": "AWWA conference recap - general industry discussion, mentions various topics but not lead specifically.",
+      "keywords_present": [
+        "water"
+      ],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_285": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Benefits/HR matter - employee insurance and health plans, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_286": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "HR performance management - employee evaluation process, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_287": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "New employee announcement - routine HR onboarding, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_288": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Employee retirement celebration - personnel matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_289": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Mandatory compliance training - HR/legal requirement, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_290": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Holiday schedule announcement - administrative matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_291": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Telework policy - HR/administrative policy, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_292": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Employee assistance program - benefits matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_293": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Union contract ratification - labor relations matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_294": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Employee wellness program - HR initiative, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_295": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "IT security - password management, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_296": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Email system maintenance - IT infrastructure, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_297": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Cybersecurity awareness - IT security training, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_298": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Computer equipment deployment - IT matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_299": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Microsoft Teams training - IT/software matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_300": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Network issue resolution - IT infrastructure, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_301": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "GIS system launch - IT/mapping system, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_302": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Cybersecurity training - IT security, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_303": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Parking permit administration - facilities matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_304": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Records retention policy - administrative/legal matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_305": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Office supply ordering - administrative procurement, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_306": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Dress code policy - HR/administrative matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_307": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Building access/security - facilities matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_308": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "City vehicle policy - fleet management, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_309": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Mail services - administrative operations, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_310": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Facility renovation - building maintenance, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_311": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Payroll administration - finance/HR matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_312": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Budget process - general finance matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_313": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Purchasing card policy - finance/procurement, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_314": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Expense reimbursement - finance policy, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_315": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Fiscal year-end procedures - accounting matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_316": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Budget adoption announcement - general finance, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_317": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Annual financial audit - accounting/compliance, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_318": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Petty cash procedures - finance matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_319": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Employee social event - recreation/morale, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_320": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Blood drive announcement - community health event, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_321": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Charitable campaign - community/employee giving, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_322": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Food drive - charitable event, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_323": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Holiday celebration - employee event, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_324": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Employee recreation - sports team, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_325": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "HVAC maintenance - building systems, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_326": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Fire safety drill - emergency preparedness, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_327": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Elevator maintenance - building equipment, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_328": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Pest control - facility maintenance, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_329": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Cleaning services - janitorial matter, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_330": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Earthquake drill - emergency preparedness, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_331": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Workers compensation - risk management, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_332": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Contract authority - legal/administrative, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_333": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Insurance renewal - risk management, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_334": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Social media policy - communications/HR, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_335": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Ethics policy - gift restrictions, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_336": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Website launch - communications/IT, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_337": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Media relations protocol - communications, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_338": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Newsletter content request - communications, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    },
+    "email_339": {
+      "responsive": false,
+      "challenge_type": "TRUE_NEGATIVE",
+      "buried_in_thread": false,
+      "reasoning": "Open meeting law compliance - legal/governance, unrelated to water or lead.",
+      "keywords_present": [],
+      "keywords_absent": [
+        "lead",
+        "contamination",
+        "testing"
+      ]
+    }
+  },
   "metadata": {
-    "total_responsive": 0,
-    "total_non_responsive": 0,
+    "total_responsive": 155,
+    "total_non_responsive": 184,
     "by_challenge_type": {
-      "DIRECT_MATCH": 0,
-      "AMBIGUOUS_TERMS": 0,
-      "INDIRECT_REFERENCE": 0,
-      "TECHNICAL_JARGON": 0,
-      "TEMPORAL_REFERENCE": 0,
-      "BURIED_IN_THREAD": 0,
-      "KEYWORD_FALSE_POSITIVE": 0,
-      "ADJACENT_TOPIC": 0,
-      "TRUE_NEGATIVE": 0
+      "DIRECT_MATCH": 30,
+      "AMBIGUOUS_TERMS": 30,
+      "INDIRECT_REFERENCE": 35,
+      "TECHNICAL_JARGON": 25,
+      "TEMPORAL_REFERENCE": 25,
+      "BURIED_IN_THREAD": 10,
+      "KEYWORD_FALSE_POSITIVE": 55,
+      "ADJACENT_TOPIC": 45,
+      "TRUE_NEGATIVE": 55
     }
   }
 }
