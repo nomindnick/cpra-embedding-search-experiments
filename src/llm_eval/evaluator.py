@@ -335,7 +335,8 @@ def evaluate_evidence_extraction(
         "no_content_response": False,
     }
 
-    if "NO RELEVANT CONTENT" in response.upper():
+    response_upper = response.upper()
+    if "NO RELEVANT CONTENT" in response_upper or response_upper.strip() == "NONE":
         metrics["no_content_response"] = True
         return None, metrics
 
@@ -442,28 +443,26 @@ def evaluate_example_generation(
 def evaluate_keyword_extraction(
     response: str,
 ) -> tuple[bool | None, dict[str, Any]]:
-    """Evaluate keyword extraction response.
+    """Evaluate keyword/search term extraction response.
 
     Returns (None, metrics) - no correct/incorrect for this task
     """
     metrics: dict[str, Any] = {}
 
-    # Check for expected sections
-    metrics["has_keywords"] = bool(re.search(r"keywords?:", response, re.IGNORECASE))
-    metrics["has_entities"] = bool(re.search(r"entit", response, re.IGNORECASE))
-    metrics["has_acronyms"] = bool(re.search(r"acronym", response, re.IGNORECASE))
+    # Count bullet items (- item format)
+    bullet_items = re.findall(r"^-\s+(.+)$", response, re.MULTILINE)
+    metrics["term_count"] = len(bullet_items)
 
-    # Count extracted items
-    keywords_match = re.search(r"keywords?:\s*(.+?)(?:\n|$)", response, re.IGNORECASE)
-    if keywords_match:
-        keywords = [k.strip() for k in keywords_match.group(1).split(",")]
-        metrics["keyword_count"] = len([k for k in keywords if k])
-    else:
-        metrics["keyword_count"] = 0
+    # Check if terms have annotations (term (description) format)
+    annotated_items = [item for item in bullet_items if "(" in item and ")" in item]
+    metrics["annotated_count"] = len(annotated_items)
 
-    metrics["format_complete"] = all(
-        [metrics["has_keywords"], metrics["has_entities"], metrics["has_acronyms"]]
-    )
+    # Check for "related words" section (grouped terms)
+    has_related = bool(re.search(r"related\s+words?", response, re.IGNORECASE))
+    metrics["has_related_words"] = has_related
+
+    # Basic quality: at least 3 terms extracted
+    metrics["meets_minimum"] = len(bullet_items) >= 3
 
     return None, metrics
 
@@ -559,9 +558,43 @@ class LLMEvaluator:
         if task.task_type in (
             TaskType.PARAPHRASE_GENERATION,
             TaskType.EXAMPLE_GENERATION,
+            TaskType.KEYWORD_EXTRACTION,
         ):
             # These tasks don't need per-document evaluation
-            if task.task_type == TaskType.PARAPHRASE_GENERATION:
+            if task.task_type == TaskType.KEYWORD_EXTRACTION:
+                # Extract search terms from request (run once)
+                prompt = task.format_prompt(request_text=request_text)
+                try:
+                    response, latency = model.generate(
+                        prompt, system_prompt=task.system_prompt
+                    )
+                    _, metrics = evaluate_keyword_extraction(response)
+                    results.append(
+                        TaskResult(
+                            task_name=task.name,
+                            model_name=model.model_name,
+                            document_id=None,
+                            expected=None,
+                            response=response,
+                            latency=latency,
+                            correct=None,
+                            metrics=metrics,
+                        )
+                    )
+                except Exception as e:
+                    results.append(
+                        TaskResult(
+                            task_name=task.name,
+                            model_name=model.model_name,
+                            document_id=None,
+                            expected=None,
+                            response="",
+                            latency=0,
+                            correct=None,
+                            error=str(e),
+                        )
+                    )
+            elif task.task_type == TaskType.PARAPHRASE_GENERATION:
                 prompt = task.format_prompt(request_text=request_text)
                 try:
                     response, latency = model.generate(
@@ -654,8 +687,6 @@ class LLMEvaluator:
                         correct, metrics = evaluate_evidence_extraction(
                             response, email.text
                         )
-                    elif task.task_type == TaskType.KEYWORD_EXTRACTION:
-                        correct, metrics = evaluate_keyword_extraction(response)
                     else:
                         correct, metrics = None, {}
 
@@ -797,15 +828,15 @@ class LLMEvaluator:
                 generation_scores.append((model.model_name, avg_score, avg_lat))
 
             # Extraction score
-            ext_tasks = ["Evidence Extraction", "Keyword Extraction"]
+            ext_tasks = ["Evidence Extraction", "Search Term Extraction"]
             ext_scores_list = []
             ext_latencies = []
             for task_name in ext_tasks:
                 if task_name in summary:
                     if "avg_extraction_accuracy" in summary[task_name]:
                         ext_scores_list.append(summary[task_name]["avg_extraction_accuracy"])
-                    elif "avg_format_complete" in summary[task_name]:
-                        ext_scores_list.append(summary[task_name]["avg_format_complete"])
+                    elif "avg_meets_minimum" in summary[task_name]:
+                        ext_scores_list.append(summary[task_name]["avg_meets_minimum"])
                     ext_latencies.append(summary[task_name].get("avg_latency", 0))
 
             if ext_scores_list:

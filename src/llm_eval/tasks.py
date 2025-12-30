@@ -108,6 +108,83 @@ ANSWER:""",
     evaluator_fn="evaluate_binary_classification",
 )
 
+# Classification task: Multi-shot with 6 examples covering challenge types
+CLASSIFICATION_MULTI_SHOT = Task(
+    task_type=TaskType.CLASSIFICATION_BINARY,
+    name="Multi-Shot Binary Classification",
+    description="Classify document as responsive YES or NO using 6 examples covering challenge types",
+    system_prompt=None,  # Self-contained prompt with examples
+    prompt_template="""You are classifying documents under the California Public Records Act (CPRA).
+
+A document is RESPONSIVE if it contains information related to what the requester asked for.
+A document is NON-RESPONSIVE if it has no information related to the request.
+
+Important:
+- A document can be RESPONSIVE even if it does not use the exact words from the request. Look for contextual clues and related concepts.
+- A document is NON-RESPONSIVE if it merely shares vocabulary or general topic area but is about a different specific subject.
+- Words can have multiple meanings. Focus on the meaning relevant to the request.
+
+===
+EXAMPLE 1
+
+REQUEST: All records about the Smith construction project.
+
+DOCUMENT: Email from John to Mary, 3/15/24. Subject: "Smith project delay." Body: "The contractor said materials won't arrive until next week."
+
+ANSWER: YES
+===
+EXAMPLE 2
+
+REQUEST: All records about the Smith construction project.
+
+DOCUMENT: Email from John to Mary, 3/18/24. Subject: "Lunch Friday?" Body: "Want to grab lunch at the new Thai place?"
+
+ANSWER: NO
+===
+EXAMPLE 3 (indirect reference — no keywords, but contextually related)
+
+REQUEST: All records about the Smith construction project.
+
+DOCUMENT: Email from Susan to Contractor, 3/19/24. Subject: "Oak Street timeline." Body: "The owner is asking when the framing will be done at 445 Oak. Can you send an updated schedule?"
+
+ANSWER: YES
+===
+EXAMPLE 4 (adjacent topic — similar domain, different subject)
+
+REQUEST: All records about the Smith construction project.
+
+DOCUMENT: Email from Facilities to Board, 3/20/24. Subject: "Capital Projects Update." Body: "The Johnson Elementary roof replacement is on schedule. HVAC upgrade bids are due next week."
+
+ANSWER: NO
+===
+EXAMPLE 5 (word with multiple meanings — wrong meaning)
+
+REQUEST: All records about the Smith construction project.
+
+DOCUMENT: Email from HR, 3/21/24. Subject: "Smith promoted." Body: "Please congratulate Jane Smith on her promotion to lead project manager for IT services."
+
+ANSWER: NO
+===
+EXAMPLE 6 (partial relevance — mentioned among other topics)
+
+REQUEST: All records about the Smith construction project.
+
+DOCUMENT: Email from Susan to John, 3/20/24. Subject: "Budget meeting." Body: "Reminder about tomorrow's meeting. We'll cover Smith project overruns and the new HVAC contract."
+
+ANSWER: YES
+===
+NOW CLASSIFY THIS DOCUMENT
+
+REQUEST:
+{request_text}
+
+DOCUMENT:
+{document_text}
+
+ANSWER:""",
+    evaluator_fn="evaluate_binary_classification",
+)
+
 # Classification task: Ternary with confidence
 CLASSIFICATION_TERNARY = Task(
     task_type=TaskType.CLASSIFICATION_TERNARY,
@@ -182,29 +259,31 @@ EVIDENCE_EXTRACTION = Task(
     task_type=TaskType.EVIDENCE_EXTRACTION,
     name="Evidence Extraction",
     description="Extract verbatim quotes supporting responsiveness",
-    system_prompt=(
-        "You are evaluating documents under the California Public Records Act (CPRA). "
-        "Your task is to identify specific evidence that shows a document is responsive. "
-        "Always quote exactly from the source document."
-    ),
-    prompt_template="""You are evaluating whether a document must be disclosed under the California Public Records Act (CPRA).
+    system_prompt=None,  # Self-contained prompt with example
+    prompt_template="""Extract passages from this document that relate to the public records request. Copy text EXACTLY as written—do not paraphrase or summarize.
 
-A document is RESPONSIVE if it contains information reasonably related to what the requester asked for.
+===
+EXAMPLE
 
-REQUEST:
-{request_text}
+REQUEST: Records about water main breaks on Elm Street.
 
-DOCUMENT:
-{document_text}
+DOCUMENT: From: Mike. To: Repairs. Date: 3/15/24. Subject: Elm St update. Body: "The 6-inch main at Elm and 3rd failed overnight. Crew arrived 6am, isolated the break by 8am. Approximately 12 customers affected. Unrelated: the Oak Street paving project starts Monday."
 
-If this document contains information relevant to the request, extract 1-3 verbatim quotes from the document that demonstrate relevance. Each quote must appear exactly in the document above.
+EVIDENCE:
+- "The 6-inch main at Elm and 3rd failed overnight"
+- "Crew arrived 6am, isolated the break by 8am"
+- "Approximately 12 customers affected"
 
-If the document is not relevant, respond with: NO RELEVANT CONTENT
+===
+NOW EXTRACT FROM THIS DOCUMENT
 
-Format your response as:
-QUOTE 1: "exact quote from document"
-QUOTE 2: "exact quote from document"
-(etc.)""",
+REQUEST: {request_text}
+
+DOCUMENT: {document_text}
+
+If this document has no relevant content, respond with only: NONE
+
+EVIDENCE:""",
     evaluator_fn="evaluate_evidence_extraction",
 )
 
@@ -213,20 +292,27 @@ PARAPHRASE_GENERATION = Task(
     task_type=TaskType.PARAPHRASE_GENERATION,
     name="Paraphrase Generation",
     description="Generate diverse paraphrases of a request",
-    system_prompt=(
-        "You are an expert at reformulating search queries and document requests. "
-        "Generate diverse paraphrases that capture the same information need."
-    ),
-    prompt_template="""The following is a California Public Records Act (CPRA) request:
+    system_prompt=None,  # Self-contained prompt with example
+    prompt_template="""Rewrite this public records request 5 different ways. Each version should ask for the same records but use different words.
 
-{request_text}
+===
+EXAMPLE
 
-Generate 5 semantically different paraphrases of this request. Each paraphrase should:
-- Capture the same information need
-- Use different vocabulary and phrasing
-- Be a complete, standalone request
+ORIGINAL: All emails about the Smith construction project.
 
-Output exactly 5 paraphrases, numbered 1-5, one per line.""",
+PARAPHRASES:
+1. Correspondence regarding the Smith building project
+2. Email communications related to Smith construction work
+3. Messages discussing the construction project for Smith
+4. Electronic mail concerning Smith's construction activities
+5. Any emails mentioning the Smith construction job
+
+===
+NOW PARAPHRASE THIS REQUEST
+
+ORIGINAL: {request_text}
+
+PARAPHRASES:""",
     evaluator_fn="evaluate_paraphrase_generation",
 )
 
@@ -235,31 +321,34 @@ EXAMPLE_GENERATION_POSITIVE = Task(
     task_type=TaskType.EXAMPLE_GENERATION,
     name="Positive Example Generation",
     description="Generate realistic responsive document examples",
-    system_prompt=(
-        "You are an expert at generating realistic email content for document "
-        "retrieval testing. Generate plausible emails that would appear in a "
-        "government agency's email system."
-    ),
-    prompt_template="""The following is a California Public Records Act (CPRA) request:
+    system_prompt=None,  # Self-contained prompt with example
+    prompt_template="""Write a realistic work email that would be responsive to this public records request. Do not use obvious keywords—show relevance through context.
 
-{request_text}
+===
+EXAMPLE
 
-A document is RESPONSIVE if it contains information reasonably related to what the requester asked for.
+REQUEST: All records about lead contamination in the water system.
 
-Generate a realistic email that WOULD be responsive to this request.
+EMAIL:
+From: Sarah Chen <schen@citywater.gov>
+To: Operations Team <ops@citywater.gov>
+Date: March 15, 2024
+Subject: Pre-1950 service line replacements - Q2 schedule
 
-Requirements:
-- Include realistic From, To, Subject fields
-- The email should clearly contain information relevant to the request
-- Make it sound like a real internal government email
-- Length: 100-250 words for the body
+Team,
 
-Format:
-From: [email]
-To: [email]
-Subject: [subject]
+We need to prioritize the Oakwood neighborhood replacements this quarter. Most homes there were built in the 1940s and still have original plumbing. Three residents have already requested testing after the news coverage last month.
 
-[body]""",
+I've attached the prioritization matrix based on construction date and complaint history. Let's discuss at Thursday's meeting.
+
+Sarah
+
+===
+NOW GENERATE AN EMAIL
+
+REQUEST: {request_text}
+
+EMAIL:""",
     evaluator_fn="evaluate_example_generation",
 )
 
@@ -268,63 +357,75 @@ EXAMPLE_GENERATION_NEGATIVE = Task(
     task_type=TaskType.EXAMPLE_GENERATION,
     name="Negative Example Generation",
     description="Generate realistic non-responsive document examples",
-    system_prompt=(
-        "You are an expert at generating realistic email content for document "
-        "retrieval testing. Generate plausible emails that would appear in a "
-        "government agency's email system."
-    ),
-    prompt_template="""The following is a California Public Records Act (CPRA) request:
+    system_prompt=None,  # Self-contained prompt with example
+    prompt_template="""Write a realistic work email that is NOT responsive to this public records request, but might be confused for responsive because it shares some vocabulary or general topic.
 
-{request_text}
+===
+EXAMPLE
 
-A document is NON-RESPONSIVE if it contains no information related to the request.
+REQUEST: All records about lead contamination in the water system.
 
-Generate a realistic email that is RELATED TO but NOT responsive to this request.
-This should be a plausible false positive - something that might seem relevant but isn't.
+EMAIL:
+From: James Wu <jwu@citywater.gov>
+To: HR Department <hr@citywater.gov>
+Date: March 18, 2024
+Subject: Lead Engineer Position - Interview Panel
 
-Requirements:
-- Include realistic From, To, Subject fields
-- The email should be about a related topic but NOT actually responsive to the request
-- Examples of non-responsive but confusing content:
-  - Keywords used in different contexts
-  - Adjacent topics in the same domain
-  - Administrative content tangentially related
-- Length: 100-250 words for the body
+Hi HR,
 
-Format:
-From: [email]
-To: [email]
-Subject: [subject]
+I'd like to recommend Maria Torres and Kevin Park for the interview panel for our open Lead Engineer position. Both have experience evaluating technical candidates.
 
-[body]""",
+Can we target next Wednesday for first-round interviews? The water infrastructure team is eager to fill this role before the summer project season.
+
+Thanks,
+James
+
+===
+NOW GENERATE AN EMAIL
+
+REQUEST: {request_text}
+
+EMAIL:""",
     evaluator_fn="evaluate_example_generation",
 )
 
-# Keyword extraction task
+# Search term extraction task (from request, not document)
 KEYWORD_EXTRACTION = Task(
     task_type=TaskType.KEYWORD_EXTRACTION,
-    name="Keyword Extraction",
-    description="Extract relevant keywords and entities from text",
-    system_prompt=(
-        "You are an expert at identifying key terms, entities, and concepts "
-        "in documents. Extract precise, relevant terms."
-    ),
-    prompt_template="""You are identifying terms in a document that relate to a California Public Records Act (CPRA) request.
+    name="Search Term Extraction",
+    description="Extract search terms from a public records request",
+    system_prompt=None,  # Self-contained prompt with examples
+    prompt_template="""Extract search terms from this public records request that could help find relevant documents.
 
-REQUEST:
-{request_text}
+===
+EXAMPLE
 
-DOCUMENT:
-{document_text}
+REQUEST: All emails from 2023 about the Smith Elementary roof replacement project, including communications with ABC Roofing contractors.
 
-Extract keywords and entities from this document that are relevant to the request.
+SEARCH TERMS:
+- Smith Elementary (school name)
+- roof replacement (project type)
+- ABC Roofing (contractor)
+- 2023 (time period)
+- roofing, contractor, construction, repair (related words)
 
-Organize your extraction as:
-KEYWORDS: [comma-separated list of important terms]
-ENTITIES: [comma-separated list of people, organizations, places, projects]
-ACRONYMS: [comma-separated list of abbreviations with their meanings]
+===
+EXAMPLE
 
-Only include terms that actually appear in or are directly implied by the document.""",
+REQUEST: Records of complaints about water quality in the Oakwood neighborhood.
+
+SEARCH TERMS:
+- Oakwood (neighborhood)
+- water quality (subject)
+- complaint, concern, issue, problem (related words)
+- contamination, testing, results, sample (related words)
+
+===
+NOW EXTRACT SEARCH TERMS
+
+REQUEST: {request_text}
+
+SEARCH TERMS:""",
     evaluator_fn="evaluate_keyword_extraction",
 )
 
@@ -333,6 +434,7 @@ Only include terms that actually appear in or are directly implied by the docume
 TASKS = {
     "classification_binary": CLASSIFICATION_BINARY,
     "classification_few_shot": CLASSIFICATION_FEW_SHOT,
+    "classification_multi_shot": CLASSIFICATION_MULTI_SHOT,
     "classification_ternary": CLASSIFICATION_TERNARY,
     "json_output": JSON_OUTPUT,
     "evidence_extraction": EVIDENCE_EXTRACTION,
@@ -348,6 +450,7 @@ TASK_CATEGORIES = {
     "classification": [
         "classification_binary",
         "classification_few_shot",
+        "classification_multi_shot",
         "classification_ternary",
         "json_output",
     ],

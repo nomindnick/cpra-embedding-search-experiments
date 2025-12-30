@@ -61,7 +61,7 @@ This is the "what do we try next?" plan for pushing **precision up** while keepi
 
 **Goal:** Identify which local LLMs to use for which tasks in subsequent experiments. Different models excel at different tasks (classification vs generation vs extraction), and latency matters when processing 339+ documents.
 
-**Models to evaluate:**
+**Models to evaluate (available via Ollama):**
 
 | Model | Size | Notes |
 |-------|------|-------|
@@ -83,17 +83,22 @@ This is the "what do we try next?" plan for pushing **precision up** while keepi
 | ministral-3:14b | 14B | Mistral large |
 | llama3:8b-instruct-q5_K_M | 8B | Meta |
 | gpt-oss:20b | 20B | Largest available |
+| olmo-3:7b | 7B | Allen AI open model |
+| functiongemma:270m | 270M | Function calling specialist |
 
 **Tasks to evaluate:**
 
-1. **Classification (binary)** — Given document + request, output YES/NO
-2. **Classification (ternary + confidence)** — Output yes/no/maybe with confidence 0-100
-3. **JSON format compliance** — Can it output valid, parseable JSON?
-4. **Evidence extraction** — Can it quote verbatim from the document?
-5. **Generation (paraphrases)** — Generate 5 diverse paraphrases of a request
-6. **Generation (examples)** — Generate realistic responsive/non-responsive emails
-7. **Extraction (keywords)** — Extract relevant keywords/entities from text
-8. **Latency** — Time per task (critical for corpus-scale processing)
+1. **Classification (few-shot)** — ⭐ BEST APPROACH: Few-shot examples + YES/NO output
+2. **Classification (binary)** — Zero-shot YES/NO (baseline comparison)
+3. **Classification (ternary + confidence)** — Output yes/no/maybe with confidence 0-100
+4. **JSON format compliance** — Can it output valid, parseable JSON?
+5. **Evidence extraction** — Can it quote verbatim from the document?
+6. **Generation (paraphrases)** — Generate 5 diverse paraphrases of a request
+7. **Generation (examples)** — Generate realistic responsive/non-responsive emails
+8. **Extraction (keywords)** — Extract relevant keywords/entities from text
+9. **Latency** — Time per task (critical for corpus-scale processing)
+
+**Early finding:** Few-shot prompting dramatically improves classification (85% vs 60-70% zero-shot on qwen3:0.6b). Use `classification_few_shot` task for all future classification work.
 
 **Evaluation approach:**
 
@@ -118,7 +123,7 @@ This is the "what do we try next?" plan for pushing **precision up** while keepi
 
 **Expected outcome:** Identify 3-5 models to focus on for subsequent experiments, with clear guidance on which to use for which task type.
 
-**Status:** Pending
+**Status:** In Progress — qwen3:0.6b (85% few-shot), deepseek-r1:1.5b (not recommended) complete. See `LLM_Capability_Assessment.md` for detailed results.
 
 ---
 
@@ -475,6 +480,8 @@ Cross-encoders failed because they were trained for different relevance signals.
 
 **Hypothesis:** LLM verification on a candidate set increases precision while preserving recall if we bias toward "include."
 
+**Note from EXP-000:** Few-shot prompting dramatically improves classification accuracy (85% vs 60-70% zero-shot). Consider using few-shot approach for the verifier prompt instead of zero-shot structured output.
+
 **Method:**
 
 **Stage 1 (high recall):** Retrieve candidate set using mpnet (threshold tuned for ≥98% recall, or top_k=250)
@@ -516,7 +523,7 @@ IMPORTANT: If you answer "yes" or "maybe", you MUST include at least one verbati
 - Which challenge types does it incorrectly reject (risk to recall)?
 - Tokens/time per document
 
-**Models to test:** qwen2.5:7b, llama3.2:3b, mistral:7b, phi3:medium
+**Models to test:** qwen3:8b, gemma3:4b, ministral-3:8b, phi4-mini:3.8b, granite3.3:8b
 
 **Status:** Pending
 
@@ -691,12 +698,35 @@ All experiment prompts should use these fields dynamically:
 
 ### Available Local LLMs (via Ollama)
 
-Models to test for verification/generation tasks:
-- `qwen2.5:7b` — Good reasoning, efficient
-- `llama3.2:3b` — Fast, decent quality
-- `mistral:7b` — Strong general performance
-- `phi3:medium` — Microsoft's efficient model
-- `gemma2:9b` — Google's latest
+**Generative models for verification/generation tasks:**
+- `qwen3:8b` — Strong reasoning, flagship Qwen
+- `qwen3:1.7b` — Fast, good quality
+- `qwen3:0.6b` — Ultra-fast for simple tasks
+- `gemma3:12b` — Google's latest, larger
+- `gemma3:4b` — Google's latest, efficient
+- `gemma2:2b` — Previous gen, fast
+- `phi4-mini:3.8b` — Microsoft's efficient model
+- `phi4-mini-reasoning:3.8b` — Reasoning-focused variant
+- `phi3:mini` — Previous gen, stable
+- `granite3.3:8b` — IBM, good for structured output
+- `granite3.3:2b` — IBM, fast
+- `deepseek-r1:8b` — Reasoning-focused
+- `deepseek-r1:1.5b` — Fast reasoning
+- `ministral-3:14b` — Mistral large
+- `ministral-3:8b` — Mistral medium
+- `ministral-3:3b` — Mistral small/fast
+- `llama3:8b-instruct-q5_K_M` — Meta, instruction-tuned
+- `gpt-oss:20b` — Largest available
+- `olmo-3:7b` — Allen AI open model
+- `functiongemma:270m` — Function calling specialist
+
+**Embedding models (also available):**
+- `qwen3-embedding:8b` — Qwen embedding large
+- `qwen3-embedding:4b` — Qwen embedding medium
+- `qwen3-embedding:0.6b` — Qwen embedding fast
+- `embeddinggemma:300m` — Gemma-based embeddings
+- `nomic-embed-text` — Efficient text embeddings
+- `mxbai-embed-large` — Strong MTEB performer
 
 ### Embedding Models with Cached Results
 
