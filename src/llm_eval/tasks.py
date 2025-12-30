@@ -39,21 +39,72 @@ CLASSIFICATION_BINARY = Task(
     name="Binary Classification",
     description="Classify document as responsive YES or NO",
     system_prompt=(
-        "You are a legal document reviewer evaluating documents for a California "
-        "Public Records Act (CPRA) request. Your task is to determine if documents "
-        "are responsive (should be disclosed) or not. Be precise and follow "
-        "instructions exactly."
+        "You are evaluating whether a document must be disclosed under the "
+        "California Public Records Act (CPRA). Be precise and follow instructions exactly."
     ),
-    prompt_template="""CPRA REQUEST:
+    prompt_template="""You are evaluating whether a document must be disclosed under the California Public Records Act (CPRA).
+
+A document is RESPONSIVE if it contains information reasonably related to what the requester asked for. It does not need to match the request exactly—if the document's content falls within the scope of the request, it is responsive.
+
+A document is NON-RESPONSIVE if it contains no information related to the request.
+
+Do not consider exemptions or privileges—only whether the document relates to the request.
+
+REQUEST:
 {request_text}
 
-DOCUMENT TO EVALUATE:
+DOCUMENT:
 {document_text}
 
-Is this document RESPONSIVE to the CPRA request?
-A document is responsive if it contains information that would need to be disclosed.
+Is this document RESPONSIVE to the request? Answer YES or NO.""",
+    evaluator_fn="evaluate_binary_classification",
+)
 
-Answer with exactly one word: YES or NO""",
+# Classification task: Binary with few-shot examples
+CLASSIFICATION_FEW_SHOT = Task(
+    task_type=TaskType.CLASSIFICATION_BINARY,
+    name="Few-Shot Binary Classification",
+    description="Classify document as responsive YES or NO using few-shot examples",
+    system_prompt=None,  # Self-contained prompt with examples
+    prompt_template="""You are classifying documents under the California Public Records Act (CPRA).
+
+A document is RESPONSIVE if it contains information related to what the requester asked for.
+A document is NON-RESPONSIVE if it has no information related to the request.
+
+===
+EXAMPLE 1
+
+REQUEST: All emails about the Smith construction project.
+
+DOCUMENT: Email from John to Mary, dated 3/15/24. Subject: "Smith project delay." Body: "The contractor said materials won't arrive until next week."
+
+ANSWER: YES
+===
+EXAMPLE 2
+
+REQUEST: All emails about the Smith construction project.
+
+DOCUMENT: Email from John to Mary, dated 3/18/24. Subject: "Lunch Friday?" Body: "Want to grab lunch at the new Thai place?"
+
+ANSWER: NO
+===
+EXAMPLE 3
+
+REQUEST: All emails about the Smith construction project.
+
+DOCUMENT: Email from Susan to John, dated 3/20/24. Subject: "Budget meeting." Body: "Reminder about tomorrow's budget meeting. We'll cover Smith project overruns and the new HVAC contract."
+
+ANSWER: YES
+===
+NOW CLASSIFY THIS DOCUMENT
+
+REQUEST:
+{request_text}
+
+DOCUMENT:
+{document_text}
+
+ANSWER:""",
     evaluator_fn="evaluate_binary_classification",
 )
 
@@ -63,19 +114,24 @@ CLASSIFICATION_TERNARY = Task(
     name="Ternary Classification with Confidence",
     description="Classify as yes/no/maybe with confidence score",
     system_prompt=(
-        "You are a legal document reviewer evaluating documents for a California "
-        "Public Records Act (CPRA) request. Your task is to determine if documents "
-        "are responsive (should be disclosed) or not. Be precise and follow "
-        "instructions exactly."
+        "You are evaluating whether a document must be disclosed under the "
+        "California Public Records Act (CPRA). Be precise and follow instructions exactly."
     ),
-    prompt_template="""CPRA REQUEST:
+    prompt_template="""You are evaluating whether a document must be disclosed under the California Public Records Act (CPRA).
+
+A document is RESPONSIVE if it contains information reasonably related to what the requester asked for. It does not need to match the request exactly—if the document's content falls within the scope of the request, it is responsive.
+
+A document is NON-RESPONSIVE if it contains no information related to the request.
+
+Use MAYBE if the document is borderline or you are uncertain.
+
+Do not consider exemptions or privileges—only whether the document relates to the request.
+
+REQUEST:
 {request_text}
 
-DOCUMENT TO EVALUATE:
+DOCUMENT:
 {document_text}
-
-Determine if this document is RESPONSIVE to the CPRA request.
-A document is responsive if it contains information that would need to be disclosed.
 
 Respond with exactly two lines:
 Line 1: Your classification (exactly one of: YES, NO, or MAYBE)
@@ -93,16 +149,25 @@ JSON_OUTPUT = Task(
     name="JSON Structured Output",
     description="Output classification in valid JSON format",
     system_prompt=(
-        "You are a legal document reviewer. Always respond with valid JSON only, "
+        "You are evaluating whether a document must be disclosed under the "
+        "California Public Records Act (CPRA). Always respond with valid JSON only, "
         "no other text before or after the JSON."
     ),
-    prompt_template="""CPRA REQUEST:
+    prompt_template="""You are evaluating whether a document must be disclosed under the California Public Records Act (CPRA).
+
+A document is RESPONSIVE if it contains information reasonably related to what the requester asked for. It does not need to match the request exactly—if the document's content falls within the scope of the request, it is responsive.
+
+A document is NON-RESPONSIVE if it contains no information related to the request.
+
+Do not consider exemptions or privileges—only whether the document relates to the request.
+
+REQUEST:
 {request_text}
 
-DOCUMENT TO EVALUATE:
+DOCUMENT:
 {document_text}
 
-Analyze this document and respond with a JSON object containing:
+Respond with a JSON object containing:
 - "responsive": "yes", "no", or "maybe"
 - "confidence": number from 0 to 100
 - "category": one of "direct_match", "indirect_reference", "keyword_false_positive", "adjacent_topic", "unrelated"
@@ -118,19 +183,21 @@ EVIDENCE_EXTRACTION = Task(
     name="Evidence Extraction",
     description="Extract verbatim quotes supporting responsiveness",
     system_prompt=(
-        "You are a legal document reviewer. Your task is to identify specific "
-        "evidence in documents that supports their relevance to a records request. "
+        "You are evaluating documents under the California Public Records Act (CPRA). "
+        "Your task is to identify specific evidence that shows a document is responsive. "
         "Always quote exactly from the source document."
     ),
-    prompt_template="""CPRA REQUEST:
+    prompt_template="""You are evaluating whether a document must be disclosed under the California Public Records Act (CPRA).
+
+A document is RESPONSIVE if it contains information reasonably related to what the requester asked for.
+
+REQUEST:
 {request_text}
 
-DOCUMENT TO EVALUATE:
+DOCUMENT:
 {document_text}
 
-If this document contains information relevant to the CPRA request, extract 1-3
-verbatim quotes from the document that demonstrate relevance. Each quote must
-appear exactly in the document above.
+If this document contains information relevant to the request, extract 1-3 verbatim quotes from the document that demonstrate relevance. Each quote must appear exactly in the document above.
 
 If the document is not relevant, respond with: NO RELEVANT CONTENT
 
@@ -150,7 +217,8 @@ PARAPHRASE_GENERATION = Task(
         "You are an expert at reformulating search queries and document requests. "
         "Generate diverse paraphrases that capture the same information need."
     ),
-    prompt_template="""Original CPRA request:
+    prompt_template="""The following is a California Public Records Act (CPRA) request:
+
 {request_text}
 
 Generate 5 semantically different paraphrases of this request. Each paraphrase should:
@@ -172,10 +240,13 @@ EXAMPLE_GENERATION_POSITIVE = Task(
         "retrieval testing. Generate plausible emails that would appear in a "
         "government agency's email system."
     ),
-    prompt_template="""CPRA REQUEST:
+    prompt_template="""The following is a California Public Records Act (CPRA) request:
+
 {request_text}
 
-Generate a realistic email that WOULD be responsive to this CPRA request.
+A document is RESPONSIVE if it contains information reasonably related to what the requester asked for.
+
+Generate a realistic email that WOULD be responsive to this request.
 
 Requirements:
 - Include realistic From, To, Subject fields
@@ -202,10 +273,13 @@ EXAMPLE_GENERATION_NEGATIVE = Task(
         "retrieval testing. Generate plausible emails that would appear in a "
         "government agency's email system."
     ),
-    prompt_template="""CPRA REQUEST:
+    prompt_template="""The following is a California Public Records Act (CPRA) request:
+
 {request_text}
 
-Generate a realistic email that is RELATED TO but NOT responsive to this CPRA request.
+A document is NON-RESPONSIVE if it contains no information related to the request.
+
+Generate a realistic email that is RELATED TO but NOT responsive to this request.
 This should be a plausible false positive - something that might seem relevant but isn't.
 
 Requirements:
@@ -235,13 +309,15 @@ KEYWORD_EXTRACTION = Task(
         "You are an expert at identifying key terms, entities, and concepts "
         "in documents. Extract precise, relevant terms."
     ),
-    prompt_template="""CPRA REQUEST:
+    prompt_template="""You are identifying terms in a document that relate to a California Public Records Act (CPRA) request.
+
+REQUEST:
 {request_text}
 
 DOCUMENT:
 {document_text}
 
-Extract keywords and entities from this document that are relevant to the CPRA request.
+Extract keywords and entities from this document that are relevant to the request.
 
 Organize your extraction as:
 KEYWORDS: [comma-separated list of important terms]
@@ -256,6 +332,7 @@ Only include terms that actually appear in or are directly implied by the docume
 # All tasks for evaluation
 TASKS = {
     "classification_binary": CLASSIFICATION_BINARY,
+    "classification_few_shot": CLASSIFICATION_FEW_SHOT,
     "classification_ternary": CLASSIFICATION_TERNARY,
     "json_output": JSON_OUTPUT,
     "evidence_extraction": EVIDENCE_EXTRACTION,
@@ -270,6 +347,7 @@ TASKS = {
 TASK_CATEGORIES = {
     "classification": [
         "classification_binary",
+        "classification_few_shot",
         "classification_ternary",
         "json_output",
     ],
