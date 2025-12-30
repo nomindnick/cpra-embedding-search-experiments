@@ -1,6 +1,6 @@
 # EXP-000: Local LLM Capability Assessment
 
-> Last updated: 2025-12-29 (qwen3:0.6b, deepseek-r1:1.5b complete; few-shot approach validated)
+> Last updated: 2025-12-30 (qwen3 family + gemma2:2b complete)
 
 **Goal:** Identify which local LLMs to use for which tasks in subsequent experiments. Different models excel at different tasks (classification vs generation vs extraction), and latency matters when processing 339+ documents.
 
@@ -12,18 +12,24 @@
 
 **Different models prefer different prompt approaches.** Testing revealed:
 
-| Model | Best Approach | Accuracy | Latency |
-|-------|---------------|----------|---------|
-| qwen3:0.6b | Few-shot | **85%** | 4.23s |
-| qwen3:1.7b | Zero-shot binary | **85%** | 13.33s |
-| deepseek-r1:1.5b | Few-shot | 65% | 10.79s |
+| Model | Size | Best Approach | Accuracy | Latency |
+|-------|------|---------------|----------|---------|
+| qwen3:0.6b | 522 MB | Few-shot | 85% | 4.2s |
+| qwen3:1.7b | 1.4 GB | Zero-shot | 85% | 13.3s |
+| qwen3:8b | 5.2 GB | Zero-shot | **95%** | 45.6s |
+| gemma2:2b | 1.6 GB | Ternary | **90%** ⭐ | **2.2s** |
+| deepseek-r1:1.5b | 1.1 GB | Few-shot | 65% | 10.8s |
 
-**Key insight:** Few-shot helps smaller models but can hurt larger ones. qwen3:1.7b had 25% parse errors with few-shot, suggesting it "overthinks" the examples.
+**Key insight:** Optimal prompt strategy varies dramatically by model family:
+- **qwen:** Larger models prefer zero-shot; smaller prefer few-shot
+- **gemma2:** Ternary format (YES/NO/MAYBE + confidence) works best — 90% @ 2.2s!
+- Multi-shot (6 annotated examples) helps gemma2 (+15% over few-shot) but hurts qwen
 
 **Recommendations:**
-- **qwen3:0.6b:** Use `classification_few_shot` — best accuracy AND fastest
-- **qwen3:1.7b:** Use `classification_binary` — few-shot causes parse errors
-- **Test both approaches** when evaluating new models
+- **gemma2:2b:** Use `classification_ternary` — **90% @ 2.2s** (best speed/accuracy!)
+- **qwen3:8b:** Use `classification_binary` or `classification_ternary` — 95% (if latency acceptable)
+- **qwen3:0.6b:** Use `classification_few_shot` — 85% @ 4.2s
+- **Test multiple approaches** when evaluating new models — results vary dramatically
 
 ---
 
@@ -33,39 +39,39 @@ Quick reference for model recommendations by task type. Updated as testing progr
 
 ### Classification Tasks
 
-| Model | Few-Shot | Binary | Ternary | JSON | Latency (s) | Notes |
-|-------|----------|--------|---------|------|-------------|-------|
-| qwen3:0.6b | **85%** | 70% | 50% | 85% | 4.23s | Few-shot is best |
-| qwen3:1.7b | 60% | **85%** | — | 80% | 16.17s | Binary is best; few-shot hurts! |
-| qwen3:8b | — | — | — | — | — | Pending |
-| gemma3:4b | — | — | — | — | — | Pending |
-| gemma3:12b | — | — | — | — | — | Pending |
-| gemma2:2b | — | — | — | — | — | Pending |
-| phi4-mini:3.8b | — | — | — | — | — | Pending |
-| phi4-mini-reasoning:3.8b | — | — | — | — | — | Pending |
-| phi3:mini | — | — | — | — | — | Pending |
-| granite3.3:2b | — | — | — | — | — | Pending |
-| granite3.3:8b | — | — | — | — | — | Pending |
-| deepseek-r1:1.5b | 65% | 50% | — | 55% | 13.11s | NOT REC: Few-shot helps but still poor |
-| deepseek-r1:8b | — | — | — | — | — | Pending |
-| ministral-3:3b | — | — | — | — | — | Pending |
-| ministral-3:8b | — | — | — | — | — | Pending |
-| ministral-3:14b | — | — | — | — | — | Pending |
-| llama3:8b-instruct-q5_K_M | — | — | — | — | — | Pending |
-| gpt-oss:20b | — | — | — | — | — | Pending |
-| olmo-3:7b | — | — | — | — | — | Pending |
-| functiongemma:270m | — | — | — | — | — | Pending |
+| Model | Few-Shot | Multi-Shot | Binary | Ternary | JSON | Latency (s) | Notes |
+|-------|----------|------------|--------|---------|------|-------------|-------|
+| qwen3:0.6b | **85%** | 75% | 70% | 50% | 85% | 4.2s | Few-shot is best |
+| qwen3:1.7b | 60% | — | **85%** | — | 80% | 16.2s | Binary is best; few-shot hurts! |
+| qwen3:8b | 60% | 60% | **95%** | **95%** | **95%** | 45.6s | Zero-shot is best; few-shot hurts! ⭐ |
+| gemma3:4b | — | — | — | — | — | — | Pending |
+| gemma3:12b | — | — | — | — | — | — | Pending |
+| gemma2:2b | 65% | 80% | 60% | **90%** ⭐ | 50% | 2.2s | Ternary is best! Multi-shot helps |
+| phi4-mini:3.8b | — | — | — | — | — | — | Pending |
+| phi4-mini-reasoning:3.8b | — | — | — | — | — | — | Pending |
+| phi3:mini | — | — | — | — | — | — | Pending |
+| granite3.3:2b | — | — | — | — | — | — | Pending |
+| granite3.3:8b | — | — | — | — | — | — | Pending |
+| deepseek-r1:1.5b | 65% | — | 50% | — | 55% | 13.1s | NOT REC: Few-shot helps but still poor |
+| deepseek-r1:8b | — | — | — | — | — | — | Pending |
+| ministral-3:3b | — | — | — | — | — | — | Pending |
+| ministral-3:8b | — | — | — | — | — | — | Pending |
+| ministral-3:14b | — | — | — | — | — | — | Pending |
+| llama3:8b-instruct-q5_K_M | — | — | — | — | — | — | Pending |
+| gpt-oss:20b | — | — | — | — | — | — | Pending |
+| olmo-3:7b | — | — | — | — | — | — | Pending |
+| functiongemma:270m | — | — | — | — | — | — | Pending |
 
 ### Generation Tasks
 
 | Model | Paraphrases | Examples | Diversity | Latency (s) | Notes |
 |-------|-------------|----------|-----------|-------------|-------|
-| qwen3:0.6b | 5/5 | 100% | 4.4% | 9.34s | Low diversity but correct structure |
+| qwen3:0.6b | 5/5 | 100% | 8.8% | 8.6s | Good structure |
 | qwen3:1.7b | — | — | — | — | Pending |
-| qwen3:8b | — | — | — | — | Pending |
+| qwen3:8b | 5/5 | 100%* | 15.9% | 106s | Higher diversity; *timeouts on neg examples |
 | gemma3:4b | — | — | — | — | Pending |
 | gemma3:12b | — | — | — | — | Pending |
-| gemma2:2b | — | — | — | — | Pending |
+| gemma2:2b | 0/5 | 50%* | — | 17s | Failed paraphrase; *neg only works |
 | phi4-mini:3.8b | — | — | — | — | Pending |
 | phi4-mini-reasoning:3.8b | — | — | — | — | Pending |
 | phi3:mini | — | — | — | — | Pending |
@@ -83,14 +89,14 @@ Quick reference for model recommendations by task type. Updated as testing progr
 
 ### Extraction Tasks
 
-| Model | Evidence Quotes | Keywords | Quote Accuracy | Latency (s) | Notes |
-|-------|-----------------|----------|----------------|-------------|-------|
-| qwen3:0.6b | 1.1 avg | 100% | 65% | 6.75s | Good format, some hallucinated quotes |
+| Model | Evidence Quotes | Search Terms | Quote Accuracy | Latency (s) | Notes |
+|-------|-----------------|--------------|----------------|-------------|-------|
+| qwen3:0.6b | 1.1 avg | 14 terms | 36% | 6.9s | Good format, some hallucinated quotes |
 | qwen3:1.7b | — | — | — | — | Pending |
-| qwen3:8b | — | — | — | — | Pending |
+| qwen3:8b | 2.0 avg | timeout | 29% | 56.7s | More quotes but lower accuracy; timeout on search terms |
 | gemma3:4b | — | — | — | — | Pending |
 | gemma3:12b | — | — | — | — | Pending |
-| gemma2:2b | — | — | — | — | Pending |
+| gemma2:2b | 0.6 avg | Failed | 41% | 10.6s | Conservative; search term format failed |
 | phi4-mini:3.8b | — | — | — | — | Pending |
 | phi4-mini-reasoning:3.8b | — | — | — | — | Pending |
 | phi3:mini | — | — | — | — | Pending |
@@ -111,21 +117,21 @@ Quick reference for model recommendations by task type. Updated as testing progr
 ## Recommendations (Updated as Testing Progresses)
 
 ### Best for Classification
-- **Primary:** TBD
-- **Fast alternative:** TBD
+- **Primary:** qwen3:8b (95% accuracy) — use `classification_binary` or `classification_ternary`
+- **Fast alternative:** gemma2:2b (90% accuracy, 20x faster!) — use `classification_ternary`
 
 ### Best for Generation
-- **Primary:** TBD
-- **Fast alternative:** TBD
+- **Primary:** qwen3:0.6b — fast, reliable structure, all tasks complete
+- **Fast alternative:** Same (gemma2 fails paraphrase, partial on examples)
 
 ### Best for Extraction
-- **Primary:** TBD
-- **Fast alternative:** TBD
+- **Primary:** gemma2:2b — 41% quote accuracy (best), fast
+- **Fast alternative:** qwen3:0.6b — 36% quote accuracy, also good
 
 ### Speed vs Quality Tradeoffs
-- **Fastest usable:** TBD
-- **Best quality (if time allows):** TBD
-- **Sweet spot:** TBD
+- **Fastest usable:** gemma2:2b + ternary (**90% @ 2.2s/doc**) ⭐ NEW BEST
+- **Best quality (if time allows):** qwen3:8b + zero-shot (95% @ 45s/doc)
+- **Sweet spot:** gemma2:2b + ternary — only 5pt below best, 20x faster
 
 ---
 
@@ -507,47 +513,68 @@ CONCEPTS: concept1, concept2
 
 ### qwen3:8b
 
-**Status:** Pending
+**Status:** Complete
 
-**Test Date:** —
+**Test Date:** 2025-12-30
 
 **Model Info:**
 - Parameters: 8B
-- Notes: Flagship Qwen
+- Size: 5.2 GB
+- Notes: Flagship Qwen — **best classification accuracy (95%)** but slow on CPU
 
 #### Classification Results
 
-| Doc ID | Expected | Binary | Ternary | Confidence | JSON Valid |
-|--------|----------|--------|---------|------------|------------|
-| — | — | — | — | — | — |
-
 **Summary:**
-- Binary accuracy: —/20 (—%)
-- Ternary accuracy: —/20 (—%)
-- JSON compliance: —/20 (—%)
-- Avg latency: — seconds
+- **Binary accuracy: 19/20 (95%)** — BEST overall, perfectly calibrated (0.45 predicted vs 0.50 expected)
+- **Ternary accuracy: 19/20 (95%)** — excellent, high confidence (95.5 avg)
+- **JSON accuracy: 19/20 (95%)** — 100% valid JSON
+- Few-shot accuracy: 12/20 (60%) — 25% parse errors, severe NO bias (0.13 predicted)
+- Multi-shot accuracy: 12/20 (60%) — 20% parse errors, severe NO bias (0.12 predicted)
+- Avg latency: 45.6 seconds (binary), 55.0s (few-shot), 65.7s (multi-shot)
+
+**Observations:**
+- **Zero-shot dramatically outperforms few-shot** — examples confuse this model
+- Parse errors with few-shot (25%) and multi-shot (20%) suggest model "overthinks" examples
+- Severe NO bias with examples (predicted ~0.12 vs expected ~0.35)
+- All zero-shot approaches (binary, ternary, JSON) achieve same 95% accuracy
+- ~10x slower than qwen3:0.6b on CPU
 
 #### Generation Results
 
 | Task | Output Quality | Constraints Met | Latency (s) |
 |------|----------------|-----------------|-------------|
-| Paraphrases | — | — | — |
-| Responsive example | — | — | — |
-| Non-responsive example | — | — | — |
+| Paraphrases | 5/5 generated | 100% | 116.0 |
+| Responsive example | Structure complete | 100% (118 words) | 95.6 |
+| Non-responsive example | **TIMEOUT** | — | — |
+
+**Observations:**
+- Higher paraphrase diversity (15.9%) than qwen3:0.6b (8.8%)
+- Negative example generation hit 120s timeout — model too slow for long outputs on CPU
+- Good structure compliance when it completes
 
 #### Extraction Results
 
-| Doc ID | Quotes Accurate | Keywords Relevant | Latency (s) |
-|--------|-----------------|-------------------|-------------|
-| — | — | — | — |
-
 **Summary:**
-- Quote accuracy: —%
-- Keyword relevance: —/5
+- Evidence quotes found: 2.0 average per document (more than 0.6b)
+- Quote accuracy: 29% (worse than 0.6b's 36%)
+- "No relevant content" responses: 5% of documents
+- Search term extraction: **TIMEOUT**
 
-#### Notes
+**Observations:**
+- Finds more quotes but lower accuracy — more hallucination
+- Too slow for search term extraction (120s timeout)
+- 1 error in evidence extraction task
 
-—
+#### Overall Assessment
+
+| Strength | Weakness |
+|----------|----------|
+| **95% classification accuracy** ⭐ | ~10x slower than 0.6b (~45s vs ~4s) |
+| Perfect calibration on zero-shot | Timeouts on generation/extraction |
+| 100% JSON compliance | Few-shot causes parse errors & bias |
+| High confidence (95.5 avg) | Not practical for batch processing on CPU |
+
+**Recommendation:** BEST FOR ACCURACY, use zero-shot prompts. If latency is acceptable (~45s/doc), qwen3:8b achieves the highest classification accuracy at 95%. Avoid few-shot/multi-shot prompts — they confuse the model. For speed-sensitive applications, use qwen3:0.6b with few-shot (85% accuracy, 10x faster).
 
 ---
 
@@ -645,47 +672,68 @@ CONCEPTS: concept1, concept2
 
 ### gemma2:2b
 
-**Status:** Pending
+**Status:** Complete ⭐
 
-**Test Date:** —
+**Test Date:** 2025-12-30
 
 **Model Info:**
 - Parameters: 2B
-- Notes: Previous gen, fast
+- Size: 1.6 GB
+- Notes: **Best speed/accuracy tradeoff discovered!** 90% @ 2.2s with ternary
 
 #### Classification Results
 
-| Doc ID | Expected | Binary | Ternary | Confidence | JSON Valid |
-|--------|----------|--------|---------|------------|------------|
-| — | — | — | — | — | — |
-
 **Summary:**
-- Binary accuracy: —/20 (—%)
-- Ternary accuracy: —/20 (—%)
-- JSON compliance: —/20 (—%)
-- Avg latency: — seconds
+- Binary accuracy: 12/20 (60%) — severe NO bias (0.10 predicted)
+- Few-shot accuracy: 13/20 (65%) — slight improvement, 10% parse errors
+- Multi-shot accuracy: 16/20 (80%) — big jump! Annotated examples help
+- **Ternary accuracy: 18/20 (90%)** ⭐ — BEST, fast (2.2s), well-calibrated
+- JSON accuracy: 10/20 (50%) — 100% valid JSON but extreme YES bias (1.0 predicted)
+- Avg latency: 1.9s (binary), 6.5s (few-shot), 5.9s (multi-shot), **2.2s (ternary)**, 6.0s (JSON)
+
+**Observations:**
+- **Ternary format unlocks this model** — YES/NO/MAYBE + confidence works perfectly
+- Multi-shot (6 annotated examples) helps significantly (+15% over few-shot)
+- Binary has extreme NO bias; JSON has extreme YES bias — avoid both
+- Very fast across all tasks
 
 #### Generation Results
 
 | Task | Output Quality | Constraints Met | Latency (s) |
 |------|----------------|-----------------|-------------|
-| Paraphrases | — | — | — |
-| Responsive example | — | — | — |
-| Non-responsive example | — | — | — |
+| Paraphrases | 0/5 generated | 0% | 24.6 |
+| Responsive example | Missing From/To | 0% (partial) | 12.4 |
+| Non-responsive example | Structure complete | **100%** | 13.5 |
+
+**Observations:**
+- Failed paraphrase generation — didn't produce numbered format
+- Positive examples missing From/To fields (has Subject + body)
+- Negative examples work perfectly — 100% structure compliance
+- Not recommended for generation tasks
 
 #### Extraction Results
 
-| Doc ID | Quotes Accurate | Keywords Relevant | Latency (s) |
-|--------|-----------------|-------------------|-------------|
-| — | — | — | — |
-
 **Summary:**
-- Quote accuracy: —%
-- Keyword relevance: —/5
+- Evidence quotes found: 0.6 average per document
+- Quote accuracy: **41%** (best so far!)
+- "No relevant content" responses: 90% (very conservative)
+- Search term extraction: Failed (0 terms, wrong format)
 
-#### Notes
+**Observations:**
+- Very conservative on evidence extraction — says "no content" 90% of time
+- But when it does extract, quotes are more accurate than other models (41%)
+- Search term extraction failed format compliance
 
-—
+#### Overall Assessment
+
+| Strength | Weakness |
+|----------|----------|
+| **90% classification @ 2.2s** ⭐ | Failed paraphrase generation |
+| Best speed/accuracy tradeoff | Partial example generation |
+| 41% quote accuracy (best) | Search term format failed |
+| Multi-shot helps (+15%) | Extreme bias on binary/JSON |
+
+**Recommendation:** BEST FOR SPEED+ACCURACY on classification. Use `classification_ternary` to achieve 90% accuracy at just 2.2s/doc — 20x faster than qwen3:8b with only 5pt accuracy drop. Avoid binary (NO bias) and JSON (YES bias). Not suitable for generation tasks.
 
 ---
 
@@ -1365,6 +1413,9 @@ Record of test runs for reproducibility.
 | 2025-12-29 | qwen3:0.6b | Classification | ~2 min | **FEW-SHOT = 85%** — best approach discovered. Balanced predictions. |
 | 2025-12-29 | deepseek-r1:1.5b | Classification | ~4 min | Few-shot = 65% (best for this model). Still 20pts below qwen3:0.6b. |
 | 2025-12-29 | qwen3:1.7b | Classification | ~5 min | Binary = 85% best. Few-shot hurts (60%)! Prompt approach is model-dependent. |
+| 2025-12-30 | qwen3:0.6b | All 10 | ~3 min | Retested with revised prompts. Few-shot still best (85%). Generation improved. |
+| 2025-12-30 | qwen3:8b | All 10 | ~30 min | **95% classification** ⭐ with zero-shot. Few-shot hurts (60%). Timeouts on gen/extraction. |
+| 2025-12-30 | gemma2:2b | All 10 | ~15 min | **90% @ 2.2s with ternary** ⭐ Best speed/accuracy! Multi-shot helps (+15%). Generation weak. |
 
 ---
 
