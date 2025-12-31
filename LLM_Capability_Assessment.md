@@ -1,6 +1,6 @@
 # EXP-000: Local LLM Capability Assessment
 
-> Last updated: 2025-12-30 (qwen3 family + gemma2:2b complete)
+> Last updated: 2025-12-30 (qwen3 + gemma + phi4-mini families complete)
 
 **Goal:** Identify which local LLMs to use for which tasks in subsequent experiments. Different models excel at different tasks (classification vs generation vs extraction), and latency matters when processing 339+ documents.
 
@@ -14,22 +14,30 @@
 
 | Model | Size | Best Approach | Accuracy | Latency |
 |-------|------|---------------|----------|---------|
+| gemma3:4b | 3.3 GB | Few-shot | **100%** ⭐⭐ | **3.3s** |
+| gemma3:12b | 8.1 GB | Binary | 96% | 10.5s |
+| qwen3:8b | 5.2 GB | Zero-shot | 95% | 45.6s |
+| phi4-mini:3.8b | 2.5 GB | Multi-shot | 90% | 6.7s |
+| gemma2:2b | 1.6 GB | Ternary | 90% | 2.2s |
 | qwen3:0.6b | 522 MB | Few-shot | 85% | 4.2s |
 | qwen3:1.7b | 1.4 GB | Zero-shot | 85% | 13.3s |
-| qwen3:8b | 5.2 GB | Zero-shot | **95%** | 45.6s |
-| gemma2:2b | 1.6 GB | Ternary | **90%** ⭐ | **2.2s** |
 | deepseek-r1:1.5b | 1.1 GB | Few-shot | 65% | 10.8s |
 
 **Key insight:** Optimal prompt strategy varies dramatically by model family:
+- **gemma3:4b:** Few-shot achieves **100% accuracy** — best for classification!
+- **gemma3:12b:** Binary best (96%); few-shot doesn't help; **96% quote extraction** ⭐
+- **phi4-mini:** Multi-shot (6 examples) works best — 90% @ 6.7s; **76% extraction**
+- **gemma2:** Ternary format works best — 90% @ 2.2s (different from gemma3!)
 - **qwen:** Larger models prefer zero-shot; smaller prefer few-shot
-- **gemma2:** Ternary format (YES/NO/MAYBE + confidence) works best — 90% @ 2.2s!
-- Multi-shot (6 annotated examples) helps gemma2 (+15% over few-shot) but hurts qwen
+- Reasoning models (phi4-mini-reasoning, deepseek-r1) don't work — parsing issues
 
 **Recommendations:**
-- **gemma2:2b:** Use `classification_ternary` — **90% @ 2.2s** (best speed/accuracy!)
-- **qwen3:8b:** Use `classification_binary` or `classification_ternary` — 95% (if latency acceptable)
-- **qwen3:0.6b:** Use `classification_few_shot` — 85% @ 4.2s
-- **Test multiple approaches** when evaluating new models — results vary dramatically
+- **gemma3:4b:** Use `classification_few_shot` — **100% @ 3.3s** ⭐⭐ BEST CLASSIFICATION
+- **gemma3:12b:** Use for extraction — **96% quote accuracy** ⭐ BEST EXTRACTION
+- **phi4-mini:3.8b:** Use `classification_multi_shot` — 90% @ 6.7s; also **76% extraction**, **100% paraphrase**
+- **gemma2:2b:** Use `classification_ternary` — 90% @ 2.2s (fastest)
+- **qwen3:8b:** Use `classification_binary` — 95% @ 45.6s (if latency acceptable)
+- **AVOID reasoning models** (phi4-mini-reasoning, deepseek-r1) — parsing issues
 
 ---
 
@@ -44,12 +52,12 @@ Quick reference for model recommendations by task type. Updated as testing progr
 | qwen3:0.6b | **85%** | 75% | 70% | 50% | 85% | 4.2s | Few-shot is best |
 | qwen3:1.7b | 60% | — | **85%** | — | 80% | 16.2s | Binary is best; few-shot hurts! |
 | qwen3:8b | 60% | 60% | **95%** | **95%** | **95%** | 45.6s | Zero-shot is best; few-shot hurts! ⭐ |
-| gemma3:4b | — | — | — | — | — | — | Pending |
-| gemma3:12b | — | — | — | — | — | — | Pending |
+| gemma3:4b | **100%** ⭐ | 95% | 95% | 70% | 85% | 3.3s | Few-shot is best! Perfect score |
+| gemma3:12b | 95% | 95% | **96%** | 95% | 92% | 10.5s | Binary best; examples don't help |
 | gemma2:2b | 65% | 80% | 60% | **90%** ⭐ | 50% | 2.2s | Ternary is best! Multi-shot helps |
-| phi4-mini:3.8b | — | — | — | — | — | — | Pending |
-| phi4-mini-reasoning:3.8b | — | — | — | — | — | — | Pending |
-| phi3:mini | — | — | — | — | — | — | Pending |
+| phi4-mini:3.8b | 84% | **90%** | 82% | 89% | 89% | 6.7s | Multi-shot best; well-rounded |
+| phi4-mini-reasoning:3.8b | — | — | 46% | — | — | 46.5s | NOT REC: reasoning breaks parsing |
+| phi3:mini | 61% | **71%** | 60% | — | — | 22.9s | NOT REC: Multi-shot best but weak (71%) |
 | granite3.3:2b | — | — | — | — | — | — | Pending |
 | granite3.3:8b | — | — | — | — | — | — | Pending |
 | deepseek-r1:1.5b | 65% | — | 50% | — | 55% | 13.1s | NOT REC: Few-shot helps but still poor |
@@ -69,11 +77,11 @@ Quick reference for model recommendations by task type. Updated as testing progr
 | qwen3:0.6b | 5/5 | 100% | 8.8% | 8.6s | Good structure |
 | qwen3:1.7b | — | — | — | — | Pending |
 | qwen3:8b | 5/5 | 100%* | 15.9% | 106s | Higher diversity; *timeouts on neg examples |
-| gemma3:4b | — | — | — | — | Pending |
-| gemma3:12b | — | — | — | — | Pending |
+| gemma3:4b | 0/5 | **100%** | — | 24s | Failed paraphrase; excellent email gen |
+| gemma3:12b | 0/5 | 50%* | — | 114s | Timeouts; *only neg example works |
 | gemma2:2b | 0/5 | 50%* | — | 17s | Failed paraphrase; *neg only works |
-| phi4-mini:3.8b | — | — | — | — | Pending |
-| phi4-mini-reasoning:3.8b | — | — | — | — | Pending |
+| phi4-mini:3.8b | **5/5** | 50%* | — | 22s | **100% paraphrase**; *pos example fails |
+| phi4-mini-reasoning:3.8b | — | — | — | — | NOT REC: too slow |
 | phi3:mini | — | — | — | — | Pending |
 | granite3.3:2b | — | — | — | — | Pending |
 | granite3.3:8b | — | — | — | — | Pending |
@@ -94,11 +102,11 @@ Quick reference for model recommendations by task type. Updated as testing progr
 | qwen3:0.6b | 1.1 avg | 14 terms | 36% | 6.9s | Good format, some hallucinated quotes |
 | qwen3:1.7b | — | — | — | — | Pending |
 | qwen3:8b | 2.0 avg | timeout | 29% | 56.7s | More quotes but lower accuracy; timeout on search terms |
-| gemma3:4b | — | — | — | — | Pending |
-| gemma3:12b | — | — | — | — | Pending |
+| gemma3:4b | ~0.6 avg | ✓ | 16% | 10.8s | Low quote accuracy; search terms work |
+| gemma3:12b | High | ✓ | **96%** ⭐ | 19.2s | BEST quote accuracy! Slow but excellent |
 | gemma2:2b | 0.6 avg | Failed | 41% | 10.6s | Conservative; search term format failed |
-| phi4-mini:3.8b | — | — | — | — | Pending |
-| phi4-mini-reasoning:3.8b | — | — | — | — | Pending |
+| phi4-mini:3.8b | Good | ✓ | **76%** | 4.4s | Excellent extraction; fast |
+| phi4-mini-reasoning:3.8b | — | — | — | — | NOT REC: too slow |
 | phi3:mini | — | — | — | — | Pending |
 | granite3.3:2b | — | — | — | — | Pending |
 | granite3.3:8b | — | — | — | — | Pending |
@@ -117,21 +125,24 @@ Quick reference for model recommendations by task type. Updated as testing progr
 ## Recommendations (Updated as Testing Progresses)
 
 ### Best for Classification
-- **Primary:** qwen3:8b (95% accuracy) — use `classification_binary` or `classification_ternary`
-- **Fast alternative:** gemma2:2b (90% accuracy, 20x faster!) — use `classification_ternary`
+- **Primary:** gemma3:4b (**100% accuracy**) — use `classification_few_shot` ⭐⭐ NEW BEST
+- **Fast alternative:** gemma2:2b (90% accuracy, faster) — use `classification_ternary`
 
 ### Best for Generation
-- **Primary:** qwen3:0.6b — fast, reliable structure, all tasks complete
-- **Fast alternative:** Same (gemma2 fails paraphrase, partial on examples)
+- **Primary:** phi4-mini:3.8b — **100% paraphrase**, good structure @ 22s avg
+- **Email generation:** gemma3:4b — 100% structure compliance for both positive and negative
+- **Paraphrase + emails:** qwen3:0.6b — 100% paraphrase, 100% emails, fastest (8.6s)
+- **Paraphrase diversity:** qwen3:8b — 15.9% diversity (but slow and timeouts)
 
 ### Best for Extraction
-- **Primary:** gemma2:2b — 41% quote accuracy (best), fast
-- **Fast alternative:** qwen3:0.6b — 36% quote accuracy, also good
+- **Primary:** gemma3:12b — **96% quote accuracy** ⭐ (BEST overall!)
+- **Fast + accurate:** phi4-mini:3.8b — **76% quote accuracy** @ 4.4s (best speed/accuracy ratio)
+- **Budget:** gemma2:2b — 41% quote accuracy, fast (10.6s)
 
 ### Speed vs Quality Tradeoffs
-- **Fastest usable:** gemma2:2b + ternary (**90% @ 2.2s/doc**) ⭐ NEW BEST
-- **Best quality (if time allows):** qwen3:8b + zero-shot (95% @ 45s/doc)
-- **Sweet spot:** gemma2:2b + ternary — only 5pt below best, 20x faster
+- **Best quality:** gemma3:4b + few-shot (**100% @ 3.3s/doc**) ⭐⭐ PERFECT
+- **Fastest usable:** gemma2:2b + ternary (90% @ 2.2s/doc)
+- **Sweet spot:** gemma3:4b + few-shot — perfect accuracy, fast enough
 
 ---
 
@@ -580,93 +591,134 @@ CONCEPTS: concept1, concept2
 
 ### gemma3:4b
 
-**Status:** Pending
+**Status:** Complete ⭐⭐
 
-**Test Date:** —
+**Test Date:** 2025-12-30
 
 **Model Info:**
 - Parameters: 4B
-- Notes: Google's latest, efficient
+- Size: 3.3 GB
+- Notes: **BEST CLASSIFICATION MODEL — 100% accuracy with few-shot!**
 
 #### Classification Results
 
-| Doc ID | Expected | Binary | Ternary | Confidence | JSON Valid |
-|--------|----------|--------|---------|------------|------------|
-| — | — | — | — | — | — |
-
 **Summary:**
-- Binary accuracy: —/20 (—%)
-- Ternary accuracy: —/20 (—%)
-- JSON compliance: —/20 (—%)
-- Avg latency: — seconds
+- Binary accuracy: 19/20 (95%) — well-calibrated (0.55 pred vs 0.50 expected)
+- **Few-shot accuracy: 20/20 (100%)** ⭐⭐ — PERFECT, perfectly calibrated (0.50 pred)
+- Multi-shot accuracy: 19/20 (95%) — no improvement over binary
+- Ternary accuracy: 14/20 (70%) — drops significantly, avoid
+- JSON accuracy: 17/20 (85%) — 100% valid JSON, slight YES bias (0.65 pred)
+- Avg latency: 3.3-3.5s (classification), 9.2s (JSON)
+
+**Observations:**
+- **Few-shot achieves PERFECT 100% accuracy** — first model to do so!
+- Perfectly calibrated predictions (0.50 predicted vs 0.50 expected)
+- Ternary format hurts this model (-30% vs few-shot) — opposite of gemma2!
+- Very consistent ~3.3s latency across most tasks
+- JSON works but slower and less accurate
 
 #### Generation Results
 
 | Task | Output Quality | Constraints Met | Latency (s) |
 |------|----------------|-----------------|-------------|
-| Paraphrases | — | — | — |
-| Responsive example | — | — | — |
-| Non-responsive example | — | — | — |
+| Paraphrases | 0/5 generated | 0% | 34.8 |
+| Responsive example | Structure complete | **100%** | 24.3 |
+| Non-responsive example | Structure complete | **100%** | 24.0 |
+
+**Observations:**
+- Failed paraphrase generation — didn't produce numbered format
+- Excellent email generation — 100% structure compliance for both positive and negative
+- Fast for generation tasks compared to larger models
 
 #### Extraction Results
 
-| Doc ID | Quotes Accurate | Keywords Relevant | Latency (s) |
-|--------|-----------------|-------------------|-------------|
-| — | — | — | — |
-
 **Summary:**
-- Quote accuracy: —%
-- Keyword relevance: —/5
+- Evidence quotes found: Low (~0.6 avg)
+- Quote accuracy: **16%** (worse than other models)
+- Search term extraction: Completed @ 15.4s
+- Very conservative on evidence extraction
 
-#### Notes
+**Observations:**
+- Struggles with verbatim quote extraction — low accuracy
+- Works for search term extraction but not evidence
+- Classification is this model's strength, not extraction
 
-—
+#### Overall Assessment
+
+| Strength | Weakness |
+|----------|----------|
+| **100% classification accuracy** ⭐⭐ | Ternary format hurts (-30%) |
+| Perfect calibration | Failed paraphrase generation |
+| Fast (3.3s/doc) | Low extraction accuracy (16%) |
+| No parse errors | |
+| 100% email generation | |
+
+**Recommendation:** BEST FOR CLASSIFICATION. Use `classification_few_shot` for perfect 100% accuracy at 3.3s/doc. Avoid ternary (drops to 70%). Excellent at email generation (100%) but struggles with extraction tasks. This is the gold standard for CPRA classification.
 
 ---
 
 ### gemma3:12b
 
-**Status:** Pending
+**Status:** Complete
 
-**Test Date:** —
+**Test Date:** 2025-12-30
 
 **Model Info:**
 - Parameters: 12B
-- Notes: Google's latest, larger
+- Size: 8.1 GB
+- Notes: Larger gemma3 — **96% classification with zero-shot binary**
 
 #### Classification Results
 
-| Doc ID | Expected | Binary | Ternary | Confidence | JSON Valid |
-|--------|----------|--------|---------|------------|------------|
-| — | — | — | — | — | — |
-
 **Summary:**
-- Binary accuracy: —/20 (—%)
-- Ternary accuracy: —/20 (—%)
-- JSON compliance: —/20 (—%)
-- Avg latency: — seconds
+- **Binary accuracy: 77/80 (96%)** — BEST for this model, well-calibrated
+- Few-shot accuracy: 76/80 (95%) — examples don't help
+- Multi-shot accuracy: 76/80 (95%) — same as few-shot
+- Ternary accuracy: 76/80 (95%) — same as few-shot
+- JSON accuracy: 74/80 (92%) — slowest approach
+- Avg latency: **10.5s (binary)**, 11.3s (few-shot), 16.6s (multi-shot), 13.0s (ternary), 27.0s (JSON)
+
+**Observations:**
+- **Zero-shot binary is best** — opposite of gemma3:4b where few-shot won
+- All example-based approaches (few-shot, multi-shot) perform identically at 95%
+- Larger model doesn't benefit from examples — already "understands" task well
+- ~3x slower than gemma3:4b
 
 #### Generation Results
 
 | Task | Output Quality | Constraints Met | Latency (s) |
 |------|----------------|-----------------|-------------|
-| Paraphrases | — | — | — |
-| Responsive example | — | — | — |
-| Non-responsive example | — | — | — |
+| Paraphrases | Failed | 0% | timeout |
+| Responsive example | Failed | 0% | timeout |
+| Non-responsive example | Structure complete | **100%** | 114.5 |
+
+**Observations:**
+- Very slow on generation (114s for negative example)
+- Paraphrase and positive example likely timed out
+- Only negative example generation completed successfully
+- Not recommended for generation tasks due to speed
 
 #### Extraction Results
 
-| Doc ID | Quotes Accurate | Keywords Relevant | Latency (s) |
-|--------|-----------------|-------------------|-------------|
-| — | — | — | — |
-
 **Summary:**
-- Quote accuracy: —%
-- Keyword relevance: —/5
+- Evidence quote accuracy: **96%** ⭐ (BEST of all models!)
+- Search term extraction: ✓ @ 57s
+- Much better extraction than gemma3:4b (16%)
 
-#### Notes
+**Observations:**
+- Excellent at verbatim quote extraction — 96% accuracy!
+- Best extraction model tested so far
+- Slow but accurate
 
-—
+#### Overall Assessment
+
+| Strength | Weakness |
+|----------|----------|
+| **96% classification accuracy** | 3x slower than gemma3:4b |
+| **96% quote extraction** ⭐ | Generation tasks timeout |
+| Zero-shot works best | Too slow for batch generation |
+
+**Recommendation:** BEST FOR EXTRACTION. Use `classification_binary` for 96% classification at 10.5s/doc. Outstanding 96% quote extraction accuracy — best of all models tested. Too slow for generation tasks. For classification-only workloads where latency matters less, this is a strong choice.
 
 ---
 
@@ -739,139 +791,158 @@ CONCEPTS: concept1, concept2
 
 ### phi4-mini:3.8b
 
-**Status:** Pending
+**Status:** Complete
 
-**Test Date:** —
+**Test Date:** 2025-12-30
 
 **Model Info:**
 - Parameters: 3.8B
-- Notes: Microsoft's efficient model
+- Size: 2.5 GB
+- Notes: Microsoft's efficient model — **well-rounded performer**
 
 #### Classification Results
 
-| Doc ID | Expected | Binary | Ternary | Confidence | JSON Valid |
-|--------|----------|--------|---------|------------|------------|
-| — | — | — | — | — | — |
-
 **Summary:**
-- Binary accuracy: —/20 (—%)
-- Ternary accuracy: —/20 (—%)
-- JSON compliance: —/20 (—%)
-- Avg latency: — seconds
+- Binary accuracy: 66/80 (82%) — baseline
+- Few-shot accuracy: 67/80 (84%) — slight improvement
+- **Multi-shot accuracy: 72/80 (90%)** — BEST, big jump with examples
+- Ternary accuracy: 71/80 (89%) — good
+- JSON accuracy: 71/80 (89%) — good
+- Avg latency: 9.0s (binary), 7.5s (few-shot), **6.7s (multi-shot)**, 5.2s (ternary), 7.3s (JSON)
+
+**Observations:**
+- **Multi-shot (6 examples) is best** — +8% over binary/few-shot
+- Model benefits from more examples unlike qwen/gemma3
+- Ternary and JSON both work well (89%)
+- Consistent, well-calibrated across approaches
 
 #### Generation Results
 
 | Task | Output Quality | Constraints Met | Latency (s) |
 |------|----------------|-----------------|-------------|
-| Paraphrases | — | — | — |
-| Responsive example | — | — | — |
-| Non-responsive example | — | — | — |
+| Paraphrases | **5/5 generated** | **100%** | 27.1 |
+| Responsive example | Missing structure | 0% | 24.2 |
+| Non-responsive example | Structure complete | **100%** | 16.8 |
+
+**Observations:**
+- **Excellent paraphrase generation** — 100% success, all 5 paraphrases
+- Positive example generation fails (missing email structure)
+- Negative example generation works perfectly
 
 #### Extraction Results
 
-| Doc ID | Quotes Accurate | Keywords Relevant | Latency (s) |
-|--------|-----------------|-------------------|-------------|
-| — | — | — | — |
-
 **Summary:**
-- Quote accuracy: —%
-- Keyword relevance: —/5
+- Evidence quote accuracy: **76%** (second best after gemma3:12b!)
+- Search term extraction: ✓ @ 9.4s
+- Fast extraction (4.4s avg)
 
-#### Notes
+**Observations:**
+- Excellent extraction accuracy — 76% quotes verbatim
+- Second only to gemma3:12b (96%) but much faster
+- Good balance of speed and accuracy
 
-—
+#### Overall Assessment
+
+| Strength | Weakness |
+|----------|----------|
+| **90% classification with multi-shot** | Positive example generation fails |
+| **76% quote extraction** (2nd best) | Not as good as gemma3:4b for classification |
+| **100% paraphrase generation** | |
+| Well-rounded across tasks | |
+| Fast (5-9s per task) | |
+
+**Recommendation:** EXCELLENT WELL-ROUNDED MODEL. Use `classification_multi_shot` for 90% accuracy. Outstanding for extraction (76% — second best) and paraphrase generation (100%). A strong alternative if gemma3:4b is unavailable.
 
 ---
 
 ### phi4-mini-reasoning:3.8b
 
-**Status:** Pending
+**Status:** In Progress (NOT RECOMMENDED)
 
-**Test Date:** —
+**Test Date:** 2025-12-30
 
 **Model Info:**
 - Parameters: 3.8B
-- Notes: Reasoning-focused variant
+- Size: 3.2 GB
+- Notes: Reasoning-focused variant — **NOT suitable for this task**
 
 #### Classification Results
 
-| Doc ID | Expected | Binary | Ternary | Confidence | JSON Valid |
-|--------|----------|--------|---------|------------|------------|
-| — | — | — | — | — | — |
-
 **Summary:**
-- Binary accuracy: —/20 (—%)
-- Ternary accuracy: —/20 (—%)
-- JSON compliance: —/20 (—%)
-- Avg latency: — seconds
+- Binary accuracy: 37/80 (**46%**) — worse than coin flip!
+- Avg latency: **46.47s** (5x slower than regular phi4-mini)
+- Other tasks: Not tested due to poor performance
+
+**Observations:**
+- **Reasoning models don't work well** for simple classification
+- Extended "thinking" output interferes with YES/NO parsing
+- 5x slower than regular phi4-mini for worse results
+- Same problem as deepseek-r1 family
 
 #### Generation Results
 
-| Task | Output Quality | Constraints Met | Latency (s) |
-|------|----------------|-----------------|-------------|
-| Paraphrases | — | — | — |
-| Responsive example | — | — | — |
-| Non-responsive example | — | — | — |
+*(Not tested — model unsuitable)*
 
 #### Extraction Results
 
-| Doc ID | Quotes Accurate | Keywords Relevant | Latency (s) |
-|--------|-----------------|-------------------|-------------|
-| — | — | — | — |
+*(Not tested — model unsuitable)*
 
-**Summary:**
-- Quote accuracy: —%
-- Keyword relevance: —/5
+#### Overall Assessment
 
-#### Notes
+| Strength | Weakness |
+|----------|----------|
+| (none for this task) | 46% accuracy (worse than random) |
+| | 5x slower than regular phi4-mini |
+| | Reasoning tokens cause parse errors |
 
-—
+**Recommendation:** NOT RECOMMENDED. Reasoning models produce extended "thinking" output that interferes with structured output tasks. Use regular phi4-mini:3.8b instead — it's faster and far more accurate.
 
 ---
 
 ### phi3:mini
 
-**Status:** Pending
+**Status:** In Progress (classification partial)
 
-**Test Date:** —
+**Test Date:** 2025-12-30
 
 **Model Info:**
 - Parameters: 3B
-- Notes: Previous gen, stable
+- Size: 2.2 GB
+- Notes: Previous gen — **weaker than phi4-mini**
 
 #### Classification Results
 
-| Doc ID | Expected | Binary | Ternary | Confidence | JSON Valid |
-|--------|----------|--------|---------|------------|------------|
-| — | — | — | — | — | — |
+**Summary (partial):**
+- Binary accuracy: 48/80 (60%) — poor baseline
+- Few-shot accuracy: 49/80 (61%) — minimal improvement
+- **Multi-shot accuracy: 57/80 (71%)** — BEST so far, +11% over binary
+- Ternary accuracy: — (pending)
+- JSON accuracy: — (pending)
+- Avg latency: 15.0s (binary), 14.2s (few-shot), 22.9s (multi-shot)
 
-**Summary:**
-- Binary accuracy: —/20 (—%)
-- Ternary accuracy: —/20 (—%)
-- JSON compliance: —/20 (—%)
-- Avg latency: — seconds
+**Observations:**
+- Much weaker than phi4-mini across all approaches
+- Multi-shot helps (+11%) but still only reaches 71%
+- Slower than phi4-mini despite being smaller
+- Not competitive with other models tested
 
 #### Generation Results
 
-| Task | Output Quality | Constraints Met | Latency (s) |
-|------|----------------|-----------------|-------------|
-| Paraphrases | — | — | — |
-| Responsive example | — | — | — |
-| Non-responsive example | — | — | — |
+*(Testing pending)*
 
 #### Extraction Results
 
-| Doc ID | Quotes Accurate | Keywords Relevant | Latency (s) |
-|--------|-----------------|-------------------|-------------|
-| — | — | — | — |
+*(Testing pending)*
 
-**Summary:**
-- Quote accuracy: —%
-- Keyword relevance: —/5
+#### Overall Assessment (Partial)
 
-#### Notes
+| Strength | Weakness |
+|----------|----------|
+| Multi-shot helps (+11%) | 71% max accuracy (poor) |
+| | Slower than phi4-mini |
+| | Far behind gemma3/phi4-mini |
 
-—
+**Recommendation (preliminary):** NOT RECOMMENDED. Even with multi-shot, only reaches 71% — far below phi4-mini (90%) and gemma3:4b (100%). Use phi4-mini:3.8b instead.
 
 ---
 
@@ -1416,6 +1487,11 @@ Record of test runs for reproducibility.
 | 2025-12-30 | qwen3:0.6b | All 10 | ~3 min | Retested with revised prompts. Few-shot still best (85%). Generation improved. |
 | 2025-12-30 | qwen3:8b | All 10 | ~30 min | **95% classification** ⭐ with zero-shot. Few-shot hurts (60%). Timeouts on gen/extraction. |
 | 2025-12-30 | gemma2:2b | All 10 | ~15 min | **90% @ 2.2s with ternary** ⭐ Best speed/accuracy! Multi-shot helps (+15%). Generation weak. |
+| 2025-12-30 | gemma3:4b | All 10 | ~25 min | **100% classification with few-shot** ⭐⭐ PERFECT! 100% email gen. Poor extraction (16%). |
+| 2025-12-30 | gemma3:12b | All 10 | ~40 min | 96% classification (binary best). **96% quote extraction** ⭐ BEST! Generation timeouts. |
+| 2025-12-30 | phi4-mini:3.8b | All 10 | ~20 min | 90% classification (multi-shot). **76% extraction**, **100% paraphrase**. Well-rounded! |
+| 2025-12-30 | phi4-mini-reasoning:3.8b | Binary only | ~60 min | **NOT REC**: 46% accuracy (worse than random), 5x slower. Reasoning breaks parsing. |
+| 2025-12-30 | phi3:mini | Classification (partial) | ~15 min | **NOT REC**: 71% max (multi-shot). Weaker and slower than phi4-mini. |
 
 ---
 
