@@ -866,8 +866,65 @@ class LLMEvaluator:
         return recommendations
 
     def save_results(self, result: EvaluationResult, filename: str = "llm_eval_results.json") -> Path:
-        """Save evaluation results to JSON."""
+        """Save evaluation results to JSON, merging with existing results if file exists."""
         output_path = self.output_dir / filename
-        with open(output_path, "w") as f:
-            json.dump(result.to_dict(), f, indent=2)
+        
+        # Load existing results if file exists
+        if output_path.exists():
+            try:
+                with open(output_path, "r") as f:
+                    existing_data = json.load(f)
+                
+                # Merge model results - replace if same model exists, otherwise append
+                existing_models = {m["model_name"]: m for m in existing_data.get("model_results", [])}
+                
+                for new_model in result.model_results:
+                    model_dict = {
+                        "model_name": new_model.model_name,
+                        "model_size": new_model.model_size,
+                        "summary": new_model.summary,
+                        "results": [
+                            {
+                                "task_name": r.task_name,
+                                "document_id": r.document_id,
+                                "expected": r.expected,
+                                "response": r.response[:500],
+                                "latency": r.latency,
+                                "correct": r.correct,
+                                "metrics": r.metrics,
+                                "error": r.error,
+                            }
+                            for r in new_model.results
+                        ],
+                    }
+                    
+                    # If model already exists, merge task results
+                    if new_model.model_name in existing_models:
+                        existing_model = existing_models[new_model.model_name]
+                        # Append new task results
+                        existing_model["results"].extend(model_dict["results"])
+                        # Update summary (will need recomputation)
+                        existing_model["summary"] = model_dict["summary"]
+                    else:
+                        existing_models[new_model.model_name] = model_dict
+                
+                # Update the result with merged data
+                existing_data["model_results"] = list(existing_models.values())
+                existing_data["timestamp"] = result.timestamp
+                existing_data["models_evaluated"] = list(existing_models.keys())
+                
+                # Save merged results
+                with open(output_path, "w") as f:
+                    json.dump(existing_data, f, indent=2)
+                    
+            except (json.JSONDecodeError, KeyError) as e:
+                # If existing file is corrupted, just overwrite
+                print(f"Warning: Could not merge with existing results: {e}")
+                with open(output_path, "w") as f:
+                    json.dump(result.to_dict(), f, indent=2)
+        else:
+            # No existing file, just save new results
+            with open(output_path, "w") as f:
+                json.dump(result.to_dict(), f, indent=2)
+                
         return output_path

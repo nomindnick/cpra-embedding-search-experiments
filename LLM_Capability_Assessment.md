@@ -32,8 +32,9 @@
 - Reasoning models (phi4-mini-reasoning, deepseek-r1) don't work — parsing issues
 
 **Recommendations:**
-- **gemma3:4b:** Use `classification_few_shot` — **100% @ 3.3s** ⭐⭐ BEST CLASSIFICATION
-- **gemma3:12b:** Use for extraction — **96% quote accuracy** ⭐ BEST EXTRACTION
+- **gemma3:4b:** Use `classification_few_shot` — **100% @ 3.3s** ⭐⭐ FASTEST PERFECT
+- **ministral-3:3b:** Use `classification_ternary` — **100% @ 11.3s** ⭐⭐ NEW! Also **96% extraction**
+- **gemma3:12b:** Use for extraction — **96% quote accuracy** ⭐ (tied with ministral-3:3b)
 - **phi4-mini:3.8b:** Use `classification_multi_shot` — 90% @ 6.7s; also **76% extraction**, **100% paraphrase**
 - **gemma2:2b:** Use `classification_ternary` — 90% @ 2.2s (fastest)
 - **qwen3:8b:** Use `classification_binary` — 95% @ 45.6s (if latency acceptable)
@@ -62,8 +63,8 @@ Quick reference for model recommendations by task type. Updated as testing progr
 | granite3.3:8b | — | — | — | — | — | — | Pending |
 | deepseek-r1:1.5b | 65% | — | 50% | — | 55% | 13.1s | NOT REC: Few-shot helps but still poor |
 | deepseek-r1:8b | — | — | — | — | — | — | Pending |
-| ministral-3:3b | — | — | — | — | — | — | Pending |
-| ministral-3:8b | — | — | — | — | — | — | Pending |
+| ministral-3:3b | 80% | 55% | 90% | **100%** ⭐ | 95% | 11.3s | Ternary is best! Zero-shot wins |
+| ministral-3:8b | 60% | Timeout | 90% | **100%** ⭐ | Timeout | 26.2s | NOT REC: 3b is better (faster, better extraction) |
 | ministral-3:14b | — | — | — | — | — | — | Pending |
 | llama3:8b-instruct-q5_K_M | — | — | — | — | — | — | Pending |
 | gpt-oss:20b | — | — | — | — | — | — | Pending |
@@ -87,8 +88,8 @@ Quick reference for model recommendations by task type. Updated as testing progr
 | granite3.3:8b | — | — | — | — | Pending |
 | deepseek-r1:1.5b | 0/5 | 50% | — | 22.26s | Failed paraphrase; poor structure |
 | deepseek-r1:8b | — | — | — | — | Pending |
-| ministral-3:3b | — | — | — | — | Pending |
-| ministral-3:8b | — | — | — | — | Pending |
+| ministral-3:3b | **5/5** | **100%** | — | 43.7s | All 3 tasks work! Slow but reliable |
+| ministral-3:8b | Timeout | Timeout | — | — | NOT REC: Too slow, all generation tasks timeout |
 | ministral-3:14b | — | — | — | — | Pending |
 | llama3:8b-instruct-q5_K_M | — | — | — | — | Pending |
 | gpt-oss:20b | — | — | — | — | Pending |
@@ -112,8 +113,8 @@ Quick reference for model recommendations by task type. Updated as testing progr
 | granite3.3:8b | — | — | — | — | Pending |
 | deepseek-r1:1.5b | 1.2 avg | 90% | 22% | 19.66s | High hallucination; poor quote accuracy |
 | deepseek-r1:8b | — | — | — | — | Pending |
-| ministral-3:3b | — | — | — | — | Pending |
-| ministral-3:8b | — | — | — | — | Pending |
+| ministral-3:3b | ✓ | ✓ | **96%** ⭐ | 15.2s | Ties gemma3:12b for best quote accuracy! |
+| ministral-3:8b | ✓ | Timeout | 87% | 29.9s | NOT REC: Worse than 3b (87% vs 96%), slower |
 | ministral-3:14b | — | — | — | — | Pending |
 | llama3:8b-instruct-q5_K_M | — | — | — | — | Pending |
 | gpt-oss:20b | — | — | — | — | Pending |
@@ -125,8 +126,9 @@ Quick reference for model recommendations by task type. Updated as testing progr
 ## Recommendations (Updated as Testing Progresses)
 
 ### Best for Classification
-- **Primary:** gemma3:4b (**100% accuracy**) — use `classification_few_shot` ⭐⭐ NEW BEST
-- **Fast alternative:** gemma2:2b (90% accuracy, faster) — use `classification_ternary`
+- **Primary (fastest):** gemma3:4b (**100% accuracy @ 3.3s**) — use `classification_few_shot` ⭐⭐ FASTEST PERFECT
+- **Primary (alternative):** ministral-3:3b (**100% accuracy @ 11.3s**) — use `classification_ternary` ⭐⭐ NEW
+- **Fast alternative:** gemma2:2b (90% accuracy @ 2.2s) — use `classification_ternary`
 
 ### Best for Generation
 - **Primary:** phi4-mini:3.8b — **100% paraphrase**, good structure @ 22s avg
@@ -135,7 +137,8 @@ Quick reference for model recommendations by task type. Updated as testing progr
 - **Paraphrase diversity:** qwen3:8b — 15.9% diversity (but slow and timeouts)
 
 ### Best for Extraction
-- **Primary:** gemma3:12b — **96% quote accuracy** ⭐ (BEST overall!)
+- **Primary (tied):** gemma3:12b — **96% quote accuracy** @ 19.2s ⭐
+- **Primary (tied):** ministral-3:3b — **96% quote accuracy** @ 15.2s ⭐ (faster!)
 - **Fast + accurate:** phi4-mini:3.8b — **76% quote accuracy** @ 4.4s (best speed/accuracy ratio)
 - **Budget:** gemma2:2b — 41% quote accuracy, fast (10.6s)
 
@@ -958,37 +961,56 @@ CONCEPTS: concept1, concept2
 
 #### Classification Results
 
-| Doc ID | Expected | Binary | Ternary | Confidence | JSON Valid |
-|--------|----------|--------|---------|------------|------------|
-| — | — | — | — | — | — |
-
 **Summary:**
-- Binary accuracy: —/20 (—%)
-- Ternary accuracy: —/20 (—%)
-- JSON compliance: —/20 (—%)
-- Avg latency: — seconds
+- Binary accuracy: 18/20 (90%) — same as 3b but 2.5x slower
+- Few-shot accuracy: 12/20 (60%) — examples hurt severely (-30%)
+- Multi-shot accuracy: Timeout — too slow
+- **Ternary accuracy: 20/20 (100%)** ⭐⭐ — PERFECT (same as 3b)
+- JSON accuracy: Timeout — too slow for structured output
+- Avg latency: 23.6s (binary), 37.2s (few-shot), **26.2s (ternary)**
+
+**Observations:**
+- **Ternary achieves perfect 100%** (same as 3b model)
+- Zero-shot works best (binary/ternary); examples hurt performance
+- **Significantly slower than 3b** (2.5x on binary, 1.8x on few-shot)
+- Multi-shot and JSON timeout due to slowness
+- Same pattern as 3b: zero-shot ternary is optimal
 
 #### Generation Results
 
 | Task | Output Quality | Constraints Met | Latency (s) |
 |------|----------------|-----------------|-------------|
-| Paraphrases | — | — | — |
-| Responsive example | — | — | — |
-| Non-responsive example | — | — | — |
+| Paraphrases | **TIMEOUT** | — | — |
+| Responsive example | **TIMEOUT** | — | — |
+| Non-responsive example | **TIMEOUT** | — | — |
+
+**Observations:**
+- All generation tasks hit Ollama's 120s read timeout
+- Model too slow for generation on CPU
+- 3b model completes all these tasks successfully
 
 #### Extraction Results
 
-| Doc ID | Quotes Accurate | Keywords Relevant | Latency (s) |
-|--------|-----------------|-------------------|-------------|
-| — | — | — | — |
-
 **Summary:**
-- Quote accuracy: —%
-- Keyword relevance: —/5
+- Evidence quote accuracy: **87%** @ 29.9s
+- Search term extraction: **TIMEOUT**
 
-#### Notes
+**Observations:**
+- **Worse than 3b's 96%** extraction accuracy
+- Slower than 3b (30s vs 15s)
+- Keyword extraction times out
+- 3b model is superior for extraction
 
-—
+#### Overall Assessment
+
+| Strength | Weakness |
+|----------|----------|
+| **100% ternary classification** ⭐⭐ | 2.5x slower than 3b (23.6s vs 9.6s) |
+| | Worse extraction than 3b (87% vs 96%) |
+| | All generation tasks timeout |
+| | JSON/multi-shot timeout |
+
+**Recommendation:** **NOT RECOMMENDED**. Use ministral-3:3b instead — it's **faster** (2.5x), has **better extraction** (96% vs 87%), and **completes all generation tasks**. The 8b model only adds size and slowness without any accuracy gains. Perfect example of "bigger ≠ better" on CPU.
 
 ---
 
@@ -1153,59 +1175,84 @@ CONCEPTS: concept1, concept2
 
 ### ministral-3:3b
 
-**Status:** Pending
+**Status:** Complete ⭐⭐
 
-**Test Date:** —
+**Test Date:** 2026-01-05
 
 **Model Info:**
 - Parameters: 3B
-- Notes: Mistral small/fast
+- Size: 3.0 GB
+- Notes: **EXCELLENT all-rounder — 100% ternary classification + 96% extraction!**
 
 #### Classification Results
 
-| Doc ID | Expected | Binary | Ternary | Confidence | JSON Valid |
-|--------|----------|--------|---------|------------|------------|
-| — | — | — | — | — | — |
-
 **Summary:**
-- Binary accuracy: —/20 (—%)
-- Ternary accuracy: —/20 (—%)
-- JSON compliance: —/20 (—%)
-- Avg latency: — seconds
+- Binary accuracy: 18/20 (90%) — good baseline, well-calibrated
+- Few-shot accuracy: 16/20 (80%) — examples hurt (-10%)
+- Multi-shot accuracy: 11/20 (55%) — examples hurt severely (-35%)
+- **Ternary accuracy: 20/20 (100%)** ⭐⭐ — PERFECT, best approach for this model
+- JSON accuracy: 19/20 (95%) — excellent structured output
+- Avg latency: 9.6s (binary), 21s (few-shot), 26s (multi-shot), **11.3s (ternary)**, 18.9s (JSON)
+
+**Observations:**
+- **Ternary format unlocks perfect classification** — YES/NO/MAYBE + confidence
+- Zero-shot dramatically outperforms few-shot/multi-shot (same pattern as qwen3:8b)
+- Examples cause confusion and degradation (-10% few-shot, -35% multi-shot)
+- Second model to achieve 100% (after gemma3:4b)
+- Ternary is both fastest and most accurate
 
 #### Generation Results
 
 | Task | Output Quality | Constraints Met | Latency (s) |
 |------|----------------|-----------------|-------------|
-| Paraphrases | — | — | — |
-| Responsive example | — | — | — |
-| Non-responsive example | — | — | — |
+| Paraphrases | **5/5 generated** | **100%** | 43.7 |
+| Responsive example | Structure complete | **100%** | 81.9 |
+| Non-responsive example | Structure complete | **100%** | 29.6 |
+
+**Observations:**
+- Excellent generation across all tasks — 100% success rate
+- All 5 paraphrases generated successfully
+- Both positive and negative email examples have complete structure
+- Faster on negative examples (30s vs 82s for positive)
 
 #### Extraction Results
 
-| Doc ID | Quotes Accurate | Keywords Relevant | Latency (s) |
-|--------|-----------------|-------------------|-------------|
-| — | — | — | — |
-
 **Summary:**
-- Quote accuracy: —%
-- Keyword relevance: —/5
+- Evidence quote accuracy: **96%** ⭐ (ties gemma3:12b for BEST!)
+- Search term extraction: 100% format compliance @ 50.2s
+- Keywords per doc: 23 average (comprehensive)
+- All terms annotated (100%)
 
-#### Notes
+**Observations:**
+- Outstanding quote extraction — 96% verbatim accuracy!
+- Ties gemma3:12b as best extraction model
+- Comprehensive keyword extraction (23 terms vs typical 9-14)
+- All extracted terms have annotations (explanations)
 
-—
+#### Overall Assessment
+
+| Strength | Weakness |
+|----------|----------|
+| **100% classification (ternary)** ⭐⭐ | Examples hurt performance (-35% multi-shot) |
+| **96% quote extraction** ⭐ | Slower than gemma3:4b (~11s vs 3.3s) |
+| 100% generation success | |
+| Well-rounded excellence | |
+| Comprehensive keyword extraction | |
+
+**Recommendation:** EXCELLENT ALL-ROUNDER. Use `classification_ternary` for perfect 100% classification at 11.3s/doc. Tied for best extraction (96% with gemma3:12b). Perfect generation success (100% on all tasks). This model excels at everything — a true generalist. Comparable to gemma3:4b but 3x slower; choose based on latency requirements.
 
 ---
 
 ### ministral-3:8b
 
-**Status:** Pending
+**Status:** Complete (partial - generation timeouts)
 
-**Test Date:** —
+**Test Date:** 2026-01-06
 
 **Model Info:**
 - Parameters: 8B
-- Notes: Mistral medium
+- Size: 6.0 GB
+- Notes: **NOT RECOMMENDED - 3b is better (faster, better extraction, completes all tasks)**
 
 #### Classification Results
 
