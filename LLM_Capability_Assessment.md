@@ -1,6 +1,6 @@
 # EXP-000: Local LLM Capability Assessment
 
-> Last updated: 2025-12-30 (qwen3 + gemma + phi4-mini families complete)
+> Last updated: 2026-01-08 (added olmo-3:7b partial — catastrophic failure on few-shot/multi-shot)
 
 **Goal:** Identify which local LLMs to use for which tasks in subsequent experiments. Different models excel at different tasks (classification vs generation vs extraction), and latency matters when processing 339+ documents.
 
@@ -59,7 +59,7 @@ Quick reference for model recommendations by task type. Updated as testing progr
 | phi4-mini:3.8b | 84% | **90%** | 82% | 89% | 89% | 6.7s | Multi-shot best; well-rounded |
 | phi4-mini-reasoning:3.8b | — | — | 46% | — | — | 46.5s | NOT REC: reasoning breaks parsing |
 | phi3:mini | 61% | **71%** | 60% | — | — | 22.9s | NOT REC: Multi-shot best but weak (71%) |
-| granite3.3:2b | — | — | — | — | — | — | Pending |
+| granite3.3:2b | 60% | 77% | **85%** | 70% | **85%** | 11.8s | Binary/JSON best; 100% JSON compliance ⭐ |
 | granite3.3:8b | — | — | — | — | — | — | Pending |
 | deepseek-r1:1.5b | 65% | — | 50% | — | 55% | 13.1s | NOT REC: Few-shot helps but still poor |
 | deepseek-r1:8b | — | — | — | — | — | — | Pending |
@@ -67,9 +67,9 @@ Quick reference for model recommendations by task type. Updated as testing progr
 | ministral-3:8b | 60% | Timeout | 90% | **100%** ⭐ | Timeout | 26.2s | NOT REC: 3b is better (faster, better extraction) |
 | ministral-3:14b | — | — | — | — | — | — | Pending |
 | llama3:8b-instruct-q5_K_M | — | — | — | — | — | — | Pending |
-| gpt-oss:20b | — | — | — | — | — | — | Pending |
-| olmo-3:7b | — | — | — | — | — | — | Pending |
-| functiongemma:270m | — | — | — | — | — | — | Pending |
+| gpt-oss:20b | 85% | 80% | 85% | **87%** | 80% | ~55s | NOT REC: 15pts below gemma3:4b, extremely slow |
+| olmo-3:7b | **5%** | 10% | **72%** | — | — | ~22s | NOT REC: Catastrophic few-shot failure |
+| functiongemma:270m | 50% | 50% | 57% | 50% | 37% | 1.25s | **NOT REC**: Function calling model, random accuracy |
 
 ### Generation Tasks
 
@@ -84,7 +84,7 @@ Quick reference for model recommendations by task type. Updated as testing progr
 | phi4-mini:3.8b | **5/5** | 50%* | — | 22s | **100% paraphrase**; *pos example fails |
 | phi4-mini-reasoning:3.8b | — | — | — | — | NOT REC: too slow |
 | phi3:mini | — | — | — | — | Pending |
-| granite3.3:2b | — | — | — | — | Pending |
+| granite3.3:2b | **5/5** | **100%** | 9.2% | 32.5s | Excellent generation; all tasks complete |
 | granite3.3:8b | — | — | — | — | Pending |
 | deepseek-r1:1.5b | 0/5 | 50% | — | 22.26s | Failed paraphrase; poor structure |
 | deepseek-r1:8b | — | — | — | — | Pending |
@@ -94,7 +94,7 @@ Quick reference for model recommendations by task type. Updated as testing progr
 | llama3:8b-instruct-q5_K_M | — | — | — | — | Pending |
 | gpt-oss:20b | — | — | — | — | Pending |
 | olmo-3:7b | — | — | — | — | Pending |
-| functiongemma:270m | — | — | — | — | Pending |
+| functiongemma:270m | 0/5 | 0% | — | 0.8s | **NOT REC**: Refuses generation tasks |
 
 ### Extraction Tasks
 
@@ -109,7 +109,7 @@ Quick reference for model recommendations by task type. Updated as testing progr
 | phi4-mini:3.8b | Good | ✓ | **76%** | 4.4s | Excellent extraction; fast |
 | phi4-mini-reasoning:3.8b | — | — | — | — | NOT REC: too slow |
 | phi3:mini | — | — | — | — | Pending |
-| granite3.3:2b | — | — | — | — | Pending |
+| granite3.3:2b | 0.17 avg | 13 terms | 25% | 16.6s | Conservative (70% "no content"); good format |
 | granite3.3:8b | — | — | — | — | Pending |
 | deepseek-r1:1.5b | 1.2 avg | 90% | 22% | 19.66s | High hallucination; poor quote accuracy |
 | deepseek-r1:8b | — | — | — | — | Pending |
@@ -119,7 +119,7 @@ Quick reference for model recommendations by task type. Updated as testing progr
 | llama3:8b-instruct-q5_K_M | — | — | — | — | Pending |
 | gpt-oss:20b | — | — | — | — | Pending |
 | olmo-3:7b | — | — | — | — | Pending |
-| functiongemma:270m | — | — | — | — | Pending |
+| functiongemma:270m | 0 avg | 0 terms | 0% | 0.9s | **NOT REC**: Complete failure on extraction |
 
 ---
 
@@ -951,66 +951,69 @@ CONCEPTS: concept1, concept2
 
 ### granite3.3:2b
 
-**Status:** Pending
+**Status:** Complete
 
-**Test Date:** —
+**Test Date:** 2026-01-06
 
 **Model Info:**
 - Parameters: 2B
-- Notes: IBM, fast
+- Size: 1.5 GB
+- Notes: IBM model — **solid performer with perfect JSON compliance**
 
 #### Classification Results
 
 **Summary:**
-- Binary accuracy: 18/20 (90%) — same as 3b but 2.5x slower
-- Few-shot accuracy: 12/20 (60%) — examples hurt severely (-30%)
-- Multi-shot accuracy: Timeout — too slow
-- **Ternary accuracy: 20/20 (100%)** ⭐⭐ — PERFECT (same as 3b)
-- JSON accuracy: Timeout — too slow for structured output
-- Avg latency: 23.6s (binary), 37.2s (few-shot), **26.2s (ternary)**
+- **Binary accuracy: 34/40 (85%)** — BEST for this model, well-calibrated (0.45 pred)
+- Few-shot accuracy: 24/40 (60%) — examples hurt! Severe NO bias (0.10 pred)
+- Multi-shot accuracy: 31/40 (77.5%) — better than few-shot but below binary
+- Ternary accuracy: 28/40 (70%) — low confidence scores (20.4 avg)
+- **JSON accuracy: 34/40 (85%)** — **100% valid JSON!** Tied with binary
+- Avg latency: 11.8s (binary), 11.6s (few-shot), 15.5s (multi-shot), 10.9s (ternary), 16.4s (JSON)
 
 **Observations:**
-- **Ternary achieves perfect 100%** (same as 3b model)
-- Zero-shot works best (binary/ternary); examples hurt performance
-- **Significantly slower than 3b** (2.5x on binary, 1.8x on few-shot)
-- Multi-shot and JSON timeout due to slowness
-- Same pattern as 3b: zero-shot ternary is optimal
+- **Zero-shot binary is best** — same pattern as qwen3:8b, ministral-3:3b
+- Few-shot causes severe NO bias (predicted 0.10 vs expected 0.50)
+- **Perfect JSON compliance** — 100% valid JSON with all required fields
+- Low ternary confidence (20.4 avg) suggests model is uncertain
+- Moderate latency (~12s) — slower than gemma models but reasonable
 
 #### Generation Results
 
 | Task | Output Quality | Constraints Met | Latency (s) |
 |------|----------------|-----------------|-------------|
-| Paraphrases | **TIMEOUT** | — | — |
-| Responsive example | **TIMEOUT** | — | — |
-| Non-responsive example | **TIMEOUT** | — | — |
+| Paraphrases | **5/5 generated** | **100%** | 43.4 |
+| Responsive example | Structure complete | **100%** | 28.9 |
+| Non-responsive example | Structure complete | **100%** | 25.3 |
 
 **Observations:**
-- All generation tasks hit Ollama's 120s read timeout
-- Model too slow for generation on CPU
-- 3b model completes all these tasks successfully
+- **Excellent generation across all tasks** — 100% success rate
+- All 5 paraphrases generated (9.2% diversity)
+- Both positive and negative examples have complete email structure
+- Slower on generation than classification (~25-43s vs ~12s)
 
 #### Extraction Results
 
 **Summary:**
-- Evidence quote accuracy: **87%** @ 29.9s
-- Search term extraction: **TIMEOUT**
+- Evidence quote accuracy: **25%** @ 13.4s
+- Search term extraction: 13 terms, 100% format compliance @ 19.9s
+- "No relevant content" responses: 70% (very conservative)
 
 **Observations:**
-- **Worse than 3b's 96%** extraction accuracy
-- Slower than 3b (30s vs 15s)
-- Keyword extraction times out
-- 3b model is superior for extraction
+- Very conservative on evidence extraction — says "no content" 70% of time
+- When it does extract, moderate accuracy (25%)
+- Good search term extraction format compliance
+- Not as strong as gemma3:12b (96%) or ministral-3:3b (96%) for extraction
 
 #### Overall Assessment
 
 | Strength | Weakness |
 |----------|----------|
-| **100% ternary classification** ⭐⭐ | 2.5x slower than 3b (23.6s vs 9.6s) |
-| | Worse extraction than 3b (87% vs 96%) |
-| | All generation tasks timeout |
-| | JSON/multi-shot timeout |
+| **85% classification (binary/JSON)** | Below top performers (100%) |
+| **100% JSON compliance** ⭐ | Few-shot causes severe bias |
+| **100% generation success** | Conservative extraction (25%) |
+| All tasks complete (no timeouts) | Moderate latency (~12s) |
 
-**Recommendation:** **NOT RECOMMENDED**. Use ministral-3:3b instead — it's **faster** (2.5x), has **better extraction** (96% vs 87%), and **completes all generation tasks**. The 8b model only adds size and slowness without any accuracy gains. Perfect example of "bigger ≠ better" on CPU.
+**Recommendation:** SOLID ALTERNATIVE. Use `classification_binary` or `json_output` for 85% accuracy. Outstanding JSON compliance (100% valid) makes it ideal for structured output pipelines. Excellent generation (100% on all tasks). However, classification accuracy (85%) doesn't match top performers like gemma3:4b (100%) or ministral-3:3b (100%). Choose granite if you need perfect JSON compliance.
 
 ---
 
@@ -1384,25 +1387,34 @@ CONCEPTS: concept1, concept2
 
 ### gpt-oss:20b
 
-**Status:** Pending
+**Status:** Partial (classification only — interrupted)
 
-**Test Date:** —
+**Test Date:** 2026-01-06
 
 **Model Info:**
 - Parameters: 20B
-- Notes: Largest available
+- Size: 13 GB
+- Notes: Largest model tested — **underperforms smaller models despite size**
 
 #### Classification Results
 
-| Doc ID | Expected | Binary | Ternary | Confidence | JSON Valid |
-|--------|----------|--------|---------|------------|------------|
-| — | — | — | — | — | — |
+**Summary (PARTIAL — test interrupted after classification tasks):**
+- Binary accuracy: 34/40 (85%) — same as granite3.3:2b (1.5GB!)
+- Few-shot accuracy: 34/40 (85%) — examples don't help
+- Multi-shot accuracy: 32/40 (80%) — examples actually hurt
+- **Ternary accuracy: 35/40 (87.5%)** — BEST for this model
+- JSON accuracy: 32/40 (80%) — below binary/ternary
+- Avg latency: **~50-60s per document** (extremely slow on CPU)
 
-**Summary:**
-- Binary accuracy: —/20 (—%)
-- Ternary accuracy: —/20 (—%)
-- JSON compliance: —/20 (—%)
-- Avg latency: — seconds
+**Observations:**
+- **Ternary is the best approach** — 87.5% accuracy
+- Examples don't help (few-shot) or hurt (multi-shot) — same pattern as qwen3:8b
+- **Dramatically underperforms smaller models**:
+  - gemma3:4b (3.3GB): 100% — 15pts better, 15x faster
+  - ministral-3:3b (3.0GB): 100% — 15pts better, 5x faster
+  - qwen3:8b (5.2GB): 95% — 10pts better, similar speed
+- At ~1 min/doc, processing 339 documents would take ~6 hours
+- Test interrupted before generation/extraction tasks
 
 #### Generation Results
 
@@ -1412,43 +1424,59 @@ CONCEPTS: concept1, concept2
 | Responsive example | — | — | — |
 | Non-responsive example | — | — | — |
 
-#### Extraction Results
+*(Not tested — evaluation interrupted)*
 
-| Doc ID | Quotes Accurate | Keywords Relevant | Latency (s) |
-|--------|-----------------|-------------------|-------------|
-| — | — | — | — |
+#### Extraction Results
 
 **Summary:**
 - Quote accuracy: —%
 - Keyword relevance: —/5
 
-#### Notes
+*(Not tested — evaluation interrupted)*
 
-—
+#### Overall Assessment (Partial)
+
+| Strength | Weakness |
+|----------|----------|
+| 87.5% ternary accuracy | **15pts below gemma3:4b (100%)** |
+| Large model capacity | **Extremely slow (~60s/doc)** |
+| | Examples hurt performance |
+| | Not practical for batch processing |
+
+**Recommendation:** **NOT RECOMMENDED for CPU deployment**. Despite being the largest model (20B params, 13GB), gpt-oss:20b achieves only 87.5% accuracy — significantly below gemma3:4b (100%) and ministral-3:3b (100%) which are 4-6x smaller and 5-15x faster. This is a clear case of "bigger ≠ better" for this task. The model may perform better on GPU, but on CPU it's impractical. Use gemma3:4b with few-shot for better accuracy and speed.
+
+**Key Insight:** Model size does not correlate with CPRA classification accuracy. Smaller, well-tuned models (gemma3:4b, ministral-3:3b) dramatically outperform this 20B parameter model. The task benefits more from prompt-following ability than raw model capacity.
 
 ---
 
 ### olmo-3:7b
 
-**Status:** Pending
+**Status:** Partial (classification only — interrupted due to catastrophic failure)
 
-**Test Date:** —
+**Test Date:** 2026-01-08
 
 **Model Info:**
 - Parameters: 7B
-- Notes: Allen AI open model
+- Size: 4.9 GB
+- Notes: Allen AI open model — **CATASTROPHIC FAILURE on few-shot/multi-shot prompts**
 
 #### Classification Results
 
-| Doc ID | Expected | Binary | Ternary | Confidence | JSON Valid |
-|--------|----------|--------|---------|------------|------------|
-| — | — | — | — | — | — |
+**Summary (PARTIAL — test interrupted after observing catastrophic failure):**
+- **Binary accuracy: 29/40 (72.5%)** — best for this model, but still 28pts below leaders
+- **Few-shot accuracy: 2/40 (5%)** — CATASTROPHIC FAILURE
+- **Multi-shot accuracy: 4/40 (10%)** — also catastrophic
+- Ternary accuracy: — (not tested)
+- JSON accuracy: — (not tested)
+- Avg latency: ~22s per document
 
-**Summary:**
-- Binary accuracy: —/20 (—%)
-- Ternary accuracy: —/20 (—%)
-- JSON compliance: —/20 (—%)
-- Avg latency: — seconds
+**Observations:**
+- **Few-shot examples completely break this model** — drops from 72% to 5%
+- Worst few-shot result of any model tested (5%)
+- Multi-shot (10%) almost as bad as few-shot (5%)
+- Even binary (72.5%) is well below acceptable threshold
+- This is the opposite pattern of gemma3:4b where few-shot achieves 100%
+- Model may be fundamentally incompatible with in-context learning for this task
 
 #### Generation Results
 
@@ -1458,65 +1486,107 @@ CONCEPTS: concept1, concept2
 | Responsive example | — | — | — |
 | Non-responsive example | — | — | — |
 
-#### Extraction Results
+*(Not tested — evaluation interrupted)*
 
-| Doc ID | Quotes Accurate | Keywords Relevant | Latency (s) |
-|--------|-----------------|-------------------|-------------|
-| — | — | — | — |
+#### Extraction Results
 
 **Summary:**
 - Quote accuracy: —%
 - Keyword relevance: —/5
 
-#### Notes
+*(Not tested — evaluation interrupted)*
 
-—
+#### Overall Assessment (Partial)
+
+| Strength | Weakness |
+|----------|----------|
+| (none identified) | **5% few-shot accuracy** (worst of all models) |
+| | **10% multi-shot accuracy** |
+| | 72.5% binary (28pts below leaders) |
+| | Examples cause catastrophic degradation |
+
+**Recommendation:** **NOT RECOMMENDED**. olmo-3:7b exhibits catastrophic failure when given few-shot examples (5% accuracy) — the worst result of any model tested. Even zero-shot binary achieves only 72.5%, far below gemma3:4b (100%) and ministral-3:3b (100%). This model appears fundamentally incompatible with in-context learning for CPRA classification. Test was interrupted as there was no point continuing after observing these results.
 
 ---
 
 ### functiongemma:270m
 
-**Status:** Pending
+**Status:** Complete ❌
 
-**Test Date:** —
+**Test Date:** 2026-01-06
 
 **Model Info:**
 - Parameters: 270M
-- Notes: Function calling specialist
+- Size: 300 MB
+- Notes: **NOT SUITABLE** — Function calling specialist, not designed for text tasks
 
 #### Classification Results
 
-| Doc ID | Expected | Binary | Ternary | Confidence | JSON Valid |
-|--------|----------|--------|---------|------------|------------|
-| — | — | — | — | — | — |
-
 **Summary:**
-- Binary accuracy: —/20 (—%)
-- Ternary accuracy: —/20 (—%)
-- JSON compliance: —/20 (—%)
-- Avg latency: — seconds
+- Binary accuracy: 23/40 (57.5%) — barely above random (50%)
+- Few-shot accuracy: 20/40 (50%) — exactly random
+- Multi-shot accuracy: 20/40 (50%) — exactly random
+- Ternary accuracy: 20/40 (50%) — random guessing
+- JSON accuracy: 15/40 (37.5%) — can produce JSON structure but wrong answers
+- Avg latency: 1.25s (fastest of any model tested)
+
+**Observations:**
+- **Predicts NO for almost everything** — avg_predicted: 0.00-0.12 vs avg_expected: 0.50
+- Model actively **refuses many requests** with "I cannot assist with..."
+- Specialized for function calling (extracting structured parameters), not text classification
+- Very fast but useless for this task
+
+**Sample Responses:**
+
+Binary Classification (expected YES):
+```
+"NO"
+"I cannot assist with drafting or evaluating the suitability of documents..."
+```
+
+JSON Output (malformed):
+```json
+{"category": "no", "reasoning": "...", "reasoning": "..."}}$$
+```
 
 #### Generation Results
 
 | Task | Output Quality | Constraints Met | Latency (s) |
 |------|----------------|-----------------|-------------|
-| Paraphrases | — | — | — |
-| Responsive example | — | — | — |
-| Non-responsive example | — | — | — |
+| Paraphrases | 0/5 generated | 0% | 0.70 |
+| Responsive example | Missing structure | 0% | 0.79 |
+| Non-responsive example | Missing structure | 0% | 0.83 |
+
+**Observations:**
+- **Complete failure on all generation tasks**
+- Model refuses: "I am sorry, but I cannot fulfill this request. My current capabilities are limited to assisting with administrative tasks..."
+- Produces ~43-48 words but no proper email structure (no From/To/Subject)
+- Function calling models are not designed for content generation
 
 #### Extraction Results
 
-| Doc ID | Quotes Accurate | Keywords Relevant | Latency (s) |
-|--------|-----------------|-------------------|-------------|
-| — | — | — | — |
-
 **Summary:**
-- Quote accuracy: —%
-- Keyword relevance: —/5
+- Evidence quotes found: 0 average
+- Quote accuracy: 0%
+- Search term extraction: 0/5 (0 terms extracted)
+- Avg latency: ~0.9s
 
-#### Notes
+**Observations:**
+- Complete failure on extraction tasks
+- Model doesn't understand the task — produces empty or irrelevant output
+- Not designed for text analysis
 
-—
+#### Overall Assessment
+
+| Strength | Weakness |
+|----------|----------|
+| Very fast (1.25s avg) | 50% accuracy (random chance) |
+| | Refuses most requests |
+| | Malformed JSON output |
+| | 0% generation/extraction success |
+| | Wrong model type for this task |
+
+**Recommendation:** **NOT SUITABLE**. functiongemma is a specialized model for **function/tool calling** (extracting structured parameters from natural language, like Claude's tool use). It actively refuses text classification and generation tasks. Despite being the fastest model tested, its accuracy is at or below random chance. Do not use for CPRA document classification or any text analysis tasks.
 
 ---
 
@@ -1539,9 +1609,90 @@ Record of test runs for reproducibility.
 | 2025-12-30 | phi4-mini:3.8b | All 10 | ~20 min | 90% classification (multi-shot). **76% extraction**, **100% paraphrase**. Well-rounded! |
 | 2025-12-30 | phi4-mini-reasoning:3.8b | Binary only | ~60 min | **NOT REC**: 46% accuracy (worse than random), 5x slower. Reasoning breaks parsing. |
 | 2025-12-30 | phi3:mini | Classification (partial) | ~15 min | **NOT REC**: 71% max (multi-shot). Weaker and slower than phi4-mini. |
+| 2026-01-06 | functiongemma:270m | All 10 | ~2 min | **NOT REC**: 50% accuracy (random), refuses tasks. Function calling model, not for text. |
+| 2026-01-06 | granite3.3:2b | All 10 | ~15 min | 85% classification (binary/JSON); **100% JSON compliance** ⭐; 100% generation; 25% extraction. |
+| 2026-01-06 | gpt-oss:20b | Classification only | ~2 hrs (interrupted) | **87.5% ternary** (best); extremely slow (~55s/doc); **underperforms smaller models**. |
+| 2026-01-08 | olmo-3:7b | Classification partial | ~30 min (interrupted) | **5% few-shot** (CATASTROPHIC); 72.5% binary; worst few-shot result of all models. |
 
 ---
 
 ## Conclusions
 
-*To be completed after testing.*
+### Testing Summary
+
+**16 models tested** across classification, generation, and extraction tasks. Two clear winners emerged for CPRA document classification.
+
+### Key Findings
+
+#### 1. Optimal Models Identified
+
+| Use Case | Model | Accuracy | Latency | Prompt Style |
+|----------|-------|----------|---------|--------------|
+| **Classification (fastest)** | gemma3:4b | **100%** | 3.3s | Few-shot |
+| **Classification (best all-rounder)** | ministral-3:3b | **100%** | 11.3s | Ternary |
+| **Extraction (quote accuracy)** | gemma3:12b / ministral-3:3b | **96%** | 15-19s | Zero-shot |
+| **Generation (paraphrases)** | phi4-mini:3.8b | **100%** | 22s | — |
+| **Speed priority** | gemma2:2b | 90% | **2.2s** | Ternary |
+
+#### 2. Bigger ≠ Better
+
+Model size does **not** correlate with CPRA classification accuracy:
+
+| Model | Size | Best Accuracy |
+|-------|------|---------------|
+| gemma3:4b | 3.3 GB | **100%** ⭐ |
+| ministral-3:3b | 3.0 GB | **100%** ⭐ |
+| gpt-oss:20b | 13 GB | 87.5% |
+| olmo-3:7b | 4.9 GB | 72.5% |
+
+The largest model tested (gpt-oss:20b) scored 12.5 points **below** models 4x smaller.
+
+#### 3. Prompt Strategy is Model-Dependent
+
+Different models respond dramatically differently to the same prompting approach:
+
+| Prompt Style | Best Model | Worst Model |
+|--------------|------------|-------------|
+| Few-shot | gemma3:4b (100%) | olmo-3:7b (**5%**) |
+| Multi-shot | phi4-mini (90%) | ministral-3:3b (55%) |
+| Zero-shot binary | qwen3:8b (95%) | gemma2:2b (60%) |
+| Ternary | ministral-3:3b (100%) | gemma3:4b (70%) |
+
+**Critical insight:** Always test multiple prompt strategies per model. A model that excels with one approach may fail catastrophically with another.
+
+#### 4. Models to Avoid
+
+| Model | Issue |
+|-------|-------|
+| Reasoning models (phi4-mini-reasoning, deepseek-r1) | Extended thinking breaks output parsing |
+| Function calling models (functiongemma) | Wrong task type — refuses text classification |
+| olmo-3:7b | Catastrophic few-shot failure (5%) |
+| gpt-oss:20b | Too slow for CPU, underperforms smaller models |
+
+### Final Recommendations
+
+**For CPRA document classification on CPU:**
+
+1. **Primary choice:** `gemma3:4b` with `classification_few_shot`
+   - 100% accuracy, 3.3s/doc, perfect calibration
+   - Process 339 docs in ~19 minutes
+
+2. **Alternative (better extraction):** `ministral-3:3b` with `classification_ternary`
+   - 100% accuracy, 11.3s/doc
+   - Also 96% quote extraction accuracy
+   - Process 339 docs in ~64 minutes
+
+3. **Budget/speed priority:** `gemma2:2b` with `classification_ternary`
+   - 90% accuracy, 2.2s/doc (fastest)
+   - Process 339 docs in ~12 minutes
+
+### Remaining Untested Models
+
+| Model | Priority | Rationale |
+|-------|----------|-----------|
+| granite3.3:8b | Low | 2b version only reached 85% |
+| llama3:8b-instruct-q5_K_M | Low | Have 100% models already |
+| ministral-3:14b | Low | 3b already achieves 100% |
+| deepseek-r1:8b | Skip | Reasoning models don't work |
+
+**Recommendation:** Testing is effectively complete. We have identified optimal models (gemma3:4b, ministral-3:3b) achieving 100% accuracy. Additional testing unlikely to yield better results.

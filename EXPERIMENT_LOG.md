@@ -1168,9 +1168,9 @@ Larger cross-encoders consistently underperform smaller ones on document ranking
 
 ---
 
-## Experiments Complete
+## Embedding Experiments Complete
 
-All 19 experiments have been run. See summary table above for complete results.
+All 19 embedding/cross-encoder experiments have been run. See summary table above for complete results.
 
 ---
 
