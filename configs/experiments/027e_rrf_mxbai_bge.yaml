@@ -1,0 +1,21 @@
+# EXP-027e: RRF Ensemble - mxbai + BGE-Large
+# Rationale: Both models have 100% recall on PFAS
+# mxbai: 100% recall on PFAS, best MAP (0.9551)
+# BGE-Large: Best precision on PFAS (70.59%), 100% recall both corpora
+name: "027e RRF mxbai + BGE-Large"
+
+pipeline:
+  method: ensemble
+
+ensemble:
+  method: rrf
+  rrf_k: 60
+  pipelines:
+    - model: ollama:mxbai-embed-large
+      weight: 1.0
+    - model: st:bge-large-en-v1.5
+      weight: 1.0
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.001, 0.002, 0.003, 0.004, 0.005, 0.006, 0.007, 0.008, 0.009, 0.010, 0.012, 0.015, 0.020]

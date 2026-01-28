@@ -1,0 +1,21 @@
+# EXP-027a: RRF Ensemble - mpnet + mxbai
+# Rationale: Complementary BURIED_IN_THREAD coverage
+# mpnet: Best precision on Lead (57.74%), but 0% BURIED_IN_THREAD on PFAS
+# mxbai: 100% recall on PFAS, best MAP (0.9551)
+name: "027a RRF mpnet + mxbai"
+
+pipeline:
+  method: ensemble
+
+ensemble:
+  method: rrf
+  rrf_k: 60
+  pipelines:
+    - model: st:all-mpnet-base-v2
+      weight: 1.0
+    - model: ollama:mxbai-embed-large
+      weight: 1.0
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.001, 0.002, 0.003, 0.004, 0.005, 0.006, 0.007, 0.008, 0.009, 0.010, 0.012, 0.015, 0.020]

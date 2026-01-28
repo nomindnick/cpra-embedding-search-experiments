@@ -50,6 +50,11 @@ This document tracks experiments on the manually-crafted v2 corpus for evaluatin
 | 019 | BGE Reranker Large | 2025-12-29 | bge-reranker-large | 45.72% | 100.00% | 62.75% | 0.7084 | **Yes** (0.0) |
 | 020 | Voyage 4 Nano Baseline | 2026-01-28 | voyage-4-nano | 68.56% | 85.81% | 76.22% | 0.8220 | **Yes** (0.40) |
 | 021 | Voyage 4 Nano Asymmetric | 2026-01-28 | voyage-4-nano-asymmetric | 65.24% | 98.06% | 78.35% | 0.9335 | **Yes** (0.35) |
+| 027a | RRF mpnet + mxbai | 2026-01-28 | Ensemble[RRF] | 58.20% | 96.13% | 72.51% | 0.8888 | **Yes** (0.007) |
+| 027b | RRF mpnet + BGE-Large | 2026-01-28 | Ensemble[RRF] | 58.37% | 96.77% | 72.82% | 0.8971 | **Yes** (0.007) |
+| 027c | RRF mpnet + mxbai + BGE | 2026-01-28 | Ensemble[RRF] | 55.88% | 98.06% | 71.19% | 0.8889 | **Yes** (0.01) |
+| 027d | RRF hybrid (mpnet + mxbai + keyword) | 2026-01-28 | Ensemble[RRF] | 50.84% | 97.42% | 66.81% | 0.9073 | **Yes** (0.01) |
+| 027e | RRF mxbai + BGE-Large | 2026-01-28 | Ensemble[RRF] | 59.67% | 93.55% | 72.86% | 0.8657 | **Yes** (0.007) |
 
 ### EXP-020: Validation Corpus Sanity Check (2026-01-28)
 
@@ -1429,6 +1434,151 @@ All 21 embedding/cross-encoder experiments have been run. See summary table abov
 2. **Challenge-type specific routing**: Use different models for different document types
 3. **Continue testing new models**: No reason to commit to one embedder yet
 4. **Pipeline strategies**: Multi-stage approaches may matter more than model choice
+
+---
+
+## EXP-027: RRF Ensemble Across Top Bi-Encoders
+
+**Date:** 2026-01-28
+
+**Purpose:** Test whether combining diverse embedding models via Reciprocal Rank Fusion (RRF) improves precision at the 94% recall compliance threshold.
+
+**Background:** EXP-020 showed models have complementary strengths:
+- `all-mpnet-base-v2`: Best precision on Lead (57.74%), but 0% BURIED_IN_THREAD on PFAS
+- `mxbai-embed-large`: 100% recall on PFAS, best MAP (0.9551)
+- `bge-large-en-v1.5`: Best precision on PFAS (70.59%), 100% recall both corpora
+- `jina-embeddings-v3`: 100% recall both corpora
+
+**Implementation:** Added ensemble pipeline support to `run_experiment.py` and created EnsemblePipeline using Reciprocal Rank Fusion (RRF) with k=60.
+
+### Results Summary (Primary Corpus - Lead)
+
+| Variant | Models | Recall@94% | Precision@94% | Best F1 | MAP |
+|---------|--------|------------|---------------|---------|-----|
+| 027a | mpnet + mxbai | 96.13% | 58.20% | 80.97% | 0.8888 |
+| 027b | mpnet + BGE-Large | 96.77% | **58.37%** | **81.82%** | **0.8971** |
+| 027c | mpnet + mxbai + BGE | 98.06% | 55.88% | 79.07% | 0.8889 |
+| 027d | mpnet + mxbai + keyword | 97.42% | 50.84% | 80.65% | 0.9073 |
+| 027e | mxbai + BGE-Large | 93.55% | 59.67% | 79.07% | 0.8657 |
+
+**Note:** RRF scores are much smaller (sum of 1/(k+rank)) so thresholds need adjustment (~0.007-0.015 range).
+
+### Results Summary (Validation Corpus - PFAS)
+
+| Variant | Models | Recall@94% | Precision@94% | Best F1 | MAP |
+|---------|--------|------------|---------------|---------|-----|
+| 027a | mpnet + mxbai | 100% | 55.56% | 71.43% | 0.9501 |
+| 027b | mpnet + BGE-Large | 100% | 55.56% | 71.43% | **0.9535** |
+| 027c | mpnet + mxbai + BGE | 100% | 42.37% | 59.52% | 0.9536 |
+| 027d | mpnet + mxbai + keyword | 100% | 42.37% | 59.52% | 0.9550 |
+| 027e | mxbai + BGE-Large | 100% | 54.35% | 70.42% | 0.9534 |
+
+### Detailed Results
+
+#### 027a - RRF mpnet + mxbai
+
+**Rationale:** Complementary BURIED_IN_THREAD coverage (mpnet: 0% on PFAS, mxbai: 100% on PFAS)
+
+**Primary Corpus (Lead):**
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.006 | 50.00% | 99.35% | 66.52% | 154 | 154 | 1 |
+| 0.007 | 58.20% | 96.13% | 72.51% | 149 | 107 | 6 |
+| 0.008 | 69.70% | 89.03% | 78.19% | 138 | 60 | 17 |
+| 0.009 | 76.14% | 86.45% | **80.97%** | 134 | 42 | 21 |
+| 0.010 | 79.73% | 76.13% | 77.89% | 118 | 30 | 37 |
+
+**Validation Corpus (PFAS):** 100% recall maintained at threshold 0.020, precision 55.56%, F1 71.43%
+
+#### 027b - RRF mpnet + BGE-Large
+
+**Rationale:** Best precision on each corpus (mpnet: 57.74% on Lead, BGE-Large: 70.59% on PFAS)
+
+**Primary Corpus (Lead):**
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.006 | 50.33% | 99.35% | 66.81% | 154 | 152 | 1 |
+| 0.007 | 58.37% | 96.77% | 72.82% | 150 | 107 | 5 |
+| 0.008 | 70.41% | 89.03% | 78.63% | 138 | 58 | 17 |
+| 0.009 | 77.14% | 87.10% | **81.82%** | 135 | 40 | 20 |
+| 0.010 | 80.26% | 78.71% | 79.48% | 122 | 30 | 33 |
+
+**Validation Corpus (PFAS):** 100% recall maintained at threshold 0.020, precision 55.56%, F1 71.43%
+
+#### 027c - RRF mpnet + mxbai + BGE (3-model)
+
+**Rationale:** Combine all three top-performing models
+
+**Primary Corpus (Lead):**
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.009 | 50.49% | 99.35% | 66.96% | 154 | 151 | 1 |
+| 0.010 | 55.88% | 98.06% | 71.19% | 152 | 120 | 3 |
+| 0.012 | 68.32% | 89.03% | 77.31% | 138 | 64 | 17 |
+| 0.015 | 81.51% | 76.77% | **79.07%** | 119 | 27 | 36 |
+
+**Validation Corpus (PFAS):** All thresholds up to 0.020 maintain 100% recall, precision 42.37%
+
+#### 027d - RRF hybrid (mpnet + mxbai + keyword)
+
+**Rationale:** Hybrid approach combining embedding models with lexical search
+
+**Primary Corpus (Lead):**
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.009 | 47.26% | 100.00% | 64.18% | 155 | 173 | 0 |
+| 0.010 | 50.84% | 97.42% | 66.81% | 151 | 146 | 4 |
+| 0.012 | 65.71% | 89.03% | 75.62% | 138 | 72 | 17 |
+| 0.015 | 80.65% | 80.65% | **80.65%** | 125 | 30 | 30 |
+
+**Validation Corpus (PFAS):** All thresholds up to 0.020 maintain 100% recall, precision 42.37%
+
+#### 027e - RRF mxbai + BGE-Large
+
+**Rationale:** Both models have 100% recall on PFAS
+
+**Primary Corpus (Lead):**
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.006 | 51.34% | 98.71% | 67.55% | 153 | 145 | 2 |
+| 0.007 | 59.67% | 93.55% | 72.86% | 145 | 98 | 10 |
+| 0.008 | 66.67% | 85.16% | 74.79% | 132 | 66 | 23 |
+| 0.009 | 73.96% | 80.65% | 77.16% | 125 | 44 | 30 |
+| 0.010 | 81.51% | 76.77% | **79.07%** | 119 | 27 | 36 |
+
+**Validation Corpus (PFAS):** 100% recall at threshold 0.020, precision 54.35%, F1 70.42%
+
+### Key Observations
+
+1. **RRF does NOT improve precision at 94% recall**: Best ensemble (027b) achieves 58.37% precision at 96.77% recall — nearly identical to all-mpnet-base-v2 alone (57.74% at 98.71%). The hypothesis that combining models would improve precision was not confirmed.
+
+2. **RRF does improve F1 at best threshold**: 027b achieves 81.82% F1 vs 78.73% for all-mpnet-base-v2 at their respective best F1 thresholds. However, the best F1 thresholds don't meet the 94% recall requirement.
+
+3. **3-model and hybrid ensembles perform worse**: Adding more models (027c) or keyword search (027d) reduces precision without improving recall. The models may have overlapping weaknesses that dilute RRF's benefits.
+
+4. **027e fails to meet 94% recall**: mxbai + BGE-Large ensemble only reaches 93.55% recall at reasonable precision. Excluding mpnet hurts recall on the primary corpus.
+
+5. **All ensembles achieve 100% recall on validation**: The complementary coverage hypothesis works for the validation corpus, where all ensembles maintain 100% recall.
+
+6. **MAP is slightly lower than best individual models**: Ensemble MAPs (0.86-0.91) are lower than all-mpnet-base-v2 (0.8923) and Voyage asymmetric (0.9335). RRF doesn't improve document ranking.
+
+### Comparison vs Individual Models at 94%+ Recall
+
+| Model | Threshold | Recall | Precision | MAP |
+|-------|-----------|--------|-----------|-----|
+| Voyage 4 Nano Asymmetric | 0.35 | 98.06% | **65.24%** | **0.9335** |
+| all-mpnet-base-v2 | 0.30 | 98.71% | 57.74% | 0.8923 |
+| **027b RRF mpnet+BGE** | 0.007 | 96.77% | 58.37% | 0.8971 |
+| **027a RRF mpnet+mxbai** | 0.007 | 96.13% | 58.20% | 0.8888 |
+| Jina v3 | 0.50 | 98.06% | 51.70% | 0.8592 |
+
+### Conclusions
+
+**RRF ensemble does NOT provide the expected precision improvement** for this task. The models' weaknesses on challenging categories (BURIED_IN_THREAD, TECHNICAL_JARGON) are shared rather than complementary for the primary corpus.
+
+**The Voyage 4 Nano Asymmetric model remains the best choice** for CPRA compliance, with 65.24% precision at 98.06% recall — significantly better than any ensemble approach.
+
+**Recommendation:** Focus on improving individual model performance (e.g., asymmetric encoding, domain-specific fine-tuning) rather than ensemble approaches for this task.
 
 ---
 

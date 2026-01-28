@@ -1,0 +1,24 @@
+# EXP-027d: RRF Hybrid Ensemble - mpnet + mxbai + keyword
+# Rationale: Hybrid approach combining embedding models with lexical search
+# mpnet: Best precision on Lead (57.74%)
+# mxbai: 100% recall on PFAS, best MAP (0.9551)
+# keyword: Baseline lexical search for complementary signal
+name: "027d RRF hybrid (mpnet + mxbai + keyword)"
+
+pipeline:
+  method: ensemble
+
+ensemble:
+  method: rrf
+  rrf_k: 60
+  pipelines:
+    - model: st:all-mpnet-base-v2
+      weight: 1.0
+    - model: ollama:mxbai-embed-large
+      weight: 1.0
+    - model: keyword
+      weight: 1.0
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.001, 0.002, 0.003, 0.004, 0.005, 0.006, 0.007, 0.008, 0.009, 0.010, 0.012, 0.015, 0.020]

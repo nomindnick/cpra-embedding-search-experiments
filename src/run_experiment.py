@@ -43,6 +43,30 @@ def create_pipeline(config: dict):
 
         model_name = config.get("cross_encoder_model", "ms-marco-MiniLM-L-6-v2")
         return CrossEncoderSearchPipeline(model_name=model_name)
+    elif method == "ensemble":
+        # Import here to avoid loading models if not needed
+        from src.pipeline.embedding import EmbeddingSearchPipeline
+        from src.pipeline.ensemble import EnsemblePipeline, PipelineWeight
+
+        ensemble_config = config.get("ensemble", {})
+        pipelines = []
+
+        for p_config in ensemble_config.get("pipelines", []):
+            model = p_config.get("model")
+            weight = p_config.get("weight", 1.0)
+
+            if model == "keyword":
+                pipeline = KeywordSearchPipeline()
+            else:
+                pipeline = EmbeddingSearchPipeline(model_name=model)
+
+            pipelines.append(PipelineWeight(pipeline, weight=weight))
+
+        return EnsemblePipeline(
+            pipelines=pipelines,
+            method=ensemble_config.get("method", "rrf"),
+            rrf_k=ensemble_config.get("rrf_k", 60),
+        )
     else:
         raise ValueError(f"Unknown pipeline method: {method}")
 
@@ -215,7 +239,7 @@ def main():
     results.config = config
 
     # Run threshold analysis if thresholds are configured
-    if thresholds and config.get("pipeline", {}).get("method") in ("embedding", "cross_encoder"):
+    if thresholds and config.get("pipeline", {}).get("method") in ("embedding", "cross_encoder", "ensemble"):
         if not args.quiet:
             console.print()
             console.print("[bold]Running threshold analysis...[/bold]")
