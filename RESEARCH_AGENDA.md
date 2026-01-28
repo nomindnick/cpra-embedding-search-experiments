@@ -437,9 +437,104 @@ Specifically target these false positive patterns:
 Generate {N} different examples of non-responsive but plausibly-confused content.
 ```
 
+**Variants:**
+- 025a: `max_sim(email, positives)` — positive prototypes only
+- 025b: `max_sim(email, positives) - λ * max_sim(email, negatives)` — contrastive with max
+- 025c: `avg_sim(email, positives) - λ * avg_sim(email, negatives)` — contrastive with mean
+
 **Expected win:** Precision bump without sacrificing recall.
 
 **Status:** Pending
+
+---
+
+### EXP-025d — Query Prototypes with Asymmetric Encoding
+
+**Hypothesis:** Asymmetric models (like Voyage 4 Nano) are trained for query→document matching. By generating **short query-like prototypes** instead of full pseudo-emails, we use the model the way it was trained — potentially improving discrimination.
+
+**Key insight:** EXP-025a-c generate document prototypes (full emails) and compare documents to documents. But asymmetric encoding optimizes for query→document, not document→document. Phrasing prototypes as queries may leverage this training better.
+
+**Method:**
+1. LLM generates SHORT query-like descriptions (10-30 words each):
+   - P positive queries describing what responsive content looks like
+   - N negative queries describing false positive patterns
+2. Encode prototypes as **queries** via `encode_query()`
+3. Encode corpus emails as **documents** via `encode_document()`
+4. Score: `max_sim(doc, positive_queries) - λ * max_sim(doc, negative_queries)`
+
+**Positive query prototype prompt:**
+```
+Given this CPRA request:
+{request.request_text}
+
+Generate {P} SHORT search queries (10-30 words each) that would find responsive documents.
+
+Cover different aspects:
+- Direct discussions of the core topic
+- Technical/regulatory terminology and jargon
+- Indirect references (e.g., project names, related activities)
+- Historical events or future planning related to the topic
+
+Output one query per line. Be specific and concrete.
+```
+
+**Negative query prototype prompt:**
+```
+Given this CPRA request:
+{request.request_text}
+
+The request mentions these keywords: {request.keywords}
+
+Generate {N} SHORT search queries (10-30 words each) that would find FALSE POSITIVES — documents that seem relevant but aren't.
+
+Target these patterns:
+- "{keyword}" used in unrelated contexts (e.g., "lead" meaning leadership)
+- Adjacent topics in the same domain but different subject
+- Administrative/procedural content tangentially related
+
+Output one query per line. Be specific about what makes each a false positive.
+```
+
+**Example output (for lead contamination request):**
+
+Positive queries:
+- "water testing results showing elevated lead levels in residential samples"
+- "lead service line replacement project timeline and contractor communications"
+- "EPA action level exceedances and required public notification"
+- "corrosion control treatment adjustments to reduce lead leaching"
+
+Negative queries:
+- "leadership transition planning for water department director position"
+- "leading the infrastructure modernization initiative kickoff meeting"
+- "general water main replacement project unrelated to lead pipes"
+- "budget allocation for water system improvements no contamination mentioned"
+
+**Why this might work better:**
+1. Voyage asymmetric is trained on query→document pairs, not document→document
+2. Short queries match the input distribution the query encoder expects
+3. Queries express "what to look for" which aligns with retrieval training
+4. Avoids generating long synthetic emails that may not match real email distribution
+
+**Comparison to 025a-c:**
+
+| Aspect | 025a-c (Document Prototypes) | 025d (Query Prototypes) |
+|--------|------------------------------|-------------------------|
+| Prototype format | Full pseudo-emails (100-300 words) | Short queries (10-30 words) |
+| Encoding | `embed()` (symmetric) | `encode_query()` (asymmetric) |
+| Comparison | document ↔ document | query → document |
+| Model fit | General embedding models | Asymmetric retrieval models |
+| LLM generation | Harder (realistic emails) | Easier (short descriptions) |
+
+**Variants:**
+- 025d-i: Voyage 4 Nano asymmetric with max aggregation
+- 025d-ii: Voyage 4 Nano asymmetric with mean aggregation
+- 025d-iii: Compare symmetric (025b) vs asymmetric (025d) on same model
+
+**Implementation notes:**
+- Requires `ContrastivePipeline` to support asymmetric encoding (encode prototypes as queries)
+- May need to adjust λ since query-document similarities have different distributions than document-document
+
+**Status:** Pending — depends on EXP-025a-c results for comparison
 
 ---
 
