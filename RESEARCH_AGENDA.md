@@ -472,43 +472,64 @@ Ensembles can help in two ways:
 
 ### EXP-027 — Reciprocal Rank Fusion Across Top Bi-Encoders
 
-**Hypothesis:** Combining diverse embedders increases precision at the compliance threshold by stabilizing ranking.
+**Hypothesis:** Combining diverse embedders increases precision at the compliance threshold by stabilizing ranking. EXP-020 showed models have complementary strengths across corpora and challenge types.
 
-**Candidates:**
-- `all-mpnet-base-v2` (best precision@high recall)
-- `embeddinggemma` (strong MAP, 100% recall at low threshold)
-- `bge-large-en-v1.5`
-- `jina-embeddings-v3`
-- `qwen3-embedding-0.6b` (precision specialist)
+**Candidates (updated based on EXP-020):**
+- `all-mpnet-base-v2` — Best precision on Lead (57.74%), but 0% BURIED_IN_THREAD on PFAS
+- `mxbai-embed-large` — 100% recall on PFAS, consistent across challenge types, best MAP on validation (0.9551)
+- `bge-large-en-v1.5` — Best precision on PFAS (70.59%), 100% recall on both corpora
+- `jina-embeddings-v3` — 100% recall on both corpora, good generalization
+
+**Not recommended (based on EXP-020):**
+- `qwen3-embedding-0.6b` — Fails to generalize (24% recall on PFAS vs 89% on Lead)
+- `embeddinggemma` — Only 68% recall on PFAS at default threshold
 
 **Method:**
-1. Run each model, get ranked list (top_k large, e.g., 250–339)
+1. Run each model, get ranked list (all documents, ranked by similarity)
 2. Fuse with RRF: `score(d) = Σ 1/(k + rank_m(d))` where k=60 (standard)
+3. Evaluate on both primary (Lead) and validation (PFAS) corpora
 
 **Variants:**
-- 027a: 2-model fusion (mpnet + embeddinggemma)
-- 027b: 3–4 model fusion
-- 027c: add BM25 as another "model" into RRF
 
-**Status:** Pending
+| Variant | Models | Rationale |
+|---------|--------|-----------|
+| 027a | mpnet + mxbai | Complementary BURIED_IN_THREAD coverage (mpnet: 90% Lead/0% PFAS, mxbai: ~90% Lead/100% PFAS) |
+| 027b | mpnet + BGE-Large | Best precision on each corpus (mpnet: Lead, BGE: PFAS) |
+| 027c | mpnet + mxbai + BGE-Large | 3-model ensemble for maximum coverage |
+| 027d | mpnet + mxbai + BM25 | Add lexical signal — keywords work well on PFAS (92% recall, 65.71% precision) |
+| 027e | mxbai + BGE-Large | Skip mpnet — both have 100% recall on PFAS |
+
+**Expected outcomes:**
+- 027a/027c should improve BURIED_IN_THREAD coverage on PFAS
+- 027b should improve precision on both corpora
+- 027d tests whether hybrid (embedding + lexical) helps
+
+**Status:** Pending — High priority based on EXP-020 findings
 
 ---
 
-### EXP-028 — Precision Specialist Rerank (mpnet → qwen3)
+### EXP-028 — Precision Specialist Rerank (Two-Stage Scoring)
 
-**Hypothesis:** Qwen3's high precision (but lower recall) makes it a good *second-stage* scorer if mpnet supplies the high-recall candidate set.
+**Hypothesis:** A high-precision model as second-stage scorer can improve precision if a high-recall model supplies the candidate set.
+
+**⚠️ Updated based on EXP-020:** Qwen3 fails to generalize (24% recall on PFAS) — do not use as reranker. Consider Voyage asymmetric instead (best average precision at 94%+ recall: 66.91%).
 
 **Method:**
-1. Stage 1: retrieve candidates with mpnet (top_k large, e.g., 250)
-2. Stage 2: compute qwen3 similarity for the same candidates
-3. Final score:
-   - 028a: `score = α * mpnet_sim + (1-α) * qwen3_sim`
-   - 028b: RRF over the two candidate rankings
-4. Tune α on primary; evaluate on validation
+1. Stage 1: retrieve candidates with high-recall model (mxbai or BGE-Large, top_k=100-200)
+2. Stage 2: re-score candidates with precision-focused model
+3. Final score: weighted combination or RRF
 
-**What to watch:** If recall drops below 94%, the reranker is too aggressive; expand candidate set or reduce qwen3 weight.
+**Variants:**
 
-**Status:** Pending
+| Variant | Stage 1 | Stage 2 | Rationale |
+|---------|---------|---------|-----------|
+| 028a | mxbai (100% recall both) | Voyage-asym | Voyage has best avg precision but misses BURIED_IN_THREAD |
+| 028b | BGE-Large (100% recall both) | mpnet | mpnet has better Lead precision |
+| 028c | mxbai | BGE-Large | Both generalize well, different strengths |
+
+**What to watch:** If recall drops below 94%, expand candidate set or reduce Stage 2 weight.
+
+**Status:** Pending — Lower priority than EXP-027 (ensemble is simpler)
 
 ---
 
@@ -850,14 +871,21 @@ Already computed (in `.cache/embeddings/`):
 
 ---
 
-## Quick Recommendations (What to Run First)
+## Quick Recommendations (What to Run Next)
 
-If we want the fastest path to "meaningfully better than mpnet alone":
+Based on EXP-020 findings (models have complementary strengths):
 
-1. **EXP-020** (validation sanity check) — ensure we're not overfitting
-2. **EXP-025** (positive/negative prototypes) — directly targets keyword false positives
+1. ✅ **EXP-020** (validation sanity check) — COMPLETE. Found no single model dominates.
+
+2. **EXP-027** (RRF ensemble) — **HIGH PRIORITY**
+   - EXP-020 showed models have complementary strengths (mxbai: PFAS, mpnet: Lead)
+   - Low complexity, directly tests the insight
+   - Start with 027a (mpnet + mxbai) for BURIED_IN_THREAD coverage
+
+3. **EXP-025** (positive/negative prototypes) — targets keyword false positives
+   - More relevant for Lead corpus (the "lead/leadership" ambiguity)
    - Use ministral-3:3b (100% both pos/neg examples)
-3. **EXP-027** (RRF ensemble) — easy win if it works, low complexity
+
 4. **EXP-031** (LLM verifier with evidence) — likely biggest precision jump
    - Start with gemma3:4b (100% @ 3.3s)
    - Fall back to ministral-3:3b if extraction quality matters
