@@ -46,6 +46,23 @@ class EmbeddingModel(ABC):
         """
         return self.embed([text])[0]
 
+    @property
+    def supports_asymmetric(self) -> bool:
+        """Whether this model supports asymmetric query/document encoding."""
+        return False
+
+    def embed_queries(self, texts: list[str]) -> np.ndarray:
+        """Embed query texts. Default: falls back to embed()."""
+        return self.embed(texts)
+
+    def embed_query_single(self, text: str) -> np.ndarray:
+        """Embed a single query."""
+        return self.embed_queries([text])[0]
+
+    def embed_documents(self, texts: list[str]) -> np.ndarray:
+        """Embed document texts. Default: falls back to embed()."""
+        return self.embed(texts)
+
 
 class SentenceTransformerEmbedding(EmbeddingModel):
     """Embedding model using sentence-transformers library."""
@@ -85,6 +102,85 @@ class SentenceTransformerEmbedding(EmbeddingModel):
             convert_to_numpy=True,
             show_progress_bar=False,
         )
+        return embeddings
+
+
+class AsymmetricSentenceTransformerEmbedding(EmbeddingModel):
+    """Embedding model using asymmetric query/document encoding.
+
+    Some models like voyage-4-nano support specialized encode_query() and
+    encode_document() methods for better retrieval performance.
+    """
+
+    def __init__(
+        self,
+        model_name: str,
+        trust_remote_code: bool = False,
+        truncate_dim: int | None = None,
+    ):
+        """Initialize with an asymmetric sentence-transformers model.
+
+        Args:
+            model_name: Model name (e.g., 'voyageai/voyage-4-nano')
+            trust_remote_code: Whether to trust remote code
+            truncate_dim: Optional dimension for Matryoshka truncation
+        """
+        from sentence_transformers import SentenceTransformer
+
+        self._model_name = model_name
+        self._truncate_dim = truncate_dim
+        self._model = SentenceTransformer(model_name, trust_remote_code=trust_remote_code)
+
+        # Verify model supports asymmetric encoding
+        if not hasattr(self._model, "encode_query") or not hasattr(
+            self._model, "encode_document"
+        ):
+            raise ValueError(
+                f"Model {model_name} does not support asymmetric encoding "
+                "(missing encode_query/encode_document methods)"
+            )
+
+        # Get dimensions (use truncate_dim if specified)
+        full_dim = self._model.get_sentence_embedding_dimension()
+        self._dimensions = truncate_dim if truncate_dim else full_dim
+
+    @property
+    def dimensions(self) -> int:
+        return self._dimensions
+
+    @property
+    def name(self) -> str:
+        suffix = f"-{self._truncate_dim}d" if self._truncate_dim else ""
+        return f"st:{self._model_name}-asymmetric{suffix}"
+
+    @property
+    def supports_asymmetric(self) -> bool:
+        return True
+
+    def embed(self, texts: list[str]) -> np.ndarray:
+        """Embed texts using standard encode (falls back to document encoding)."""
+        return self.embed_documents(texts)
+
+    def embed_queries(self, texts: list[str]) -> np.ndarray:
+        """Embed query texts using specialized query encoding."""
+        embeddings = self._model.encode_query(
+            texts,
+            convert_to_numpy=True,
+            show_progress_bar=False,
+        )
+        if self._truncate_dim:
+            embeddings = embeddings[:, : self._truncate_dim]
+        return embeddings
+
+    def embed_documents(self, texts: list[str]) -> np.ndarray:
+        """Embed document texts using specialized document encoding."""
+        embeddings = self._model.encode_document(
+            texts,
+            convert_to_numpy=True,
+            show_progress_bar=False,
+        )
+        if self._truncate_dim:
+            embeddings = embeddings[:, : self._truncate_dim]
         return embeddings
 
 
@@ -210,6 +306,13 @@ def get_embedding_model(
     provider = model_config["provider"]
 
     if provider == "sentence-transformers":
+        # Check if asymmetric encoding is requested
+        if model_config.get("asymmetric", False):
+            return AsymmetricSentenceTransformerEmbedding(
+                model_config["model_name"],
+                trust_remote_code=model_config.get("trust_remote_code", False),
+                truncate_dim=model_config.get("truncate_dim"),
+            )
         return SentenceTransformerEmbedding(
             model_config["model_name"],
             trust_remote_code=model_config.get("trust_remote_code", False),

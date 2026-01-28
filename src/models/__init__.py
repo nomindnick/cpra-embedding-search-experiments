@@ -1,5 +1,6 @@
 # Model abstractions for embeddings and LLMs
 from .embeddings import (
+    AsymmetricSentenceTransformerEmbedding,
     EmbeddingModel,
     OllamaEmbedding,
     SentenceTransformerEmbedding,
@@ -8,6 +9,7 @@ from .embeddings import (
 )
 
 __all__ = [
+    "AsymmetricSentenceTransformerEmbedding",
     "EmbeddingModel",
     "OllamaEmbedding",
     "SentenceTransformerEmbedding",

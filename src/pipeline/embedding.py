@@ -107,7 +107,10 @@ class EmbeddingSearchPipeline(SearchPipeline):
 
         # Embed all documents using their .text property
         texts = [doc.text for doc in documents]
-        embeddings_array = self.model.embed(texts)
+        if self.model.supports_asymmetric:
+            embeddings_array = self.model.embed_documents(texts)
+        else:
+            embeddings_array = self.model.embed(texts)
 
         embeddings = {doc.id: embeddings_array[i] for i, doc in enumerate(documents)}
 
@@ -134,7 +137,10 @@ class EmbeddingSearchPipeline(SearchPipeline):
 
         # Embed the request
         request_text = self._get_request_text(request)
-        request_embedding = self.model.embed_single(request_text)
+        if self.model.supports_asymmetric:
+            request_embedding = self.model.embed_query_single(request_text)
+        else:
+            request_embedding = self.model.embed_single(request_text)
 
         # Build document embedding matrix
         doc_ids = [d.id for d in documents]

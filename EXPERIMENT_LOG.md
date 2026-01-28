@@ -48,6 +48,8 @@ This document tracks experiments on the manually-crafted v2 corpus for evaluatin
 | 017 | Cross-Encoder Quora RoBERTa | 2025-12-29 | quora-roberta-large | 28.57% | 1.29% | 2.47% | 0.4115 | No |
 | 018 | BGE Reranker Base | 2025-12-29 | bge-reranker-base | 45.72% | 100.00% | 62.75% | 0.7431 | **Yes** (0.0) |
 | 019 | BGE Reranker Large | 2025-12-29 | bge-reranker-large | 45.72% | 100.00% | 62.75% | 0.7084 | **Yes** (0.0) |
+| 020 | Voyage 4 Nano Baseline | 2026-01-28 | voyage-4-nano | 68.56% | 85.81% | 76.22% | 0.8220 | **Yes** (0.40) |
+| 021 | Voyage 4 Nano Asymmetric | 2026-01-28 | voyage-4-nano-asymmetric | 65.24% | 98.06% | 78.35% | 0.9335 | **Yes** (0.35) |
 
 ---
 
@@ -1168,9 +1170,160 @@ Larger cross-encoders consistently underperform smaller ones on document ranking
 
 ---
 
+---
+
+### 020 - Voyage 4 Nano Baseline
+
+**Date:** 2026-01-28
+
+**Configuration:** `configs/experiments/020_voyage_4_nano_baseline.yaml`
+
+**Model:** voyageai/voyage-4-nano (340M params, 2048 dims, 32K context, Matryoshka support)
+
+**Purpose:** Test Voyage AI's new efficient embedding model using standard `encode()` method.
+
+**Results (at best F1 threshold 0.45):**
+
+| Metric | Value | vs Keyword Baseline |
+|--------|-------|---------------------|
+| Precision | 68.56% | +13.24% |
+| Recall | 85.81% | +1.94% |
+| F1 | 76.22% | +9.55% |
+| Average Precision | 0.8220 | +0.027 |
+| True Positives | 133 | +3 |
+| False Positives | 61 | -44 |
+| False Negatives | 22 | -3 |
+
+**Threshold Analysis:**
+
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-------|-----|-----|-----|
+| 0.30 | 46.97% | 100.00% | 63.92% | 155 | 175 | 0 |
+| 0.35 | 48.42% | 98.71% | 64.97% | 153 | 163 | 2 |
+| 0.40 | 54.01% | 95.48% | 69.00% | 148 | 126 | 7 |
+| 0.45 | 68.56% | 85.81% | 76.22% | 133 | 61 | 22 |
+| 0.50 | 76.51% | 73.55% | 75.00% | 114 | 35 | 41 |
+| 0.55 | 86.32% | 52.90% | 65.60% | 82 | 13 | 73 |
+| 0.60 | 94.34% | 32.26% | 48.08% | 50 | 3 | 105 |
+
+**By Challenge Type (at threshold 0.50):**
+
+| Challenge Type | Recall | vs Keyword Baseline |
+|----------------|--------|---------------------|
+| DIRECT_MATCH | 96.67% | -3.33% |
+| AMBIGUOUS_TERMS | 70.00% | -30.00% |
+| INDIRECT_REFERENCE | 65.71% | -11.43% |
+| TECHNICAL_JARGON | 72.00% | +8.00% |
+| TEMPORAL_REFERENCE | 80.00% | -8.00% |
+| BURIED_IN_THREAD | 30.00% | -20.00% |
+
+**Observations:**
+
+1. **MEETS 94% recall requirement**: At threshold 0.40, achieves 95.48% recall with 54.01% precision — similar to keyword baseline precision (55.32%).
+
+2. **Best F1 at 0.45**: 76.22% F1 beats all-mpnet-base-v2 (72.86%) at best F1, though at lower recall (85.81% vs 98.71%).
+
+3. **Middle-tier MAP**: 0.8220 MAP is below all-mpnet-base-v2 (0.8923) and Qwen3 (0.9169).
+
+4. **Struggles with BURIED_IN_THREAD**: Only 30% recall at default threshold — consistent weakness.
+
+5. **AMBIGUOUS_TERMS weakness**: 70% recall is lower than expected for an embedding model, suggesting possible difficulty with contextual disambiguation.
+
+**Key Insight:**
+Voyage 4 Nano baseline provides a good precision-recall tradeoff but doesn't stand out compared to existing models. At the 94% recall threshold, precision (54.01%) is nearly identical to keyword search (55.32%). The model's strength is at higher precision operating points, not high-recall legal compliance scenarios.
+
+**Meets 94% Recall?** **Yes** (95.48% at threshold 0.40)
+
+---
+
+### 021 - Voyage 4 Nano Asymmetric
+
+**Date:** 2026-01-28
+
+**Configuration:** `configs/experiments/021_voyage_4_nano_asymmetric.yaml`
+
+**Model:** voyageai/voyage-4-nano with asymmetric encoding (encode_query/encode_document)
+
+**Purpose:** Test if asymmetric query/document encoding improves retrieval over standard symmetric encoding.
+
+**Results (at best F1 threshold 0.40):**
+
+| Metric | Value | vs Baseline (020) |
+|--------|-------|-------------------|
+| Precision | 80.90% | +26.89% |
+| Recall | 92.90% | -2.58% |
+| F1 | 86.49% | +17.49% |
+| Average Precision | 0.9335 | **+0.1115** |
+| True Positives | 144 | -4 |
+| False Positives | 34 | -92 |
+| False Negatives | 11 | +4 |
+
+**Threshold Analysis:**
+
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-------|-----|-----|-----|
+| 0.30 | 53.66% | 99.35% | 69.68% | 154 | 133 | 1 |
+| 0.35 | 65.24% | 98.06% | 78.35% | 152 | 81 | 3 |
+| 0.40 | 80.90% | 92.90% | 86.49% | 144 | 34 | 11 |
+| 0.45 | 90.32% | 72.26% | 80.29% | 112 | 12 | 43 |
+| 0.50 | 98.78% | 52.26% | 68.35% | 81 | 1 | 74 |
+| 0.55 | 100.00% | 23.87% | 38.54% | 37 | 0 | 118 |
+| 0.60 | 100.00% | 5.81% | 10.98% | 9 | 0 | 146 |
+
+**By Challenge Type (at threshold 0.40):**
+
+| Challenge Type | Recall | vs Baseline (020) | vs Keyword |
+|----------------|--------|-------------------|------------|
+| DIRECT_MATCH | 90.00% | -6.67% | -10.00% |
+| AMBIGUOUS_TERMS | 86.67% | +16.67% | -13.33% |
+| INDIRECT_REFERENCE | 40.00% | -25.71% | -37.14% |
+| TECHNICAL_JARGON | 8.00% | -64.00% | -56.00% |
+| TEMPORAL_REFERENCE | 48.00% | -32.00% | -40.00% |
+| BURIED_IN_THREAD | 0.00% | -30.00% | -50.00% |
+
+**Comparison at 94%+ Recall:**
+
+| Model | Threshold | Recall | Precision | FPs | MAP |
+|-------|-----------|--------|-----------|-----|-----|
+| **Voyage Asymmetric** | 0.35 | 98.06% | **65.24%** | **81** | **0.9335** |
+| Voyage Baseline | 0.40 | 95.48% | 54.01% | 126 | 0.8220 |
+| all-mpnet-base-v2 | 0.30 | 98.71% | 57.74% | 112 | 0.8923 |
+| Keyword Baseline | N/A | 83.87% | 55.32% | 105 | 0.7953 |
+
+**Observations:**
+
+1. **MEETS 94% recall with best precision**: At threshold 0.35, achieves 98.06% recall with 65.24% precision — **best precision at 94%+ recall** of any model tested.
+
+2. **Dramatic MAP improvement**: 0.9335 MAP is the second-highest of all experiments, only behind Qwen3 (0.9169 at lower recall). Shows excellent document ranking.
+
+3. **Best F1 of all bi-encoder models**: 86.49% F1 at threshold 0.40 beats Qwen3 (82.88%) and all-mpnet (78.73%).
+
+4. **Asymmetric encoding helps precision significantly**: +11 percentage points precision improvement over baseline at comparable recall.
+
+5. **Category-specific tradeoffs**:
+   - **Better**: AMBIGUOUS_TERMS (86.67% vs 70.00%) — asymmetric encoding helps disambiguation
+   - **Much worse**: TECHNICAL_JARGON (8% vs 72%), BURIED_IN_THREAD (0% vs 30%)
+
+6. **Specialized for direct semantic matching**: The asymmetric encoding excels when query and document have clear semantic overlap, but struggles with documents that require domain knowledge (technical jargon) or long-context understanding (buried threads).
+
+**Analysis:**
+
+The asymmetric encoding fundamentally changes how the model matches queries to documents. By using separate encoders for queries and documents, the model learns that queries are short intent expressions while documents are longer content pieces. This improves precision by better distinguishing "what the user wants" from "what the document says."
+
+However, this specialization comes at a cost: the model loses some ability to find documents that require inference or domain knowledge. TECHNICAL_JARGON documents use specialized terminology (LSL, CCT, ppb) that doesn't match query semantics even though they're about lead contamination. BURIED_IN_THREAD requires understanding that a responsive mention exists somewhere in a long context.
+
+**Key Insight:**
+Voyage 4 Nano with asymmetric encoding provides the **best precision at 94%+ recall** (65.24% vs 57.74% for all-mpnet). However, it achieves this by being excellent at direct matches while failing on challenging categories. For CPRA compliance where every document matters, the 0% recall on BURIED_IN_THREAD and 8% on TECHNICAL_JARGON is concerning — these are exactly the documents humans would miss too.
+
+**Recommendation:** Use asymmetric encoding as a first-pass ranker for precision, but pair with a model that handles technical jargon and buried content (like all-mpnet-base-v2 or Qwen3) for complete coverage.
+
+**Meets 94% Recall?** **Yes** (98.06% at threshold 0.35 — best precision at 94%+ recall)
+
+---
+
 ## Embedding Experiments Complete
 
-All 19 embedding/cross-encoder experiments have been run. See summary table above for complete results.
+All 21 embedding/cross-encoder experiments have been run. See summary table above for complete results.
 
 ---
 

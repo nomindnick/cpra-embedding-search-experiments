@@ -1,0 +1,12 @@
+# Voyage 4 Nano - Asymmetric (query/document encoding)
+# Uses specialized encode_query() and encode_document() methods for better retrieval
+name: "021 Voyage 4 Nano Asymmetric"
+
+pipeline:
+  method: embedding
+
+embedding_model: st:voyage-4-nano-asymmetric
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80]

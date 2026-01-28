@@ -107,6 +107,23 @@ embedding_models:
     local: true
     trust_remote_code: true
 
+  st:voyage-4-nano:
+    provider: sentence-transformers
+    model_name: voyageai/voyage-4-nano
+    dimensions: 2048
+    description: "Voyage 4 Nano baseline (standard encode), 340M params"
+    local: true
+    trust_remote_code: true
+
+  st:voyage-4-nano-asymmetric:
+    provider: sentence-transformers
+    model_name: voyageai/voyage-4-nano
+    dimensions: 2048
+    description: "Voyage 4 Nano with asymmetric query/document encoding"
+    local: true
+    trust_remote_code: true
+    asymmetric: true
+
   # Cloud models (for experimentation)
   openai:text-embedding-3-small:
     provider: openai
