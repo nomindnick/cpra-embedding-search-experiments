@@ -1,6 +1,6 @@
 # Research Agenda: CPRA Semantic Search (v2 corpus)
 
-> Last updated: 2025-12-29
+> Last updated: 2026-01-28
 
 This is the "what do we try next?" plan for pushing **precision up** while keeping **recall ≥ 94%** (legal requirement).
 
@@ -8,7 +8,12 @@ This is the "what do we try next?" plan for pushing **precision up** while keepi
 
 ## Where We Are (Baseline)
 
-**Best single-model baseline:** `all-mpnet-base-v2` (Exp 006) hits **98.71% recall** at threshold 0.30 with **57.74% precision**.
+**Current baselines on primary (lead) corpus:**
+- `all-mpnet-base-v2` (Exp 006): 98.71% recall, 57.74% precision at threshold 0.30
+- `voyage-4-nano-asymmetric` (Exp 021): 98.06% recall, 65.24% precision at threshold 0.35
+- `BGE Large EN v1.5` (Exp 009): 99.35% recall, 47.24% precision at threshold 0.50
+
+**EXP-020 (validation corpus) showed different models excel on different corpora** — no single model dominates across both. This suggests we should continue exploring rather than committing to one embedder.
 
 **Cross-encoders didn't help** on the keyword-free v2 corpus (Exp 011–019). The issue appears to be *training mismatch*:
 - MS-MARCO/BGE models over-rely on lexical overlap
@@ -55,94 +60,141 @@ This is the "what do we try next?" plan for pushing **precision up** while keepi
 
 ---
 
-## Priority 0: Foundation & Sanity Checks
+## LLM Model Recommendations
 
-### EXP-000 — Local LLM Capability Assessment
+Based on EXP-000 testing (16 models evaluated). For each task type, **try candidate models in order** — the first may not always work best in your specific pipeline context.
 
-**Goal:** Identify which local LLMs to use for which tasks in subsequent experiments. Different models excel at different tasks (classification vs generation vs extraction), and latency matters when processing 339+ documents.
+### Classification Tasks (EXP-031, EXP-032)
 
-**Models to evaluate (available via Ollama):**
+For document responsiveness classification:
 
-| Model | Size | Notes |
-|-------|------|-------|
-| qwen3:0.6b | 0.6B | Ultra-fast baseline |
-| qwen3:1.7b | 1.7B | Small but capable |
-| qwen3:8b | 8B | Flagship qwen |
-| gemma3:4b | 4B | Google's latest |
-| gemma3:12b | 12B | Larger gemma |
-| gemma2:2b | 2B | Previous gen |
-| phi4-mini:3.8b | 3.8B | Microsoft |
-| phi4-mini-reasoning:3.8b | 3.8B | Reasoning variant |
-| phi3:mini | 3B | Previous gen |
-| granite3.3:2b | 2B | IBM |
-| granite3.3:8b | 8B | IBM larger |
-| deepseek-r1:1.5b | 1.5B | Reasoning focused |
-| deepseek-r1:8b | 8B | Reasoning larger |
-| ministral-3:3b | 3B | Mistral small |
-| ministral-3:8b | 8B | Mistral medium |
-| ministral-3:14b | 14B | Mistral large |
-| llama3:8b-instruct-q5_K_M | 8B | Meta |
-| gpt-oss:20b | 20B | Largest available |
-| olmo-3:7b | 7B | Allen AI open model |
-| functiongemma:270m | 270M | Function calling specialist |
+| Priority | Model | Accuracy | Latency | Prompt Style | Notes |
+|----------|-------|----------|---------|--------------|-------|
+| 1 | gemma3:4b | 100% | 3.3s | Few-shot | Fastest perfect scorer |
+| 2 | ministral-3:3b | 100% | 11.3s | Ternary | Also excellent at extraction |
+| 3 | phi4-mini:3.8b | 90% | 6.7s | Multi-shot | Well-rounded alternative |
+| 4 | qwen3:8b | 95% | 45.6s | Zero-shot | High accuracy but slow |
 
-**Tasks to evaluate:**
+**Fallback (speed priority):** gemma2:2b (90% @ 2.2s) with ternary prompts
 
-1. **Classification (few-shot)** — ⭐ BEST APPROACH: Few-shot examples + YES/NO output
-2. **Classification (binary)** — Zero-shot YES/NO (baseline comparison)
-3. **Classification (ternary + confidence)** — Output yes/no/maybe with confidence 0-100
-4. **JSON format compliance** — Can it output valid, parseable JSON?
-5. **Evidence extraction** — Can it quote verbatim from the document?
-6. **Generation (paraphrases)** — Generate 5 diverse paraphrases of a request
-7. **Generation (examples)** — Generate realistic responsive/non-responsive emails
-8. **Extraction (keywords)** — Extract relevant keywords/entities from text
-9. **Latency** — Time per task (critical for corpus-scale processing)
+### Generation Tasks (EXP-021, EXP-025)
 
-**Early finding:** Few-shot prompting dramatically improves classification (85% vs 60-70% zero-shot on qwen3:0.6b). Use `classification_few_shot` task for all future classification work.
+For paraphrases, example documents, facet queries:
 
-**Evaluation approach:**
+| Priority | Model | Paraphrase | Email Gen | Latency | Notes |
+|----------|-------|------------|-----------|---------|-------|
+| 1 | phi4-mini:3.8b | 100% | 50%* | 22s | Best paraphrase; *pos example fails |
+| 2 | ministral-3:3b | 100% | 100% | 44s | All tasks work, slower |
+| 3 | granite3.3:2b | 100% | 100% | 33s | Reliable across all tasks |
+| 4 | qwen3:0.6b | 100% | 100% | 9s | Fast, lower diversity |
 
-1. Select 20 documents from corpus:
-   - 5 clear responsive (DIRECT_MATCH)
-   - 5 tricky responsive (INDIRECT_REFERENCE, TECHNICAL_JARGON, BURIED_IN_THREAD)
-   - 5 tricky non-responsive (KEYWORD_FALSE_POSITIVE, ADJACENT_TOPIC)
-   - 5 clear non-responsive (TRUE_NEGATIVE)
+**Note:** gemma3:4b excels at email generation (100%) but fails paraphrase format.
 
-2. Run each model on each task type, measuring:
-   - **Accuracy** — correct classification rate
-   - **Format compliance** — valid JSON rate
-   - **Extraction quality** — quotes actually appear in source
-   - **Generation diversity** — unique paraphrases, realistic examples
-   - **Latency** — seconds per request
+### Extraction Tasks (EXP-023, EXP-024, EXP-031, EXP-033)
 
-3. Produce recommendation matrix:
-   - Best models for classification tasks
-   - Best models for generation tasks
-   - Best models for extraction tasks
-   - Speed vs accuracy tradeoffs
+For quote extraction, keyword extraction, evidence retrieval:
 
-**Expected outcome:** Identify 3-5 models to focus on for subsequent experiments, with clear guidance on which to use for which task type.
+| Priority | Model | Quote Accuracy | Keyword Format | Latency | Notes |
+|----------|-------|----------------|----------------|---------|-------|
+| 1 | gemma3:12b | 96% | ✓ | 19s | Best accuracy, slower |
+| 2 | ministral-3:3b | 96% | ✓ | 15s | Ties gemma3:12b, faster |
+| 3 | phi4-mini:3.8b | 76% | ✓ | 4s | Best speed/accuracy ratio |
+| 4 | gemma2:2b | 41% | ✗ | 11s | Budget option |
 
-**Status:** In Progress — qwen3:0.6b (85% few-shot), deepseek-r1:1.5b (not recommended) complete. See `LLM_Capability_Assessment.md` for detailed results.
+**Warning:** qwen3:8b and smaller qwen models have higher hallucination rates on extraction.
+
+### Speed vs Accuracy Tradeoffs
+
+| Scenario | Model | Task Accuracy | Time for 339 docs |
+|----------|-------|---------------|-------------------|
+| **Fastest usable** | gemma2:2b | 90% classification | ~12 min |
+| **Best balance** | gemma3:4b | 100% classification | ~19 min |
+| **Best extraction** | ministral-3:3b | 96% quotes | ~85 min |
+| **Maximum accuracy** | gemma3:12b | 96% extraction | ~107 min |
+
+### Model Selection Guidelines
+
+1. **Start with the top candidate** for each task type
+2. **Test with your actual prompts** — EXP-000 results may not transfer perfectly
+3. **Have a fallback ready** — if top choice fails on edge cases, try #2
+4. **Consider pipeline position:**
+   - Upfront tasks (paraphrase gen): prefer faster models
+   - Verification (few candidates): accuracy matters more than speed
+5. **Watch for prompt sensitivity** — if a model performs poorly, try a different prompt style before switching models
 
 ---
 
-### EXP-020 — Validation Corpus Sanity Check
+## Priority 0: Foundation & Sanity Checks
 
-**Hypothesis:** The "winner" on Lead remains strong on PFAS; if not, we may be overfitting.
+### EXP-000 — Local LLM Capability Assessment ✅ COMPLETE
+
+**Goal:** Identify which local LLMs to use for which tasks in subsequent experiments. Different models excel at different tasks (classification vs generation vs extraction), and latency matters when processing 339+ documents.
+
+**Status:** ✅ **COMPLETE** — 16 models tested. See `LLM_Capability_Assessment.md` for detailed results.
+
+#### Key Findings
+
+**1. Two models achieve 100% classification accuracy:**
+
+| Model | Accuracy | Latency | Best Prompt Style |
+|-------|----------|---------|-------------------|
+| gemma3:4b | **100%** | 3.3s | Few-shot |
+| ministral-3:3b | **100%** | 11.3s | Ternary (yes/no/maybe) |
+
+**2. Optimal prompt strategy varies dramatically by model:**
+
+| Model | Few-Shot | Multi-Shot | Zero-Shot Binary | Ternary |
+|-------|----------|------------|------------------|---------|
+| gemma3:4b | **100%** ⭐ | 95% | 95% | 70% |
+| ministral-3:3b | 80% | 55% | 90% | **100%** ⭐ |
+| olmo-3:7b | **5%** 💀 | 10% | 72% | — |
+| qwen3:8b | 60% | 60% | **95%** | 95% |
+
+**Critical insight:** A model that excels with one prompt approach may fail catastrophically with another. Always test multiple strategies.
+
+**3. Bigger ≠ Better:**
+
+| Model | Size | Best Accuracy |
+|-------|------|---------------|
+| gemma3:4b | 3.3 GB | **100%** |
+| ministral-3:3b | 3.0 GB | **100%** |
+| gpt-oss:20b | 13 GB | 87.5% |
+
+**4. Models to avoid:**
+
+| Model | Issue |
+|-------|-------|
+| Reasoning models (phi4-mini-reasoning, deepseek-r1) | Extended thinking breaks output parsing |
+| Function calling models (functiongemma) | Refuses text classification tasks |
+| olmo-3:7b | Catastrophic few-shot failure (5%) |
+
+#### Model Recommendations by Task
+
+See **LLM Model Recommendations** section below for per-task candidate lists.
+
+---
+
+### EXP-020 — Validation Corpus Sanity Check ✅ COMPLETE
+
+**Hypothesis:** Models that perform well on Lead corpus also perform well on PFAS; if not, we may be overfitting.
 
 **Method:**
-1. Run experiments 003–010 (top bi-encoders) on `corpus/validation` with the same thresholds used on primary
+1. Run experiments 003–010 (top bi-encoders) + Voyage models on `corpus/validation`
 2. Produce:
    - Precision/recall/F1/MAP
    - Recall@K curves (K=25/50; validation set is small)
    - Challenge-type breakdown (responsive vs non-responsive)
 
-**Decision rule:**
-- If `all-mpnet-base-v2` is still top-1 or top-2 on *precision at ≥94% recall*, keep it as the default embedder
-- If a different model generalizes better, promote that model
+**Status:** ✅ **COMPLETE** — See EXPERIMENT_LOG.md for detailed results.
 
-**Status:** Pending
+**Key Findings:**
+- Different models excel on different corpora — no single "winner"
+- **Jina v3, mxbai-embed-large, BGE Large EN v1.5** achieve 100% recall on PFAS at default threshold
+- **all-mpnet-base-v2** struggles on BURIED_IN_THREAD for PFAS (0% vs 90% on lead)
+- **Qwen3 0.6B** fails to generalize (24% recall on PFAS vs 89% on lead)
+- **BGE Large EN v1.5** has best precision at 94%+ recall on validation (70.59%)
+
+**Implication:** We should continue exploring different models and approaches rather than committing to a single embedder. Model choice may depend on the specific CPRA request characteristics.
 
 ---
 
@@ -158,6 +210,11 @@ This is the "what do we try next?" plan for pushing **precision up** while keepi
 1. Use local LLM to generate N paraphrases of the CPRA request (N ∈ {3, 5, 10})
 2. Embed: original request + paraphrases
 3. Score each email by aggregation across queries
+
+**Candidate models (see LLM Model Recommendations):**
+1. phi4-mini:3.8b — 100% paraphrase success, good diversity
+2. ministral-3:3b — 100% success, slower
+3. qwen3:0.6b — 100% success, fastest but lower diversity
 
 **Variants:**
 - 021a: max cosine across all query embeddings
@@ -197,6 +254,11 @@ Output only the paraphrases, one per line.
 2. Retrieve per facet; merge with RRF
 3. Optionally weight facets
 
+**Candidate models (see LLM Model Recommendations):**
+1. phi4-mini:3.8b — Good structured output, fast
+2. ministral-3:3b — Reliable generation
+3. granite3.3:2b — 100% JSON compliance if structured output needed
+
 **Prompt:**
 ```
 Given this CPRA request:
@@ -230,6 +292,11 @@ Output each facet as a search query, one per line.
    - Entity types (agencies, facilities, projects, etc.)
 2. Run lexical retrieval (BM25 or simple OR keyword matching) using the expanded set
 3. Combine lexical + embedding rankings with RRF
+
+**Candidate models (see LLM Model Recommendations):**
+1. granite3.3:2b — 100% format compliance, good keyword extraction
+2. qwen3:0.6b — Fast (4s), 100% format compliance
+3. ministral-3:3b — Comprehensive extraction (23 terms avg)
 
 **Prompt:**
 ```
@@ -275,6 +342,11 @@ NICE_TO_HAVE: [optional terms]
    - Expanded keyword query for BM25, and/or
    - 3–10 expansion queries to embed (multi-query retrieval)
 4. Re-run retrieval and merge with the baseline list (RRF)
+
+**Candidate models (see LLM Model Recommendations):**
+1. ministral-3:3b — Best extraction (96% quote accuracy), comprehensive
+2. phi4-mini:3.8b — 76% extraction, much faster
+3. gemma3:12b — 96% extraction but slow; use if accuracy critical
 
 **Prompt:**
 ```
@@ -325,6 +397,13 @@ This is directly aligned with the original design in SPEC: generate **positive c
    - **Score B:** `max_sim(email, positives) - λ * max_sim(email, negatives)`
    - **Score C:** `avg_sim(email, positives) - λ * avg_sim(email, negatives)`
 4. Tune λ on primary corpus; evaluate on validation
+
+**Candidate models (see LLM Model Recommendations):**
+1. ministral-3:3b — 100% success on both positive and negative examples
+2. granite3.3:2b — 100% success, good structure compliance
+3. gemma3:4b — 100% email generation, but fails paraphrase format
+
+**Note:** phi4-mini succeeds on negative examples but fails positive example structure.
 
 **Positive generation prompt:**
 ```
@@ -486,7 +565,17 @@ Cross-encoders failed because they were trained for different relevance signals.
 
 **Stage 1 (high recall):** Retrieve candidate set using mpnet (threshold tuned for ≥98% recall, or top_k=250)
 
-**Stage 2 (LLM judge):** For each candidate email, ask for structured output:
+**Stage 2 (LLM judge):** For each candidate email, ask for structured output
+
+**Candidate models (see LLM Model Recommendations):**
+
+| Priority | Model | Classification | Extraction | Speed | Notes |
+|----------|-------|---------------|------------|-------|-------|
+| 1 | gemma3:4b | 100% | 16% | 3.3s | Best classification, weak extraction |
+| 2 | ministral-3:3b | 100% | 96% | 11.3s | Best all-rounder |
+| 3 | phi4-mini:3.8b | 90% | 76% | 6.7s | Good balance |
+
+**Recommendation:** Start with gemma3:4b for speed. If evidence extraction quality matters, use ministral-3:3b or phi4-mini.
 
 **Prompt:**
 ```
@@ -523,8 +612,6 @@ IMPORTANT: If you answer "yes" or "maybe", you MUST include at least one verbati
 - Which challenge types does it incorrectly reject (risk to recall)?
 - Tokens/time per document
 
-**Models to test:** qwen3:8b, gemma3:4b, ministral-3:8b, phi4-mini:3.8b, granite3.3:8b
-
 **Status:** Pending
 
 ---
@@ -532,6 +619,13 @@ IMPORTANT: If you answer "yes" or "maybe", you MUST include at least one verbati
 ### EXP-032 — LLM Verifier with Few-Shot Examples
 
 **Concept:** Same as 031 but with examples in the prompt.
+
+**Candidate models (see LLM Model Recommendations):**
+1. gemma3:4b — 100% with few-shot (best prompt style for this model)
+2. ministral-3:3b — Use ternary prompts instead (few-shot hurts this model!)
+3. phi4-mini:3.8b — 90% with multi-shot (6 examples)
+
+**Critical insight from EXP-000:** Few-shot helps some models dramatically (gemma3:4b: 70%→100%) but hurts others (ministral-3:3b: 100%→80%, qwen3:8b: 95%→60%). Match prompt style to model.
 
 **Implementation options:**
 
@@ -543,7 +637,7 @@ c) **Challenge-type coverage:** Select examples covering edge cases:
    - Responsive: indirect references, technical jargon, buried context
    - Non-responsive: keyword false positives, adjacent topics
 
-**Hypothesis:** Few-shot examples improve LLM accuracy on edge cases.
+**Hypothesis:** Few-shot examples improve LLM accuracy on edge cases (for models that respond well to few-shot).
 
 **Status:** Pending
 
@@ -560,6 +654,13 @@ c) **Challenge-type coverage:** Select examples covering edge cases:
    - Baseline embedding score on raw email
    - Embedding score on compressed extract
    - Hybrid (max of both)
+
+**Candidate models (see LLM Model Recommendations):**
+1. ministral-3:3b — 96% quote accuracy, best for verbatim extraction
+2. gemma3:12b — 96% quote accuracy, slower
+3. phi4-mini:3.8b — 76% accuracy, fastest
+
+**Note:** Extraction accuracy matters here since we're quoting from the document. Avoid models with high hallucination rates (qwen3 family).
 
 **Prompt:**
 ```
@@ -698,27 +799,37 @@ All experiment prompts should use these fields dynamically:
 
 ### Available Local LLMs (via Ollama)
 
-**Generative models for verification/generation tasks:**
-- `qwen3:8b` — Strong reasoning, flagship Qwen
-- `qwen3:1.7b` — Fast, good quality
-- `qwen3:0.6b` — Ultra-fast for simple tasks
-- `gemma3:12b` — Google's latest, larger
-- `gemma3:4b` — Google's latest, efficient
-- `gemma2:2b` — Previous gen, fast
-- `phi4-mini:3.8b` — Microsoft's efficient model
-- `phi4-mini-reasoning:3.8b` — Reasoning-focused variant
-- `phi3:mini` — Previous gen, stable
-- `granite3.3:8b` — IBM, good for structured output
-- `granite3.3:2b` — IBM, fast
-- `deepseek-r1:8b` — Reasoning-focused
-- `deepseek-r1:1.5b` — Fast reasoning
-- `ministral-3:14b` — Mistral large
-- `ministral-3:8b` — Mistral medium
-- `ministral-3:3b` — Mistral small/fast
-- `llama3:8b-instruct-q5_K_M` — Meta, instruction-tuned
-- `gpt-oss:20b` — Largest available
-- `olmo-3:7b` — Allen AI open model
-- `functiongemma:270m` — Function calling specialist
+**Tested & Recommended:**
+| Model | Status | Best Use | Notes |
+|-------|--------|----------|-------|
+| `gemma3:4b` | ✅ **TOP PICK** | Classification | 100% @ 3.3s (few-shot) |
+| `ministral-3:3b` | ✅ **TOP PICK** | Classification + Extraction | 100% class, 96% extraction |
+| `phi4-mini:3.8b` | ✅ Recommended | Generation + Extraction | 100% paraphrase, 76% extraction |
+| `gemma3:12b` | ✅ Recommended | Extraction | 96% quote accuracy |
+| `granite3.3:2b` | ✅ Recommended | Generation | 100% JSON compliance |
+| `gemma2:2b` | ✅ Speed option | Classification | 90% @ 2.2s (fastest) |
+| `qwen3:8b` | ✅ Usable | Classification | 95% but slow (45s) |
+| `qwen3:0.6b` | ✅ Usable | Fast generation | 85% class, 100% gen |
+| `qwen3:1.7b` | ✅ Usable | Classification | 85% binary |
+
+**Tested & NOT Recommended:**
+| Model | Status | Issue |
+|-------|--------|-------|
+| `ministral-3:8b` | ❌ Skip | Worse than 3b, slower, timeouts |
+| `gpt-oss:20b` | ❌ Skip | 87.5% accuracy, extremely slow (~60s/doc) |
+| `olmo-3:7b` | ❌ Skip | Catastrophic few-shot failure (5%) |
+| `phi4-mini-reasoning:3.8b` | ❌ Skip | 46% accuracy, reasoning breaks parsing |
+| `deepseek-r1:1.5b` | ❌ Skip | 65% max, high hallucination |
+| `phi3:mini` | ❌ Skip | 71% max, slower than phi4-mini |
+| `functiongemma:270m` | ❌ Skip | 50% (random), refuses tasks |
+
+**Not Yet Tested (Low Priority):**
+| Model | Notes |
+|-------|-------|
+| `granite3.3:8b` | 2b version only reached 85% |
+| `llama3:8b-instruct-q5_K_M` | Have 100% models already |
+| `ministral-3:14b` | 3b already achieves 100% |
+| `deepseek-r1:8b` | Reasoning models don't work |
 
 **Embedding models (also available):**
 - `qwen3-embedding:8b` — Qwen embedding large
@@ -745,8 +856,23 @@ If we want the fastest path to "meaningfully better than mpnet alone":
 
 1. **EXP-020** (validation sanity check) — ensure we're not overfitting
 2. **EXP-025** (positive/negative prototypes) — directly targets keyword false positives
+   - Use ministral-3:3b (100% both pos/neg examples)
 3. **EXP-027** (RRF ensemble) — easy win if it works, low complexity
 4. **EXP-031** (LLM verifier with evidence) — likely biggest precision jump
+   - Start with gemma3:4b (100% @ 3.3s)
+   - Fall back to ministral-3:3b if extraction quality matters
+
+### Model Quick Reference
+
+| Task | First Choice | Fallback | Avoid |
+|------|--------------|----------|-------|
+| Classification | gemma3:4b (few-shot) | ministral-3:3b (ternary) | reasoning models, olmo-3 |
+| Paraphrase gen | phi4-mini:3.8b | ministral-3:3b | gemma3:4b (fails format) |
+| Example gen | ministral-3:3b | granite3.3:2b | phi4-mini (pos fails) |
+| Quote extraction | ministral-3:3b | gemma3:12b | qwen models (hallucinate) |
+| Keyword extraction | granite3.3:2b | qwen3:0.6b | — |
+
+See **LLM Model Recommendations** section for complete details.
 
 ---
 
@@ -792,7 +918,7 @@ Testing whether different cross-encoder training objectives perform better than 
 | 003 | Jina v3 | 98.06% | 51.70% | 67.73% | 0.85 | Yes |
 | 004 | BGE-M3 | 100% | 46.83% | 63.79% | 0.85 | Yes |
 | 005 | Embedding Gemma | 100% | 49.36% | 66.10% | 0.87 | Yes |
-| 006 | **all-mpnet-base-v2** | **98.71%** | **57.74%** | **72.86%** | **0.89** | **Yes (Best)** |
+| 006 | all-mpnet-base-v2 | 98.71% | 57.74% | 72.86% | 0.89 | Yes |
 | 007 | mxbai-embed-large | 98.71% | 51.17% | 67.41% | 0.86 | Yes |
 | 008 | nomic-embed-text | 99.35% | 46.11% | 62.99% | 0.81 | Yes |
 | 009 | BGE Large EN v1.5 | 99.35% | 47.24% | 64.04% | 0.84 | Yes |

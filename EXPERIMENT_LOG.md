@@ -51,6 +51,17 @@ This document tracks experiments on the manually-crafted v2 corpus for evaluatin
 | 020 | Voyage 4 Nano Baseline | 2026-01-28 | voyage-4-nano | 68.56% | 85.81% | 76.22% | 0.8220 | **Yes** (0.40) |
 | 021 | Voyage 4 Nano Asymmetric | 2026-01-28 | voyage-4-nano-asymmetric | 65.24% | 98.06% | 78.35% | 0.9335 | **Yes** (0.35) |
 
+### EXP-020: Validation Corpus Sanity Check (2026-01-28)
+
+Ran 11 models on PFAS validation corpus to check generalization. Key findings:
+- **No single model dominates** — different models excel on different corpora
+- **BGE Large EN v1.5** best precision on validation (70.59% @ 94%+ recall)
+- **Voyage 4 Nano Asymmetric** best average precision across both corpora
+- **Jina v3, mxbai-embed-large** achieve 100% recall on validation
+- **Qwen3 0.6B** fails to generalize (24% recall on validation vs 89% on primary)
+
+This suggests we should continue exploring different models and pipeline approaches rather than committing to one embedder. See full EXP-020 section below for detailed results.
+
 ---
 
 ## Experiment Details
@@ -1315,7 +1326,7 @@ However, this specialization comes at a cost: the model loses some ability to fi
 **Key Insight:**
 Voyage 4 Nano with asymmetric encoding provides the **best precision at 94%+ recall** (65.24% vs 57.74% for all-mpnet). However, it achieves this by being excellent at direct matches while failing on challenging categories. For CPRA compliance where every document matters, the 0% recall on BURIED_IN_THREAD and 8% on TECHNICAL_JARGON is concerning — these are exactly the documents humans would miss too.
 
-**Recommendation:** Use asymmetric encoding as a first-pass ranker for precision, but pair with a model that handles technical jargon and buried content (like all-mpnet-base-v2 or Qwen3) for complete coverage.
+**Observation:** Asymmetric encoding's precision advantage comes at the cost of coverage on challenging categories. Ensemble or multi-stage approaches may help combine precision with coverage.
 
 **Meets 94% Recall?** **Yes** (98.06% at threshold 0.35 — best precision at 94%+ recall)
 
@@ -1324,6 +1335,100 @@ Voyage 4 Nano with asymmetric encoding provides the **best precision at 94%+ rec
 ## Embedding Experiments Complete
 
 All 21 embedding/cross-encoder experiments have been run. See summary table above for complete results.
+
+---
+
+## EXP-020: Validation Corpus Sanity Check
+
+**Date:** 2026-01-28
+
+**Purpose:** Run top bi-encoders on the PFAS validation corpus to check for overfitting and understand how models generalize across different CPRA request types.
+
+**Corpus:** Validation (PFAS) - 59 emails (25 responsive, 34 non-responsive)
+
+### Results Summary
+
+**Comparison: Primary (Lead) vs Validation (PFAS) Corpus**
+
+| Model | Primary Recall | Primary Prec | Val Recall | Val Prec | Val MAP | Generalizes? |
+|-------|---------------|--------------|------------|----------|---------|--------------|
+| Keyword Baseline | 83.87% | 55.32% | 92.00% | 65.71% | 0.8277 | (baseline) |
+| Jina v3 | 98.06% | 51.70% | 100.00% | 53.19% | 0.9039 | **Yes** |
+| BGE-M3 | 100.00% | 46.83% | 80.00% | 71.43% | 0.8868 | Partial |
+| Embedding Gemma | 100.00% | 49.36% | 68.00% | 80.95% | 0.8776 | Partial |
+| **all-mpnet-base-v2** | **98.71%** | **57.74%** | 80.00% | 95.24% | **0.9319** | **Partial** |
+| mxbai-embed-large | 98.71% | 51.17% | 100.00% | 53.19% | **0.9551** | **Yes** |
+| nomic-embed-text | 99.35% | 46.11% | 100.00% | 44.64% | 0.8041 | **Yes** |
+| BGE Large EN v1.5 | 99.35% | 47.24% | 100.00% | 46.30% | **0.9538** | **Yes** |
+| Qwen3 0.6B | 89.03% | 77.53% | 24.00% | 100.00% | 0.9084 | No |
+| Voyage 4 Nano | 95.48% | 54.01% | 92.00% | 67.65% | 0.8886 | Partial |
+| Voyage 4 Nano Asym | 98.06% | 65.24% | 72.00% | 100.00% | 0.9528 | Partial |
+
+**At 94%+ Recall Threshold:**
+
+| Model | Val Threshold | Val Precision @ 94%+ | Val MAP | Primary Prec @ 94%+ |
+|-------|---------------|---------------------|---------|---------------------|
+| Keyword Baseline | N/A | N/A (92% max) | 0.8277 | N/A (84% max) |
+| BGE Large EN v1.5 | 0.60 | **70.59%** | **0.9538** | 47.24% |
+| Voyage 4 Nano Asym | 0.40 | 68.57% | 0.9528 | 65.24% |
+| all-mpnet-base-v2 | 0.40 | 65.79% | 0.9319 | 57.74% |
+| Embedding Gemma | 0.40 | 61.54% | 0.8776 | 49.36% |
+| Voyage 4 Nano | 0.45 | 58.14% | 0.8886 | 54.01% |
+| Jina v3 | 0.50 | 53.19% | 0.9039 | 51.70% |
+| mxbai-embed-large | 0.50 | 53.19% | **0.9551** | 51.17% |
+| BGE-M3 | 0.40 | 44.64% | 0.8868 | 46.83% |
+| nomic-embed-text | 0.50 | 44.64% | 0.8041 | 46.11% |
+| Qwen3 0.6B | - | N/A (84% max) | 0.9084 | N/A (89% max) |
+
+### Challenge Type Breakdown (Validation Corpus)
+
+| Challenge Type | Count | Keyword | all-mpnet | mxbai | BGE-Large | Voyage-Asym |
+|----------------|-------|---------|-----------|-------|-----------|-------------|
+| DIRECT_MATCH | 8 | 100% | 87.5% | 100% | 100% | 100% |
+| INDIRECT_REFERENCE | 8 | 87.5% | 87.5% | 100% | 100% | 75% |
+| TECHNICAL_JARGON | 5 | 80% | 80% | 100% | 100% | 40% |
+| TEMPORAL_REFERENCE | 2 | 100% | 100% | 100% | 100% | 100% |
+| BURIED_IN_THREAD | 2 | 100% | 0% | 100% | 100% | 0% |
+
+### Key Observations
+
+1. **Keywords perform better on PFAS**: 92% recall vs 84% on lead corpus. PFAS doesn't have the "lead/leadership" ambiguity problem.
+
+2. **Different models excel on different corpora**:
+   - **Jina v3, mxbai-embed-large, nomic-embed-text, BGE Large EN v1.5** achieve 100% recall on validation at default threshold
+   - **all-mpnet-base-v2, Voyage asymmetric** struggle on validation (80%, 72% at default threshold) but excel on primary
+
+3. **all-mpnet-base-v2 has a BURIED_IN_THREAD weakness**: 0% recall on BURIED_IN_THREAD in validation corpus (vs 90% on primary). The model struggles when relevant content is buried in thread context for PFAS topics.
+
+4. **Voyage asymmetric shows same weaknesses on validation**: TECHNICAL_JARGON (40%), BURIED_IN_THREAD (0%) - consistent with primary corpus findings.
+
+5. **BGE Large EN v1.5 is the surprise winner**: Best precision at 94%+ recall on validation (70.59%) with excellent MAP (0.9538). Generalizes well across both corpora.
+
+6. **Qwen3 0.6B fails on validation**: Only 24% recall at default threshold (vs 89% on primary). The model may be overfitting to lead contamination semantics.
+
+### Summary: Cross-Corpus Performance
+
+| Model | Primary Prec@94% | Val Prec@94% | Avg Prec@94% | MAP Avg |
+|-------|-----------------|--------------|--------------|---------|
+| BGE Large EN v1.5 | 47.24% | **70.59%** | 58.92% | 0.9135 |
+| all-mpnet-base-v2 | 57.74% | 65.79% | 61.77% | 0.9121 |
+| Voyage Asym | **65.24%** | 68.57% | **66.91%** | **0.9432** |
+| Jina v3 | 51.70% | 53.19% | 52.45% | 0.8816 |
+| mxbai-embed-large | 51.17% | 53.19% | 52.18% | 0.9056 |
+
+### Implications for Future Experiments
+
+**No single model dominates** — different models excel on different corpora and challenge types:
+- **BGE Large EN v1.5**: Best on validation, 100% recall on both, but lower precision on primary
+- **Voyage Asymmetric**: Best average precision, but struggles with BURIED_IN_THREAD and TECHNICAL_JARGON
+- **all-mpnet-base-v2**: Balanced, but 0% BURIED_IN_THREAD on validation
+- **mxbai-embed-large**: 100% on validation, consistent across challenge types
+
+**This suggests several directions worth exploring:**
+1. **Ensemble approaches** (EXP-027): Combine models with complementary strengths
+2. **Challenge-type specific routing**: Use different models for different document types
+3. **Continue testing new models**: No reason to commit to one embedder yet
+4. **Pipeline strategies**: Multi-stage approaches may matter more than model choice
 
 ---
 
