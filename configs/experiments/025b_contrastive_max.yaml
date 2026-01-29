@@ -1,0 +1,20 @@
+# EXP-025b: Contrastive scoring with max aggregation
+# Tests if negative prototypes help filter false positives
+# Variant: max_sim(pos) - lambda * max_sim(neg)
+name: "025b Contrastive Max"
+
+pipeline:
+  method: contrastive
+
+contrastive:
+  embedding_model: st:all-mpnet-base-v2
+  llm_model: ministral-3:3b
+  num_positive: 5
+  num_negative: 5
+  use_negatives: true
+  lambda_negative: 0.5
+  scoring_method: max
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40]

@@ -1,0 +1,20 @@
+# EXP-025a: Contrastive scoring with positive prototypes only
+# Tests if modeling "what responsive looks like" improves precision
+# Variant: max_sim(email, positives) with lambda=0 (no negative penalty)
+name: "025a Contrastive Positive Only"
+
+pipeline:
+  method: contrastive
+
+contrastive:
+  embedding_model: st:all-mpnet-base-v2
+  llm_model: ministral-3:3b
+  num_positive: 5
+  num_negative: 0
+  use_negatives: false
+  lambda_negative: 0.0
+  scoring_method: max
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50]

@@ -55,6 +55,9 @@ This document tracks experiments on the manually-crafted v2 corpus for evaluatin
 | 027c | RRF mpnet + mxbai + BGE | 2026-01-28 | Ensemble[RRF] | 55.88% | 98.06% | 71.19% | 0.8889 | **Yes** (0.01) |
 | 027d | RRF hybrid (mpnet + mxbai + keyword) | 2026-01-28 | Ensemble[RRF] | 50.84% | 97.42% | 66.81% | 0.9073 | **Yes** (0.01) |
 | 027e | RRF mxbai + BGE-Large | 2026-01-28 | Ensemble[RRF] | 59.67% | 93.55% | 72.86% | 0.8657 | **Yes** (0.007) |
+| 025a | Contrastive Positive Only | 2026-01-28 | Contrastive[mpnet] | 52.92% | 99.35% | 69.06% | 0.8259 | **Yes** (0.30) |
+| 025b | Contrastive Max (λ=0.5) | 2026-01-28 | Contrastive[mpnet] | 56.08% | 92.26% | 69.76% | 0.8221 | No |
+| 025c | Contrastive Mean (λ=0.5) | 2026-01-28 | Contrastive[mpnet] | 61.43% | 88.39% | 72.49% | 0.8243 | No |
 
 ### EXP-020: Validation Corpus Sanity Check (2026-01-28)
 
@@ -1579,6 +1582,141 @@ All 21 embedding/cross-encoder experiments have been run. See summary table abov
 **The Voyage 4 Nano Asymmetric model remains the best choice** for CPRA compliance, with 65.24% precision at 98.06% recall — significantly better than any ensemble approach.
 
 **Recommendation:** Focus on improving individual model performance (e.g., asymmetric encoding, domain-specific fine-tuning) rather than ensemble approaches for this task.
+
+---
+
+### EXP-025: Contrastive Scoring with LLM-Generated Prototypes (2026-01-28)
+
+**Hypothesis:** Using LLM-generated positive/negative prototype emails can improve precision by better capturing the semantic space of responsive vs non-responsive documents, particularly for polysemy issues ("lead" metal vs "lead" leadership).
+
+**Approach:**
+- Generate 5 positive prototypes (responsive email examples) and 5 negative prototypes (false positive examples) using ministral-3:3b
+- Score documents by similarity to prototypes: `pos_score - λ * neg_score`
+- Test three variants: positive-only (λ=0), max aggregation (λ=0.5), mean aggregation (λ=0.5)
+
+#### 025a - Contrastive Positive Only
+
+**Configuration:** `configs/experiments/025a_contrastive_positive_only.yaml`
+
+**Model:** all-mpnet-base-v2 with 5 LLM-generated positive prototypes
+
+**Results:**
+
+| Metric | Value | vs Baseline (mpnet) |
+|--------|-------|---------------------|
+| Precision | 52.92% (at 99.35% recall) | -4.82% |
+| Recall | 99.35% | +0.64% |
+| F1 | 69.06% | -3.80% |
+| MAP | 0.8259 | -0.0664 |
+
+**Threshold Analysis:**
+
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.20 | 46.27% | 100.00% | 63.27% | 155 | 180 | 0 |
+| 0.25 | 48.44% | 100.00% | 65.26% | 155 | 165 | 0 |
+| 0.30 | 52.92% | 99.35% | 69.06% | 154 | 137 | 1 |
+| 0.35 | 59.20% | 95.48% | 73.09% | 148 | 102 | 7 |
+| 0.40 | 66.67% | 83.87% | **74.29%** | 130 | 65 | 25 |
+| 0.45 | 71.62% | 68.39% | 69.97% | 106 | 42 | 49 |
+| 0.50 | 87.37% | 53.55% | 66.40% | 83 | 12 | 72 |
+
+**By Challenge Type (at default threshold 0.50):**
+
+| Challenge Type | Recall | vs Baseline |
+|----------------|--------|-------------|
+| DIRECT_MATCH | 90.00% | +6.13% |
+| AMBIGUOUS_TERMS | 76.67% | -7.20% |
+| INDIRECT_REFERENCE | 28.57% | -48.57% |
+| TECHNICAL_JARGON | 32.00% | -32.00% |
+| TEMPORAL_REFERENCE | 52.00% | -36.00% |
+| BURIED_IN_THREAD | 20.00% | -30.00% |
+
+**Meets 94% Recall?** Yes (at threshold 0.35, 95.48% recall with 59.20% precision)
+
+#### 025b - Contrastive Max (with negatives, λ=0.5)
+
+**Configuration:** `configs/experiments/025b_contrastive_max.yaml`
+
+**Model:** all-mpnet-base-v2 with 5 positive + 5 negative prototypes, max aggregation
+
+**Results:**
+
+| Metric | Value | vs Baseline (mpnet) |
+|--------|-------|---------------------|
+| Precision | 56.08% (at 92.26% recall) | -1.66% |
+| Recall | 92.26% | -6.45% |
+| F1 | 69.76% | -3.10% |
+| MAP | 0.8221 | -0.0702 |
+
+**Threshold Analysis:**
+
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.05 | 46.13% | 100.00% | 63.14% | 155 | 181 | 0 |
+| 0.10 | 48.44% | 100.00% | 65.26% | 155 | 165 | 0 |
+| 0.15 | 56.08% | 92.26% | **69.76%** | 143 | 112 | 12 |
+| 0.20 | 67.47% | 72.26% | 69.78% | 112 | 54 | 43 |
+| 0.25 | 82.52% | 54.84% | 65.89% | 85 | 18 | 70 |
+| 0.30 | 95.56% | 27.74% | 43.00% | 43 | 2 | 112 |
+| 0.35 | 100.00% | 10.97% | 19.77% | 17 | 0 | 138 |
+
+**Meets 94% Recall?** No (max 92.26% recall at threshold 0.15)
+
+#### 025c - Contrastive Mean (with negatives, λ=0.5)
+
+**Configuration:** `configs/experiments/025c_contrastive_mean.yaml`
+
+**Model:** all-mpnet-base-v2 with 5 positive + 5 negative prototypes, mean aggregation
+
+**Results:**
+
+| Metric | Value | vs Baseline (mpnet) |
+|--------|-------|---------------------|
+| Precision | 61.43% (at 88.39% recall) | +3.69% |
+| Recall | 88.39% | -10.32% |
+| F1 | 72.49% | -0.37% |
+| MAP | 0.8243 | -0.0680 |
+
+**Threshold Analysis:**
+
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.05 | 45.86% | 100.00% | 62.88% | 155 | 183 | 0 |
+| 0.10 | 48.90% | 100.00% | 65.68% | 155 | 162 | 0 |
+| 0.15 | 61.43% | 88.39% | **72.49%** | 137 | 86 | 18 |
+| 0.20 | 79.13% | 58.71% | 67.41% | 91 | 24 | 64 |
+| 0.25 | 97.62% | 26.45% | 41.62% | 41 | 1 | 114 |
+| 0.30 | 100.00% | 6.45% | 12.12% | 10 | 0 | 145 |
+
+**Meets 94% Recall?** No (max 88.39% recall at threshold 0.15)
+
+### EXP-025 Key Observations
+
+1. **Negative prototypes hurt recall**: Adding negative prototypes (025b, 025c) makes it harder to maintain 94% recall. The contrastive penalty pushes down scores for responsive documents that happen to share vocabulary with false positives.
+
+2. **Positive-only variant (025a) achieves 100% recall**: At low thresholds (0.10-0.25), positive-only contrastive achieves 100% recall, but precision is worse than baseline mpnet.
+
+3. **No precision improvement at 94%+ recall**:
+   - 025a at 95.48% recall: 59.20% precision (vs 57.74% baseline at 98.71%) — marginal improvement but lower recall
+   - Neither 025b nor 025c can achieve 94% recall at any threshold
+
+4. **MAP degrades across all variants**: All contrastive approaches have lower MAP (0.82-0.83) than baseline mpnet (0.89), indicating worse overall ranking.
+
+5. **Challenge type analysis reveals prototype limitations**: INDIRECT_REFERENCE and TECHNICAL_JARGON recall drops significantly, suggesting the LLM-generated prototypes don't capture these challenging cases well.
+
+### EXP-025 Conclusions
+
+**The LLM-generated prototype approach does NOT improve over baseline** for this task:
+- Positive-only (025a) maintains high recall but doesn't improve precision
+- Adding negatives (025b, 025c) degrades both recall and ranking quality
+- Generated prototypes may not capture the true distribution of false positives in the corpus
+
+**Potential improvements to explore:**
+- Use corpus-derived prototypes (actual FP/TP examples) instead of LLM-generated
+- Fine-tune lambda based on corpus characteristics
+- Generate more diverse prototypes (10+)
+- Use asymmetric encoding (query-style prototypes)
 
 ---
 

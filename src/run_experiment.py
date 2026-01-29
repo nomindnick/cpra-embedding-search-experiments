@@ -21,7 +21,7 @@ def load_config(config_path: str) -> dict:
         return yaml.safe_load(f)
 
 
-def create_pipeline(config: dict):
+def create_pipeline(config: dict, corpus_path: str | None = None):
     """Create the appropriate pipeline based on config."""
     method = config.get("pipeline", {}).get("method", "keyword")
 
@@ -66,6 +66,29 @@ def create_pipeline(config: dict):
             pipelines=pipelines,
             method=ensemble_config.get("method", "rrf"),
             rrf_k=ensemble_config.get("rrf_k", 60),
+        )
+    elif method == "contrastive":
+        from src.pipeline.contrastive import ContrastivePipeline, LLMPrototypeGenerator
+
+        contrastive_config = config.get("contrastive", {})
+
+        # Load corpus to get request for prototype generation
+        corpus = load_corpus(corpus_path or DEFAULT_CORPUS)
+
+        # Generate prototypes using LLM
+        generator = LLMPrototypeGenerator(
+            model_name=contrastive_config.get("llm_model", "ministral-3:3b"),
+            num_positive=contrastive_config.get("num_positive", 5),
+            num_negative=contrastive_config.get("num_negative", 5),
+        )
+        positives, negatives = generator.generate(corpus.request)
+
+        return ContrastivePipeline(
+            model_name=contrastive_config.get("embedding_model", "st:all-mpnet-base-v2"),
+            positive_prototypes=positives,
+            negative_prototypes=negatives if contrastive_config.get("use_negatives", True) else [],
+            lambda_negative=contrastive_config.get("lambda_negative", 0.5),
+            scoring_method=contrastive_config.get("scoring_method", "max"),
         )
     else:
         raise ValueError(f"Unknown pipeline method: {method}")
@@ -217,7 +240,7 @@ def main():
         console.print("[bold]Creating pipeline...[/bold]")
 
     # Create pipeline
-    pipeline = create_pipeline(config)
+    pipeline = create_pipeline(config, corpus_path=args.corpus)
 
     if not args.quiet:
         console.print(f"Pipeline: {pipeline.name}")
@@ -239,7 +262,7 @@ def main():
     results.config = config
 
     # Run threshold analysis if thresholds are configured
-    if thresholds and config.get("pipeline", {}).get("method") in ("embedding", "cross_encoder", "ensemble"):
+    if thresholds and config.get("pipeline", {}).get("method") in ("embedding", "cross_encoder", "ensemble", "contrastive"):
         if not args.quiet:
             console.print()
             console.print("[bold]Running threshold analysis...[/bold]")
