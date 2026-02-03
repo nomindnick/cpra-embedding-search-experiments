@@ -1,22 +1,21 @@
-# EXP-025b: Contrastive scoring with max aggregation
-# Tests if negative prototypes help filter false positives
+# EXP-025f: Contrastive scoring with gemma3:4b - max aggregation
+# Compare gemma3:4b prototype generation vs ministral-3:3b
 # Variant: max_sim(pos) - lambda * max_sim(neg)
-# Updated 2026-01-28: Improved prompts for better prototype generation
-name: "025b Contrastive Max (ministral)"
+name: "025f Contrastive Max (gemma)"
 
 pipeline:
   method: contrastive
 
 contrastive:
   embedding_model: st:all-mpnet-base-v2
-  llm_model: ministral-3:3b
+  llm_model: gemma3:4b
   num_positive: 5
   num_negative: 5
   use_negatives: true
   lambda_negative: 0.5
   scoring_method: max
   verbose: true
-  save_prototypes_to: results/025b_contrastive_max/prototypes.json
+  save_prototypes_to: results/025f_contrastive_gemma_max/prototypes.json
 
 evaluation:
   k_values: [50, 100, 150, 200]

@@ -8,5 +8,6 @@ __all__ = [
     "KeywordSearchPipeline",
 ]
 
-# Note: EmbeddingSearchPipeline is imported lazily in run_experiment.py
-# to avoid loading heavy dependencies when not needed
+# Note: EmbeddingSearchPipeline, MultiQueryPipeline, EnsemblePipeline,
+# TwoStagePipeline, LLMReranker, and ContrastivePipeline are imported
+# lazily to avoid loading heavy dependencies

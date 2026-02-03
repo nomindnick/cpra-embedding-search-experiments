@@ -1,0 +1,23 @@
+# EXP-025i: Contrastive scoring with gemma3:4b - 10 prototypes each
+# Test if more prototypes improve precision
+# Variant: max_sim(pos) - lambda * max_sim(neg) with 10+10 prototypes
+name: "025i Contrastive Max (gemma, 10 proto)"
+
+pipeline:
+  method: contrastive
+
+contrastive:
+  embedding_model: st:all-mpnet-base-v2
+  llm_model: gemma3:4b
+  num_positive: 10
+  num_negative: 10
+  use_negatives: true
+  lambda_negative: 0.5
+  scoring_method: max
+  verbose: true
+  llm_timeout: 300
+  save_prototypes_to: results/025i_contrastive_gemma_10proto/prototypes.json
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40]

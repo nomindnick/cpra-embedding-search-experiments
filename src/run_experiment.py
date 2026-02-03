@@ -68,20 +68,50 @@ def create_pipeline(config: dict, corpus_path: str | None = None):
             rrf_k=ensemble_config.get("rrf_k", 60),
         )
     elif method == "contrastive":
-        from src.pipeline.contrastive import ContrastivePipeline, LLMPrototypeGenerator
+        from src.pipeline.contrastive import (
+            ContrastivePipeline,
+            CorpusPrototypeGenerator,
+            LLMPrototypeGenerator,
+            print_prototypes,
+            save_prototypes,
+        )
 
         contrastive_config = config.get("contrastive", {})
+        prototype_source = contrastive_config.get("prototype_source", "llm")
 
-        # Load corpus to get request for prototype generation
+        # Load corpus
         corpus = load_corpus(corpus_path or DEFAULT_CORPUS)
 
-        # Generate prototypes using LLM
-        generator = LLMPrototypeGenerator(
-            model_name=contrastive_config.get("llm_model", "ministral-3:3b"),
-            num_positive=contrastive_config.get("num_positive", 5),
-            num_negative=contrastive_config.get("num_negative", 5),
-        )
-        positives, negatives = generator.generate(corpus.request)
+        if prototype_source == "corpus":
+            # Generate prototypes from actual corpus emails (ceiling test)
+            generator = CorpusPrototypeGenerator(
+                num_positive=contrastive_config.get("num_positive", 5),
+                num_negative=contrastive_config.get("num_negative", 5),
+                positive_categories=contrastive_config.get("positive_categories"),
+                negative_categories=contrastive_config.get("negative_categories"),
+                seed=contrastive_config.get("seed", 42),
+            )
+            positives, negatives = generator.generate(corpus)
+            source_name = "corpus"
+        else:
+            # Generate prototypes using LLM (default)
+            llm_model = contrastive_config.get("llm_model", "ministral-3:3b")
+            generator = LLMPrototypeGenerator(
+                model_name=llm_model,
+                num_positive=contrastive_config.get("num_positive", 5),
+                num_negative=contrastive_config.get("num_negative", 5),
+                timeout=contrastive_config.get("llm_timeout", 300),
+            )
+            positives, negatives = generator.generate(corpus.request)
+            source_name = llm_model
+
+        # Log prototypes if verbose
+        if contrastive_config.get("verbose", False):
+            print_prototypes(positives, negatives)
+
+        # Save prototypes to output directory if specified
+        if output_dir := contrastive_config.get("save_prototypes_to"):
+            save_prototypes(positives, negatives, output_dir, model_name=source_name)
 
         return ContrastivePipeline(
             model_name=contrastive_config.get("embedding_model", "st:all-mpnet-base-v2"),

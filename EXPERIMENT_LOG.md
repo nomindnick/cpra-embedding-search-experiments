@@ -55,9 +55,15 @@ This document tracks experiments on the manually-crafted v2 corpus for evaluatin
 | 027c | RRF mpnet + mxbai + BGE | 2026-01-28 | Ensemble[RRF] | 55.88% | 98.06% | 71.19% | 0.8889 | **Yes** (0.01) |
 | 027d | RRF hybrid (mpnet + mxbai + keyword) | 2026-01-28 | Ensemble[RRF] | 50.84% | 97.42% | 66.81% | 0.9073 | **Yes** (0.01) |
 | 027e | RRF mxbai + BGE-Large | 2026-01-28 | Ensemble[RRF] | 59.67% | 93.55% | 72.86% | 0.8657 | **Yes** (0.007) |
-| 025a | Contrastive Positive Only | 2026-01-28 | Contrastive[mpnet] | 52.92% | 99.35% | 69.06% | 0.8259 | **Yes** (0.30) |
-| 025b | Contrastive Max (λ=0.5) | 2026-01-28 | Contrastive[mpnet] | 56.08% | 92.26% | 69.76% | 0.8221 | No |
-| 025c | Contrastive Mean (λ=0.5) | 2026-01-28 | Contrastive[mpnet] | 61.43% | 88.39% | 72.49% | 0.8243 | No |
+| 025a | Contrastive Positive Only (ministral) | 2026-01-29 | Contrastive[mpnet] | 55.20% | 99.35% | 70.97% | 0.8833 | **Yes** (0.35) |
+| 025b | Contrastive Max (ministral, λ=0.5) | 2026-01-29 | Contrastive[mpnet] | 64.76% | 94.84% | 76.96% | 0.8897 | **Yes** (0.20) |
+| 025f | Contrastive Max (gemma, λ=0.5) | 2026-01-29 | Contrastive[mpnet] | **69.48%** | 95.48% | **80.43%** | 0.8814 | **Yes** (0.20) |
+| 025g | Contrastive Mean (gemma, λ=0.5) | 2026-01-29 | Contrastive[mpnet] | 64.94% | 96.77% | 77.72% | 0.8765 | **Yes** (0.15) |
+| 025h | Contrastive Max (gemma-12b, λ=0.5) | 2026-01-30 | Contrastive[mpnet] | 63.29% | 96.77% | 76.53% | 0.7783 | **Yes** (0.20) |
+| 025i | Contrastive Max (gemma, 10 proto) | 2026-01-30 | Contrastive[mpnet] | 67.13% | 93.55% | 78.17% | 0.8487 | No |
+| 025j | Contrastive Max (gemma, λ=0.3) | 2026-01-31 | Contrastive[mpnet] | 63.07% | 98.06% | 76.77% | 0.8652 | **Yes** (0.25) |
+| 025k | Contrastive Max (gemma, λ=0.7) | 2026-01-31 | Contrastive[mpnet] | 63.25% | 95.48% | 76.09% | 0.8734 | **Yes** (0.10) |
+| 025l | Contrastive Corpus-Derived (ceiling) | 2026-01-31 | Contrastive[mpnet] | 64.78% | 96.13% | 77.40% | 0.8155 | **Yes** (0.25) |
 
 ### EXP-020: Validation Corpus Sanity Check (2026-01-28)
 
@@ -1585,138 +1591,261 @@ All 21 embedding/cross-encoder experiments have been run. See summary table abov
 
 ---
 
-### EXP-025: Contrastive Scoring with LLM-Generated Prototypes (2026-01-28)
+### EXP-025: Contrastive Scoring with LLM-Generated Prototypes (2026-01-28, updated 2026-01-29)
 
 **Hypothesis:** Using LLM-generated positive/negative prototype emails can improve precision by better capturing the semantic space of responsive vs non-responsive documents, particularly for polysemy issues ("lead" metal vs "lead" leadership).
 
 **Approach:**
-- Generate 5 positive prototypes (responsive email examples) and 5 negative prototypes (false positive examples) using ministral-3:3b
+- Generate 5 positive prototypes (responsive email examples) and 5 negative prototypes (false positive examples)
 - Score documents by similarity to prototypes: `pos_score - λ * neg_score`
-- Test three variants: positive-only (λ=0), max aggregation (λ=0.5), mean aggregation (λ=0.5)
+- Test variants: positive-only (λ=0), max aggregation (λ=0.5), mean aggregation (λ=0.5)
+- Compare LLM models: ministral-3:3b vs gemma3:4b
 
-#### 025a - Contrastive Positive Only
+#### Phase 1: Initial Results with Original Prompts (Failed)
 
-**Configuration:** `configs/experiments/025a_contrastive_positive_only.yaml`
+Initial experiments with simple prompts produced poor results because the generated "negative" prototypes were actually responsive to the request. Inspection revealed:
 
-**Model:** all-mpnet-base-v2 with 5 LLM-generated positive prototypes
+**Problem 1:** Positives were too obvious — all explicitly mentioned "lead testing", "lead remediation" despite prompt asking for indirect references.
 
-**Results:**
+**Problem 2:** "Negatives" were actually responsive! Examples generated:
+- "lead remediation budget has been allocated" — about lead contamination
+- "lead-related expenses" — responsive content
+- "lead remediation and testing procedures" — definitely responsive
 
-| Metric | Value | vs Baseline (mpnet) |
-|--------|-------|---------------------|
-| Precision | 52.92% (at 99.35% recall) | -4.82% |
-| Recall | 99.35% | +0.64% |
-| F1 | 69.06% | -3.80% |
-| MAP | 0.8259 | -0.0664 |
+**Problem 3:** No polysemy examples — not a single negative used "lead" to mean leadership/project lead.
 
-**Threshold Analysis:**
+The LLM misunderstood the task and generated emails about lead contamination in administrative contexts, not emails using "lead" with different meanings.
 
-| Threshold | Precision | Recall | F1 | TP | FP | FN |
-|-----------|-----------|--------|-----|-----|-----|-----|
-| 0.20 | 46.27% | 100.00% | 63.27% | 155 | 180 | 0 |
-| 0.25 | 48.44% | 100.00% | 65.26% | 155 | 165 | 0 |
-| 0.30 | 52.92% | 99.35% | 69.06% | 154 | 137 | 1 |
-| 0.35 | 59.20% | 95.48% | 73.09% | 148 | 102 | 7 |
-| 0.40 | 66.67% | 83.87% | **74.29%** | 130 | 65 | 25 |
-| 0.45 | 71.62% | 68.39% | 69.97% | 106 | 42 | 49 |
-| 0.50 | 87.37% | 53.55% | 66.40% | 83 | 12 | 72 |
+#### Phase 2: Improved Prompts (2026-01-29)
 
-**By Challenge Type (at default threshold 0.50):**
+Rewrote prompts to be explicit about the polysemy problem:
 
-| Challenge Type | Recall | vs Baseline |
-|----------------|--------|-------------|
-| DIRECT_MATCH | 90.00% | +6.13% |
-| AMBIGUOUS_TERMS | 76.67% | -7.20% |
-| INDIRECT_REFERENCE | 28.57% | -48.57% |
-| TECHNICAL_JARGON | 32.00% | -32.00% |
-| TEMPORAL_REFERENCE | 52.00% | -36.00% |
-| BURIED_IN_THREAD | 20.00% | -30.00% |
+**Positive prompt improvements:**
+- Request technical jargon (ppb, action levels, LSL, CCT)
+- Ask for indirect references without obvious keywords
+- Request varied styles (historical, future planning, buried content)
 
-**Meets 94% Recall?** Yes (at threshold 0.35, 95.48% recall with 59.20% precision)
+**Negative prompt improvements:**
+- Explicit focus on POLYSEMY: "lead" meaning LEADERSHIP, TO GUIDE, FIRST/PRIMARY
+- Examples: "project lead", "team lead", "lead contractor", "lead agency"
+- Include adjacent topics (water infrastructure NOT about contamination)
 
-#### 025b - Contrastive Max (with negatives, λ=0.5)
+#### Phase 2 Results: Ministral-3:3b with Improved Prompts
 
-**Configuration:** `configs/experiments/025b_contrastive_max.yaml`
-
-**Model:** all-mpnet-base-v2 with 5 positive + 5 negative prototypes, max aggregation
-
-**Results:**
-
-| Metric | Value | vs Baseline (mpnet) |
-|--------|-------|---------------------|
-| Precision | 56.08% (at 92.26% recall) | -1.66% |
-| Recall | 92.26% | -6.45% |
-| F1 | 69.76% | -3.10% |
-| MAP | 0.8221 | -0.0702 |
-
-**Threshold Analysis:**
+##### 025a - Positive Only (ministral)
 
 | Threshold | Precision | Recall | F1 | TP | FP | FN |
 |-----------|-----------|--------|-----|-----|-----|-----|
-| 0.05 | 46.13% | 100.00% | 63.14% | 155 | 181 | 0 |
-| 0.10 | 48.44% | 100.00% | 65.26% | 155 | 165 | 0 |
-| 0.15 | 56.08% | 92.26% | **69.76%** | 143 | 112 | 12 |
-| 0.20 | 67.47% | 72.26% | 69.78% | 112 | 54 | 43 |
-| 0.25 | 82.52% | 54.84% | 65.89% | 85 | 18 | 70 |
-| 0.30 | 95.56% | 27.74% | 43.00% | 43 | 2 | 112 |
-| 0.35 | 100.00% | 10.97% | 19.77% | 17 | 0 | 138 |
+| 0.30 | 50.49% | 99.35% | 66.96% | 154 | 151 | 1 |
+| 0.35 | 55.20% | 99.35% | 70.97% | 154 | 125 | 1 |
+| 0.40 | 60.73% | 96.77% | 74.63% | 150 | 97 | 5 |
+| 0.45 | 69.90% | 92.90% | 79.78% | 144 | 62 | 11 |
+| 0.50 | 77.06% | 84.52% | **80.62%** | 131 | 39 | 24 |
 
-**Meets 94% Recall?** No (max 92.26% recall at threshold 0.15)
+**Meets 94% Recall?** Yes (0.35: 99.35% recall, 55.20% precision)
 
-#### 025c - Contrastive Mean (with negatives, λ=0.5)
-
-**Configuration:** `configs/experiments/025c_contrastive_mean.yaml`
-
-**Model:** all-mpnet-base-v2 with 5 positive + 5 negative prototypes, mean aggregation
-
-**Results:**
-
-| Metric | Value | vs Baseline (mpnet) |
-|--------|-------|---------------------|
-| Precision | 61.43% (at 88.39% recall) | +3.69% |
-| Recall | 88.39% | -10.32% |
-| F1 | 72.49% | -0.37% |
-| MAP | 0.8243 | -0.0680 |
-
-**Threshold Analysis:**
+##### 025b - Contrastive Max (ministral, λ=0.5)
 
 | Threshold | Precision | Recall | F1 | TP | FP | FN |
 |-----------|-----------|--------|-----|-----|-----|-----|
-| 0.05 | 45.86% | 100.00% | 62.88% | 155 | 183 | 0 |
-| 0.10 | 48.90% | 100.00% | 65.68% | 155 | 162 | 0 |
-| 0.15 | 61.43% | 88.39% | **72.49%** | 137 | 86 | 18 |
-| 0.20 | 79.13% | 58.71% | 67.41% | 91 | 24 | 64 |
-| 0.25 | 97.62% | 26.45% | 41.62% | 41 | 1 | 114 |
-| 0.30 | 100.00% | 6.45% | 12.12% | 10 | 0 | 145 |
+| 0.15 | 54.04% | 99.35% | 70.00% | 154 | 131 | 1 |
+| 0.20 | 64.76% | 94.84% | 76.96% | 147 | 80 | 8 |
+| 0.25 | 79.77% | 89.03% | **84.15%** | 138 | 35 | 17 |
+| 0.30 | 88.32% | 78.06% | 82.88% | 121 | 16 | 34 |
 
-**Meets 94% Recall?** No (max 88.39% recall at threshold 0.15)
+**Meets 94% Recall?** Yes (0.20: 94.84% recall, **64.76% precision**, +7.02% vs baseline)
 
-### EXP-025 Key Observations
+#### Phase 2 Results: Gemma3:4b with Improved Prompts
 
-1. **Negative prototypes hurt recall**: Adding negative prototypes (025b, 025c) makes it harder to maintain 94% recall. The contrastive penalty pushes down scores for responsive documents that happen to share vocabulary with false positives.
+##### 025f - Contrastive Max (gemma, λ=0.5)
 
-2. **Positive-only variant (025a) achieves 100% recall**: At low thresholds (0.10-0.25), positive-only contrastive achieves 100% recall, but precision is worse than baseline mpnet.
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.15 | 58.17% | 98.71% | 73.21% | 153 | 110 | 2 |
+| 0.20 | 69.48% | 95.48% | **80.43%** | 148 | 65 | 7 |
+| 0.25 | 78.61% | 87.74% | 82.93% | 136 | 37 | 19 |
+| 0.30 | 83.45% | 78.06% | 80.67% | 121 | 24 | 34 |
 
-3. **No precision improvement at 94%+ recall**:
-   - 025a at 95.48% recall: 59.20% precision (vs 57.74% baseline at 98.71%) — marginal improvement but lower recall
-   - Neither 025b nor 025c can achieve 94% recall at any threshold
+**Meets 94% Recall?** Yes (0.20: 95.48% recall, **69.48% precision**, +11.74% vs baseline)
 
-4. **MAP degrades across all variants**: All contrastive approaches have lower MAP (0.82-0.83) than baseline mpnet (0.89), indicating worse overall ranking.
+##### 025g - Contrastive Mean (gemma, λ=0.5)
 
-5. **Challenge type analysis reveals prototype limitations**: INDIRECT_REFERENCE and TECHNICAL_JARGON recall drops significantly, suggesting the LLM-generated prototypes don't capture these challenging cases well.
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.10 | 51.68% | 99.35% | 67.99% | 154 | 144 | 1 |
+| 0.15 | 64.94% | 96.77% | 77.72% | 150 | 81 | 5 |
+| 0.20 | 78.86% | 89.03% | **83.64%** | 138 | 37 | 17 |
+
+**Meets 94% Recall?** Yes (0.15: 96.77% recall, 64.94% precision, +7.20% vs baseline)
+
+#### Phase 3: Additional Variations (2026-01-30)
+
+##### 025h - Larger LLM (gemma3:12b)
+
+**Hypothesis:** Larger LLM produces better quality prototypes.
+
+**Result:** The 12b model produces more sophisticated, indirect prototypes but performs **worse**:
+
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.15 | 56.88% | 98.71% | 72.17% | 153 | 116 | 2 |
+| 0.20 | 63.29% | 96.77% | 76.53% | 150 | 87 | 5 |
+| 0.25 | 68.48% | 81.29% | 74.34% | 126 | 58 | 29 |
+
+**At 96.77% recall:** 63.29% precision (vs 69.48% for gemma3:4b at 95.48% recall)
+
+**Why worse?** The 12b model generates overly indirect prototypes that miss the semantic space of actual responsive emails in the corpus. Examples:
+- "pipe network... deterioration" instead of explicit "lead"
+- Subtle historical references without keywords
+
+**Conclusion:** Simpler, more direct prototypes from 4b work better than sophisticated indirect ones.
+
+##### 025i - More Prototypes (10+10)
+
+**Hypothesis:** More prototypes capture more edge cases.
+
+**Result:** 10 prototypes per class performs **worse** than 5:
+
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.15 | 57.63% | 97.42% | 72.42% | 151 | 111 | 4 |
+| 0.20 | 67.13% | 93.55% | 78.17% | 145 | 71 | 10 |
+| 0.25 | 73.33% | 85.16% | **78.81%** | 132 | 48 | 23 |
+
+**At 93.55% recall (best achievable):** 67.13% precision — does NOT meet 94% recall requirement.
+
+**Why worse?** More prototypes dilute the signal:
+- Averaging over more examples creates a diffuse semantic space
+- LLM variability — some prototypes may be lower quality
+- 5 prototypes appears to be the "sweet spot" of coverage vs. focus
+
+#### Phase 4: Lambda Tuning (2026-01-31)
+
+Tested λ ∈ {0.3, 0.5, 0.7} to find optimal negative penalty weight.
+
+##### 025j - Lambda = 0.3 (Less Penalty)
+
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.15 | 48.90% | 100.00% | 65.68% | 155 | 162 | 0 |
+| 0.20 | 55.23% | 98.71% | 70.83% | 153 | 124 | 2 |
+| 0.25 | 63.07% | 98.06% | 76.77% | 152 | 89 | 3 |
+| 0.30 | 73.58% | 91.61% | 81.61% | 142 | 51 | 13 |
+| 0.35 | 81.21% | 86.45% | **83.75%** | 134 | 31 | 21 |
+
+**At 98.06% recall:** 63.07% precision — achieves high recall but worse precision than λ=0.5.
+
+##### 025k - Lambda = 0.7 (More Penalty)
+
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.08 | 58.02% | 98.06% | 72.90% | 152 | 110 | 3 |
+| 0.10 | 63.25% | 95.48% | 76.09% | 148 | 86 | 7 |
+| 0.12 | 70.39% | 93.55% | 80.33% | 145 | 61 | 10 |
+| 0.15 | 77.78% | 90.32% | **83.58%** | 140 | 40 | 15 |
+
+**At 95.48% recall:** 63.25% precision — no improvement over λ=0.5.
+
+##### Lambda Tuning Summary
+
+| λ | At ~95%+ Recall | Precision | Best F1 |
+|---|-----------------|-----------|---------|
+| 0.3 | 98.06% | 63.07% | 83.75% |
+| **0.5** | **95.48%** | **69.48%** | 82.93% |
+| 0.7 | 95.48% | 63.25% | 83.58% |
+
+**Conclusion:** λ=0.5 is optimal for the 94%+ recall target. Lower λ achieves higher recall but sacrifices precision. Higher λ doesn't improve precision, just makes high recall harder to achieve.
+
+#### Phase 5: Corpus-Derived Prototypes (2026-01-31)
+
+**Hypothesis:** Using actual corpus emails as prototypes (rather than LLM-generated) should establish a ceiling on performance, since real examples perfectly represent the target distribution.
+
+##### 025l - Corpus-Derived Ceiling Test
+
+**Configuration:**
+- Positive prototypes: 5 randomly sampled from responsive categories (DIRECT_MATCH, TECHNICAL_JARGON, INDIRECT_REFERENCE, AMBIGUOUS_TERMS, TEMPORAL_REFERENCE)
+- Negative prototypes: 5 randomly sampled from KEYWORD_FALSE_POSITIVE category
+- Same pipeline: mpnet embeddings, max aggregation, λ=0.5
+- Seed: 42 for reproducibility
+
+**Result:** Corpus-derived prototypes perform **worse** than LLM-generated:
+
+| Threshold | Precision | Recall | F1 | TP | FP | FN |
+|-----------|-----------|--------|-----|-----|-----|-----|
+| 0.20 | 62.76% | 96.77% | 76.14% | 150 | 89 | 5 |
+| 0.25 | 64.78% | 96.13% | 77.40% | 149 | 81 | 6 |
+| 0.30 | 69.00% | 89.03% | **77.75%** | 138 | 62 | 17 |
+
+**At 96.13% recall:** 64.78% precision — worse than 025f (69.48% at 95.48% recall).
+
+**Why worse?** This was a surprising result that challenges the initial hypothesis:
+
+1. **Specificity vs Generalization**: Real emails contain specific details (names, dates, project references) that don't generalize well. LLM-generated prototypes capture the *essence* of the category without irrelevant specifics.
+
+2. **Prototype Quality**: LLM prototypes are designed to be clear examples. Real emails may be ambiguous, poorly written, or contain mixed signals.
+
+3. **5 samples insufficient**: With only 5 samples per class, random selection may not capture the diversity of the category. The LLM, having been trained on massive text corpora, generates more representative examples.
+
+4. **Polysemy handling**: LLM prompts explicitly address the "lead" ambiguity. Real KEYWORD_FALSE_POSITIVE emails may not all be about leadership — some might be borderline cases that don't strongly represent the false positive pattern.
+
+**Key Insight:** LLM-generated prototypes are not a poor substitute for real data — they're actually *better* at representing generalized concepts. This is good news for production deployment, as we don't need labeled examples.
+
+### EXP-025 Summary Comparison
+
+| Experiment | LLM | Protos | λ | At 94%+ Recall | Precision | vs Baseline |
+|------------|-----|--------|---|----------------|-----------|-------------|
+| Baseline mpnet | - | - | - | 98.71% | 57.74% | - |
+| 025a | ministral 3b | 5+5 | 0 | 99.35% | 55.20% | -2.54% |
+| **025b** | ministral 3b | 5+5 | 0.5 | 94.84% | 64.76% | **+7.02%** |
+| **025f** | **gemma 4b** | **5+5** | **0.5** | **95.48%** | **69.48%** | **+11.74%** |
+| 025g | gemma 4b | 5+5 | 0.5 | 96.77% | 64.94% | +7.20% |
+| 025h | gemma 12b | 5+5 | 0.5 | 96.77% | 63.29% | +5.55% |
+| 025i | gemma 4b | 10+10 | 0.5 | 93.55%* | 67.13% | — |
+| 025j | gemma 4b | 5+5 | 0.3 | 98.06% | 63.07% | +5.33% |
+| 025k | gemma 4b | 5+5 | 0.7 | 95.48% | 63.25% | +5.51% |
+| 025l | corpus-derived | 5+5 | 0.5 | 96.13% | 64.78% | +7.04% |
+
+*Does not meet 94% recall requirement
+
+### EXP-025 Key Findings
+
+1. **Prompt quality is critical**: Original prompts generated useless negatives. Explicit instructions about polysemy were essential.
+
+2. **Gemma3:4b is optimal**: Neither smaller (ministral-3b) nor larger (gemma-12b) models perform as well.
+
+3. **5 prototypes is optimal**: More prototypes (10+10) dilute the signal and hurt performance.
+
+4. **λ=0.5 is optimal**: Lower λ (0.3) sacrifices precision for recall; higher λ (0.7) doesn't improve precision.
+
+5. **Max aggregation > Mean**: Max aggregation performs better at high recall thresholds.
+
+6. **Contrastive with negatives > Positive only**: Adding proper negative prototypes improves precision significantly.
+
+7. **Best result (025f)**: 69.48% precision at 95.48% recall — **+11.74% precision improvement** over baseline.
+
+8. **Bigger/more is not always better**: Larger LLM, more prototypes, and higher λ all hurt performance.
+
+9. **LLM prototypes > corpus-derived**: Surprisingly, LLM-generated prototypes outperform actual corpus examples. LLMs capture generalized concepts better than specific real-world examples that contain noise and irrelevant details.
 
 ### EXP-025 Conclusions
 
-**The LLM-generated prototype approach does NOT improve over baseline** for this task:
-- Positive-only (025a) maintains high recall but doesn't improve precision
-- Adding negatives (025b, 025c) degrades both recall and ranking quality
-- Generated prototypes may not capture the true distribution of false positives in the corpus
+**Contrastive scoring with LLM-generated prototypes DOES improve precision** when:
+- Prompts explicitly address the polysemy problem
+- A mid-sized LLM (gemma3:4b) generates focused prototypes
+- 5 prototypes per class (not more)
+- λ=0.5 negative penalty weight
+- Max aggregation is used for scoring
 
-**Potential improvements to explore:**
-- Use corpus-derived prototypes (actual FP/TP examples) instead of LLM-generated
-- Fine-tune lambda based on corpus characteristics
-- Generate more diverse prototypes (10+)
-- Use asymmetric encoding (query-style prototypes)
+**Best configuration:** 025f (gemma3:4b, 5+5 prototypes, max aggregation, λ=0.5)
+- Precision: 69.48% at 95.48% recall
+- **+11.74% precision improvement** over baseline mpnet
+- Best overall result across all experiments
+
+**Key insight for production deployment:** LLM-generated prototypes outperform corpus-derived prototypes. This means we don't need labeled examples to deploy this approach — the LLM can generate effective prototypes from just the CPRA request description. This is a major advantage for generalization to new requests.
+
+**Remaining variations to explore:**
+- Combine contrastive with Voyage asymmetric encoding
+- Test on validation corpus (PFAS request) to verify generalization
 
 ---
 

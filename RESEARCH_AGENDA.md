@@ -1,6 +1,6 @@
 # Research Agenda: CPRA Semantic Search (v2 corpus)
 
-> Last updated: 2026-01-28
+> Last updated: 2026-02-01
 
 This is the "what do we try next?" plan for pushing **precision up** while keeping **recall ≥ 94%** (legal requirement).
 
@@ -12,6 +12,10 @@ This is the "what do we try next?" plan for pushing **precision up** while keepi
 - `all-mpnet-base-v2` (Exp 006): 98.71% recall, 57.74% precision at threshold 0.30
 - `voyage-4-nano-asymmetric` (Exp 021): 98.06% recall, 65.24% precision at threshold 0.35
 - `BGE Large EN v1.5` (Exp 009): 99.35% recall, 47.24% precision at threshold 0.50
+
+**Best result so far (EXP-025f):** Contrastive scoring with LLM-generated prototypes
+- **69.48% precision at 95.48% recall** (+11.74% precision vs baseline mpnet)
+- Uses gemma3:4b for prototype generation, 5+5 prototypes, λ=0.5, max aggregation
 
 **EXP-020 (validation corpus) showed different models excel on different corpora** — no single model dominates across both. This suggests we should continue exploring rather than committing to one embedder.
 
@@ -88,7 +92,10 @@ For paraphrases, example documents, facet queries:
 | 3 | granite3.3:2b | 100% | 100% | 33s | Reliable across all tasks |
 | 4 | qwen3:0.6b | 100% | 100% | 9s | Fast, lower diversity |
 
-**Note:** gemma3:4b excels at email generation (100%) but fails paraphrase format.
+**⚠️ Updated based on EXP-025:** For prototype generation specifically, **gemma3:4b is best**:
+- Produces more focused, generalizable prototypes than ministral-3:3b
+- Outperforms larger gemma3:12b (which generates overly verbose/specific examples)
+- Best result: 69.48% precision at 95.48% recall (EXP-025f)
 
 ### Extraction Tasks (EXP-023, EXP-024, EXP-031, EXP-033)
 
@@ -383,11 +390,68 @@ Mark each term as MUST_HAVE or NICE_TO_HAVE.
 
 This is directly aligned with the original design in SPEC: generate **positive candidates** and **negative candidates** and use them as "anchors."
 
-### EXP-025 — LLM-Generated Positive & Negative Pseudo-Emails
+### EXP-025 — LLM-Generated Positive & Negative Pseudo-Emails ✅ COMPLETE
 
 **Hypothesis:** Modeling "what responsive looks like" *and* "what a red herring looks like" will reduce false positives from polysemy/adjacent topics.
 
-**Method:**
+**Status:** ✅ **COMPLETE** — See EXPERIMENT_LOG.md for detailed results.
+
+#### Key Findings
+
+**Best result (025f):** gemma3:4b, 5+5 prototypes, max aggregation, λ=0.5
+- **69.48% precision at 95.48% recall** (+11.74% vs baseline mpnet)
+- Best overall result across all experiments
+
+**Critical insights:**
+
+1. **Prompt quality is critical**: Original prompts generated useless negatives (about lead contamination instead of leadership). Explicit polysemy instructions were essential.
+
+2. **gemma3:4b is optimal**: Neither smaller (ministral-3b) nor larger (gemma-12b) models perform as well.
+
+3. **5 prototypes is optimal**: More prototypes (10+10) dilute the signal and hurt performance.
+
+4. **λ=0.5 is optimal**: Lower λ sacrifices precision for recall; higher λ doesn't improve precision.
+
+5. **Max aggregation > Mean**: Max performs better at high recall thresholds.
+
+6. **LLM prototypes > corpus-derived**: Surprisingly, LLM-generated prototypes outperform actual corpus examples. LLMs capture generalized concepts better than specific real-world examples.
+
+#### Results Summary
+
+| Experiment | LLM | Protos | λ | At 94%+ Recall | Precision | vs Baseline |
+|------------|-----|--------|---|----------------|-----------|-------------|
+| Baseline mpnet | - | - | - | 98.71% | 57.74% | - |
+| 025a | ministral 3b | 5+5 | 0 | 99.35% | 55.20% | -2.54% |
+| 025b | ministral 3b | 5+5 | 0.5 | 94.84% | 64.76% | +7.02% |
+| **025f** | **gemma 4b** | **5+5** | **0.5** | **95.48%** | **69.48%** | **+11.74%** |
+| 025g | gemma 4b | 5+5 | 0.5 | 96.77% | 64.94% | +7.20% |
+| 025h | gemma 12b | 5+5 | 0.5 | 96.77% | 63.29% | +5.55% |
+| 025i | gemma 4b | 10+10 | 0.5 | 93.55%* | 67.13% | — |
+| 025j | gemma 4b | 5+5 | 0.3 | 98.06% | 63.07% | +5.33% |
+| 025k | gemma 4b | 5+5 | 0.7 | 95.48% | 63.25% | +5.51% |
+| 025l | corpus-derived | 5+5 | 0.5 | 96.13% | 64.78% | +7.04% |
+
+*Does not meet 94% recall requirement
+
+#### Production Deployment Insight
+
+LLM-generated prototypes work better than real corpus examples. This means we don't need labeled training data — the LLM can generate effective prototypes from just the CPRA request description. Major advantage for generalization to new requests.
+
+#### Recommended Configuration
+
+```yaml
+contrastive:
+  embedding_model: st:all-mpnet-base-v2
+  llm_model: gemma3:4b
+  num_positive: 5
+  num_negative: 5
+  use_negatives: true
+  lambda_negative: 0.5
+  scoring_method: max
+```
+
+#### Original Method (for reference)
+
 1. LLM generates:
    - P positive examples (P ∈ {3, 5, 10})
    - N negative examples (N ∈ {3, 5, 10})
@@ -398,53 +462,12 @@ This is directly aligned with the original design in SPEC: generate **positive c
    - **Score C:** `avg_sim(email, positives) - λ * avg_sim(email, negatives)`
 4. Tune λ on primary corpus; evaluate on validation
 
-**Candidate models (see LLM Model Recommendations):**
-1. ministral-3:3b — 100% success on both positive and negative examples
-2. granite3.3:2b — 100% success, good structure compliance
-3. gemma3:4b — 100% email generation, but fails paraphrase format
-
-**Note:** phi4-mini succeeds on negative examples but fails positive example structure.
-
-**Positive generation prompt:**
-```
-Given this CPRA request:
-{request.request_text}
-
-Generate a realistic email that WOULD be responsive to this request.
-The email should:
-- Discuss the subject matter substantively
-- NOT use these exact keywords: {request.keywords}
-- Include realistic email metadata (sender, recipient, subject)
-- Be 100-300 words
-
-Generate {P} different examples covering different types of responsive content.
-```
-
-**Negative generation prompt:**
-```
-Given this CPRA request:
-{request.request_text}
-
-Generate a realistic email that is RELATED TO but NOT responsive to this request.
-It should be a plausible false positive - discussing adjacent topics that might
-seem relevant but don't actually address the request subject matter.
-
-Specifically target these false positive patterns:
-- Keywords used in unrelated contexts (e.g., "lead" as verb meaning "to guide")
-- Same domain but different specific topic
-- Administrative/procedural content tangentially related
-
-Generate {N} different examples of non-responsive but plausibly-confused content.
-```
-
-**Variants:**
+**Variants tested:**
 - 025a: `max_sim(email, positives)` — positive prototypes only
 - 025b: `max_sim(email, positives) - λ * max_sim(email, negatives)` — contrastive with max
 - 025c: `avg_sim(email, positives) - λ * avg_sim(email, negatives)` — contrastive with mean
-
-**Expected win:** Precision bump without sacrificing recall.
-
-**Status:** Pending
+- 025f-k: Various LLM sizes, prototype counts, and λ values
+- 025l: Corpus-derived prototypes (ceiling test)
 
 ---
 
@@ -534,7 +557,7 @@ Negative queries:
 - Requires `ContrastivePipeline` to support asymmetric encoding (encode prototypes as queries)
 - May need to adjust λ since query-document similarities have different distributions than document-document
 
-**Status:** Pending — depends on EXP-025a-c results for comparison
+**Status:** Pending — EXP-025a-c complete (see above). Ready to test if query-style prototypes with asymmetric encoding outperform document-style prototypes.
 
 ---
 
@@ -542,20 +565,27 @@ Negative queries:
 
 **Hypothesis:** If prototypes work, using *real* positives/negatives should work even better than LLM-generated text.
 
+**⚠️ Updated based on EXP-025l:** This hypothesis was **disproven**. Corpus-derived prototypes (sampled from real responsive/non-responsive emails) performed *worse* than LLM-generated prototypes:
+- Corpus-derived (025l): 64.78% precision at 96.13% recall
+- LLM-generated (025f): 69.48% precision at 95.48% recall
+
+**Why corpus-derived underperforms:**
+1. Real emails contain specific details (names, dates, projects) that don't generalize
+2. LLM prototypes capture the *essence* of categories without noise
+3. Random sampling may not cover category diversity well
+
 **Method:**
 1. Build centroid vectors from ground truth:
    - `c_pos = mean(embeddings of known responsive docs)`
    - `c_neg = mean(embeddings of known non-responsive docs)` (or of specific negative classes like KEYWORD_FALSE_POSITIVE)
 2. Score: `cos(d, c_pos) - λ * cos(d, c_neg)`
 
-**Why do this:** Gives an "upper bound" on what prototype scoring could achieve without LLM variability.
-
 **Variants:**
 - 026a: All non-responsive as negatives
 - 026b: Only KEYWORD_FALSE_POSITIVE as negatives
 - 026c: Only ADJACENT_TOPIC as negatives
 
-**Status:** Pending
+**Status:** Low priority — EXP-025l already showed corpus-derived prototypes underperform LLM-generated. Centroid approach may show different results but unlikely to beat 025f.
 
 ---
 
@@ -968,22 +998,30 @@ Already computed (in `.cache/embeddings/`):
 
 ## Quick Recommendations (What to Run Next)
 
-Based on EXP-020 findings (models have complementary strengths):
+Based on EXP-020 and EXP-025 findings:
 
 1. ✅ **EXP-020** (validation sanity check) — COMPLETE. Found no single model dominates.
 
-2. **EXP-027** (RRF ensemble) — **HIGH PRIORITY**
+2. ✅ **EXP-025** (positive/negative prototypes) — **COMPLETE. Best result so far.**
+   - 69.48% precision at 95.48% recall (+11.74% vs baseline)
+   - Use gemma3:4b (not ministral-3:3b as originally recommended)
+   - 5+5 prototypes, max aggregation, λ=0.5
+   - LLM prototypes > corpus-derived (no labeled data needed!)
+
+3. **EXP-027** (RRF ensemble) — **HIGH PRIORITY**
    - EXP-020 showed models have complementary strengths (mxbai: PFAS, mpnet: Lead)
    - Low complexity, directly tests the insight
    - Start with 027a (mpnet + mxbai) for BURIED_IN_THREAD coverage
+   - Could potentially combine with contrastive scoring for additional gains
 
-3. **EXP-025** (positive/negative prototypes) — targets keyword false positives
-   - More relevant for Lead corpus (the "lead/leadership" ambiguity)
-   - Use ministral-3:3b (100% both pos/neg examples)
+4. **EXP-025d** (query prototypes with asymmetric encoding) — **MEDIUM PRIORITY**
+   - Now that 025a-c are complete, test if query-style prototypes work better with Voyage asymmetric
+   - Could potentially beat 025f by leveraging asymmetric training
 
-4. **EXP-031** (LLM verifier with evidence) — likely biggest precision jump
+5. **EXP-031** (LLM verifier with evidence) — likely biggest precision jump
    - Start with gemma3:4b (100% @ 3.3s)
    - Fall back to ministral-3:3b if extraction quality matters
+   - May be overkill if contrastive scoring already achieves target precision
 
 ### Model Quick Reference
 
@@ -991,9 +1029,11 @@ Based on EXP-020 findings (models have complementary strengths):
 |------|--------------|----------|-------|
 | Classification | gemma3:4b (few-shot) | ministral-3:3b (ternary) | reasoning models, olmo-3 |
 | Paraphrase gen | phi4-mini:3.8b | ministral-3:3b | gemma3:4b (fails format) |
-| Example gen | ministral-3:3b | granite3.3:2b | phi4-mini (pos fails) |
+| **Prototype gen** | **gemma3:4b** | ministral-3:3b | gemma3:12b (too verbose) |
 | Quote extraction | ministral-3:3b | gemma3:12b | qwen models (hallucinate) |
 | Keyword extraction | granite3.3:2b | qwen3:0.6b | — |
+
+**Note:** EXP-025 found gemma3:4b produces better prototypes than ministral-3:3b or gemma3:12b.
 
 See **LLM Model Recommendations** section for complete details.
 

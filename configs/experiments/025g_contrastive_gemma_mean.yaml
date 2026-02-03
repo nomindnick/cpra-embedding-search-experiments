@@ -1,22 +1,21 @@
-# EXP-025c: Contrastive scoring with mean aggregation
-# Tests mean vs max aggregation for prototype similarity
+# EXP-025g: Contrastive scoring with gemma3:4b - mean aggregation
+# Compare gemma3:4b prototype generation vs ministral-3:3b
 # Variant: mean_sim(pos) - lambda * mean_sim(neg)
-# Updated 2026-01-28: Improved prompts for better prototype generation
-name: "025c Contrastive Mean (ministral)"
+name: "025g Contrastive Mean (gemma)"
 
 pipeline:
   method: contrastive
 
 contrastive:
   embedding_model: st:all-mpnet-base-v2
-  llm_model: ministral-3:3b
+  llm_model: gemma3:4b
   num_positive: 5
   num_negative: 5
   use_negatives: true
   lambda_negative: 0.5
   scoring_method: mean
   verbose: true
-  save_prototypes_to: results/025c_contrastive_mean/prototypes.json
+  save_prototypes_to: results/025g_contrastive_gemma_mean/prototypes.json
 
 evaluation:
   k_values: [50, 100, 150, 200]

@@ -1,0 +1,33 @@
+# EXP-025l: Contrastive scoring with corpus-derived prototypes (ceiling test)
+# Uses actual corpus emails as prototypes to establish upper bound
+# NOTE: This requires ground truth and is NOT deployable in production
+name: "025l Contrastive Corpus-Derived (ceiling)"
+
+pipeline:
+  method: contrastive
+
+contrastive:
+  embedding_model: st:all-mpnet-base-v2
+  prototype_source: corpus  # Use actual corpus emails instead of LLM
+  num_positive: 5
+  num_negative: 5
+  # Sample positives from diverse responsive categories
+  positive_categories:
+    - DIRECT_MATCH
+    - TECHNICAL_JARGON
+    - INDIRECT_REFERENCE
+    - AMBIGUOUS_TERMS
+    - TEMPORAL_REFERENCE
+  # Sample negatives from false positive category
+  negative_categories:
+    - KEYWORD_FALSE_POSITIVE
+  use_negatives: true
+  lambda_negative: 0.5
+  scoring_method: max
+  seed: 42
+  verbose: true
+  save_prototypes_to: results/025l_contrastive_corpus_derived/prototypes.json
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50]

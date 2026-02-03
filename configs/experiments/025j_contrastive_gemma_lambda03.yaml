@@ -1,0 +1,22 @@
+# EXP-025j: Contrastive scoring with gemma3:4b - lambda=0.3
+# Test if lower negative penalty improves recall while maintaining precision
+# Based on best config 025f, varying lambda from 0.5 to 0.3
+name: "025j Contrastive Max (gemma, λ=0.3)"
+
+pipeline:
+  method: contrastive
+
+contrastive:
+  embedding_model: st:all-mpnet-base-v2
+  llm_model: gemma3:4b
+  num_positive: 5
+  num_negative: 5
+  use_negatives: true
+  lambda_negative: 0.3
+  scoring_method: max
+  verbose: true
+  save_prototypes_to: results/025j_contrastive_gemma_lambda03/prototypes.json
+
+evaluation:
+  k_values: [50, 100, 150, 200]
+  thresholds: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40]
